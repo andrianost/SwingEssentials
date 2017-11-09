@@ -1,0 +1,43 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactNative = require('react-native');
+
+var _reactNavigation = require('react-navigation');
+
+var _LoginScreen = require('./LoginScreen');
+
+var _LoginScreen2 = _interopRequireDefault(_LoginScreen);
+
+var _HomeScreen = require('./HomeScreen');
+
+var _HomeScreen2 = _interopRequireDefault(_HomeScreen);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var AppNavigation = (0, _reactNavigation.StackNavigator)({
+  First: {
+    screen: _LoginScreen2.default,
+    navigationOptions: {
+      title: 'Login Screen'
+    }
+  },
+  Second: {
+    screen: _HomeScreen2.default,
+    navigationOptions: {
+      title: 'Home Screen'
+    }
+  }
+});
+
+exports.default = AppNavigation;
+
+
+_reactNative.AppRegistry.registerComponent('SwingEssentials', function () {
+  return AppNavigation;
+});
