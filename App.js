@@ -43,7 +43,7 @@ class YourLessons extends React.Component {
     return (
       <Button
         title="Go back home"
-        onPress={() => DrawerNavigator('YourLessons')}
+        onPress={() => this.props.navigation.goBack()}
       />
     );
   }
@@ -169,7 +169,7 @@ const MyApp = DrawerNavigator({
     screen: MyHomeScreen,
   },
   YourLessons: {
-    screen: LoginScreen,
+    screen: YourLessons,
   },
   RedeemLessons: {
     screen: RedeemLessons,
