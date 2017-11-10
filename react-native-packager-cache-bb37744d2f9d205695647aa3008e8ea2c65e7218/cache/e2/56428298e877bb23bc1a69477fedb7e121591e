@@ -68,7 +68,7 @@ var Login = _wrapComponent('Login')(function (_Component) {
         _reactNative.View,
         { style: styles.loginView, __source: {
             fileName: _jsxFileName,
-            lineNumber: 15
+            lineNumber: 14
           }
         },
         _react3.default.createElement(_reactNative.TextInput, {
@@ -79,7 +79,7 @@ var Login = _wrapComponent('Login')(function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 16
+            lineNumber: 15
           }
         }),
         _react3.default.createElement(_reactNative.TextInput, {
@@ -90,7 +90,7 @@ var Login = _wrapComponent('Login')(function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21
+            lineNumber: 20
           }
         })
       );
@@ -119,18 +119,18 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_Component2) {
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 36
+            lineNumber: 35
           }
         },
         _react3.default.createElement(_reactNative.Image, { source: require('./img/SE-Logo-circle.png'), __source: {
             fileName: _jsxFileName,
-            lineNumber: 37
+            lineNumber: 36
           }
         }),
         _react3.default.createElement(Login, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 38
+            lineNumber: 37
           }
         }),
         _react3.default.createElement(_reactNative.Button, {
@@ -140,14 +140,14 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_Component2) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 39
+            lineNumber: 38
           }
         }),
         _react3.default.createElement(
           _reactNative.Text,
           { style: styles.title, __source: {
               fileName: _jsxFileName,
-              lineNumber: 43
+              lineNumber: 42
             }
           },
           'Welcome to the Native Navigation Example!'

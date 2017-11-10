@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { AppRegistry, View, Text, StyleSheet, Button, Image, TextInput, Alert } from 'react-native';
 
 //Username capture, password capture and login button.
-//TODO Work on capture
 class Login extends Component {
   constructor(props) {
     super(props);
