@@ -42,8 +42,8 @@ class YourLessons extends React.Component {
   render() {
     return (
       <Button
-        onPress={() => this.props.navigation.goBack()}
         title="Go back home"
+        onPress={() => DrawerNavigator('YourLessons')}
       />
     );
   }
@@ -169,7 +169,7 @@ const MyApp = DrawerNavigator({
     screen: MyHomeScreen,
   },
   YourLessons: {
-    screen: YourLessons,
+    screen: LoginScreen,
   },
   RedeemLessons: {
     screen: RedeemLessons,
@@ -188,6 +188,7 @@ const MyApp = DrawerNavigator({
   },
 });
 
+export default MyApp
 
 //Stack Nav
 const AppNavigation = StackNavigator({
@@ -204,7 +205,5 @@ const AppNavigation = StackNavigator({
     }
   }
   })
-
-export default MyApp
 
 AppRegistry.registerComponent('SwingEssentials', () => MyApp);

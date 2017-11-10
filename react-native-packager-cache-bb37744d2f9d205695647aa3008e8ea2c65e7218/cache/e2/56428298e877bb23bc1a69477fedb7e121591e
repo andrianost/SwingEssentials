@@ -112,6 +112,8 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_Component2) {
   _createClass(LoginScreen, [{
     key: 'render',
     value: function render() {
+      var _this4 = this;
+
       var navigate = this.props.navigation.navigate;
 
 
@@ -136,7 +138,7 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_Component2) {
         _react3.default.createElement(_reactNative.Button, {
           title: 'Sign In',
           onPress: function onPress() {
-            return navigate('Second');
+            return _this4.props.navigation.goBack();
           },
           __source: {
             fileName: _jsxFileName,

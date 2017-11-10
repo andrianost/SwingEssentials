@@ -153,13 +153,11 @@ var YourLessons = _wrapComponent('YourLessons')((_temp2 = _class2 = function (_R
   _createClass(YourLessons, [{
     key: 'render',
     value: function render() {
-      var _this4 = this;
-
       return _react3.default.createElement(_reactNative.Button, {
-        onPress: function onPress() {
-          return _this4.props.navigation.goBack();
-        },
         title: 'Go back home',
+        onPress: function onPress() {
+          return (0, _reactNavigation.DrawerNavigator)('YourLessons');
+        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 44
@@ -196,11 +194,11 @@ var RedeemLessons = _wrapComponent('RedeemLessons')((_temp3 = _class3 = function
   _createClass(RedeemLessons, [{
     key: 'render',
     value: function render() {
-      var _this6 = this;
+      var _this5 = this;
 
       return _react3.default.createElement(_reactNative.Button, {
         onPress: function onPress() {
-          return _this6.props.navigation.goBack();
+          return _this5.props.navigation.goBack();
         },
         title: 'Go back home',
         __source: {
@@ -239,11 +237,11 @@ var OrderLessons = _wrapComponent('OrderLessons')((_temp4 = _class4 = function (
   _createClass(OrderLessons, [{
     key: 'render',
     value: function render() {
-      var _this8 = this;
+      var _this7 = this;
 
       return _react3.default.createElement(_reactNative.Button, {
         onPress: function onPress() {
-          return _this8.props.navigation.goBack();
+          return _this7.props.navigation.goBack();
         },
         title: 'Go back home',
         __source: {
@@ -282,11 +280,11 @@ var Help = _wrapComponent('Help')((_temp5 = _class5 = function (_React$Component
   _createClass(Help, [{
     key: 'render',
     value: function render() {
-      var _this10 = this;
+      var _this9 = this;
 
       return _react3.default.createElement(_reactNative.Button, {
         onPress: function onPress() {
-          return _this10.props.navigation.goBack();
+          return _this9.props.navigation.goBack();
         },
         title: 'Go back home',
         __source: {
@@ -325,11 +323,11 @@ var About = _wrapComponent('About')((_temp6 = _class6 = function (_React$Compone
   _createClass(About, [{
     key: 'render',
     value: function render() {
-      var _this12 = this;
+      var _this11 = this;
 
       return _react3.default.createElement(_reactNative.Button, {
         onPress: function onPress() {
-          return _this12.props.navigation.goBack();
+          return _this11.props.navigation.goBack();
         },
         title: 'Go back home',
         __source: {
@@ -368,11 +366,11 @@ var Settings = _wrapComponent('Settings')((_temp7 = _class7 = function (_React$C
   _createClass(Settings, [{
     key: 'render',
     value: function render() {
-      var _this14 = this;
+      var _this13 = this;
 
       return _react3.default.createElement(_reactNative.Button, {
         onPress: function onPress() {
-          return _this14.props.navigation.goBack();
+          return _this13.props.navigation.goBack();
         },
         title: 'Go back home',
         __source: {
@@ -414,7 +412,7 @@ var MyApp = (0, _reactNavigation.DrawerNavigator)({
     screen: MyHomeScreen
   },
   YourLessons: {
-    screen: YourLessons
+    screen: _LoginScreen2.default
   },
   RedeemLessons: {
     screen: RedeemLessons
@@ -433,6 +431,8 @@ var MyApp = (0, _reactNavigation.DrawerNavigator)({
   }
 });
 
+exports.default = MyApp;
+
 var AppNavigation = (0, _reactNavigation.StackNavigator)({
   First: {
     screen: _LoginScreen2.default,
@@ -447,9 +447,6 @@ var AppNavigation = (0, _reactNavigation.StackNavigator)({
     }
   }
 });
-
-exports.default = MyApp;
-
 
 _reactNative.AppRegistry.registerComponent('SwingEssentials', function () {
   return MyApp;

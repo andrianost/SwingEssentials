@@ -37,7 +37,7 @@ export default class LoginScreen extends Component {
         <Login/>
         <Button
           title="Sign In"
-          onPress={() => navigate('Second')}
+          onPress={() => this.props.navigation.goBack()}
         />
         <Text style={styles.title}>Welcome to the Native Navigation Example!</Text>
       </View>
