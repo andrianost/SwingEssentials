@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Button, Image, View } from 'react-native';
+import { AppRegistry, StyleSheet, Image, View } from 'react-native';
+import { Button } from 'react-native-elements'
 import { StackNavigator, DrawerNavigator } from 'react-navigation';
 import LoginScreen from './LoginScreen';
-import HomeScreen from './HomeScreen';
+import YourLessonsScreen from './YourLessonsScreen';
+import RedeemLessonsScreen from './RedeemLessonsScreen';
+import OrderLessonsScreen from './OrderLessonsScreen';
+import AboutScreen from './AboutScreen';
+import HelpScreen from './HelpScreen';
+import SettingsScreen from './SettingsScreen';
 
-class MyHomeScreen extends React.Component {
+//Launching drawer menu
+class Menu extends React.Component {
   static navigationOptions = {
     drawerLabel: 'Home',
     drawerIcon: ({ tintColor }) => (
@@ -18,177 +25,51 @@ class MyHomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-      <Image source={require('./img/ic_dehaze_2x.png')} />
       <Button
+        buttonStyle={{height: 50, width: 80, backgroundColor: 'white'}}
         onPress={() => this.props.navigation.navigate('DrawerOpen')}
-        title="Go to menu"
+        icon={{name: 'dehaze', color: 'black', size: 50}}
       />
       </View>
     );
   }
 }
 
-class YourLessons extends React.Component {
-  static navigationOptions = {
-    drawerLabel: 'Your Lessons',
-    drawerIcon: ({ tintColor }) => (
-      <Image
-        source={require('./img/notif-icon.png')}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
-    ),
-  };
-
-  render() {
-    return (
-      <Button
-        title="Go back home"
-        onPress={() => this.props.navigation.goBack()}
-      />
-    );
-  }
-}
-
-class RedeemLessons extends React.Component {
-  static navigationOptions = {
-    drawerLabel: 'Redeem Lessons',
-    drawerIcon: ({ tintColor }) => (
-      <Image
-        source={require('./img/notif-icon.png')}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
-    ),
-  };
-
-  render() {
-    return (
-      <Button
-        onPress={() => this.props.navigation.goBack()}
-        title="Go back home"
-      />
-    );
-  }
-}
-
-class OrderLessons extends React.Component {
-  static navigationOptions = {
-    drawerLabel: 'Order Lessons',
-    drawerIcon: ({ tintColor }) => (
-      <Image
-        source={require('./img/notif-icon.png')}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
-    ),
-  };
-
-  render() {
-    return (
-      <Button
-        onPress={() => this.props.navigation.goBack()}
-        title="Go back home"
-      />
-    );
-  }
-}
-
-class Help extends React.Component {
-  static navigationOptions = {
-    drawerLabel: 'Help',
-    drawerIcon: ({ tintColor }) => (
-      <Image
-        source={require('./img/notif-icon.png')}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
-    ),
-  };
-
-  render() {
-    return (
-      <Button
-        onPress={() => this.props.navigation.goBack()}
-        title="Go back home"
-      />
-    );
-  }
-}
-
-class About extends React.Component {
-  static navigationOptions = {
-    drawerLabel: 'About',
-    drawerIcon: ({ tintColor }) => (
-      <Image
-        source={require('./img/notif-icon.png')}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
-    ),
-  };
-
-  render() {
-    return (
-      <Button
-        onPress={() => this.props.navigation.goBack()}
-        title="Go back home"
-      />
-    );
-  }
-}
-
-class Settings extends React.Component {
-  static navigationOptions = {
-    drawerLabel: 'Settings',
-    drawerIcon: ({ tintColor }) => (
-      <Image
-        source={require('./img/notif-icon.png')}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
-    ),
-  };
-
-  render() {
-    return (
-      <Button
-        onPress={() => this.props.navigation.goBack()}
-        title="Go back home"
-      />
-    );
-  }
-}
-
+//Styling
 const styles = StyleSheet.create({
   icon: {
     width: 24,
     height: 24,
   },
   container: {
-    paddingTop: 20
+    paddingTop: 30
   },
 });
 
+//Drawer Nav
 const MyApp = DrawerNavigator({
   Home: {
-    screen: MyHomeScreen,
+    screen: Menu,
   },
-  YourLessons: {
-    screen: YourLessons,
+  YourLessonsScreen: {
+    screen: YourLessonsScreen,
   },
-  RedeemLessons: {
-    screen: RedeemLessons,
+  RedeemLessonsScreen: {
+    screen: RedeemLessonsScreen,
   },
-  OrderLessons: {
-    screen: OrderLessons,
+  OrderLessonsScreen: {
+    screen: OrderLessonsScreen,
   },
-  Help: {
-    screen: Help,
+  HelpScreen: {
+    screen: HelpScreen,
   },
-  About: {
-    screen: About,
+  AboutScreen: {
+    screen: AboutScreen,
   },
-  Settings: {
-    screen: Settings,
+  SettingsScreen: {
+    screen: SettingsScreen,
   },
 });
-
-export default MyApp
 
 //Stack Nav
 const AppNavigation = StackNavigator({
@@ -199,11 +80,13 @@ const AppNavigation = StackNavigator({
     }
   },
   Second: {
-    screen: HomeScreen,
+    screen: YourLessonsScreen,
     navigationOptions: {
-      title: 'Home Screen',
+      title: 'Your Lessons Screen',
     }
   }
   })
+
+export default MyApp
 
 AppRegistry.registerComponent('SwingEssentials', () => MyApp);

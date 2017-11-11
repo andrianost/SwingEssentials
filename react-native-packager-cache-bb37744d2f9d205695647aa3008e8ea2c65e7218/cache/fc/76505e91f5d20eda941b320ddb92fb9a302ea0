@@ -14,41 +14,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class,
     _temp,
-    _jsxFileName = '/Users/andrianost/projects/SwingEssentials/App.js';
+    _jsxFileName = '/Users/andrianost/projects/SwingEssentials/SettingsScreen.js';
 
 var _reactNative = require('react-native');
 
-var _reactNativeElements = require('react-native-elements');
-
 var _reactNavigation = require('react-navigation');
-
-var _LoginScreen = require('./LoginScreen');
-
-var _LoginScreen2 = _interopRequireDefault(_LoginScreen);
-
-var _YourLessonsScreen = require('./YourLessonsScreen');
-
-var _YourLessonsScreen2 = _interopRequireDefault(_YourLessonsScreen);
-
-var _RedeemLessonsScreen = require('./RedeemLessonsScreen');
-
-var _RedeemLessonsScreen2 = _interopRequireDefault(_RedeemLessonsScreen);
-
-var _OrderLessonsScreen = require('./OrderLessonsScreen');
-
-var _OrderLessonsScreen2 = _interopRequireDefault(_OrderLessonsScreen);
-
-var _AboutScreen = require('./AboutScreen');
-
-var _AboutScreen2 = _interopRequireDefault(_AboutScreen);
-
-var _HelpScreen = require('./HelpScreen');
-
-var _HelpScreen2 = _interopRequireDefault(_HelpScreen);
-
-var _SettingsScreen = require('./SettingsScreen');
-
-var _SettingsScreen2 = _interopRequireDefault(_SettingsScreen);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -59,13 +29,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-  Menu: {
-    displayName: 'Menu'
+  SettingsScreen: {
+    displayName: 'SettingsScreen'
   }
 };
 
 var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-  filename: '/Users/andrianost/projects/SwingEssentials/App.js',
+  filename: '/Users/andrianost/projects/SwingEssentials/SettingsScreen.js',
   components: _components,
   locals: [module],
   imports: [_react3.default]
@@ -77,16 +47,16 @@ function _wrapComponent(id) {
   };
 }
 
-var Menu = _wrapComponent('Menu')((_temp = _class = function (_React$Component) {
-  _inherits(Menu, _React$Component);
+var SettingsScreen = _wrapComponent('SettingsScreen')((_temp = _class = function (_Component) {
+  _inherits(SettingsScreen, _Component);
 
-  function Menu() {
-    _classCallCheck(this, Menu);
+  function SettingsScreen() {
+    _classCallCheck(this, SettingsScreen);
 
-    return _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (SettingsScreen.__proto__ || Object.getPrototypeOf(SettingsScreen)).apply(this, arguments));
   }
 
-  _createClass(Menu, [{
+  _createClass(SettingsScreen, [{
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -95,39 +65,51 @@ var Menu = _wrapComponent('Menu')((_temp = _class = function (_React$Component) 
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 27
+            lineNumber: 19
           }
         },
-        _react3.default.createElement(_reactNativeElements.Button, {
-          buttonStyle: { height: 50, width: 80, backgroundColor: 'white' },
-          onPress: function onPress() {
-            return _this2.props.navigation.navigate('DrawerOpen');
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 20
+            }
           },
-          icon: { name: 'dehaze', color: 'black', size: 50 },
+          'Settings screen!'
+        ),
+        _react3.default.createElement(_reactNative.Button, {
+          title: 'Go back home',
+          onPress: function onPress() {
+            return _this2.props.navigation.goBack();
+          },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28
+            lineNumber: 21
           }
         })
       );
     }
   }]);
 
-  return Menu;
-}(_react3.default.Component), _class.navigationOptions = {
-  drawerLabel: 'Home',
+  return SettingsScreen;
+}(_react2.Component), _class.navigationOptions = {
+  drawerLabel: 'Settings',
   drawerIcon: function drawerIcon(_ref) {
     var tintColor = _ref.tintColor;
     return _react3.default.createElement(_reactNative.Image, {
-      source: require('./img/chats-icon.png'),
+      source: require('./img/notif-icon.png'),
       style: [styles.icon, { tintColor: tintColor }],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 10
       }
     });
   }
 }, _temp));
+
+exports.default = SettingsScreen;
+
 
 var styles = _reactNative.StyleSheet.create({
   icon: {
@@ -135,52 +117,11 @@ var styles = _reactNative.StyleSheet.create({
     height: 24
   },
   container: {
-    paddingTop: 30
+    alignItems: 'center',
+    paddingTop: 50
   }
 });
-
-var MyApp = (0, _reactNavigation.DrawerNavigator)({
-  Home: {
-    screen: Menu
-  },
-  YourLessonsScreen: {
-    screen: _YourLessonsScreen2.default
-  },
-  RedeemLessonsScreen: {
-    screen: _RedeemLessonsScreen2.default
-  },
-  OrderLessonsScreen: {
-    screen: _OrderLessonsScreen2.default
-  },
-  HelpScreen: {
-    screen: _HelpScreen2.default
-  },
-  AboutScreen: {
-    screen: _AboutScreen2.default
-  },
-  SettingsScreen: {
-    screen: _SettingsScreen2.default
-  }
-});
-
-var AppNavigation = (0, _reactNavigation.StackNavigator)({
-  First: {
-    screen: _LoginScreen2.default,
-    navigationOptions: {
-      title: 'Login Screen'
-    }
-  },
-  Second: {
-    screen: _YourLessonsScreen2.default,
-    navigationOptions: {
-      title: 'Your Lessons Screen'
-    }
-  }
-});
-
-exports.default = MyApp;
-
 
 _reactNative.AppRegistry.registerComponent('SwingEssentials', function () {
-  return MyApp;
+  return SettingsScreen;
 });
