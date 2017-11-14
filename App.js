@@ -67,7 +67,7 @@ const MyApp = DrawerNavigator({
     screen: AboutScreen,
   },
   SettingsScreen: {
-    screen: SettingsScreen,
+    screen: LoginScreen,
   },
 });
 

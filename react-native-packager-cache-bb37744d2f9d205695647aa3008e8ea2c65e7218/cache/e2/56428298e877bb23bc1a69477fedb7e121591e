@@ -25,9 +25,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-  Login: {
-    displayName: 'Login'
-  },
   LoginScreen: {
     displayName: 'LoginScreen'
   }
@@ -46,110 +43,107 @@ function _wrapComponent(id) {
   };
 }
 
-var Login = _wrapComponent('Login')(function (_Component) {
-  _inherits(Login, _Component);
+var values = {
+  username: '',
+  password: ''
+};
 
-  function Login(props) {
-    _classCallCheck(this, Login);
+var LoginScreen = _wrapComponent('LoginScreen')(function (_Component) {
+  _inherits(LoginScreen, _Component);
 
-    var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
+  function LoginScreen(props) {
+    _classCallCheck(this, LoginScreen);
 
-    _this.state = { username: '' };
-    _this.state = { password: '' };
+    var _this = _possibleConstructorReturn(this, (LoginScreen.__proto__ || Object.getPrototypeOf(LoginScreen)).call(this, props));
+
+    _this.state = { userData: {} };
     return _this;
   }
 
-  _createClass(Login, [{
+  _createClass(LoginScreen, [{
+    key: 'login',
+    value: function login() {
+      var _this2 = this;
+
+      fetch('http://www.josephpboyle.com/api/swingessentials.php/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: 'tandrianos',
+          password: 'iheartpenis'
+        })
+      }).then(function (response) {
+        if (response.headers.get('content-type').match(/application\/json/)) {
+          return response.json();
+        }
+        return response;
+      }).then(function (data) {
+        _this2.setState({ userData: data });
+      }).catch(function (error) {
+        console.warn(error);
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
+
+      var navigate = this.props.navigation.navigate;
+
+      console.log(this.state.userData);
+      console.log(values);
 
       return _react3.default.createElement(
         _reactNative.View,
-        { style: styles.loginView, __source: {
+        { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 14
+            lineNumber: 49
           }
         },
+        _react3.default.createElement(_reactNative.Image, { source: require('./img/SE-Logo-circle.png'), __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50
+          }
+        }),
         _react3.default.createElement(_reactNative.TextInput, {
           style: styles.loginText,
           placeholder: 'Username',
           onChangeText: function onChangeText(response) {
-            return _this2.setState({ username: response });
+            return values.username = response;
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 15
+            lineNumber: 51
           }
         }),
         _react3.default.createElement(_reactNative.TextInput, {
           style: styles.loginText,
           placeholder: 'Password',
           onChangeText: function onChangeText(response) {
-            return _this2.setState({ password: response });
+            return values.password = response;
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20
-          }
-        })
-      );
-    }
-  }]);
-
-  return Login;
-}(_react2.Component));
-
-var LoginScreen = _wrapComponent('LoginScreen')(function (_Component2) {
-  _inherits(LoginScreen, _Component2);
-
-  function LoginScreen() {
-    _classCallCheck(this, LoginScreen);
-
-    return _possibleConstructorReturn(this, (LoginScreen.__proto__ || Object.getPrototypeOf(LoginScreen)).apply(this, arguments));
-  }
-
-  _createClass(LoginScreen, [{
-    key: 'render',
-    value: function render() {
-      var _this4 = this;
-
-      var navigate = this.props.navigation.navigate;
-
-
-      return _react3.default.createElement(
-        _reactNative.View,
-        { style: styles.container, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 35
-          }
-        },
-        _react3.default.createElement(_reactNative.Image, { source: require('./img/SE-Logo-circle.png'), __source: {
-            fileName: _jsxFileName,
-            lineNumber: 36
-          }
-        }),
-        _react3.default.createElement(Login, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 37
+            lineNumber: 56
           }
         }),
         _react3.default.createElement(_reactNative.Button, {
           title: 'Sign In',
           onPress: function onPress() {
-            return _this4.props.navigation.goBack();
+            return _this3.login();
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 38
+            lineNumber: 61
           }
         }),
         _react3.default.createElement(
           _reactNative.Text,
           { style: styles.title, __source: {
               fileName: _jsxFileName,
-              lineNumber: 42
+              lineNumber: 65
             }
           },
           'Welcome to the Native Navigation Example!'
@@ -171,9 +165,6 @@ var styles = _reactNative.StyleSheet.create({
   container: {
     alignItems: 'center',
     paddingTop: 20
-  },
-  loginView: {
-    padding: 10
   },
   loginText: {
     padding: 10,

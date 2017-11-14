@@ -159,7 +159,7 @@ var MyApp = (0, _reactNavigation.DrawerNavigator)({
     screen: _AboutScreen2.default
   },
   SettingsScreen: {
-    screen: _SettingsScreen2.default
+    screen: _LoginScreen2.default
   }
 });
 

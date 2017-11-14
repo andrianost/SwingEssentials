@@ -25,5 +25,12 @@
     "react-native-elements": "^0.18.2",
     "react-native-vector-icons": "^4.4.2",
     "react-navigation": "^1.0.0-beta.19"
+  },
+  "consumedServices": {
+  "console-panel": {
+    "versions": {
+      "^1.0.0": "consumeConsolePanel"
+    }
   }
+}
 }

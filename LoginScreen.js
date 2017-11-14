@@ -1,43 +1,66 @@
 import React, { Component } from 'react';
 import { AppRegistry, View, Text, StyleSheet, Button, Image, TextInput, Alert } from 'react-native';
 
-//Username capture, password capture and login button.
-class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {username: ''};
-    this.state = {password: ''};
+const values = {
+      username: '',
+      password: ''
   }
-
-  render() {
-    return (
-      <View style={styles.loginView}>
-        <TextInput
-          style={styles.loginText}
-          placeholder="Username"
-          onChangeText={(response) => this.setState({username: response})}
-        />
-        <TextInput
-          style={styles.loginText}
-          placeholder="Password"
-          onChangeText={(response) => this.setState({password: response})}
-        />
-      </View>
-    );
-  }
-}
 
 export default class LoginScreen extends Component {
+  constructor(props) {
+      super(props);
+      this.state = { userData: {} };
+    }
+
+  // calls the API
+  login() {
+      fetch('http://www.josephpboyle.com/api/swingessentials.php/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            username: 'tandrianos',
+            password: 'iheartpenis'
+          })
+      })
+        .then((response) => {
+          // In this case, we check the content-type of the response
+          if (response.headers.get('content-type').match(/application\/json/)) {
+            return response.json();
+          }
+          return response;
+          // You can also try "return response.text();"
+        })
+              .then((data) => {
+                      this.setState({ userData : data })
+                  })
+                      .catch((error) => {
+                      console.warn(error);
+                    });
+                  };
+
   render() {
     const { navigate } = this.props.navigation;
+    console.log(this.state.userData);
+    console.log(values);
 
     return (
       <View style={styles.container}>
         <Image source={require('./img/SE-Logo-circle.png')} />
-        <Login/>
+        <TextInput
+          style={styles.loginText}
+          placeholder="Username"
+          onChangeText={(response) => values.username = response}
+        />
+        <TextInput
+          style={styles.loginText}
+          placeholder="Password"
+          onChangeText={(response) => values.password = response}
+        />
         <Button
           title="Sign In"
-          onPress={() => this.props.navigation.goBack()}
+          onPress={() => this.login()}
         />
         <Text style={styles.title}>Welcome to the Native Navigation Example!</Text>
       </View>
@@ -52,9 +75,6 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     paddingTop: 20
-  },
-  loginView: {
-    padding: 10
   },
   loginText: {
     padding: 10,
