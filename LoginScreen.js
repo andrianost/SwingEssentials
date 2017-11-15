@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { AppRegistry, View, Text, StyleSheet, Button, Image, TextInput, Alert } from 'react-native';
 
-const values = {
-      username: '',
-      password: ''
-  }
+var data = new FormData()
 
 export default class LoginScreen extends Component {
   constructor(props) {
@@ -16,13 +13,7 @@ export default class LoginScreen extends Component {
   login() {
       fetch('http://www.josephpboyle.com/api/swingessentials.php/login', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            username: 'tandrianos',
-            password: 'iheartpenis'
-          })
+        body: data
       })
         .then((response) => {
           // In this case, we check the content-type of the response
@@ -34,16 +25,16 @@ export default class LoginScreen extends Component {
         })
               .then((data) => {
                       this.setState({ userData : data })
-                  })
+              })
                       .catch((error) => {
                       console.warn(error);
-                    });
-                  };
+                      });
+          };
 
   render() {
     const { navigate } = this.props.navigation;
     console.log(this.state.userData);
-    console.log(values);
+    console.log(data);
 
     return (
       <View style={styles.container}>
@@ -51,12 +42,12 @@ export default class LoginScreen extends Component {
         <TextInput
           style={styles.loginText}
           placeholder="Username"
-          onChangeText={(response) => values.username = response}
+          onChangeText={(response) => data.append('username', response)}
         />
         <TextInput
           style={styles.loginText}
           placeholder="Password"
-          onChangeText={(response) => values.password = response}
+          onChangeText={(response) => data.append('password', response)}
         />
         <Button
           title="Sign In"
