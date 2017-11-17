@@ -71,7 +71,7 @@ class Menu extends React.Component {
         <Button
           raised
           title="Sign In"
-          onPress={() => this.login()} //this.props.navigation.navigate('Home', {user: 'Theo'})} //
+          onPress={() =>  this.props.navigation.navigate('Home', {user: 'Theo'})} //this.login()}
         />
       </View>
     );

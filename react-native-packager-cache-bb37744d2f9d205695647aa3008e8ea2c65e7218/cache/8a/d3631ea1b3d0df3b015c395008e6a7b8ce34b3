@@ -18,6 +18,8 @@ var _class,
 
 var _reactNative = require('react-native');
 
+var _reactNativeElements = require('react-native-elements');
+
 var _reactNavigation = require('react-navigation');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -29,8 +31,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-  OrderLessonsScreen: {
-    displayName: 'OrderLessonsScreen'
+  YourLessonsScreen: {
+    displayName: 'YourLessonsScreen'
   }
 };
 
@@ -47,25 +49,27 @@ function _wrapComponent(id) {
   };
 }
 
-var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')((_temp = _class = function (_Component) {
-  _inherits(OrderLessonsScreen, _Component);
+var YourLessonsScreen = _wrapComponent('YourLessonsScreen')((_temp = _class = function (_Component) {
+  _inherits(YourLessonsScreen, _Component);
 
-  function OrderLessonsScreen() {
-    _classCallCheck(this, OrderLessonsScreen);
+  function YourLessonsScreen() {
+    _classCallCheck(this, YourLessonsScreen);
 
-    return _possibleConstructorReturn(this, (OrderLessonsScreen.__proto__ || Object.getPrototypeOf(OrderLessonsScreen)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (YourLessonsScreen.__proto__ || Object.getPrototypeOf(YourLessonsScreen)).apply(this, arguments));
   }
 
-  _createClass(OrderLessonsScreen, [{
+  _createClass(YourLessonsScreen, [{
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var params = this.props.navigation.state.params;
+      var navigate = this.props.navigation.navigate;
+
 
       return _react3.default.createElement(
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 19
+            lineNumber: 33
           }
         },
         _react3.default.createElement(
@@ -73,42 +77,59 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')((_temp = _class = 
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 20
+              lineNumber: 34
             }
           },
           'Order lessons screen!'
         ),
-        _react3.default.createElement(_reactNative.Button, {
-          title: 'Go back to the menu',
-          onPress: function onPress() {
-            return _this2.props.navigation.navigate('DrawerOpen');
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 35
+            }
           },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 21
-          }
-        })
+          'Chat with ',
+          params.user
+        )
       );
     }
   }]);
 
-  return OrderLessonsScreen;
-}(_react2.Component), _class.navigationOptions = {
-  drawerLabel: 'Order Lessons',
-  drawerIcon: function drawerIcon(_ref) {
-    var tintColor = _ref.tintColor;
-    return _react3.default.createElement(_reactNative.Image, {
-      source: require('./img/ic_navigate_next_2x.png'),
-      style: [styles.icon, { tintColor: tintColor }],
+  return YourLessonsScreen;
+}(_react2.Component), _class.navigationOptions = function (_ref) {
+  var navigation = _ref.navigation;
+
+  return {
+    title: 'Swing Essentials',
+    drawerLabel: 'Order Lessons',
+    drawerIcon: function drawerIcon(_ref2) {
+      var tintColor = _ref2.tintColor;
+      return _react3.default.createElement(_reactNative.Image, {
+        source: require('./img/ic_navigate_next_2x.png'),
+        style: [styles.icon, { tintColor: tintColor }],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        }
+      });
+    },
+    headerLeft: _react3.default.createElement(_reactNativeElements.Button, {
+      icon: { name: 'dehaze', color: 'black', size: 40 },
+      buttonStyle: { height: 50, width: 80, backgroundColor: 'transparent' },
+      onPress: function onPress() {
+        return navigation.navigate('DrawerOpen');
+      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 19
       }
-    });
-  }
+    })
+  };
 }, _temp));
 
-exports.default = OrderLessonsScreen;
+exports.default = YourLessonsScreen;
 
 
 var styles = _reactNative.StyleSheet.create({

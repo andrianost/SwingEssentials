@@ -14,8 +14,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class,
     _temp,
-    _jsxFileName = '/Users/andrianost/projects/SwingEssentials/HomeScreen.js',
-    _this3 = this;
+    _jsxFileName = '/Users/andrianost/projects/SwingEssentials/HomeScreen.js';
 
 var _reactNative = require('react-native');
 
@@ -86,8 +85,6 @@ var HomeScreen = _wrapComponent('HomeScreen')((_temp = _class = function (_Compo
   _createClass(HomeScreen, [{
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       var params = this.props.navigation.state.params;
       var navigate = this.props.navigation.navigate;
 
@@ -96,7 +93,7 @@ var HomeScreen = _wrapComponent('HomeScreen')((_temp = _class = function (_Compo
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 33
+            lineNumber: 40
           }
         },
         _react3.default.createElement(
@@ -104,7 +101,7 @@ var HomeScreen = _wrapComponent('HomeScreen')((_temp = _class = function (_Compo
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 34
+              lineNumber: 41
             }
           },
           'Home screen!'
@@ -114,22 +111,12 @@ var HomeScreen = _wrapComponent('HomeScreen')((_temp = _class = function (_Compo
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 35
+              lineNumber: 42
             }
           },
           'Chat with ',
           params.user
-        ),
-        _react3.default.createElement(_reactNativeElements.Button, {
-          title: 'Go to the menu',
-          onPress: function onPress() {
-            return _this2.props.navigation.navigate('DrawerOpen');
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 36
-          }
-        })
+        )
       );
     }
   }]);
@@ -140,14 +127,27 @@ var HomeScreen = _wrapComponent('HomeScreen')((_temp = _class = function (_Compo
 
   return {
     title: 'Swing Essentials',
+    drawerLabel: 'Home',
+    drawerIcon: function drawerIcon(_ref2) {
+      var tintColor = _ref2.tintColor;
+      return _react3.default.createElement(_reactNative.Image, {
+        source: require('./img/ic_navigate_next_2x.png'),
+        style: [styles.icon, { tintColor: tintColor }],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        }
+      });
+    },
     headerLeft: _react3.default.createElement(_reactNativeElements.Button, {
       icon: { name: 'dehaze', color: 'black', size: 40 },
       buttonStyle: { height: 50, width: 80, backgroundColor: 'transparent' },
       onPress: function onPress() {
-        return _this3.props.navigation.navigate('DrawerOpen');
-      }, __source: {
+        return navigation.navigate('DrawerOpen');
+      },
+      __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 25
       }
     })
   };

@@ -18,6 +18,8 @@ var _class,
 
 var _reactNative = require('react-native');
 
+var _reactNativeElements = require('react-native-elements');
+
 var _reactNavigation = require('react-navigation');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -59,13 +61,15 @@ var HelpScreen = _wrapComponent('HelpScreen')((_temp = _class = function (_Compo
   _createClass(HelpScreen, [{
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var params = this.props.navigation.state.params;
+      var navigate = this.props.navigation.navigate;
+
 
       return _react3.default.createElement(
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 19
+            lineNumber: 33
           }
         },
         _react3.default.createElement(
@@ -73,39 +77,56 @@ var HelpScreen = _wrapComponent('HelpScreen')((_temp = _class = function (_Compo
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 20
+              lineNumber: 34
             }
           },
           'Help screen!'
         ),
-        _react3.default.createElement(_reactNative.Button, {
-          title: 'Go back to the menu',
-          onPress: function onPress() {
-            return _this2.props.navigation.navigate('DrawerOpen');
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 35
+            }
           },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 21
-          }
-        })
+          'Chat with ',
+          params.user
+        )
       );
     }
   }]);
 
   return HelpScreen;
-}(_react2.Component), _class.navigationOptions = {
-  drawerLabel: 'Help',
-  drawerIcon: function drawerIcon(_ref) {
-    var tintColor = _ref.tintColor;
-    return _react3.default.createElement(_reactNative.Image, {
-      source: require('./img/ic_navigate_next_2x.png'),
-      style: [styles.icon, { tintColor: tintColor }],
+}(_react2.Component), _class.navigationOptions = function (_ref) {
+  var navigation = _ref.navigation;
+
+  return {
+    title: 'Swing Essentials',
+    drawerLabel: 'Help',
+    drawerIcon: function drawerIcon(_ref2) {
+      var tintColor = _ref2.tintColor;
+      return _react3.default.createElement(_reactNative.Image, {
+        source: require('./img/ic_navigate_next_2x.png'),
+        style: [styles.icon, { tintColor: tintColor }],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        }
+      });
+    },
+    headerLeft: _react3.default.createElement(_reactNativeElements.Button, {
+      icon: { name: 'dehaze', color: 'black', size: 40 },
+      buttonStyle: { height: 50, width: 80, backgroundColor: 'transparent' },
+      onPress: function onPress() {
+        return navigation.navigate('DrawerOpen');
+      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 19
       }
-    });
-  }
+    })
+  };
 }, _temp));
 
 exports.default = HelpScreen;

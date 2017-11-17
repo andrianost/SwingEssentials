@@ -14,11 +14,18 @@ class HomeScreen extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
       title: 'Swing Essentials',
+      drawerLabel: 'Home',
+      drawerIcon: ({ tintColor }) => (
+        <Image
+          source={require('./img/ic_navigate_next_2x.png')}
+          style={[styles.icon, {tintColor: tintColor}]}
+        />
+      ),
       headerLeft: (
         <Button
           icon={{name: 'dehaze', color: 'black', size: 40}}
           buttonStyle={{height: 50, width: 80, backgroundColor: 'transparent'}}
-          onPress={() => this.props.navigation.navigate('DrawerOpen')} // This does not work
+          onPress={() => navigation.navigate('DrawerOpen')}
         />
       ),
     };
@@ -33,10 +40,6 @@ class HomeScreen extends Component {
       <View style={styles.container}>
         <Text>Home screen!</Text>
         <Text>Chat with {params.user}</Text>
-        <Button
-          title="Go to the menu"
-          onPress={() => this.props.navigation.navigate('DrawerOpen')}
-        />
       </View>
     );
   }

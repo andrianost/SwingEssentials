@@ -175,7 +175,7 @@ var Menu = _wrapComponent('Menu')(function (_React$Component) {
           raised: true,
           title: 'Sign In',
           onPress: function onPress() {
-            return _this3.login();
+            return _this3.props.navigation.navigate('Home', { user: 'Theo' });
           }, __source: {
             fileName: _jsxFileName,
             lineNumber: 71

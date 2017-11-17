@@ -1,27 +1,38 @@
 import React, { Component } from 'react';
-import { AppRegistry, View, Text, StyleSheet, Button, Image } from 'react-native';
+import { AppRegistry, StyleSheet, Image, View, Text } from 'react-native';
+import { Button, FormInput, FormLabel } from 'react-native-elements'
 import { DrawerNavigator } from 'react-navigation';
 
 
 export default class YourLessonsScreen extends Component {
-  static navigationOptions = {
-    drawerLabel: 'Your Lessons',
-    drawerIcon: ({ tintColor }) => (
-      <Image
-        source={require('./img/ic_navigate_next_2x.png')}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
-    ),
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: 'Swing Essentials',
+      drawerLabel: 'Your Lessons',
+      drawerIcon: ({ tintColor }) => (
+        <Image
+          source={require('./img/ic_navigate_next_2x.png')}
+          style={[styles.icon, {tintColor: tintColor}]}
+        />
+      ),
+      headerLeft: (
+        <Button
+          icon={{name: 'dehaze', color: 'black', size: 40}}
+          buttonStyle={{height: 50, width: 80, backgroundColor: 'transparent'}}
+          onPress={() => navigation.navigate('DrawerOpen')}
+        />
+      ),
+    };
   };
 
   render() {
+    const { params } = this.props.navigation.state;
+    const { navigate } = this.props.navigation;
+
     return (
       <View style={styles.container}>
         <Text>Your lessons screen!</Text>
-        <Button
-          title="Go back to the menu"
-          onPress={() => this.props.navigation.navigate('DrawerOpen')}
-        />
+        <Text>Chat with {params.user}</Text>
       </View>
     );
   }
