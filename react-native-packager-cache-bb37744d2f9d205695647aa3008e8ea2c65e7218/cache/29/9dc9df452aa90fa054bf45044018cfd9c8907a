@@ -79,9 +79,9 @@ var AboutScreen = _wrapComponent('AboutScreen')((_temp = _class = function (_Com
           'About screen!'
         ),
         _react3.default.createElement(_reactNative.Button, {
-          title: 'Go back home',
+          title: 'Go back to the menu',
           onPress: function onPress() {
-            return _this2.props.navigation.goBack();
+            return _this2.props.navigation.navigate('DrawerOpen');
           },
           __source: {
             fileName: _jsxFileName,
@@ -98,7 +98,7 @@ var AboutScreen = _wrapComponent('AboutScreen')((_temp = _class = function (_Com
   drawerIcon: function drawerIcon(_ref) {
     var tintColor = _ref.tintColor;
     return _react3.default.createElement(_reactNative.Image, {
-      source: require('./img/notif-icon.png'),
+      source: require('./img/ic_navigate_next_2x.png'),
       style: [styles.icon, { tintColor: tintColor }],
       __source: {
         fileName: _jsxFileName,

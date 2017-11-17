@@ -8,7 +8,7 @@ export default class RedeemLessonsScreen extends Component {
     drawerLabel: 'Redeem Lessons',
     drawerIcon: ({ tintColor }) => (
       <Image
-        source={require('./img/notif-icon.png')}
+        source={require('./img/ic_navigate_next_2x.png')}
         style={[styles.icon, {tintColor: tintColor}]}
       />
     ),
@@ -19,8 +19,8 @@ export default class RedeemLessonsScreen extends Component {
       <View style={styles.container}>
         <Text>Redeem lessons screen!</Text>
         <Button
-          title="Go back home"
-          onPress={() => this.props.navigation.goBack()}
+          title="Go back to the menu"
+          onPress={() => this.props.navigation.navigate('DrawerOpen')}
         />
       </View>
     );

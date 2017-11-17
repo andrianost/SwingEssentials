@@ -10,11 +10,21 @@ var _index = require('./node_modules/react-transform-hmr/lib/index.js');
 
 var _index2 = _interopRequireDefault(_index);
 
-var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/LoginScreen.js';
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _class,
+    _temp,
+    _jsxFileName = '/Users/andrianost/projects/SwingEssentials/LoginScreen.js';
+
 var _reactNative = require('react-native');
+
+var _reactNativeElements = require('react-native-elements');
+
+var _reactNavigation = require('react-navigation');
+
+var _YourLessonsScreen = require('./YourLessonsScreen');
+
+var _YourLessonsScreen2 = _interopRequireDefault(_YourLessonsScreen);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45,7 +55,7 @@ function _wrapComponent(id) {
 
 var data = new FormData();
 
-var LoginScreen = _wrapComponent('LoginScreen')(function (_Component) {
+var LoginScreen = _wrapComponent('LoginScreen')((_temp = _class = function (_Component) {
   _inherits(LoginScreen, _Component);
 
   function LoginScreen(props) {
@@ -84,46 +94,34 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_Component) {
       var navigate = this.props.navigation.navigate;
 
       console.log(this.state.userData);
-      console.log(data);
+      console.log(this.state.userData.status);
 
       return _react3.default.createElement(
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 40
+            lineNumber: 49
           }
         },
         _react3.default.createElement(_reactNative.Image, { source: require('./img/SE-Logo-circle.png'), __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 50
           }
         }),
-        _react3.default.createElement(_reactNative.TextInput, {
-          style: styles.loginText,
-          placeholder: 'Username',
+        _react3.default.createElement(
+          _reactNativeElements.FormLabel,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 51
+            }
+          },
+          'Username'
+        ),
+        _react3.default.createElement(_reactNativeElements.FormInput, {
+          placeholder: 'Please enter your username',
           onChangeText: function onChangeText(response) {
             return data.append('username', response);
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 42
-          }
-        }),
-        _react3.default.createElement(_reactNative.TextInput, {
-          style: styles.loginText,
-          placeholder: 'Password',
-          onChangeText: function onChangeText(response) {
-            return data.append('password', response);
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 47
-          }
-        }),
-        _react3.default.createElement(_reactNative.Button, {
-          title: 'Sign In',
-          onPress: function onPress() {
-            return _this3.login();
           },
           __source: {
             fileName: _jsxFileName,
@@ -131,23 +129,53 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_Component) {
           }
         }),
         _react3.default.createElement(
-          _reactNative.Text,
-          { style: styles.title, __source: {
+          _reactNativeElements.FormLabel,
+          {
+            __source: {
               fileName: _jsxFileName,
               lineNumber: 56
             }
           },
-          'Welcome to the Native Navigation Example!'
-        )
+          'Password'
+        ),
+        _react3.default.createElement(_reactNativeElements.FormInput, {
+          secureTextEntry: true,
+          placeholder: 'Please enter your password',
+          onChangeText: function onChangeText(response) {
+            return data.append('password', response);
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57
+          }
+        }),
+        _react3.default.createElement(_reactNativeElements.Button, {
+          raised: true,
+          title: 'Sign In',
+          onPress: function onPress() {
+            return _this3.props.navigation.navigate('DrawerOpen');
+          }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62
+          }
+        })
       );
     }
   }]);
 
   return LoginScreen;
-}(_react2.Component));
+}(_react2.Component), _class.navigationOptions = {
+  title: 'Test'
+}, _temp));
 
 exports.default = LoginScreen;
 
+
+var AppNavigation = (0, _reactNavigation.StackNavigator)({
+  YourLessonsScreen: {
+    screen: _YourLessonsScreen2.default
+  }
+});
 
 var styles = _reactNative.StyleSheet.create({
   title: {

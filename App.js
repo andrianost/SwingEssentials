@@ -1,39 +1,82 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Image, View } from 'react-native';
-import { Button } from 'react-native-elements'
-import { StackNavigator, DrawerNavigator } from 'react-navigation';
-import LoginScreen from './LoginScreen';
+import { AppRegistry, StyleSheet, Image, View, Alert } from 'react-native';
+import { Button, FormInput, FormLabel } from 'react-native-elements'
+import { StackNavigator } from 'react-navigation';
 import YourLessonsScreen from './YourLessonsScreen';
 import RedeemLessonsScreen from './RedeemLessonsScreen';
 import OrderLessonsScreen from './OrderLessonsScreen';
 import AboutScreen from './AboutScreen';
 import HelpScreen from './HelpScreen';
 import SettingsScreen from './SettingsScreen';
+import HomeScreen from './HomeScreen';
+
+
+var data = new FormData()
 
 //Launching drawer menu
 class Menu extends React.Component {
-  static navigationOptions = {
-    drawerLabel: 'Home',
-    drawerIcon: ({ tintColor }) => (
-      <Image
-        source={require('./img/chats-icon.png')}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
-    ),
-  };
+  constructor(props) {
+      super(props);
+      this.state = { userData: {} };
+    }
+
+  // calls the API
+  login() {
+      fetch('http://www.josephpboyle.com/api/swingessentials.php/login', {
+        method: 'POST',
+        body: data
+      })
+        .then((response) => {
+          if (response.ok) {
+            console.log('success');
+            response.json()
+            .then((json) => this.setState({ userData : json }))
+            this.props.navigation.navigate('Home', {user: 'Theo'})
+          }
+          else {
+            console.log('error');
+          }})
+        .catch((error) => console.error(error));
+        }
+
+
+//          this.setState({ userData : response })})
+//        .catch((error) => {console.warn(error)})
+
+//        if (this.state.userData.status === 200) {
+//          this.props.navigation.navigate('Home', {user: 'Theo'})}
+//        else {
+//            Alert.alert('Incorrect login')
+//          }
+//}
 
   render() {
+    //const { navigate } = this.props.navigation;
+    console.log(this.state.userData);
+
     return (
       <View style={styles.container}>
-      <Button
-        buttonStyle={{height: 50, width: 80, backgroundColor: 'white'}}
-        onPress={() => this.props.navigation.navigate('DrawerOpen')}
-        icon={{name: 'dehaze', color: 'black', size: 50}}
-      />
+        <Image source={require('./img/SE-Logo-circle.png')} />
+        <FormLabel>Username</FormLabel>
+        <FormInput
+          placeholder="Please enter your username"
+          onChangeText={(response) => data.append('username', response)}
+          />
+        <FormLabel>Password</FormLabel>
+          <FormInput
+            secureTextEntry={true}
+            placeholder="Please enter your password"
+            onChangeText={(response) => data.append('password', response)}
+            />
+        <Button
+          raised
+          title="Sign In"
+          onPress={() => this.login()} //this.props.navigation.navigate('Home', {user: 'Theo'})} //
+        />
       </View>
     );
   }
-}
+  }
 
 //Styling
 const styles = StyleSheet.create({
@@ -46,10 +89,13 @@ const styles = StyleSheet.create({
   },
 });
 
-//Drawer Nav
-const MyApp = DrawerNavigator({
-  Home: {
+//Nav
+const StackNav = StackNavigator({
+  Login: {
     screen: Menu,
+  },
+  Home: {
+    screen: HomeScreen,
   },
   YourLessonsScreen: {
     screen: YourLessonsScreen,
@@ -67,26 +113,10 @@ const MyApp = DrawerNavigator({
     screen: AboutScreen,
   },
   SettingsScreen: {
-    screen: LoginScreen,
+    screen: SettingsScreen,
   },
 });
 
-//Stack Nav
-const AppNavigation = StackNavigator({
-  First: {
-    screen: LoginScreen,
-    navigationOptions: {
-      title: 'Login Screen',
-    }
-  },
-  Second: {
-    screen: YourLessonsScreen,
-    navigationOptions: {
-      title: 'Your Lessons Screen',
-    }
-  }
-  })
+export default StackNav
 
-export default MyApp
-
-AppRegistry.registerComponent('SwingEssentials', () => MyApp);
+AppRegistry.registerComponent('SwingEssentials', () => StackNav);
