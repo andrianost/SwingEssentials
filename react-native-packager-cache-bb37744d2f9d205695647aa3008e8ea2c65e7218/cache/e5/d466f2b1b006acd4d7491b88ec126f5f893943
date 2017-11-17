@@ -122,12 +122,12 @@ var Menu = _wrapComponent('Menu')(function (_React$Component) {
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 58
+            lineNumber: 47
           }
         },
         _react3.default.createElement(_reactNative.Image, { source: require('./img/SE-Logo-circle.png'), __source: {
             fileName: _jsxFileName,
-            lineNumber: 59
+            lineNumber: 48
           }
         }),
         _react3.default.createElement(
@@ -135,7 +135,7 @@ var Menu = _wrapComponent('Menu')(function (_React$Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 60
+              lineNumber: 49
             }
           },
           'Username'
@@ -147,7 +147,7 @@ var Menu = _wrapComponent('Menu')(function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 50
           }
         }),
         _react3.default.createElement(
@@ -155,7 +155,7 @@ var Menu = _wrapComponent('Menu')(function (_React$Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 65
+              lineNumber: 54
             }
           },
           'Password'
@@ -168,7 +168,7 @@ var Menu = _wrapComponent('Menu')(function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66
+            lineNumber: 55
           }
         }),
         _react3.default.createElement(_reactNativeElements.Button, {
@@ -178,7 +178,7 @@ var Menu = _wrapComponent('Menu')(function (_React$Component) {
             return _this3.props.navigation.navigate('Home', { user: 'Theo' });
           }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 71
+            lineNumber: 60
           }
         })
       );

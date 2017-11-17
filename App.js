@@ -39,17 +39,6 @@ class Menu extends React.Component {
         .catch((error) => console.error(error));
         }
 
-
-//          this.setState({ userData : response })})
-//        .catch((error) => {console.warn(error)})
-
-//        if (this.state.userData.status === 200) {
-//          this.props.navigation.navigate('Home', {user: 'Theo'})}
-//        else {
-//            Alert.alert('Incorrect login')
-//          }
-//}
-
   render() {
     //const { navigate } = this.props.navigation;
     console.log(this.state.userData);

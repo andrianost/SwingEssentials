@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Image, View, Text } from 'react-native';
+import { AppRegistry, StyleSheet, Image, View, Text, Alert } from 'react-native';
 import { Button, FormInput, FormLabel } from 'react-native-elements'
 import { DrawerNavigator } from 'react-navigation';
 import YourLessonsScreen from './YourLessonsScreen';
@@ -38,8 +38,23 @@ class HomeScreen extends Component {
     return (
 
       <View style={styles.container}>
-        <Text>Home screen!</Text>
-        <Text>Chat with {params.user}</Text>
+      <View style={styles.container}>
+        <Button
+          raised
+          title="Redeem a Lesson"
+          buttonStyle={styles.CircleShapeView}
+          onPress={() => this.props.navigation.navigate('RedeemLessonsScreen')}
+        />
+      </View>
+
+      <View style={styles.container}>
+        <Button
+          raised
+          title="Order a Lesson"
+          buttonStyle={styles.CircleShapeView}
+          onPress={() => this.props.navigation.navigate('OrderLessonsScreen')}
+        />
+      </View>
       </View>
     );
   }
@@ -53,7 +68,13 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     paddingTop: 50
-  }
+  },
+  CircleShapeView: {
+    width: 150,
+    height: 150,
+    borderRadius: 150/2,
+    backgroundColor: '#00BCD4'
+  },
 });
 
 //Nav
