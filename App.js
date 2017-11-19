@@ -27,17 +27,34 @@ class Menu extends React.Component {
         body: data
       })
         .then((response) => {
-          if (response.ok) {
-            console.log('success');
-            response.json()
-            .then((json) => this.setState({ userData : json }))
-            this.props.navigation.navigate('Home', {user: 'Theo'})
+          switch(response.status) {
+            case 200:
+              console.log('200 OK');
+              response.json()
+              .then((json) => this.setState({ userData : json }))
+              this.props.navigation.navigate('Home', {user: 'Theo'})
+              break;
+            case 400:
+              console.log('400 Bad Request');
+              break;
+            case 401:
+                console.log('401 Unauthorized');
+                break;
+            case 403:
+                console.log('403 Forbidden');
+                break;
+            case 404:
+                console.log('404 Not Found');
+                break;
+            case 500:
+                console.log('500 Internal Server Error');
+                break;
+            default:
+              console.log('Other Error: ' + response.status)
           }
-          else {
-            console.log('error');
-          }})
+        })
         .catch((error) => console.error(error));
-        }
+      }
 
   render() {
     //const { navigate } = this.props.navigation;
