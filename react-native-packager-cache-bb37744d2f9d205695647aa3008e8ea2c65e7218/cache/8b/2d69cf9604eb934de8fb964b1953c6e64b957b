@@ -6,21 +6,29 @@ var _react2 = require('react');
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require('./node_modules/react-transform-hmr/lib/index.js');
+var _index = require('./../node_modules/react-transform-hmr/lib/index.js');
 
 var _index2 = _interopRequireDefault(_index);
 
+var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/screens/OrderLessonsScreen.js';
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _class,
-    _temp,
-    _jsxFileName = '/Users/andrianost/projects/SwingEssentials/OrderLessonsScreen.js';
+var _redux = require('redux');
+
+var _reactNavigation = require('react-navigation');
+
+var _reactRedux = require('react-redux');
+
+var _actions = require('../actions/actions.js');
+
+var Actions = _interopRequireWildcard(_actions);
 
 var _reactNative = require('react-native');
 
 var _reactNativeElements = require('react-native-elements');
 
-var _reactNavigation = require('react-navigation');
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31,13 +39,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-  YourLessonsScreen: {
-    displayName: 'YourLessonsScreen'
+  OrderLessonsScreen: {
+    displayName: 'OrderLessonsScreen'
   }
 };
 
 var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-  filename: '/Users/andrianost/projects/SwingEssentials/OrderLessonsScreen.js',
+  filename: '/Users/andrianost/projects/SwingEssentials/screens/OrderLessonsScreen.js',
   components: _components,
   locals: [module],
   imports: [_react3.default]
@@ -49,36 +57,41 @@ function _wrapComponent(id) {
   };
 }
 
-var YourLessonsScreen = _wrapComponent('YourLessonsScreen')((_temp = _class = function (_Component) {
-  _inherits(YourLessonsScreen, _Component);
+function mapStateToProps(state) {
+  return {
+    username: state.userData.username
+  };
+}
+function mapDispatchToProps(dispatch) {
+  return (0, _redux.bindActionCreators)(Actions, dispatch);
+}
 
-  function YourLessonsScreen(props) {
-    _classCallCheck(this, YourLessonsScreen);
+var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Component) {
+  _inherits(OrderLessonsScreen, _Component);
 
-    return _possibleConstructorReturn(this, (YourLessonsScreen.__proto__ || Object.getPrototypeOf(YourLessonsScreen)).call(this, props));
+  function OrderLessonsScreen() {
+    _classCallCheck(this, OrderLessonsScreen);
+
+    return _possibleConstructorReturn(this, (OrderLessonsScreen.__proto__ || Object.getPrototypeOf(OrderLessonsScreen)).apply(this, arguments));
   }
 
-  _createClass(YourLessonsScreen, [{
+  _createClass(OrderLessonsScreen, [{
     key: 'render',
     value: function render() {
       var _this2 = this;
-
-      var params = this.props.navigation.state.params;
-      var navigate = this.props.navigation.navigate;
-
 
       return _react3.default.createElement(
         _reactNative.View,
         { style: styles.buttonContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 37
+            lineNumber: 23
           }
         },
         _react3.default.createElement(
           _reactNative.View,
           { style: styles.title, __source: {
               fileName: _jsxFileName,
-              lineNumber: 38
+              lineNumber: 24
             }
           },
           _react3.default.createElement(
@@ -86,7 +99,7 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')((_temp = _class = fu
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 39
+                lineNumber: 25
               }
             },
             'Order a lesson'
@@ -96,7 +109,7 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')((_temp = _class = fu
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 40
+                lineNumber: 26
               }
             },
             '3 packages available'
@@ -112,7 +125,7 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')((_temp = _class = fu
             return _this2.props.navigation.navigate('Home', { user: 'Theo' });
           }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 42
+            lineNumber: 28
           }
         }),
         _react3.default.createElement(_reactNativeElements.Button, {
@@ -125,7 +138,7 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')((_temp = _class = fu
             return _this2.props.navigation.navigate('Home', { user: 'Theo' });
           }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 50
+            lineNumber: 36
           }
         }),
         _react3.default.createElement(_reactNativeElements.Button, {
@@ -138,47 +151,15 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')((_temp = _class = fu
             return _this2.props.navigation.navigate('Home', { user: 'Theo' });
           }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 58
+            lineNumber: 44
           }
         })
       );
     }
   }]);
 
-  return YourLessonsScreen;
-}(_react2.Component), _class.navigationOptions = function (_ref) {
-  var navigation = _ref.navigation;
-
-  return {
-    title: 'Swing Essentials',
-    drawerLabel: 'Order Lessons',
-    drawerIcon: function drawerIcon(_ref2) {
-      var tintColor = _ref2.tintColor;
-      return _react3.default.createElement(_reactNative.Image, {
-        source: require('./img/ic_navigate_next_2x.png'),
-        style: [styles.icon, { tintColor: tintColor }],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17
-        }
-      });
-    },
-    headerLeft: _react3.default.createElement(_reactNativeElements.Button, {
-      icon: { name: 'dehaze', color: 'black', size: 40 },
-      buttonStyle: { height: 50, width: 80, backgroundColor: 'transparent' },
-      onPress: function onPress() {
-        return navigation.navigate('DrawerOpen');
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 23
-      }
-    })
-  };
-}, _temp));
-
-exports.default = YourLessonsScreen;
-
+  return OrderLessonsScreen;
+}(_react2.Component));
 
 var styles = _reactNative.StyleSheet.create({
   icon: {
@@ -220,6 +201,4 @@ var styles = _reactNative.StyleSheet.create({
   }
 });
 
-_reactNative.AppRegistry.registerComponent('SwingEssentials', function () {
-  return OrderLessonsScreen;
-});
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(OrderLessonsScreen);

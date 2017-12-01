@@ -6,7 +6,7 @@ var _react2 = require('react');
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require('./node_modules/react-transform-hmr/lib/index.js');
+var _index = require('./../node_modules/react-transform-hmr/lib/index.js');
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -14,7 +14,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class,
     _temp,
-    _jsxFileName = '/Users/andrianost/projects/SwingEssentials/OrderLessonsScreen.js';
+    _jsxFileName = '/Users/andrianost/projects/SwingEssentials/Screens/OrderLessonsScreen.js';
 
 var _reactNative = require('react-native');
 
@@ -37,7 +37,7 @@ var _components = {
 };
 
 var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-  filename: '/Users/andrianost/projects/SwingEssentials/OrderLessonsScreen.js',
+  filename: '/Users/andrianost/projects/SwingEssentials/Screens/OrderLessonsScreen.js',
   components: _components,
   locals: [module],
   imports: [_react3.default]

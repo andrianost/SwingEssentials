@@ -1,0 +1,401 @@
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.AppNavigator = undefined;
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./../node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/navigators/AppNavigator.js';
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactRedux = require('react-redux');
+
+var _reactNavigation = require('react-navigation');
+
+var _reactNative = require('react-native');
+
+var _MaterialIcons = require('@expo/vector-icons/MaterialIcons');
+
+var _MaterialIcons2 = _interopRequireDefault(_MaterialIcons);
+
+var _navigationRoutes = require('../config/navigationRoutes.js');
+
+var _navigationRoutes2 = _interopRequireDefault(_navigationRoutes);
+
+var _HomeScreen = require('../screens/HomeScreen.js');
+
+var _HomeScreen2 = _interopRequireDefault(_HomeScreen);
+
+var _YourLessonsScreen = require('../screens/YourLessonsScreen.js');
+
+var _YourLessonsScreen2 = _interopRequireDefault(_YourLessonsScreen);
+
+var _RedeemLessonsScreen = require('../screens/RedeemLessonsScreen.js');
+
+var _RedeemLessonsScreen2 = _interopRequireDefault(_RedeemLessonsScreen);
+
+var _OrderLessonsScreen = require('../screens/OrderLessonsScreen.js');
+
+var _OrderLessonsScreen2 = _interopRequireDefault(_OrderLessonsScreen);
+
+var _AboutScreen = require('../screens/AboutScreen.js');
+
+var _AboutScreen2 = _interopRequireDefault(_AboutScreen);
+
+var _HelpScreen = require('../screens/HelpScreen.js');
+
+var _HelpScreen2 = _interopRequireDefault(_HelpScreen);
+
+var _SettingsScreen = require('../screens/SettingsScreen.js');
+
+var _SettingsScreen2 = _interopRequireDefault(_SettingsScreen);
+
+var _LoginScreen = require('../screens/LoginScreen.js');
+
+var _LoginScreen2 = _interopRequireDefault(_LoginScreen);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+    AppWithNavigationState: {
+        displayName: 'AppWithNavigationState'
+    }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: '/Users/andrianost/projects/SwingEssentials/navigators/AppNavigator.js',
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+    return function (Component) {
+        return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+}
+
+function mapStateToProps(state) {
+    return {
+        username: state.userData.username
+    };
+}
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators(Actions, dispatch);
+}
+
+var DrawerContent = function DrawerContent(props) {
+    return _react3.default.createElement(
+        _reactNative.View,
+        {
+            __source: {
+                fileName: _jsxFileName,
+                lineNumber: 29
+            }
+        },
+        _react3.default.createElement(
+            _reactNative.View,
+            {
+                style: {
+                    backgroundColor: '#f50057',
+                    height: 140,
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                },
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 30
+                }
+            },
+            _react3.default.createElement(
+                _reactNative.Text,
+                { style: { color: 'white', fontSize: 30 }, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 38
+                    }
+                },
+                'Header'
+            )
+        ),
+        _react3.default.createElement(_reactNavigation.DrawerItems, _extends({}, props, {
+            __source: {
+                fileName: _jsxFileName,
+                lineNumber: 42
+            }
+        }))
+    );
+};
+
+var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)({
+    Login: {
+        screen: _LoginScreen2.default,
+        navigationOptions: true ? {
+            drawerLabel: function drawerLabel() {
+                return null;
+            } } : {}
+    },
+    Home: {
+        screen: (0, _reactNavigation.StackNavigator)({
+            Home: {
+                screen: _HomeScreen2.default,
+                navigationOptions: function navigationOptions(_ref) {
+                    var navigation = _ref.navigation;
+                    return {
+                        title: 'Home',
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                                return navigation.navigate('DrawerOpen');
+                            }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 60
+                            }
+                        })
+                    };
+                }
+            }
+        }),
+        navigationOptions: {
+            drawerLabel: 'Home',
+            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 66
+                }
+            })
+        }
+    },
+
+    YourLessons: {
+        screen: (0, _reactNavigation.StackNavigator)({
+            YourLessons: {
+                screen: _YourLessonsScreen2.default,
+                navigationOptions: function navigationOptions(_ref2) {
+                    var navigation = _ref2.navigation;
+                    return {
+                        title: 'Your Lessons',
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                                return navigation.navigate('DrawerOpen');
+                            }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 77
+                            }
+                        })
+                    };
+                }
+            }
+        }, {
+            initialRouteName: 'YourLessons',
+            contentOptions: { activeTintColor: '#e91e63' }
+        }),
+        navigationOptions: {
+            drawerLabel: 'Your Lessons',
+            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 94
+                }
+            })
+        }
+    },
+    RedeemLessons: {
+        screen: (0, _reactNavigation.StackNavigator)({
+            RedeemLessons: {
+                screen: _RedeemLessonsScreen2.default,
+                navigationOptions: function navigationOptions(_ref3) {
+                    var navigation = _ref3.navigation;
+                    return {
+                        title: 'Redeem Lessons',
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                                return navigation.navigate('DrawerOpen');
+                            }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 103
+                            }
+                        })
+                    };
+                }
+            }
+        }, {
+            initialRouteName: 'RedeemLessons',
+            contentOptions: { activeTintColor: '#e91e63' }
+        }),
+        navigationOptions: {
+            drawerLabel: 'Redeem Lessons',
+            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 112
+                }
+            })
+        }
+    },
+    OrderLessons: {
+        screen: (0, _reactNavigation.StackNavigator)({
+            OrderLessons: {
+                screen: _OrderLessonsScreen2.default,
+                navigationOptions: function navigationOptions(_ref4) {
+                    var navigation = _ref4.navigation;
+                    return {
+                        title: 'Order Lessons',
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                                return navigation.navigate('DrawerOpen');
+                            }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 121
+                            }
+                        })
+                    };
+                }
+            }
+        }),
+        navigationOptions: {
+            drawerLabel: 'Order Lessons',
+            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 135
+                }
+            })
+        }
+    },
+
+    Help: {
+        screen: (0, _reactNavigation.StackNavigator)({
+            HelpScreen: {
+                screen: _HelpScreen2.default,
+                navigationOptions: function navigationOptions(_ref5) {
+                    var navigation = _ref5.navigation;
+                    return {
+                        title: 'Help',
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                                return navigation.navigate('DrawerOpen');
+                            }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 145
+                            }
+                        })
+                    };
+                }
+            }
+        }),
+        navigationOptions: {
+            drawerLabel: 'Help',
+            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 151
+                }
+            })
+        }
+    },
+    About: {
+        screen: (0, _reactNavigation.StackNavigator)({
+            AboutScreen: {
+                screen: _AboutScreen2.default,
+                navigationOptions: function navigationOptions(_ref6) {
+                    var navigation = _ref6.navigation;
+                    return {
+                        title: 'About',
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                                return navigation.navigate('DrawerOpen');
+                            }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 160
+                            }
+                        })
+                    };
+                }
+            }
+        }),
+        navigationOptions: {
+            drawerLabel: 'About',
+            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 166
+                }
+            })
+        }
+    },
+    Settings: {
+        screen: (0, _reactNavigation.StackNavigator)({
+            SettingsScreen: {
+                screen: _SettingsScreen2.default,
+                navigationOptions: function navigationOptions(_ref7) {
+                    var navigation = _ref7.navigation;
+                    return {
+                        title: 'Settings',
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                                return navigation.navigate('DrawerOpen');
+                            }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 175
+                            }
+                        })
+                    };
+                }
+            }
+        }),
+        navigationOptions: {
+            drawerLabel: 'Settings',
+            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 181
+                }
+            })
+        }
+    }
+}, {
+    contentComponent: DrawerContent
+}, {
+    initialRouteName: 'Login',
+    contentOptions: { activeTintColor: '#e91e63' }
+});
+
+var AppWithNavigationState = _wrapComponent('AppWithNavigationState')(function (_React$Component) {
+    _inherits(AppWithNavigationState, _React$Component);
+
+    function AppWithNavigationState() {
+        _classCallCheck(this, AppWithNavigationState);
+
+        return _possibleConstructorReturn(this, (AppWithNavigationState.__proto__ || Object.getPrototypeOf(AppWithNavigationState)).apply(this, arguments));
+    }
+
+    _createClass(AppWithNavigationState, [{
+        key: 'render',
+        value: function render() {
+            return _react3.default.createElement(AppNavigator, {
+                navigation: (0, _reactNavigation.addNavigationHelpers)({
+                    dispatch: this.props.dispatch,
+                    state: this.props.nav
+                }),
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 205
+                }
+            });
+        }
+    }]);
+
+    return AppWithNavigationState;
+}(_react3.default.Component));
+
+var mapStateToProps = function mapStateToProps(state) {
+    return {
+        nav: state.nav
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(AppWithNavigationState);

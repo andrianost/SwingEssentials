@@ -1,0 +1,200 @@
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./../node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/screens/LoginScreen.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _redux = require('redux');
+
+var _reactNavigation = require('react-navigation');
+
+var _reactRedux = require('react-redux');
+
+var _actions = require('../actions/actions.js');
+
+var Actions = _interopRequireWildcard(_actions);
+
+var _reactNative = require('react-native');
+
+var _reactNativeElements = require('react-native-elements');
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+    LoginScreen: {
+        displayName: 'LoginScreen'
+    }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: '/Users/andrianost/projects/SwingEssentials/screens/LoginScreen.js',
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+    return function (Component) {
+        return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+}
+
+function mapStateToProps(state) {
+    return {
+        username: state.userData.username,
+        loginFails: state.login.failCount,
+        token: state.login.token
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return (0, _redux.bindActionCreators)(Actions, dispatch);
+}
+
+var LoginScreen = _wrapComponent('LoginScreen')(function (_React$Component) {
+    _inherits(LoginScreen, _React$Component);
+
+    function LoginScreen(props) {
+        _classCallCheck(this, LoginScreen);
+
+        var _this = _possibleConstructorReturn(this, (LoginScreen.__proto__ || Object.getPrototypeOf(LoginScreen)).call(this, props));
+
+        _this.state = {
+            username: '',
+            password: ''
+        };
+        return _this;
+    }
+
+    _createClass(LoginScreen, [{
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            if (nextProps.username) {
+                this.props.navigation.navigate('Home');
+            } else {
+                this.setState({ password: '' });
+            }
+        }
+    }, {
+        key: '_onLogin',
+        value: function _onLogin() {
+            this.props.requestLogin({ username: this.state.username, password: this.state.password });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react3.default.createElement(
+                _reactNative.View,
+                { style: styles.container, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 52
+                    }
+                },
+                _react3.default.createElement(_reactNative.Image, { source: require('./img/SE-Logo-circle.png'), __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 53
+                    }
+                }),
+                _react3.default.createElement(
+                    _reactNativeElements.FormLabel,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 54
+                        }
+                    },
+                    'Username'
+                ),
+                _react3.default.createElement(_reactNativeElements.FormInput, {
+                    value: this.state.username,
+                    placeholder: 'Please enter your username',
+                    onChangeText: function onChangeText(newText) {
+                        return _this2.setState({ username: newText });
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 55
+                    }
+                }),
+                _react3.default.createElement(
+                    _reactNativeElements.FormLabel,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 60
+                        }
+                    },
+                    'Password'
+                ),
+                _react3.default.createElement(_reactNativeElements.FormInput, {
+                    value: this.state.password,
+                    secureTextEntry: true,
+                    placeholder: 'Please enter your password',
+                    onChangeText: function onChangeText(newText) {
+                        return _this2.setState({ password: newText });
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 61
+                    }
+                }),
+                this.props.loginFails > 0 && _react3.default.createElement(
+                    _reactNativeElements.FormValidationMessage,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 67
+                        }
+                    },
+                    'The username/password you entered was not correct.'
+                ),
+                _react3.default.createElement(_reactNativeElements.Button, {
+                    raised: true,
+                    title: 'Sign In',
+                    disabled: !this.state.username || !this.state.password,
+                    onPress: this._onLogin.bind(this),
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 68
+                    }
+                })
+            );
+        }
+    }]);
+
+    return LoginScreen;
+}(_react3.default.Component));
+
+;
+
+var styles = _reactNative.StyleSheet.create({
+    icon: {
+        width: 24,
+        height: 24
+    },
+    container: {
+        paddingTop: 30
+    }
+});
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(LoginScreen);

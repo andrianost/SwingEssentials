@@ -1,0 +1,57 @@
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.store = exports.initialStore = undefined;
+
+var _redux = require('redux');
+
+var _reducers = require('../reducers/reducers.js');
+
+var _reducers2 = _interopRequireDefault(_reducers);
+
+var _reduxThunk = require('redux-thunk');
+
+var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var initialStore = exports.initialStore = {
+    userData: {
+        username: '',
+        firstName: '',
+        lastName: '',
+        email: ''
+    },
+
+    settings: {
+        avatar: '',
+        handedness: 'right',
+        camera: {
+            delay: 5,
+            duration: 8,
+            overlay: false
+        }
+    },
+
+    credits: {
+        count: 0,
+        albatross: false,
+        albatrossExpires: 0
+    },
+
+    lessons: {
+        pending: [],
+        closed: []
+    },
+
+    packages: [],
+
+    login: {
+        token: null,
+        failCount: 0
+    },
+
+    nav: null
+};
+
+var store = exports.store = (0, _redux.createStore)(_reducers2.default, initialStore, (0, _redux.applyMiddleware)(_reduxThunk2.default));

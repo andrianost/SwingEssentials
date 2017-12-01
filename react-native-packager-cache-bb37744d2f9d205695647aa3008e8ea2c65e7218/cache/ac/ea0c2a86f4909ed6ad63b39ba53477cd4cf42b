@@ -6,7 +6,7 @@ var _react2 = require('react');
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require('./node_modules/react-transform-hmr/lib/index.js');
+var _index = require('./../node_modules/react-transform-hmr/lib/index.js');
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -14,7 +14,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class,
     _temp,
-    _jsxFileName = '/Users/andrianost/projects/SwingEssentials/OrderLessonsScreen.js';
+    _jsxFileName = '/Users/andrianost/projects/SwingEssentials/Screens/HelpScreen.js';
 
 var _reactNative = require('react-native');
 
@@ -31,13 +31,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-  YourLessonsScreen: {
-    displayName: 'YourLessonsScreen'
+  HelpScreen: {
+    displayName: 'HelpScreen'
   }
 };
 
 var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-  filename: '/Users/andrianost/projects/SwingEssentials/OrderLessonsScreen.js',
+  filename: '/Users/andrianost/projects/SwingEssentials/Screens/HelpScreen.js',
   components: _components,
   locals: [module],
   imports: [_react3.default]
@@ -49,109 +49,61 @@ function _wrapComponent(id) {
   };
 }
 
-var YourLessonsScreen = _wrapComponent('YourLessonsScreen')((_temp = _class = function (_Component) {
-  _inherits(YourLessonsScreen, _Component);
+var HelpScreen = _wrapComponent('HelpScreen')((_temp = _class = function (_Component) {
+  _inherits(HelpScreen, _Component);
 
-  function YourLessonsScreen(props) {
-    _classCallCheck(this, YourLessonsScreen);
+  function HelpScreen() {
+    _classCallCheck(this, HelpScreen);
 
-    return _possibleConstructorReturn(this, (YourLessonsScreen.__proto__ || Object.getPrototypeOf(YourLessonsScreen)).call(this, props));
+    return _possibleConstructorReturn(this, (HelpScreen.__proto__ || Object.getPrototypeOf(HelpScreen)).apply(this, arguments));
   }
 
-  _createClass(YourLessonsScreen, [{
+  _createClass(HelpScreen, [{
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       var params = this.props.navigation.state.params;
       var navigate = this.props.navigation.navigate;
 
 
       return _react3.default.createElement(
         _reactNative.View,
-        { style: styles.buttonContainer, __source: {
+        { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 37
+            lineNumber: 33
           }
         },
         _react3.default.createElement(
-          _reactNative.View,
-          { style: styles.title, __source: {
+          _reactNative.Text,
+          {
+            __source: {
               fileName: _jsxFileName,
-              lineNumber: 38
+              lineNumber: 34
             }
           },
-          _react3.default.createElement(
-            _reactNative.Text,
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 39
-              }
-            },
-            'Order a lesson'
-          ),
-          _react3.default.createElement(
-            _reactNative.Text,
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 40
-              }
-            },
-            '3 packages available'
-          )
+          'Help screen!'
         ),
-        _react3.default.createElement(_reactNativeElements.Button, {
-          large: true,
-          iconRight: { name: 'dehaze', color: 'black', size: 40 },
-          buttonStyle: styles.button1,
-          raised: true,
-          title: 'Par: 1 Lesson $14.99',
-          onPress: function onPress() {
-            return _this2.props.navigation.navigate('Home', { user: 'Theo' });
-          }, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 42
-          }
-        }),
-        _react3.default.createElement(_reactNativeElements.Button, {
-          large: true,
-          iconRight: { name: 'dehaze', color: 'black', size: 40 },
-          buttonStyle: styles.button2,
-          raised: true,
-          title: 'Eagle: 5 Lessons $39.99',
-          onPress: function onPress() {
-            return _this2.props.navigation.navigate('Home', { user: 'Theo' });
-          }, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 50
-          }
-        }),
-        _react3.default.createElement(_reactNativeElements.Button, {
-          large: true,
-          iconRight: { name: 'dehaze', color: 'black', size: 40 },
-          buttonStyle: styles.button3,
-          raised: true,
-          title: 'Albatrose: Unlimited $59.99',
-          onPress: function onPress() {
-            return _this2.props.navigation.navigate('Home', { user: 'Theo' });
-          }, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 58
-          }
-        })
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 35
+            }
+          },
+          'Chat with ',
+          params.user
+        )
       );
     }
   }]);
 
-  return YourLessonsScreen;
+  return HelpScreen;
 }(_react2.Component), _class.navigationOptions = function (_ref) {
   var navigation = _ref.navigation;
 
   return {
     title: 'Swing Essentials',
-    drawerLabel: 'Order Lessons',
+    drawerLabel: 'Help',
     drawerIcon: function drawerIcon(_ref2) {
       var tintColor = _ref2.tintColor;
       return _react3.default.createElement(_reactNative.Image, {
@@ -159,7 +111,7 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')((_temp = _class = fu
         style: [styles.icon, { tintColor: tintColor }],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 13
         }
       });
     },
@@ -171,13 +123,13 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')((_temp = _class = fu
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 19
       }
     })
   };
 }, _temp));
 
-exports.default = YourLessonsScreen;
+exports.default = HelpScreen;
 
 
 var styles = _reactNative.StyleSheet.create({
@@ -188,38 +140,9 @@ var styles = _reactNative.StyleSheet.create({
   container: {
     alignItems: 'center',
     paddingTop: 50
-  },
-  buttonContainer: {
-    alignItems: 'center'
-  },
-  title: {
-    width: 400,
-    height: 120,
-    alignItems: 'center'
-  },
-  button1: {
-    width: 400,
-    height: 120,
-    backgroundColor: 'grey',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  button2: {
-    width: 400,
-    height: 120,
-    backgroundColor: 'blue',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  button3: {
-    width: 400,
-    height: 120,
-    backgroundColor: 'green',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
   }
 });
 
 _reactNative.AppRegistry.registerComponent('SwingEssentials', function () {
-  return OrderLessonsScreen;
+  return HelpScreen;
 });

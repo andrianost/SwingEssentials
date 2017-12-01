@@ -1,0 +1,56 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reactNavigation = require('react-navigation');
+
+var _YourLessonsScreen = require('../screens/YourLessonsScreen');
+
+var _YourLessonsScreen2 = _interopRequireDefault(_YourLessonsScreen);
+
+var _RedeemLessonsScreen = require('../screens/RedeemLessonsScreen');
+
+var _RedeemLessonsScreen2 = _interopRequireDefault(_RedeemLessonsScreen);
+
+var _OrderLessonsScreen = require('../screens/OrderLessonsScreen');
+
+var _OrderLessonsScreen2 = _interopRequireDefault(_OrderLessonsScreen);
+
+var _AboutScreen = require('../screens/AboutScreen');
+
+var _AboutScreen2 = _interopRequireDefault(_AboutScreen);
+
+var _HelpScreen = require('../screens/HelpScreen');
+
+var _HelpScreen2 = _interopRequireDefault(_HelpScreen);
+
+var _SettingsScreen = require('../screens/SettingsScreen');
+
+var _SettingsScreen2 = _interopRequireDefault(_SettingsScreen);
+
+var _HomeScreen = require('../screens/HomeScreen');
+
+var _HomeScreen2 = _interopRequireDefault(_HomeScreen);
+
+var _LoginScreen = require('../screens/LoginScreen');
+
+var _LoginScreen2 = _interopRequireDefault(_LoginScreen);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var AppRoutes = (0, _reactNavigation.DrawerNavigator)({
+  Home: { screen: _HomeScreen2.default },
+  YourLessonsScreen: { screen: _YourLessonsScreen2.default },
+  RedeemLessonsScreen: { screen: _RedeemLessonsScreen2.default },
+  OrderLessonsScreen: { screen: _OrderLessonsScreen2.default },
+  HelpScreen: { screen: _HelpScreen2.default },
+  AboutScreen: { screen: _AboutScreen2.default },
+  SettingsScreen: { screen: _SettingsScreen2.default }
+}, { initialRouteName: 'Home' });
+
+var Routes = {
+  Login: { screen: _LoginScreen2.default },
+  App: { screen: AppRoutes }
+};
+
+exports.default = Routes;
