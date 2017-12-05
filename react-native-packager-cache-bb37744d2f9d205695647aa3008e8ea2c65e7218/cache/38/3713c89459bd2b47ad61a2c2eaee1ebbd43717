@@ -1,0 +1,141 @@
+'use strict';
+
+var easingTypes = require('tween-functions');
+
+var DEFAULT_STACK_BEHAVIOR = 'ADDITIVE';
+var DEFAULT_EASING = easingTypes.easeInOutQuad;
+var DEFAULT_DURATION = 300;
+var DEFAULT_DELAY = 0;
+
+function returnState(state) {
+  return state;
+}
+
+var tweenState = {
+  easingTypes: easingTypes,
+  stackBehavior: {
+    ADDITIVE: 'ADDITIVE',
+    DESTRUCTIVE: 'DESTRUCTIVE'
+  }
+};
+
+tweenState.Mixin = {
+  getInitialState: function getInitialState() {
+    return {
+      tweenQueue: []
+    };
+  },
+
+  tweenState: function tweenState(a, b, c) {
+    if (typeof a === 'string') {
+      c = b;
+      b = a;
+      a = returnState;
+    }
+    this._tweenState(a, b, c);
+  },
+
+  _tweenState: function _tweenState(stateRefFunc, stateName, config) {
+    var state = this._pendingState || this.state;
+    var stateRef = stateRefFunc(state);
+
+    var newConfig = {
+      easing: config.easing || DEFAULT_EASING,
+      duration: config.duration == null ? DEFAULT_DURATION : config.duration,
+      delay: config.delay == null ? DEFAULT_DELAY : config.delay,
+      beginValue: config.beginValue == null ? stateRef[stateName] : config.beginValue,
+      endValue: config.endValue,
+      onEnd: config.onEnd,
+      stackBehavior: config.stackBehavior || DEFAULT_STACK_BEHAVIOR
+    };
+
+    var newTweenQueue = state.tweenQueue;
+    if (newConfig.stackBehavior === tweenState.stackBehavior.DESTRUCTIVE) {
+      newTweenQueue = state.tweenQueue.filter(function (item) {
+        return item.stateName !== stateName || item.stateRefFunc(state) !== stateRef;
+      });
+    }
+
+    newTweenQueue.push({
+      stateRefFunc: stateRefFunc,
+      stateName: stateName,
+      config: newConfig,
+      initTime: Date.now() + newConfig.delay
+    });
+
+    stateRef[stateName] = newConfig.endValue;
+
+    this.setState({ tweenQueue: newTweenQueue });
+
+    if (newTweenQueue.length === 1) {
+      this.startRaf();
+    }
+  },
+
+  getTweeningValue: function getTweeningValue(a, b) {
+    if (typeof a === 'string') {
+      b = a;
+      a = returnState;
+    }
+    return this._getTweeningValue(a, b);
+  },
+
+  _getTweeningValue: function _getTweeningValue(stateRefFunc, stateName) {
+    var state = this.state;
+    var stateRef = stateRefFunc(state);
+    var tweeningValue = stateRef[stateName];
+    var now = Date.now();
+
+    for (var i = 0; i < state.tweenQueue.length; i++) {
+      var item = state.tweenQueue[i];
+      var itemStateRef = item.stateRefFunc(state);
+      if (item.stateName !== stateName || itemStateRef !== stateRef) {
+        continue;
+      }
+
+      var progressTime = now - item.initTime > item.config.duration ? item.config.duration : Math.max(0, now - item.initTime);
+
+
+      var contrib = -item.config.endValue + item.config.easing(progressTime, item.config.beginValue, item.config.endValue, item.config.duration);
+      tweeningValue += contrib;
+    }
+
+    return tweeningValue;
+  },
+
+  _rafCb: function _rafCb() {
+    var state = this.state;
+    if (state.tweenQueue.length === 0) {
+      return;
+    }
+
+    var now = Date.now();
+    var newTweenQueue = [];
+
+    for (var i = 0; i < state.tweenQueue.length; i++) {
+      var item = state.tweenQueue[i];
+      if (now - item.initTime < item.config.duration) {
+        newTweenQueue.push(item);
+      } else {
+        item.config.onEnd && item.config.onEnd();
+      }
+    }
+
+    if (!this.isMounted()) {
+      return;
+    }
+
+    this.setState({
+      tweenQueue: newTweenQueue
+    });
+
+    requestAnimationFrame(this._rafCb);
+  },
+
+  startRaf: function startRaf() {
+    requestAnimationFrame(this._rafCb);
+  }
+
+};
+
+module.exports = tweenState;

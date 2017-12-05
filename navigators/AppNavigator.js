@@ -14,15 +14,9 @@ import AboutScreen from '../screens/AboutScreen.js';
 import HelpScreen from '../screens/HelpScreen.js';
 import SettingsScreen from '../screens/SettingsScreen.js';
 import LoginScreen from '../screens/LoginScreen.js';
+import UserData from '../screens/UserData.js';
+import CameraData from '../screens/CameraData.js';
 
-function mapStateToProps(state){
-    return {
-        username: state.userData.username
-    };
-}
-function mapDispatchToProps(dispatch){
-    return bindActionCreators(Actions, dispatch);
-}
 
 const DrawerContent = (props) => {
   return (
@@ -57,8 +51,7 @@ export const AppNavigator = DrawerNavigator(
                   screen: HomeScreen,
                   navigationOptions:({ navigation }) => ({
                       title: 'Home',
-                      headerLeft: <MaterialIcons name="dehaze" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
-                  })
+                      headerLeft: <MaterialIcons name="dehaze" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>                  })
               }
             }),
             navigationOptions:{
@@ -74,7 +67,7 @@ export const AppNavigator = DrawerNavigator(
                   screen: YourLessonsScreen,
                   navigationOptions:({ navigation }) => ({
                       title: 'Your Lessons',
-                      headerLeft: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerLeft: <MaterialIcons name="dehaze" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
               // Lesson: {
@@ -100,7 +93,7 @@ export const AppNavigator = DrawerNavigator(
                   screen: RedeemLessonsScreen,
                   navigationOptions: ({ navigation }) => ({
                       title: 'Redeem Lessons',
-                      headerLeft: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerLeft: <MaterialIcons name="dehaze" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
           },{
@@ -118,7 +111,7 @@ export const AppNavigator = DrawerNavigator(
                   screen: OrderLessonsScreen,
                   navigationOptions:({ navigation }) => ({
                       title: 'Order Lessons',
-                      headerLeft: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerLeft: <MaterialIcons name="dehaze" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
               // OrderDetails: {
@@ -142,7 +135,7 @@ export const AppNavigator = DrawerNavigator(
               screen: HelpScreen,
               navigationOptions:({ navigation }) => ({
                   title: 'Help',
-                  headerLeft: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                  headerLeft: <MaterialIcons name="dehaze" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
             }
           }),
@@ -157,7 +150,7 @@ export const AppNavigator = DrawerNavigator(
               screen: AboutScreen,
               navigationOptions:({ navigation }) => ({
                   title: 'About',
-                  headerLeft: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                  headerLeft: <MaterialIcons name="dehaze" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
             }
           }),
@@ -172,9 +165,23 @@ export const AppNavigator = DrawerNavigator(
               screen: SettingsScreen,
               navigationOptions:({ navigation }) => ({
                   title: 'Settings',
-                  headerLeft: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                  headerLeft: <MaterialIcons name="dehaze" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
-            }
+            },
+            UserData: {
+                screen: UserData,
+                navigationOptions: ({ navigation }) => ({
+                    title: 'User Data',
+                    headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('SettingsScreen')}/>
+                })
+            },
+            CameraData: {
+                screen: CameraData,
+                navigationOptions: ({ navigation }) => ({
+                    title: 'Camera Data',
+                    headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('SettingsScreen')}/>
+                })
+            },
           }),
           navigationOptions: {
               drawerLabel: 'Settings',

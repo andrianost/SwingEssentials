@@ -27,7 +27,7 @@ class OrderLessonsScreen extends Component {
         </View>
         <Button
           large
-          iconRight={{name: 'dehaze', color: 'black', size: 40}}
+          iconRight={{name: 'chevron-right', color: 'black', size: 40}}
           buttonStyle={styles.button1}
           raised
           title="Par: 1 Lesson $14.99"
@@ -35,7 +35,7 @@ class OrderLessonsScreen extends Component {
         />
         <Button
           large
-          iconRight={{name: 'dehaze', color: 'black', size: 40}}
+          iconRight={{name: 'chevron-right', color: 'black', size: 40}}
           buttonStyle={styles.button2}
           raised
           title="Eagle: 5 Lessons $39.99"
@@ -43,7 +43,7 @@ class OrderLessonsScreen extends Component {
         />
         <Button
           large
-          iconRight={{name: 'dehaze', color: 'black', size: 40}}
+          iconRight={{name: 'chevron-right', color: 'black', size: 40}}
           buttonStyle={styles.button3}
           raised
           title="Albatrose: Unlimited $59.99"

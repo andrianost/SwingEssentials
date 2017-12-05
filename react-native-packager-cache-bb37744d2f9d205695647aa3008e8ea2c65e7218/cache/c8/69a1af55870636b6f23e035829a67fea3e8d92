@@ -10,9 +10,17 @@ var _index = require('./../node_modules/react-transform-hmr/lib/index.js');
 
 var _index2 = _interopRequireDefault(_index);
 
-var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/screens/SettingsScreen.js';
+var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/screens/AccordionView.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _reactNativeCollapsible = require('react-native-collapsible');
+
+var _reactNativeCollapsible2 = _interopRequireDefault(_reactNativeCollapsible);
+
+var _Accordion = require('react-native-collapsible/Accordion');
+
+var _Accordion2 = _interopRequireDefault(_Accordion);
 
 var _redux = require('redux');
 
@@ -26,8 +34,6 @@ var Actions = _interopRequireWildcard(_actions);
 
 var _reactNative = require('react-native');
 
-var _reactNativeElements = require('react-native-elements');
-
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -39,13 +45,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-  SettingsScreen: {
-    displayName: 'SettingsScreen'
+  AccordionView: {
+    displayName: 'AccordionView'
   }
 };
 
 var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-  filename: '/Users/andrianost/projects/SwingEssentials/screens/SettingsScreen.js',
+  filename: '/Users/andrianost/projects/SwingEssentials/screens/AccordionView.js',
   components: _components,
   locals: [module],
   imports: [_react3.default]
@@ -65,70 +71,110 @@ function mapStateToProps(state) {
     overlay: state.settings.camera.overlay
   };
 }
-
 function mapDispatchToProps(dispatch) {
   return (0, _redux.bindActionCreators)(Actions, dispatch);
 }
 
-var list = [{
-  title: 'User Data',
-  page: 'UserData'
+var SECTIONS = [{
+  title: 'Swing',
+  content: 'Handed '
 }, {
-  title: 'Camera Data',
-  page: 'CameraData'
+  title: 'Camera',
+  content: 'Duration'
 }];
 
-var SettingsScreen = _wrapComponent('SettingsScreen')(function (_Component) {
-  _inherits(SettingsScreen, _Component);
+var AccordionView = _wrapComponent('AccordionView')(function (_Component) {
+  _inherits(AccordionView, _Component);
 
-  function SettingsScreen() {
-    _classCallCheck(this, SettingsScreen);
+  function AccordionView() {
+    _classCallCheck(this, AccordionView);
 
-    return _possibleConstructorReturn(this, (SettingsScreen.__proto__ || Object.getPrototypeOf(SettingsScreen)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (AccordionView.__proto__ || Object.getPrototypeOf(AccordionView)).apply(this, arguments));
   }
 
-  _createClass(SettingsScreen, [{
+  _createClass(AccordionView, [{
+    key: '_renderHeader',
+    value: function _renderHeader(section) {
+      return _react3.default.createElement(
+        _reactNative.View,
+        { style: styles.header, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38
+          }
+        },
+        _react3.default.createElement(
+          _reactNative.Text,
+          { style: styles.headerText, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 39
+            }
+          },
+          section.title,
+          ' '
+        )
+      );
+    }
+  }, {
+    key: '_renderContent',
+    value: function _renderContent(section) {
+      return _react3.default.createElement(
+        _reactNative.View,
+        { style: styles.content, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 46
+          }
+        },
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 47
+            }
+          },
+          this.props.handedness
+        )
+      );
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       return _react3.default.createElement(
-        _reactNativeElements.List,
+        _reactNative.View,
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 54
           }
         },
-        list.map(function (item, i) {
-          return _react3.default.createElement(_reactNativeElements.ListItem, {
-            key: i,
-            title: item.title,
-            onPress: function onPress() {
-              return _this2.props.navigation.navigate(item.page);
-            },
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 44
+              lineNumber: 55
             }
-          });
+          },
+          'Handedness: ',
+          this.props.handedness
+        ),
+        _react3.default.createElement(_Accordion2.default, {
+          sections: SECTIONS,
+          renderHeader: this._renderHeader.bind(this),
+          renderContent: this._renderContent.bind(this),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56
+          }
         })
       );
     }
   }]);
 
-  return SettingsScreen;
+  return AccordionView;
 }(_react2.Component));
 
 var styles = _reactNative.StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24
-  },
-  container: {
-    alignItems: 'center',
-    paddingTop: 50
-  },
   header: {
     width: 400,
     height: 120,
@@ -144,4 +190,4 @@ var styles = _reactNative.StyleSheet.create({
   }
 });
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(SettingsScreen);
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(AccordionView);

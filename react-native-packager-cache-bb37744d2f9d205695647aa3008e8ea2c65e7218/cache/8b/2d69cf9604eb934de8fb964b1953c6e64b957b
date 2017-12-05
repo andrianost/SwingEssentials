@@ -117,7 +117,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
         ),
         _react3.default.createElement(_reactNativeElements.Button, {
           large: true,
-          iconRight: { name: 'dehaze', color: 'black', size: 40 },
+          iconRight: { name: 'chevron-right', color: 'black', size: 40 },
           buttonStyle: styles.button1,
           raised: true,
           title: 'Par: 1 Lesson $14.99',
@@ -130,7 +130,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
         }),
         _react3.default.createElement(_reactNativeElements.Button, {
           large: true,
-          iconRight: { name: 'dehaze', color: 'black', size: 40 },
+          iconRight: { name: 'chevron-right', color: 'black', size: 40 },
           buttonStyle: styles.button2,
           raised: true,
           title: 'Eagle: 5 Lessons $39.99',
@@ -143,7 +143,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
         }),
         _react3.default.createElement(_reactNativeElements.Button, {
           large: true,
-          iconRight: { name: 'dehaze', color: 'black', size: 40 },
+          iconRight: { name: 'chevron-right', color: 'black', size: 40 },
           buttonStyle: styles.button3,
           raised: true,
           title: 'Albatrose: Unlimited $59.99',

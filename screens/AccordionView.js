@@ -1,15 +1,13 @@
 import React from 'react';
-// import Collapsible from 'react-native-collapsible';
-// import Accordion from 'react-native-collapsible/Accordion';
+import Collapsible from 'react-native-collapsible';
+import Accordion from 'react-native-collapsible/Accordion';
 import {bindActionCreators} from 'redux';
-import {NavigationActions, StackNavigator} from 'react-navigation';
+import {NavigationActions} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
-// import AccordionView from '../screens/AccordionView.js';
 import { Component } from 'react';
 import { StyleSheet, TouchableHighlight, View, Text } from 'react-native';
-import { Button, List, ListItem } from 'react-native-elements'
 
 function mapStateToProps(state){
     return {
@@ -19,49 +17,53 @@ function mapStateToProps(state){
         overlay: state.settings.camera.overlay,
     };
 }
-
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }
 
-const list = [
+const SECTIONS = [
   {
-    title: 'User Data',
-    page: 'UserData',
+    title: 'Swing',
+    content: 'Handed ',
   },
   {
-    title: 'Camera Data',
-    page: 'CameraData'
-  },
-]
+    title: 'Camera',
+    content: 'Duration',
+  }
+];
 
-class SettingsScreen extends Component {
+class AccordionView extends Component {
+  _renderHeader(section) {
+    return (
+      <View style={styles.header}>
+        <Text style={styles.headerText}>{section.title} </Text>
+      </View>
+    );
+  }
+
+  _renderContent(section) {
+    return (
+      <View style={styles.content}>
+        <Text>{this.props.handedness}</Text>
+      </View>
+    );
+  }
+
   render() {
     return (
-      <List>
-        {
-          list.map((item, i) => (
-            <ListItem
-              key={i}
-              title={item.title}
-              onPress={() =>  this.props.navigation.navigate(item.page)}
-            />
-          ))
-        }
-      </List>
+      <View>
+      <Text>Handedness: {this.props.handedness}</Text>
+      <Accordion
+        sections={SECTIONS}
+        renderHeader={this._renderHeader.bind(this)}
+        renderContent={this._renderContent.bind(this)}
+      />
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24,
-  },
-  container: {
-    alignItems: 'center',
-    paddingTop: 50
-  },
   header: {
     width: 400,
     height: 120,
@@ -78,4 +80,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SettingsScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(AccordionView);

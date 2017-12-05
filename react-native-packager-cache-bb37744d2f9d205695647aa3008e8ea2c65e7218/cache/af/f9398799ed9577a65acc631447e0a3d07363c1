@@ -1,0 +1,211 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./../../react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/node_modules/react-native-togglebox/src/index.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactNative = require('react-native');
+
+var _MaterialIcons = require('@expo/vector-icons/MaterialIcons');
+
+var _MaterialIcons2 = _interopRequireDefault(_MaterialIcons);
+
+var _reactStyleProptype = require('react-style-proptype');
+
+var _reactStyleProptype2 = _interopRequireDefault(_reactStyleProptype);
+
+var _styles = require('./styles.js');
+
+var _styles2 = _interopRequireDefault(_styles);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  ToggleBox: {
+    displayName: 'ToggleBox'
+  }
+};
+
+var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/Users/andrianost/projects/SwingEssentials/node_modules/react-native-togglebox/src/index.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _reactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var ToggleBox = _wrapComponent('ToggleBox')(function (_Component) {
+  _inherits(ToggleBox, _Component);
+
+  function ToggleBox(props) {
+    _classCallCheck(this, ToggleBox);
+
+    var _this = _possibleConstructorReturn(this, (ToggleBox.__proto__ || Object.getPrototypeOf(ToggleBox)).call(this, props));
+
+    _this.toggle = function () {
+      var initialValue = _this.state.expanded ? _this.state.maxHeight + _this.state.minHeight : _this.state.minHeight;
+      var finalValue = _this.state.expanded ? _this.state.minHeight : _this.state.minHeight + _this.state.maxHeight;
+
+      _this.setState({
+        expanded: !_this.state.expanded
+      });
+
+      _this.state.animation.setValue(initialValue);
+      _reactNative.Animated.spring(_this.state.animation, {
+        toValue: finalValue,
+        bounciness: 0
+      }).start();
+    };
+
+    _this.setMaxHeight = function (event) {
+      if (!_this.state.maxHeight) {
+        _this.setState({
+          maxHeight: event.nativeEvent.layout.height
+        });
+      }
+    };
+
+    _this.setMinHeight = function (event) {
+      if (!_this.state.animation) {
+        _this.setState({ animation: _this.state.expanded ? new _reactNative.Animated.Value() : new _reactNative.Animated.Value(parseInt(event.nativeEvent.layout.height))
+        });
+      }
+      _this.setState({
+        minHeight: event.nativeEvent.layout.height
+      });
+    };
+
+    _this.icons = {
+      'up': _this.props.arrowUpType,
+      'down': _this.props.arrowDownType
+    };
+
+    _this.state = {
+      expanded: _this.props.expanded
+    };
+    return _this;
+  }
+
+  _createClass(ToggleBox, [{
+    key: 'render',
+    value: function render() {
+      var icon = this.icons[this.state.expanded ? 'up' : 'down'];
+
+      return _react3.default.createElement(
+        _reactNative.Animated.View,
+        { style: [_styles2.default.box, this.props.style, { height: this.state.animation }], __source: {
+            fileName: _jsxFileName,
+            lineNumber: 65
+          }
+        },
+        _react3.default.createElement(
+          _reactNative.TouchableWithoutFeedback,
+          {
+            onPress: this.toggle,
+            onLayout: this.setMinHeight,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 66
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.View,
+            { style: _styles2.default.titleContainer, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 70
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              { style: _styles2.default.label, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 71
+                }
+              },
+              this.props.label
+            ),
+            this.props.value ? _react3.default.createElement(
+              _reactNative.Text,
+              { style: _styles2.default.value, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 72
+                }
+              },
+              this.props.value
+            ) : null,
+            _react3.default.createElement(_MaterialIcons2.default, {
+              name: icon,
+              color: this.props.arrowColor,
+              style: _styles2.default.buttonImage,
+              size: this.props.arrowSize,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 73
+              }
+            })
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: _styles2.default.body, onLayout: this.setMaxHeight, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 81
+            }
+          },
+          this.props.children
+        )
+      );
+    }
+  }]);
+
+  return ToggleBox;
+}(_react2.Component));
+
+ToggleBox.propTypes = {
+  arrowColor: _propTypes2.default.string,
+  arrowSize: _propTypes2.default.number,
+  arrowDownType: _propTypes2.default.string,
+  arrowUpType: _propTypes2.default.string,
+  children: _propTypes2.default.element.isRequired,
+  expanded: _propTypes2.default.bool,
+  label: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object]).isRequired,
+  style: _reactStyleProptype2.default,
+  value: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
+};
+
+ToggleBox.defaultProps = {
+  arrowColor: 'rgb(178, 178, 178)',
+  arrowSize: 30,
+  arrowDownType: 'keyboard-arrow-down',
+  arrowUpType: 'keyboard-arrow-up',
+  expanded: false,
+  style: {},
+  value: null
+};
+
+exports.default = ToggleBox;
