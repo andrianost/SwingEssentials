@@ -1,13 +1,21 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.LOGIN_ERROR = exports.LOGIN_SUCCESS = undefined;
+exports.GET_SETTINGS_FAILURE = exports.GET_SETTINGS_SUCCESS = exports.LOGIN_ERROR = exports.LOGIN_SUCCESS = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 exports.requestLogin = requestLogin;
+exports.requestSettings = requestSettings;
 
 var _store = require('../store/store.js');
 
+var _base = require('../utils/base64.js');
+
 var LOGIN_SUCCESS = exports.LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 var LOGIN_ERROR = exports.LOGIN_ERROR = 'LOGIN_ERROR';
+var GET_SETTINGS_SUCCESS = exports.GET_SETTINGS_SUCCESS = 'GET_SETTINGS_SUCCESS';
+var GET_SETTINGS_FAILURE = exports.GET_SETTINGS_FAILURE = 'GET_SETTINGS_FAILURE';
 
 function requestLogin(userCredentials) {
     return function (dispatch) {
@@ -15,14 +23,16 @@ function requestLogin(userCredentials) {
         data.append('username', userCredentials.username);
         data.append('password', userCredentials.password);
 
-        return fetch('http://www.josephpboyle.com/api/swingessentials.php/login', {
-            method: 'POST',
-            body: data
+        return fetch('http://www.josephpboyle.com/api/myapi.php/login', {
+            method: 'GET',
+            headers: { 'Authorization': 'basic ' + (0, _base.btoa)(userCredentials.username) + '.' + (0, _base.btoa)(userCredentials.password) }
         }).then(function (response) {
             switch (response.status) {
                 case 200:
                     response.json().then(function (json) {
-                        return dispatch(loginSuccess(json));
+                        return dispatch(loginSuccess(_extends({}, json, { token: response.headers.get('Token') })));
+                    }).then(function () {
+                        return dispatch(requestSettings(response.headers.get('Token')));
                     });
                     break;
                 default:
@@ -45,6 +55,42 @@ function loginSuccess(response) {
 function loginFailure(response) {
     return {
         type: LOGIN_ERROR,
+        response: response.status
+    };
+}
+
+function requestSettings(token) {
+    return function (dispatch) {
+        return fetch('http://www.josephpboyle.com/api/myapi.php/settings', {
+            method: 'GET',
+            headers: { 'Authorization': 'bearer ' + token }
+        }).then(function (response) {
+            switch (response.status) {
+                case 200:
+                    response.json().then(function (json) {
+                        return dispatch(getSettingsSuccess(json));
+                    });
+                    break;
+                default:
+                    dispatch(getSettingsFailure(response));
+                    break;
+            }
+        }).catch(function (error) {
+            return console.error(error);
+        });
+    };
+}
+
+function getSettingsSuccess(response) {
+    return {
+        type: GET_SETTINGS_SUCCESS,
+        data: response
+    };
+}
+
+function getSettingsFailure(response) {
+    return {
+        type: GET_SETTINGS_FAILURE,
         response: response.status
     };
 }

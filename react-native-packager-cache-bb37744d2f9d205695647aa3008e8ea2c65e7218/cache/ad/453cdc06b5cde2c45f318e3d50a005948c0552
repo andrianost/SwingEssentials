@@ -29,7 +29,23 @@ var settingsReducer = function settingsReducer() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 	var action = arguments[1];
 
-	return state;
+	switch (action.type) {
+		case _actions.GET_SETTINGS_SUCCESS:
+			console.log(action.data);
+			return _extends({}, state, {
+				avatar: action.data.avatar,
+				handedness: action.data.handedness,
+				camera: {
+					delay: action.data.camera.delay,
+					duration: action.data.camera.delay,
+					overlay: action.data.camera.overlay
+				}
+			});
+		case _actions.GET_SETTINGS_FAILURE:
+			return state;
+		default:
+			return state;
+	}
 };
 var creditsReducer = function creditsReducer() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
@@ -55,8 +71,9 @@ var loginReducer = function loginReducer() {
 
 	switch (action.type) {
 		case _actions.LOGIN_SUCCESS:
+			console.log(action.data);
 			return _extends({}, state, {
-				token: null,
+				token: action.data,
 				failCount: 0
 			});
 		case _actions.LOGIN_ERROR:

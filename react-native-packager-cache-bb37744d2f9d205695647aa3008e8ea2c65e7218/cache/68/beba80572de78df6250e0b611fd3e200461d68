@@ -102,13 +102,22 @@ function _wrapComponent(id) {
     };
 }
 
+function mapStateToProps(state) {
+    return {
+        username: state.userData.username
+    };
+}
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators(Actions, dispatch);
+}
+
 var DrawerContent = function DrawerContent(props) {
     return _react3.default.createElement(
         _reactNative.View,
         {
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 23
+                lineNumber: 31
             }
         },
         _react3.default.createElement(
@@ -122,14 +131,14 @@ var DrawerContent = function DrawerContent(props) {
                 },
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 24
+                    lineNumber: 32
                 }
             },
             _react3.default.createElement(
                 _reactNative.Text,
                 { style: { color: 'white', fontSize: 30 }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 32
+                        lineNumber: 40
                     }
                 },
                 'Header'
@@ -138,7 +147,7 @@ var DrawerContent = function DrawerContent(props) {
         _react3.default.createElement(_reactNavigation.DrawerItems, _extends({}, props, {
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 36
+                lineNumber: 44
             }
         }))
     );
@@ -164,7 +173,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 54
+                                lineNumber: 62
                             }
                         }) };
                 }
@@ -174,7 +183,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             drawerLabel: 'Home',
             drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 59
+                    lineNumber: 67
                 }
             })
         }
@@ -192,7 +201,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 70
+                                lineNumber: 78
                             }
                         })
                     };
@@ -206,7 +215,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             drawerLabel: 'Your Lessons',
             drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 87
+                    lineNumber: 95
                 }
             })
         }
@@ -223,7 +232,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 96
+                                lineNumber: 104
                             }
                         })
                     };
@@ -237,7 +246,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             drawerLabel: 'Redeem Lessons',
             drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 105
+                    lineNumber: 113
                 }
             })
         }
@@ -254,7 +263,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 114
+                                lineNumber: 122
                             }
                         })
                     };
@@ -265,7 +274,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             drawerLabel: 'Order Lessons',
             drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 128
+                    lineNumber: 136
                 }
             })
         }
@@ -283,7 +292,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 138
+                                lineNumber: 146
                             }
                         })
                     };
@@ -294,7 +303,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             drawerLabel: 'Help',
             drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 144
+                    lineNumber: 152
                 }
             })
         }
@@ -311,7 +320,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 153
+                                lineNumber: 161
                             }
                         })
                     };
@@ -322,7 +331,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             drawerLabel: 'About',
             drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 159
+                    lineNumber: 167
                 }
             })
         }
@@ -339,7 +348,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 168
+                                lineNumber: 176
                             }
                         })
                     };
@@ -355,7 +364,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('SettingsScreen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 175
+                                lineNumber: 183
                             }
                         })
                     };
@@ -371,7 +380,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('SettingsScreen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 182
+                                lineNumber: 190
                             }
                         })
                     };
@@ -382,7 +391,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             drawerLabel: 'Settings',
             drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 188
+                    lineNumber: 196
                 }
             })
         }
@@ -413,7 +422,7 @@ var AppWithNavigationState = _wrapComponent('AppWithNavigationState')(function (
                 }),
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 212
+                    lineNumber: 220
                 }
             });
         }

@@ -17,6 +17,14 @@ import LoginScreen from '../screens/LoginScreen.js';
 import UserData from '../screens/UserData.js';
 import CameraData from '../screens/CameraData.js';
 
+function mapStateToProps(state){
+    return {
+        username: state.userData.username
+    };
+}
+function mapDispatchToProps(dispatch){
+    return bindActionCreators(Actions, dispatch);
+}
 
 const DrawerContent = (props) => {
   return (

@@ -4,6 +4,7 @@ import {NavigationActions} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
+
 import { StyleSheet, View, TouchableHighlight, Image } from 'react-native';
 import {FormInput, FormLabel, FormValidationMessage, Button} from 'react-native-elements';
 

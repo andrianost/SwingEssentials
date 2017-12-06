@@ -107,12 +107,12 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_React$Component) {
                 _reactNative.View,
                 { style: styles.container, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 52
+                        lineNumber: 53
                     }
                 },
                 _react3.default.createElement(_reactNative.Image, { source: require('./img/SE-Logo-circle.png'), __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 53
+                        lineNumber: 54
                     }
                 }),
                 _react3.default.createElement(
@@ -120,7 +120,7 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_React$Component) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 54
+                            lineNumber: 55
                         }
                     },
                     'Username'
@@ -133,7 +133,7 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_React$Component) {
                     },
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 55
+                        lineNumber: 56
                     }
                 }),
                 _react3.default.createElement(
@@ -141,7 +141,7 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_React$Component) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 60
+                            lineNumber: 61
                         }
                     },
                     'Password'
@@ -155,7 +155,7 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_React$Component) {
                     },
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 61
+                        lineNumber: 62
                     }
                 }),
                 this.props.loginFails > 0 && _react3.default.createElement(
@@ -163,7 +163,7 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_React$Component) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 67
+                            lineNumber: 68
                         }
                     },
                     'The username/password you entered was not correct.'
@@ -175,7 +175,7 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_React$Component) {
                     onPress: this._onLogin.bind(this),
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 68
+                        lineNumber: 69
                     }
                 })
             );
