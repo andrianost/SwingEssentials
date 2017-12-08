@@ -26,6 +26,10 @@ var Actions = _interopRequireWildcard(_actions);
 
 var _reactNative = require('react-native');
 
+var _reactNativeSmartPicker = require('react-native-smart-picker');
+
+var _reactNativeSmartPicker2 = _interopRequireDefault(_reactNativeSmartPicker);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -78,22 +82,87 @@ var CameraData = _wrapComponent('CameraData')(function (_Component) {
   _createClass(CameraData, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react3.default.createElement(
-        _reactNative.View,
-        { style: styles.container, __source: {
+        _reactNative.ScrollView,
+        {
+          __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 25
           }
         },
         _react3.default.createElement(
-          _reactNative.Text,
+          _reactNativeSmartPicker2.default,
           {
+            selectedValue: this.props.duration,
+            label: 'Select your duration:',
+            onValueChange: function onValueChange() {
+              _this2.handleChange;
+            },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 25
+              lineNumber: 26
             }
           },
-          'Camera Data Screen!'
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Right', value: 'right', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 31
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Left', value: 'left', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 32
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _reactNativeSmartPicker2.default,
+          {
+            selectedValue: this.props.delay,
+            label: 'Select your delay:',
+            onValueChange: function onValueChange() {
+              _this2.handleChange;
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 34
+            }
+          },
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Right', value: 'right', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 39
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Left', value: 'left', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 40
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _reactNativeSmartPicker2.default,
+          {
+            selectedValue: this.props.overlay,
+            label: 'Select your overlay:',
+            onValueChange: function onValueChange() {
+              _this2.handleChange;
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 42
+            }
+          },
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'True', value: 'true', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 47
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'False', value: 'false', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 48
+            }
+          })
         )
       );
     }

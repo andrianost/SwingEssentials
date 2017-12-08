@@ -17,7 +17,7 @@ const userReducer = (state=[], action) => {
 const settingsReducer = (state=[], action) => {
 	switch(action.type){
 		case GET_SETTINGS_SUCCESS:
-		console.log(action.data);
+		// console.log(action.data);
 			return{...state,
 				avatar: action.data.avatar,
 				handedness: action.data.handedness,
@@ -45,9 +45,9 @@ const packagesReducer = (state=[], action) => {
 const loginReducer = (state=[], action) => {
 	switch(action.type){
 		case LOGIN_SUCCESS:
-		console.log(action.data);
+		console.log(action.data.token);
 			return{...state,
-				token: action.data,
+				token: action.data.token,
 				failCount: 0
 			}
 		case LOGIN_ERROR:

@@ -31,7 +31,6 @@ var settingsReducer = function settingsReducer() {
 
 	switch (action.type) {
 		case _actions.GET_SETTINGS_SUCCESS:
-			console.log(action.data);
 			return _extends({}, state, {
 				avatar: action.data.avatar,
 				handedness: action.data.handedness,
@@ -71,9 +70,9 @@ var loginReducer = function loginReducer() {
 
 	switch (action.type) {
 		case _actions.LOGIN_SUCCESS:
-			console.log(action.data);
+			console.log(action.data.token);
 			return _extends({}, state, {
-				token: action.data,
+				token: action.data.token,
 				failCount: 0
 			});
 		case _actions.LOGIN_ERROR:

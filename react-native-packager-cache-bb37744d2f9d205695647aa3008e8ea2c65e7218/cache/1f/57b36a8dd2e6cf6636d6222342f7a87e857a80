@@ -63,7 +63,8 @@ function _wrapComponent(id) {
 
 function mapStateToProps(state) {
   return {
-    handedness: state.settings.handedness
+    handedness: state.settings.handedness,
+    token: state.login.token
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -73,13 +74,26 @@ function mapDispatchToProps(dispatch) {
 var UserData = _wrapComponent('UserData')(function (_Component) {
   _inherits(UserData, _Component);
 
-  function UserData() {
+  function UserData(props) {
     _classCallCheck(this, UserData);
 
-    return _possibleConstructorReturn(this, (UserData.__proto__ || Object.getPrototypeOf(UserData)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (UserData.__proto__ || Object.getPrototypeOf(UserData)).call(this, props));
+
+    _this.state = {
+      handednessSelection: '',
+      bearerToken: ''
+    };
+    return _this;
   }
 
   _createClass(UserData, [{
+    key: '_onSettingsUpdate',
+    value: function _onSettingsUpdate(newSelection) {
+      this.setState({ handednessSelection: newSelection });
+      this.setState({ bearerToken: this.props.token });
+      this.props.userSettingsUpdate({ handednessSelection: newSelection, bearerToken: this.state.bearerToken });
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -89,30 +103,31 @@ var UserData = _wrapComponent('UserData')(function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25
+            lineNumber: 40
           }
         },
         _react3.default.createElement(
           _reactNativeSmartPicker2.default,
           {
-            selectedValue: this.props.handedness,
+            defaultSelectedValue: this.props.handedness,
+            selectedValue: this.state.handednessSelection,
             label: 'Select your swing:',
-            onValueChange: function onValueChange() {
-              _this2.handleChange;
+            onValueChange: function onValueChange(newSelection) {
+              return _this2._onSettingsUpdate(newSelection);
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 26
+              lineNumber: 41
             }
           },
           _react3.default.createElement(_reactNative.Picker.Item, { label: 'Right', value: 'right', __source: {
               fileName: _jsxFileName,
-              lineNumber: 31
+              lineNumber: 47
             }
           }),
           _react3.default.createElement(_reactNative.Picker.Item, { label: 'Left', value: 'left', __source: {
               fileName: _jsxFileName,
-              lineNumber: 32
+              lineNumber: 48
             }
           })
         )

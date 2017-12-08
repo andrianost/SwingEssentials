@@ -12,6 +12,7 @@ import SmartPicker from 'react-native-smart-picker'
 function mapStateToProps(state){
     return {
       handedness: state.settings.handedness,
+      token: state.login.token,
     };
 }
 function mapDispatchToProps(dispatch){
@@ -20,13 +21,28 @@ function mapDispatchToProps(dispatch){
 
 //Fix to select new value and update the store
 class UserData extends Component {
+  constructor(props){
+      super(props);
+      this.state = {
+          handednessSelection: '',
+          bearerToken: ''
+      }
+  }
+
+  _onSettingsUpdate(newSelection){
+    this.setState({handednessSelection: newSelection});
+    this.setState({bearerToken: this.props.token});
+    this.props.userSettingsUpdate({handednessSelection: newSelection, bearerToken: this.state.bearerToken});
+  }
+
   render() {
     return (
         <ScrollView>
           <SmartPicker
-            selectedValue={this.props.handedness}
+            defaultSelectedValue={this.props.handedness}
+            selectedValue={this.state.handednessSelection}
             label='Select your swing:'
-            onValueChange={() => {this.handleChange}}
+            onValueChange={ (newSelection) => this._onSettingsUpdate(newSelection)}
           >
             <Picker.Item label='Right' value='right' />
             <Picker.Item label='Left' value='left' />
