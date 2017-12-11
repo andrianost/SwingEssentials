@@ -17,33 +17,17 @@ import LoginScreen from '../screens/LoginScreen.js';
 import UserData from '../screens/UserData.js';
 import CameraData from '../screens/CameraData.js';
 
+import CustomDrawer from '../screens/CustomDrawer.js';
+
 function mapStateToProps(state){
     return {
-        username: state.userData.username
+        username: state.userData.username,
+        firstName: state.userData.firstName
     };
 }
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }
-
-const DrawerContent = (props) => {
-  return (
-  <View>
-    <View
-      style={{
-        backgroundColor: '#f50057',
-        height: 140,
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
-      <Text style={{ color: 'white', fontSize: 30 }}>
-        Header
-      </Text>
-    </View>
-    <DrawerItems {...props} />
-  </View>
-)}
 
 export const AppNavigator = DrawerNavigator(
   {
@@ -206,11 +190,9 @@ export const AppNavigator = DrawerNavigator(
       // }
   },
   {
-    contentComponent: DrawerContent,
-  },
-  {
       initialRouteName: 'Login',
-      contentOptions:{activeTintColor: '#e91e63'}
+      contentOptions:{activeTintColor: '#e91e63'},
+      contentComponent: CustomDrawer
   },
 );
 

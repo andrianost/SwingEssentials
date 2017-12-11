@@ -36,6 +36,7 @@ export function requestLogin(userCredentials){
 }
 
 function loginSuccess(response){
+    console.log(response)
     return{
         type: LOGIN_SUCCESS,
         data: response
@@ -58,7 +59,6 @@ export function requestSettings(token){
         .then((response) => {
             switch(response.status) {
                 case 200:
-                    //console.log(response.headers.get('Token'));
                     response.json()
                     .then((json) => dispatch(getSettingsSuccess(json)));
                     break;
@@ -87,42 +87,40 @@ function getSettingsFailure(response){
 
 export function userSettingsUpdate(userSettings){
   return function(dispatch){
-  console.log(userSettings.handednessSelection)
-  console.log(userSettings.bearerToken)
-    return fetch('http://www.josephpboyle.com/api/myapi.php/settings', {
+    return fetch('http://www.josephpboyle.com/api/swingessentials.php/settings', {
         method: 'PUT',
         headers: {
           'Authorization': 'bearer ' + userSettings.bearerToken,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify( {
-          'handed': userSettings.handednessSelection,
-          'camera_delay': 5,
-          'camera_duration': 5,
-          'camera_overlay': true,
+          'handed': userSettings.handedness,
+          'camera_delay': userSettings.delay,
+          'camera_duration': userSettings.duration,
+          'camera_overlay': userSettings.overlay,
           'avatar': 'test'
         })
     })
     .then((response) => {
         switch(response.status) {
             case 200:
-                console.log(response.status)
-                dispatch(putSettingsSuccess());
-                // dispatch(requestSettings(userSettings.bearerToken))
+                dispatch(putSettingsSuccess(response))
+                dispatch(requestSettings(userSettings.bearerToken))
                 break;
             default:
-                console.log(response.status)
-                dispatch(putSettingsFailure(response));
-                // dispatch(requestSettings(userSettings.bearerToken))
+                console.log(response.status);
+                console.log(userSettings.bearerToken)
+                dispatch(putSettingsFailure(response))
+                dispatch(requestSettings(userSettings.bearerToken));
                 break;
         }
     })
     .catch((error) => console.error(error));
-    //console.log(response.status)
   }
 }
 
 function putSettingsSuccess(response){
+    console.log('put success')
     return{
         type: PUT_SETTINGS_SUCCESS,
         data: response
@@ -130,6 +128,7 @@ function putSettingsSuccess(response){
 }
 
 function putSettingsFailure(response){
+    console.log('put failure')
     return{
         type: PUT_SETTINGS_FAILURE,
         response: response.status

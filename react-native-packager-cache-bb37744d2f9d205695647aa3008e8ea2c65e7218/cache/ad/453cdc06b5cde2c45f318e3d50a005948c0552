@@ -19,7 +19,10 @@ var userReducer = function userReducer() {
 	switch (action.type) {
 		case _actions.LOGIN_SUCCESS:
 			return _extends({}, state, {
-				username: action.data.personal.username
+				username: action.data.personal.username,
+				firstName: action.data.personal.first_name,
+				lastName: action.data.personal.last_name,
+				email: action.data.personal.email
 			});
 		default:
 			return state;
@@ -31,16 +34,22 @@ var settingsReducer = function settingsReducer() {
 
 	switch (action.type) {
 		case _actions.GET_SETTINGS_SUCCESS:
+			console.log(action.data);
+			console.log(action.data.handed);
 			return _extends({}, state, {
 				avatar: action.data.avatar,
-				handedness: action.data.handedness,
+				handedness: action.data.handed,
 				camera: {
 					delay: action.data.camera.delay,
-					duration: action.data.camera.delay,
+					duration: action.data.camera.duration,
 					overlay: action.data.camera.overlay
 				}
 			});
 		case _actions.GET_SETTINGS_FAILURE:
+			return state;
+		case _actions.PUT_SETTINGS_SUCCESS:
+			return state;
+		case _actions.PUT_SETTINGS_FAILURE:
 			return state;
 		default:
 			return state;
@@ -70,7 +79,6 @@ var loginReducer = function loginReducer() {
 
 	switch (action.type) {
 		case _actions.LOGIN_SUCCESS:
-			console.log(action.data.token);
 			return _extends({}, state, {
 				token: action.data.token,
 				failCount: 0

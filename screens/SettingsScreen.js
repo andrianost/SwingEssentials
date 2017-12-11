@@ -1,12 +1,9 @@
 import React from 'react';
-// import Collapsible from 'react-native-collapsible';
-// import Accordion from 'react-native-collapsible/Accordion';
 import {bindActionCreators} from 'redux';
 import {NavigationActions, StackNavigator} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
-// import AccordionView from '../screens/AccordionView.js';
 import { Component } from 'react';
 import { StyleSheet, TouchableHighlight, View, Text } from 'react-native';
 import { Button, List, ListItem } from 'react-native-elements'

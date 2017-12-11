@@ -61,9 +61,11 @@ function _wrapComponent(id) {
 
 function mapStateToProps(state) {
   return {
+    handedness: state.settings.handedness,
     duration: state.settings.camera.duration,
     delay: state.settings.camera.delay,
-    overlay: state.settings.camera.overlay
+    overlay: state.settings.camera.overlay,
+    token: state.login.token
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -73,13 +75,40 @@ function mapDispatchToProps(dispatch) {
 var CameraData = _wrapComponent('CameraData')(function (_Component) {
   _inherits(CameraData, _Component);
 
-  function CameraData() {
+  function CameraData(props) {
     _classCallCheck(this, CameraData);
 
-    return _possibleConstructorReturn(this, (CameraData.__proto__ || Object.getPrototypeOf(CameraData)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (CameraData.__proto__ || Object.getPrototypeOf(CameraData)).call(this, props));
+
+    _this.state = {
+      handedness: _this.props.handedness,
+      bearerToken: _this.props.token,
+      duration: _this.props.duration,
+      delay: _this.props.delay,
+      overlay: _this.props.overlay
+    };
+    return _this;
   }
 
   _createClass(CameraData, [{
+    key: '_onDurationUpdate',
+    value: function _onDurationUpdate(newSelection) {
+      this.setState({ duration: newSelection });
+      this.props.userSettingsUpdate({ duration: newSelection, bearerToken: this.state.bearerToken });
+    }
+  }, {
+    key: '_onDelayUpdate',
+    value: function _onDelayUpdate(newSelection) {
+      this.setState({ delay: newSelection });
+      this.props.userSettingsUpdate({ delay: newSelection, bearerToken: this.state.bearerToken });
+    }
+  }, {
+    key: '_onOverlayUpdate',
+    value: function _onOverlayUpdate(newSelection) {
+      this.setState({ overlay: newSelection });
+      this.props.userSettingsUpdate({ overlay: newSelection, bearerToken: this.state.bearerToken });
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -89,78 +118,158 @@ var CameraData = _wrapComponent('CameraData')(function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25
+            lineNumber: 53
           }
         },
         _react3.default.createElement(
           _reactNativeSmartPicker2.default,
           {
-            selectedValue: this.props.duration,
+            selectedValue: this.state.duration,
             label: 'Select your duration:',
-            onValueChange: function onValueChange() {
-              _this2.handleChange;
+            onValueChange: function onValueChange(newSelection) {
+              return _this2._onDurationUpdate(newSelection);
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 26
+              lineNumber: 54
             }
           },
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Right', value: 'right', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'One', value: '1', __source: {
               fileName: _jsxFileName,
-              lineNumber: 31
+              lineNumber: 59
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Left', value: 'left', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Two', value: '2', __source: {
               fileName: _jsxFileName,
-              lineNumber: 32
+              lineNumber: 60
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Three', value: '3', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 61
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Four', value: '4', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 62
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Five', value: '5', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 63
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Six', value: '6', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 64
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Seven', value: '7', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 65
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Eight', value: '8', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 66
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Nine', value: '9', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 67
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Ten', value: '10', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 68
             }
           })
         ),
         _react3.default.createElement(
           _reactNativeSmartPicker2.default,
           {
-            selectedValue: this.props.delay,
+            selectedValue: this.state.delay,
             label: 'Select your delay:',
-            onValueChange: function onValueChange() {
-              _this2.handleChange;
+            onValueChange: function onValueChange(newSelection) {
+              return _this2._onDelayUpdate(newSelection);
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 34
+              lineNumber: 70
             }
           },
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Right', value: 'right', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'One', value: '1', __source: {
               fileName: _jsxFileName,
-              lineNumber: 39
+              lineNumber: 75
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Left', value: 'left', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Two', value: '2', __source: {
               fileName: _jsxFileName,
-              lineNumber: 40
+              lineNumber: 76
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Three', value: '3', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 77
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Four', value: '4', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 78
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Five', value: '5', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 79
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Six', value: '6', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 80
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Seven', value: '7', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 81
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Eight', value: '8', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 82
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Nine', value: '9', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 83
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Ten', value: '10', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 84
             }
           })
         ),
         _react3.default.createElement(
           _reactNativeSmartPicker2.default,
           {
-            selectedValue: this.props.overlay,
+            selectedValue: this.state.overlay,
             label: 'Select your overlay:',
-            onValueChange: function onValueChange() {
-              _this2.handleChange;
+            onValueChange: function onValueChange(newSelection) {
+              return _this2._onOverlayUpdate(newSelection);
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 42
+              lineNumber: 86
             }
           },
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'True', value: 'true', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'True', value: true, __source: {
               fileName: _jsxFileName,
-              lineNumber: 47
+              lineNumber: 91
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'False', value: 'false', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: 'False', value: false, __source: {
               fileName: _jsxFileName,
-              lineNumber: 48
+              lineNumber: 92
             }
           })
         )
