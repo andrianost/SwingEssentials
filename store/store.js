@@ -33,7 +33,17 @@ export const initialStore = {
 
     // user's lesson history
     lessons:{
+        loading: false,
         pending:[],
+        // [
+        //   {
+        //     request_id: '',
+        //     request_date: '',
+        //     request_notes: '',
+        //     fo_swing: '',
+        //     dtl_swing: ''
+        //   }
+        // ],
         closed:[]
     },
 

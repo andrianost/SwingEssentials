@@ -7,6 +7,8 @@ export const GET_SETTINGS_SUCCESS = 'GET_SETTINGS_SUCCESS';
 export const GET_SETTINGS_FAILURE = 'GET_SETTINGS_FAILURE';
 export const PUT_SETTINGS_SUCCESS = 'PUT_SETTINGS_SUCCESS';
 export const PUT_SETTINGS_FAILURE = 'PUT_SETTINGS_FAILURE';
+export const GET_LESSONS_SUCCESS = 'GET_LESSONS_SUCCESS';
+export const GET_LESSONS_FAILURE = 'GET_LESSONS_FAILURE';
 
 export function requestLogin(userCredentials){
     return function(dispatch){
@@ -28,6 +30,7 @@ export function requestLogin(userCredentials){
                     break;
                 default:
                     dispatch(loginFailure(response));
+                    // console.log(response)
                     break;
             }
         })
@@ -36,7 +39,7 @@ export function requestLogin(userCredentials){
 }
 
 function loginSuccess(response){
-    console.log(response)
+    // console.log(response)
     return{
         type: LOGIN_SUCCESS,
         data: response
@@ -131,6 +134,45 @@ function putSettingsFailure(response){
     console.log('put failure')
     return{
         type: PUT_SETTINGS_FAILURE,
+        response: response.status
+    }
+}
+
+export function requestLessons(userLessons){
+    return function(dispatch){
+        return fetch('http://www.josephpboyle.com/api/myapi.php/lessons', {
+            method: 'GET',
+            headers: {'Authorization': 'bearer ' + userLessons.bearerToken}
+        })
+        .then((response) => {
+            switch(response.status) {
+                case 200:
+                    response.json()
+                    .then((json) => dispatch(getLessonsSuccess(json)));
+                    break;
+                default:
+                    dispatch(getLessonsFailure(response));
+                    break;
+            }
+        })
+        .catch((error) => console.error(error));
+    }
+}
+
+function getLessonsSuccess(response){
+    console.log('success')
+    // console.log(response)
+    return{
+        type: GET_LESSONS_SUCCESS,
+        data: response
+    }
+}
+
+function getLessonsFailure(response){
+    console.log('failure')
+    // console.log(response)
+    return{
+        type: GET_LESSONS_FAILURE,
         response: response.status
     }
 }

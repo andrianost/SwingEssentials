@@ -34,8 +34,6 @@ var settingsReducer = function settingsReducer() {
 
 	switch (action.type) {
 		case _actions.GET_SETTINGS_SUCCESS:
-			console.log(action.data);
-			console.log(action.data.handed);
 			return _extends({}, state, {
 				avatar: action.data.avatar,
 				handedness: action.data.handed,
@@ -65,7 +63,19 @@ var lessonsReducer = function lessonsReducer() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 	var action = arguments[1];
 
-	return state;
+	switch (action.type) {
+		case _actions.GET_LESSONS_SUCCESS:
+			return _extends({}, state, {
+				loading: false,
+				pending: action.data.pending,
+
+				closed: action.data.closed
+			});
+		case _actions.GET_LESSONS_FAILURE:
+			return state;
+		default:
+			return state;
+	}
 };
 var packagesReducer = function packagesReducer() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];

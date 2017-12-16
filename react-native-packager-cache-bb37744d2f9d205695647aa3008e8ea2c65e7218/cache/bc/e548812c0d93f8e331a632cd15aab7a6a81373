@@ -26,6 +26,8 @@ var Actions = _interopRequireWildcard(_actions);
 
 var _reactNative = require('react-native');
 
+var _reactNativeElements = require('react-native-elements');
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -57,7 +59,9 @@ function _wrapComponent(id) {
 
 function mapStateToProps(state) {
   return {
-    username: state.userData.username
+    token: state.login.token,
+    pending: state.lessons.pending,
+    closed: state.lessons.closed
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -67,32 +71,115 @@ function mapDispatchToProps(dispatch) {
 var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component) {
   _inherits(YourLessonsScreen, _Component);
 
-  function YourLessonsScreen() {
+  function YourLessonsScreen(props) {
     _classCallCheck(this, YourLessonsScreen);
 
-    return _possibleConstructorReturn(this, (YourLessonsScreen.__proto__ || Object.getPrototypeOf(YourLessonsScreen)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (YourLessonsScreen.__proto__ || Object.getPrototypeOf(YourLessonsScreen)).call(this, props));
+
+    _this.state = {
+      bearerToken: _this.props.token,
+      pending: _this.props.pending,
+      closed: _this.props.closed
+    };
+    return _this;
   }
 
   _createClass(YourLessonsScreen, [{
-    key: 'render',
-    value: function render() {
+    key: '_getLessons',
+    value: function _getLessons() {
+      this.props.requestLessons({ bearerToken: this.state.bearerToken });
+    }
+  }, {
+    key: '_renderItem',
+    value: function _renderItem(_ref) {
+      var item = _ref.item,
+          index = _ref.index;
+
+      return _react3.default.createElement(_reactNativeElements.ListItem, {
+        key: index,
+        title: item.request_date,
+        subtitle: item.request_id,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        }
+      });
+    }
+  }, {
+    key: '_pendingHeader',
+    value: function _pendingHeader() {
       return _react3.default.createElement(
-        _reactNative.View,
-        { style: styles.container, __source: {
+        _reactNative.Text,
+        {
+          __source: {
             fileName: _jsxFileName,
-            lineNumber: 23
+            lineNumber: 50
           }
         },
-        _react3.default.createElement(
-          _reactNative.Text,
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 24
-            }
+        'Pending'
+      );
+    }
+  }, {
+    key: '_closedHeader',
+    value: function _closedHeader() {
+      return _react3.default.createElement(
+        _reactNative.Text,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56
+          }
+        },
+        'Closed'
+      );
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react3.default.createElement(
+        _reactNative.View,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62
+          }
+        },
+        _react3.default.createElement(_reactNative.Button, {
+          title: 'Get Lessons',
+          onPress: function onPress() {
+            return _this2._getLessons();
           },
-          'Your lessons screen!'
-        )
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 63
+          }
+        }),
+        _react3.default.createElement(_reactNative.FlatList, {
+          data: this.props.pending,
+          keyExtractor: function keyExtractor(item) {
+            return item.request_id;
+          },
+          renderItem: this._renderItem,
+          ListHeaderComponent: this._pendingHeader,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 67
+          }
+        }),
+        _react3.default.createElement(_reactNative.FlatList, {
+          data: this.props.closed,
+          keyExtractor: function keyExtractor(item) {
+            return item.request_id;
+          },
+          renderItem: this._renderItem,
+          ListHeaderComponent: this._closedHeader,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 80
+          }
+        })
       );
     }
   }]);

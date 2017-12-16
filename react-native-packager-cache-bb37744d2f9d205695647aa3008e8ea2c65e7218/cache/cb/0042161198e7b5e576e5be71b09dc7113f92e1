@@ -40,7 +40,9 @@ var initialStore = exports.initialStore = {
     },
 
     lessons: {
+        loading: false,
         pending: [],
+
         closed: []
     },
 
