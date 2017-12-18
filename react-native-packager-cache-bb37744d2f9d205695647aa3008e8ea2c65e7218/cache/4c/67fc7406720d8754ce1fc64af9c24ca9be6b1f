@@ -10,7 +10,7 @@ var _index = require('./../node_modules/react-transform-hmr/lib/index.js');
 
 var _index2 = _interopRequireDefault(_index);
 
-var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/screens/YourLessonsScreen.js';
+var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/screens/IndividualLessonsScreen.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -19,6 +19,10 @@ var _redux = require('redux');
 var _reactNavigation = require('react-navigation');
 
 var _reactRedux = require('react-redux');
+
+var _reactNativeVideoPlayer = require('react-native-video-player');
+
+var _reactNativeVideoPlayer2 = _interopRequireDefault(_reactNativeVideoPlayer);
 
 var _actions = require('../actions/actions.js');
 
@@ -39,13 +43,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-  YourLessonsScreen: {
-    displayName: 'YourLessonsScreen'
+  IndividualLessonsScreen: {
+    displayName: 'IndividualLessonsScreen'
   }
 };
 
 var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-  filename: '/Users/andrianost/projects/SwingEssentials/screens/YourLessonsScreen.js',
+  filename: '/Users/andrianost/projects/SwingEssentials/screens/IndividualLessonsScreen.js',
   components: _components,
   locals: [module],
   imports: [_react3.default]
@@ -59,7 +63,7 @@ function _wrapComponent(id) {
 
 function mapStateToProps(state) {
   return {
-    token: state.login.token,
+    lessons: state.lessons,
     pending: state.lessons.pending,
     closed: state.lessons.closed,
     request_id: state.lessons.request_id,
@@ -71,16 +75,18 @@ function mapDispatchToProps(dispatch) {
   return (0, _redux.bindActionCreators)(Actions, dispatch);
 }
 
-var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component) {
-  _inherits(YourLessonsScreen, _Component);
+var YOUTUBE_ID = 'https://www.youtube.com/watch?v=ogaxg5J_F_8';
 
-  function YourLessonsScreen(props) {
-    _classCallCheck(this, YourLessonsScreen);
+var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function (_Component) {
+  _inherits(IndividualLessonsScreen, _Component);
 
-    var _this = _possibleConstructorReturn(this, (YourLessonsScreen.__proto__ || Object.getPrototypeOf(YourLessonsScreen)).call(this, props));
+  function IndividualLessonsScreen(props) {
+    _classCallCheck(this, IndividualLessonsScreen);
+
+    var _this = _possibleConstructorReturn(this, (IndividualLessonsScreen.__proto__ || Object.getPrototypeOf(IndividualLessonsScreen)).call(this, props));
 
     _this.state = {
-      bearerToken: _this.props.token,
+      lessons: _this.props.lessons,
       pending: _this.props.pending,
       closed: _this.props.closed,
       request_id: _this.props.request_id,
@@ -90,118 +96,70 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
     return _this;
   }
 
-  _createClass(YourLessonsScreen, [{
-    key: '_getLessons',
-    value: function _getLessons() {
-      this.props.requestLessons({ bearerToken: this.state.bearerToken });
-    }
-  }, {
-    key: '_requestID',
-    value: function _requestID(data) {
-      this.props.setRequestId(data);
-      this.props.navigation.navigate('IndividualLessonsScreen');
-    }
-  }, {
-    key: '_renderItem',
-    value: function _renderItem(_ref) {
-      var _this2 = this;
-
-      var item = _ref.item,
-          index = _ref.index;
-
-      return _react3.default.createElement(_reactNativeElements.ListItem, {
-        key: index,
-        title: item.request_date,
-        subtitle: item.request_id,
-        onPress: function onPress() {
-          return _this2._requestID({ request_id: item.request_id, request_date: item.request_date, request_url: item.request_url });
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        }
-      });
-    }
-  }, {
-    key: '_pendingHeader',
-    value: function _pendingHeader() {
-      return _react3.default.createElement(
-        _reactNative.Text,
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 61
-          }
-        },
-        'Pending'
-      );
-    }
-  }, {
-    key: '_closedHeader',
-    value: function _closedHeader() {
-      return _react3.default.createElement(
-        _reactNative.Text,
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 67
-          }
-        },
-        'Closed'
-      );
-    }
-  }, {
+  _createClass(IndividualLessonsScreen, [{
     key: 'render',
     value: function render() {
-      var _this3 = this;
-
+      console.log(this.props.request_id);
       return _react3.default.createElement(
         _reactNative.View,
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 73
+            lineNumber: 45
           }
         },
-        _react3.default.createElement(_reactNative.Button, {
-          title: 'Get Lessons',
-          onPress: function onPress() {
-            return _this3._getLessons();
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 46
+            }
           },
+          'Individual Lessons Screen'
+        ),
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 47
+            }
+          },
+          this.props.request_id
+        ),
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 48
+            }
+          },
+          this.props.request_date
+        ),
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 49
+            }
+          },
+          this.props.request_url
+        ),
+        _react3.default.createElement(_reactNativeVideoPlayer2.default, {
+          video: { uri: 'https://www.youtube.com/embed/ogaxg5J_F_8' },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 74
-          }
-        }),
-        _react3.default.createElement(_reactNative.FlatList, {
-          data: this.props.pending,
-          keyExtractor: function keyExtractor(item) {
-            return item.request_id;
-          },
-          renderItem: this._renderItem.bind(this),
-          ListHeaderComponent: this._pendingHeader,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 78
-          }
-        }),
-        _react3.default.createElement(_reactNative.FlatList, {
-          data: this.props.closed,
-          keyExtractor: function keyExtractor(item) {
-            return item.request_id;
-          },
-          renderItem: this._renderItem.bind(this),
-          ListHeaderComponent: this._closedHeader,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 91
+            lineNumber: 50
           }
         })
       );
     }
   }]);
 
-  return YourLessonsScreen;
+  return IndividualLessonsScreen;
 }(_react2.Component));
 
 var styles = _reactNative.StyleSheet.create({
@@ -215,4 +173,4 @@ var styles = _reactNative.StyleSheet.create({
   }
 });
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(YourLessonsScreen);
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(IndividualLessonsScreen);

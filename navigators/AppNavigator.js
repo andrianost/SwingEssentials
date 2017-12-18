@@ -16,6 +16,7 @@ import SettingsScreen from '../screens/SettingsScreen.js';
 import LoginScreen from '../screens/LoginScreen.js';
 import UserData from '../screens/UserData.js';
 import CameraData from '../screens/CameraData.js';
+import IndividualLessonsScreen from '../screens/IndividualLessonsScreen.js';
 
 import CustomDrawer from '../screens/CustomDrawer.js';
 
@@ -62,14 +63,13 @@ export const AppNavigator = DrawerNavigator(
                       headerLeft: <MaterialIcons name="dehaze" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
-              // Lesson: {
-              //     screen: Lesson,
-              //     path: '/lesson',
-              //     navigationOptions: ({ navigation }) => ({
-              //         title: '11-07-2017',
-              //         headerLeft: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
-              //     })
-              // }
+              IndividualLessonsScreen: {
+                  screen: IndividualLessonsScreen,
+                  navigationOptions: ({ navigation }) => ({
+                      title: 'Lessons Screen',
+                      headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('YourLessons')}/>
+                  })
+              }
           },{
               initialRouteName: 'YourLessons',
               contentOptions:{activeTintColor: '#e91e63'}

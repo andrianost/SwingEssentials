@@ -1,0 +1,731 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./../react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/node_modules/react-native-video-player/index.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactNative = require('react-native');
+
+var _MaterialIcons = require('@expo/vector-icons/MaterialIcons');
+
+var _MaterialIcons2 = _interopRequireDefault(_MaterialIcons);
+
+var _reactNativeVideo = require('react-native-video');
+
+var _reactNativeVideo2 = _interopRequireDefault(_reactNativeVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  VideoPlayer: {
+    displayName: 'VideoPlayer'
+  }
+};
+
+var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/Users/andrianost/projects/SwingEssentials/node_modules/react-native-video-player/index.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _reactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var BackgroundImage = _reactNative.ImageBackground || _reactNative.Image;
+
+var styles = _reactNative.StyleSheet.create({
+  preloadingPlaceholder: {
+    backgroundColor: 'black',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  thumbnail: {
+    backgroundColor: 'black',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  playButton: {
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  playArrow: {
+    color: 'white'
+  },
+  video: _reactNative.Platform.Version >= 24 ? {} : {
+    backgroundColor: 'black'
+  },
+  controls: {
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    height: 48,
+    marginTop: -48,
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  playControl: {
+    color: 'white',
+    padding: 8
+  },
+  extraControl: {
+    color: 'white',
+    padding: 8
+  },
+  seekBar: {
+    alignItems: 'center',
+    height: 30,
+    flexGrow: 1,
+    flexDirection: 'row',
+    paddingHorizontal: 10,
+    marginLeft: -10,
+    marginRight: -5
+  },
+  seekBarFullWidth: {
+    marginLeft: 0,
+    marginRight: 0,
+    paddingHorizontal: 0,
+    marginTop: -3,
+    height: 3
+  },
+  seekBarProgress: {
+    height: 3,
+    backgroundColor: '#F00'
+  },
+  seekBarKnob: {
+    width: 20,
+    height: 20,
+    marginHorizontal: -8,
+    marginVertical: -10,
+    borderRadius: 10,
+    backgroundColor: '#F00',
+    transform: [{ scale: 0.8 }],
+    zIndex: 1
+  },
+  seekBarBackground: {
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    height: 3
+  },
+  overlayButton: {
+    flex: 1
+  }
+});
+
+var VideoPlayer = _wrapComponent('VideoPlayer')(function (_Component) {
+  _inherits(VideoPlayer, _Component);
+
+  function VideoPlayer(props) {
+    _classCallCheck(this, VideoPlayer);
+
+    var _this = _possibleConstructorReturn(this, (VideoPlayer.__proto__ || Object.getPrototypeOf(VideoPlayer)).call(this, props));
+
+    _this.state = {
+      isStarted: props.autoplay,
+      isPlaying: props.autoplay,
+      width: 200,
+      progress: 0,
+      isMuted: props.defaultMuted,
+      isControlsVisible: !props.hideControlsOnStart,
+      duration: 0,
+      isSeeking: false
+    };
+
+    _this.seekBarWidth = 200;
+    _this.wasPlayingBeforeSeek = props.autoplay;
+    _this.seekTouchStart = 0;
+    _this.seekProgressStart = 0;
+
+    _this.onLayout = _this.onLayout.bind(_this);
+    _this.onStartPress = _this.onStartPress.bind(_this);
+    _this.onProgress = _this.onProgress.bind(_this);
+    _this.onEnd = _this.onEnd.bind(_this);
+    _this.onLoad = _this.onLoad.bind(_this);
+    _this.onPlayPress = _this.onPlayPress.bind(_this);
+    _this.onMutePress = _this.onMutePress.bind(_this);
+    _this.showControls = _this.showControls.bind(_this);
+    _this.onToggleFullScreen = _this.onToggleFullScreen.bind(_this);
+    _this.onSeekBarLayout = _this.onSeekBarLayout.bind(_this);
+    _this.onSeekGrant = _this.onSeekGrant.bind(_this);
+    _this.onSeekRelease = _this.onSeekRelease.bind(_this);
+    _this.onSeek = _this.onSeek.bind(_this);
+    return _this;
+  }
+
+  _createClass(VideoPlayer, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (this.props.autoplay) {
+        this.hideControls();
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      if (this.controlsTimeout) {
+        clearTimeout(this.controlsTimeout);
+        this.controlsTimeout = null;
+      }
+    }
+  }, {
+    key: 'onLayout',
+    value: function onLayout(event) {
+      var width = event.nativeEvent.layout.width;
+
+      this.setState({
+        width: width
+      });
+    }
+  }, {
+    key: 'onStartPress',
+    value: function onStartPress() {
+      if (this.props.onStart) {
+        this.props.onStart();
+      }
+
+      this.setState({
+        isPlaying: true,
+        isStarted: true
+      });
+
+      this.hideControls();
+    }
+  }, {
+    key: 'onProgress',
+    value: function onProgress(event) {
+      if (this.state.isSeeking) {
+        return;
+      }
+      if (this.props.onProgress) {
+        this.props.onProgress(event);
+      }
+      this.setState({
+        progress: event.currentTime / (this.props.duration || this.state.duration)
+      });
+    }
+  }, {
+    key: 'onEnd',
+    value: function onEnd(event) {
+      if (this.props.onEnd) {
+        this.props.onEnd(event);
+      }
+
+      if (this.props.endWithThumbnail) {
+        this.setState({ isStarted: false });
+        this.player.dismissFullscreenPlayer();
+      }
+
+      this.setState({ progress: 1 });
+
+      this.player.seek(0);
+      if (!this.props.loop) {
+        this.setState({
+          isPlaying: false
+        });
+      }
+    }
+  }, {
+    key: 'onLoad',
+    value: function onLoad(event) {
+      if (this.props.onLoad) {
+        this.props.onLoad(event);
+      }
+
+      var duration = event.duration;
+
+      this.setState({ duration: duration });
+    }
+  }, {
+    key: 'onPlayPress',
+    value: function onPlayPress() {
+      if (this.props.onPlayPress) {
+        this.props.onPlayPress();
+      }
+
+      this.setState({
+        isPlaying: !this.state.isPlaying
+      });
+      this.showControls();
+    }
+  }, {
+    key: 'onMutePress',
+    value: function onMutePress() {
+      this.setState({
+        isMuted: !this.state.isMuted
+      });
+      this.showControls();
+    }
+  }, {
+    key: 'onToggleFullScreen',
+    value: function onToggleFullScreen() {
+      this.player.presentFullscreenPlayer();
+    }
+  }, {
+    key: 'onSeekBarLayout',
+    value: function onSeekBarLayout(_ref) {
+      var nativeEvent = _ref.nativeEvent;
+
+      var customStyle = this.props.customStyles.seekBar;
+      var padding = 0;
+      if (customStyle && customStyle.paddingHorizontal) {
+        padding = customStyle.paddingHorizontal * 2;
+      } else if (customStyle) {
+        padding = customStyle.paddingLeft || 0;
+        padding += customStyle.paddingRight ? customStyle.paddingRight : 0;
+      } else {
+        padding = 20;
+      }
+
+      this.seekBarWidth = nativeEvent.layout.width - padding;
+    }
+  }, {
+    key: 'onSeekStartResponder',
+    value: function onSeekStartResponder() {
+      return true;
+    }
+  }, {
+    key: 'onSeekMoveResponder',
+    value: function onSeekMoveResponder() {
+      return true;
+    }
+  }, {
+    key: 'onSeekGrant',
+    value: function onSeekGrant(e) {
+      this.seekTouchStart = e.nativeEvent.pageX;
+      this.seekProgressStart = this.state.progress;
+      this.wasPlayingBeforeSeek = this.state.isPlaying;
+      this.setState({
+        isSeeking: true,
+        isPlaying: false
+      });
+    }
+  }, {
+    key: 'onSeekRelease',
+    value: function onSeekRelease() {
+      this.setState({
+        isSeeking: false,
+        isPlaying: this.wasPlayingBeforeSeek
+      });
+      this.showControls();
+    }
+  }, {
+    key: 'onSeek',
+    value: function onSeek(e) {
+      var diff = e.nativeEvent.pageX - this.seekTouchStart;
+      var ratio = 100 / this.seekBarWidth;
+      var progress = this.seekProgressStart + ratio * diff / 100;
+
+      this.setState({
+        progress: progress
+      });
+
+      this.player.seek(progress * this.state.duration);
+    }
+  }, {
+    key: 'getSizeStyles',
+    value: function getSizeStyles() {
+      var _props = this.props,
+          videoWidth = _props.videoWidth,
+          videoHeight = _props.videoHeight;
+      var width = this.state.width;
+
+      var ratio = videoHeight / videoWidth;
+      return {
+        height: width * ratio,
+        width: width
+      };
+    }
+  }, {
+    key: 'hideControls',
+    value: function hideControls() {
+      var _this2 = this;
+
+      if (this.props.onHideControls) {
+        this.props.onHideControls();
+      }
+
+      if (this.props.disableControlsAutoHide) {
+        return;
+      }
+
+      if (this.controlsTimeout) {
+        clearTimeout(this.controlsTimeout);
+        this.controlsTimeout = null;
+      }
+      this.controlsTimeout = setTimeout(function () {
+        _this2.setState({ isControlsVisible: false });
+      }, this.props.controlsTimeout);
+    }
+  }, {
+    key: 'showControls',
+    value: function showControls() {
+      if (this.props.onShowControls) {
+        this.props.onShowControls();
+      }
+
+      this.setState({
+        isControlsVisible: true
+      });
+      this.hideControls();
+    }
+  }, {
+    key: 'seek',
+    value: function seek(t) {
+      this.player.seek(t);
+    }
+  }, {
+    key: 'renderStartButton',
+    value: function renderStartButton() {
+      var customStyles = this.props.customStyles;
+
+      return _react3.default.createElement(
+        _reactNative.TouchableOpacity,
+        {
+          style: [styles.playButton, customStyles.playButton],
+          onPress: this.onStartPress,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 318
+          }
+        },
+        _react3.default.createElement(_MaterialIcons2.default, { style: [styles.playArrow, customStyles.playArrow], name: 'play-arrow', size: 42, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 322
+          }
+        })
+      );
+    }
+  }, {
+    key: 'renderThumbnail',
+    value: function renderThumbnail() {
+      var _props2 = this.props,
+          thumbnail = _props2.thumbnail,
+          style = _props2.style,
+          customStyles = _props2.customStyles,
+          props = _objectWithoutProperties(_props2, ['thumbnail', 'style', 'customStyles']);
+
+      return _react3.default.createElement(
+        BackgroundImage,
+        _extends({}, props, {
+          style: [styles.thumbnail, this.getSizeStyles(), style, customStyles.thumbnail],
+          source: thumbnail,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 330
+          }
+        }),
+        this.renderStartButton()
+      );
+    }
+  }, {
+    key: 'renderSeekBar',
+    value: function renderSeekBar(fullWidth) {
+      var _props3 = this.props,
+          customStyles = _props3.customStyles,
+          disableSeek = _props3.disableSeek;
+
+      return _react3.default.createElement(
+        _reactNative.View,
+        {
+          style: [styles.seekBar, fullWidth ? styles.seekBarFullWidth : {}, customStyles.seekBar, fullWidth ? customStyles.seekBarFullWidth : {}],
+          onLayout: this.onSeekBarLayout,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 348
+          }
+        },
+        _react3.default.createElement(_reactNative.View, {
+          style: [{ flexGrow: this.state.progress }, styles.seekBarProgress, customStyles.seekBarProgress],
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 357
+          }
+        }),
+        !fullWidth && !disableSeek ? _react3.default.createElement(_reactNative.View, {
+          style: [styles.seekBarKnob, customStyles.seekBarKnob, this.state.isSeeking ? { transform: [{ scale: 1 }] } : {}, this.state.isSeeking ? customStyles.seekBarKnobSeeking : {}],
+          hitSlop: { top: 20, bottom: 20, left: 10, right: 20 },
+          onStartShouldSetResponder: this.onSeekStartResponder,
+          onMoveShouldSetPanResponder: this.onSeekMoveResponder,
+          onResponderGrant: this.onSeekGrant,
+          onResponderMove: this.onSeek,
+          onResponderRelease: this.onSeekRelease,
+          onResponderTerminate: this.onSeekRelease,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 365
+          }
+        }) : null,
+        _react3.default.createElement(_reactNative.View, { style: [styles.seekBarBackground, { flexGrow: 1 - this.state.progress }, customStyles.seekBarBackground], __source: {
+            fileName: _jsxFileName,
+            lineNumber: 381
+          }
+        })
+      );
+    }
+  }, {
+    key: 'renderControls',
+    value: function renderControls() {
+      var customStyles = this.props.customStyles;
+
+      return _react3.default.createElement(
+        _reactNative.View,
+        { style: [styles.controls, customStyles.controls], __source: {
+            fileName: _jsxFileName,
+            lineNumber: 393
+          }
+        },
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          {
+            onPress: this.onPlayPress,
+            style: [customStyles.controlButton, customStyles.playControl],
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 394
+            }
+          },
+          _react3.default.createElement(_MaterialIcons2.default, {
+            style: [styles.playControl, customStyles.controlIcon, customStyles.playIcon],
+            name: this.state.isPlaying ? 'pause' : 'play-arrow',
+            size: 32,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 398
+            }
+          })
+        ),
+        this.renderSeekBar(),
+        this.props.muted ? null : _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { onPress: this.onMutePress, style: customStyles.controlButton, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 406
+            }
+          },
+          _react3.default.createElement(_MaterialIcons2.default, {
+            style: [styles.extraControl, customStyles.controlIcon],
+            name: this.state.isMuted ? 'volume-off' : 'volume-up',
+            size: 24,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 407
+            }
+          })
+        ),
+        _reactNative.Platform.OS === 'android' || this.props.disableFullscreen ? null : _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { onPress: this.onToggleFullScreen, style: customStyles.controlButton, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 415
+            }
+          },
+          _react3.default.createElement(_MaterialIcons2.default, {
+            style: [styles.extraControl, customStyles.controlIcon],
+            name: 'fullscreen',
+            size: 32,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 416
+            }
+          })
+        )
+      );
+    }
+  }, {
+    key: 'renderVideo',
+    value: function renderVideo() {
+      var _this3 = this;
+
+      var _props4 = this.props,
+          video = _props4.video,
+          style = _props4.style,
+          resizeMode = _props4.resizeMode,
+          pauseOnPress = _props4.pauseOnPress,
+          fullScreenOnLongPress = _props4.fullScreenOnLongPress,
+          customStyles = _props4.customStyles,
+          props = _objectWithoutProperties(_props4, ['video', 'style', 'resizeMode', 'pauseOnPress', 'fullScreenOnLongPress', 'customStyles']);
+
+      return _react3.default.createElement(
+        _reactNative.View,
+        { style: customStyles.videoWrapper, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 438
+          }
+        },
+        _react3.default.createElement(_reactNativeVideo2.default, _extends({}, props, {
+          style: [styles.video, this.getSizeStyles(), style, customStyles.video],
+          ref: function ref(p) {
+            _this3.player = p;
+          },
+          muted: this.props.muted || this.state.isMuted,
+          paused: !this.state.isPlaying,
+          onProgress: this.onProgress,
+          onEnd: this.onEnd,
+          onLoad: this.onLoad,
+          source: video,
+          resizeMode: resizeMode,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 439
+          }
+        })),
+        _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: [this.getSizeStyles(), { marginTop: -this.getSizeStyles().height }],
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 456
+            }
+          },
+          _react3.default.createElement(_reactNative.TouchableOpacity, {
+            style: styles.overlayButton,
+            onPress: function onPress() {
+              _this3.showControls();
+              if (pauseOnPress) _this3.onPlayPress();
+            },
+            onLongPress: function onLongPress() {
+              if (fullScreenOnLongPress && _reactNative.Platform.OS !== 'android') _this3.onToggleFullScreen();
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 462
+            }
+          })
+        ),
+        !this.state.isPlaying || this.state.isControlsVisible ? this.renderControls() : this.renderSeekBar(true)
+      );
+    }
+  }, {
+    key: 'renderContent',
+    value: function renderContent() {
+      var _props5 = this.props,
+          thumbnail = _props5.thumbnail,
+          style = _props5.style;
+      var isStarted = this.state.isStarted;
+
+
+      if (!isStarted && thumbnail) {
+        return this.renderThumbnail();
+      } else if (!isStarted) {
+        return _react3.default.createElement(
+          _reactNative.View,
+          { style: [styles.preloadingPlaceholder, this.getSizeStyles(), style], __source: {
+              fileName: _jsxFileName,
+              lineNumber: 489
+            }
+          },
+          this.renderStartButton()
+        );
+      }
+      return this.renderVideo();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react3.default.createElement(
+        _reactNative.View,
+        { onLayout: this.onLayout, style: this.props.customStyles.wrapper, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 499
+          }
+        },
+        this.renderContent()
+      );
+    }
+  }]);
+
+  return VideoPlayer;
+}(_react2.Component));
+
+exports.default = VideoPlayer;
+
+
+VideoPlayer.propTypes = {
+  video: _reactNativeVideo2.default.propTypes.source,
+  thumbnail: _reactNative.Image.propTypes.source,
+  videoWidth: _propTypes2.default.number,
+  videoHeight: _propTypes2.default.number,
+  duration: _propTypes2.default.number,
+  autoplay: _propTypes2.default.bool,
+  defaultMuted: _propTypes2.default.bool,
+  muted: _propTypes2.default.bool,
+  style: _reactNative.ViewPropTypes.style,
+  controlsTimeout: _propTypes2.default.number,
+  disableControlsAutoHide: _propTypes2.default.bool,
+  disableFullscreen: _propTypes2.default.bool,
+  loop: _propTypes2.default.bool,
+  resizeMode: _reactNativeVideo2.default.propTypes.resizeMode,
+  hideControlsOnStart: _propTypes2.default.bool,
+  endWithThumbnail: _propTypes2.default.bool,
+  disableSeek: _propTypes2.default.bool,
+  pauseOnPress: _propTypes2.default.bool,
+  fullScreenOnLongPress: _propTypes2.default.bool,
+  customStyles: _propTypes2.default.shape({
+    wrapper: _reactNative.ViewPropTypes.style,
+    video: _reactNativeVideo2.default.propTypes.style,
+    videoWrapper: _reactNative.ViewPropTypes.style,
+    controls: _reactNative.ViewPropTypes.style,
+    playControl: _reactNative.TouchableOpacity.propTypes.style,
+    controlButton: _reactNative.TouchableOpacity.propTypes.style,
+    controlIcon: _MaterialIcons2.default.propTypes.style,
+    playIcon: _MaterialIcons2.default.propTypes.style,
+    seekBar: _reactNative.ViewPropTypes.style,
+    seekBarFullWidth: _reactNative.ViewPropTypes.style,
+    seekBarProgress: _reactNative.ViewPropTypes.style,
+    seekBarKnob: _reactNative.ViewPropTypes.style,
+    seekBarKnobSeeking: _reactNative.ViewPropTypes.style,
+    seekBarBackground: _reactNative.ViewPropTypes.style,
+    thumbnail: _reactNative.Image.propTypes.style,
+    playButton: _reactNative.TouchableOpacity.propTypes.style,
+    playArrow: _MaterialIcons2.default.propTypes.style
+  }),
+  onEnd: _propTypes2.default.func,
+  onProgress: _propTypes2.default.func,
+  onLoad: _propTypes2.default.func,
+  onStart: _propTypes2.default.func,
+  onPlayPress: _propTypes2.default.func,
+  onHideControls: _propTypes2.default.func,
+  onShowControls: _propTypes2.default.func
+};
+
+VideoPlayer.defaultProps = {
+  videoWidth: 1280,
+  videoHeight: 720,
+  autoplay: false,
+  controlsTimeout: 2000,
+  loop: false,
+  resizeMode: 'contain',
+  disableSeek: false,
+  pauseOnPress: false,
+  fullScreenOnLongPress: false,
+  customStyles: {}
+};

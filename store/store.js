@@ -35,16 +35,10 @@ export const initialStore = {
     lessons:{
         loading: false,
         pending:[],
-        // [
-        //   {
-        //     request_id: '',
-        //     request_date: '',
-        //     request_notes: '',
-        //     fo_swing: '',
-        //     dtl_swing: ''
-        //   }
-        // ],
-        closed:[]
+        closed:[],
+        request_id: '',
+        request_date: '',
+        request_url: ''
     },
 
     // swingessentials available lesson packages

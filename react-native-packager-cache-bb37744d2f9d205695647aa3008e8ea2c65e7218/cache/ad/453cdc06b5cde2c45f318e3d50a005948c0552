@@ -68,11 +68,16 @@ var lessonsReducer = function lessonsReducer() {
 			return _extends({}, state, {
 				loading: false,
 				pending: action.data.pending,
-
 				closed: action.data.closed
 			});
 		case _actions.GET_LESSONS_FAILURE:
 			return state;
+		case _actions.SET_REQUEST_ID_SUCCESS:
+			return _extends({}, state, {
+				request_id: action.data.request_id,
+				request_date: action.data.request_date,
+				request_url: action.data.request_url
+			});
 		default:
 			return state;
 	}

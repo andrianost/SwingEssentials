@@ -42,8 +42,10 @@ var initialStore = exports.initialStore = {
     lessons: {
         loading: false,
         pending: [],
-
-        closed: []
+        closed: [],
+        request_id: '',
+        request_date: '',
+        request_url: ''
     },
 
     packages: [],

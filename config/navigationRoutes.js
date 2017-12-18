@@ -8,27 +8,8 @@ import HelpScreen from '../screens/HelpScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
+import IndividualLessonsScreen from '../screens/IndividualLessonsScreen';
 
-// const DrawerContent = (props) => {
-//   console.log(props);
-//   return (
-//   <View>
-//     <View
-//       style={{
-//         backgroundColor: '#f50057',
-//         height: 140,
-//         alignItems: 'center',
-//         justifyContent: 'center',
-//       }}
-//     >
-//       <Text style={{ color: 'white', fontSize: 30 }}>
-//         Header
-//       </Text>
-//       <Text>{this.props.username}</Text>
-//     </View>
-//     <DrawerItems {...props} />
-//   </View>
-// )}
 const AppRoutes = DrawerNavigator({
   Home: { screen: HomeScreen },
   YourLessonsScreen: { screen: YourLessonsScreen },
@@ -36,7 +17,8 @@ const AppRoutes = DrawerNavigator({
   OrderLessonsScreen: { screen: OrderLessonsScreen },
   HelpScreen: { screen: HelpScreen },
   AboutScreen: { screen: AboutScreen },
-  SettingsScreen: { screen: SettingsScreen }
+  SettingsScreen: { screen: SettingsScreen },
+  IndividualLessonsScreen: { screen: IndividualLessonsScreen }
 }, {initialRouteName: 'Home'});
 
 const Routes = {

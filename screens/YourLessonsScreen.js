@@ -1,6 +1,6 @@
 import React from 'react';
 import {bindActionCreators} from 'redux';
-import {NavigationActions} from 'react-navigation';
+import {NavigationActions, StackNavigator} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
@@ -8,12 +8,14 @@ import { Component } from 'react';
 import { StyleSheet, View, Text, Button, FlatList } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
-
 function mapStateToProps(state){
     return {
       token: state.login.token,
       pending: state.lessons.pending,
       closed: state.lessons.closed,
+      request_id: state.lessons.request_id,
+      request_date: state.lessons.request_date,
+      request_url: state.lessons.request_url
     };
 }
 function mapDispatchToProps(dispatch){
@@ -28,11 +30,19 @@ class YourLessonsScreen extends Component {
           bearerToken: this.props.token,
           pending: this.props.pending,
           closed: this.props.closed,
+          request_id: this.props.request_id,
+          request_date: this.props.request_date,
+          request_url: this.props.request_url
       }
   }
 
   _getLessons(){
     this.props.requestLessons({bearerToken: this.state.bearerToken});
+  }
+
+  _requestID(data){
+    this.props.setRequestId(data)
+    this.props.navigation.navigate('IndividualLessonsScreen')
   }
 
   _renderItem({ item, index }) {
@@ -41,6 +51,7 @@ class YourLessonsScreen extends Component {
         key={index}
         title={item.request_date}
         subtitle={item.request_id}
+        onPress={ () => this._requestID({request_id: item.request_id, request_date: item.request_date, request_url: item.request_url})}
       />
     )
   }
@@ -67,7 +78,7 @@ class YourLessonsScreen extends Component {
         <FlatList
           data={this.props.pending}
           keyExtractor={item => item.request_id}
-          renderItem={this._renderItem}
+          renderItem={this._renderItem.bind(this)}
           ListHeaderComponent={this._pendingHeader}
           // renderItem={({ item }) => (
           //   <ListItem
@@ -80,7 +91,7 @@ class YourLessonsScreen extends Component {
         <FlatList
           data={this.props.closed}
           keyExtractor={item => item.request_id}
-          renderItem={this._renderItem}
+          renderItem={this._renderItem.bind(this)}
           ListHeaderComponent={this._closedHeader}
         />
       </View>

@@ -36,6 +36,10 @@ var _LoginScreen = require('../screens/LoginScreen');
 
 var _LoginScreen2 = _interopRequireDefault(_LoginScreen);
 
+var _IndividualLessonsScreen = require('../screens/IndividualLessonsScreen');
+
+var _IndividualLessonsScreen2 = _interopRequireDefault(_IndividualLessonsScreen);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AppRoutes = (0, _reactNavigation.DrawerNavigator)({
@@ -45,7 +49,8 @@ var AppRoutes = (0, _reactNavigation.DrawerNavigator)({
   OrderLessonsScreen: { screen: _OrderLessonsScreen2.default },
   HelpScreen: { screen: _HelpScreen2.default },
   AboutScreen: { screen: _AboutScreen2.default },
-  SettingsScreen: { screen: _SettingsScreen2.default }
+  SettingsScreen: { screen: _SettingsScreen2.default },
+  IndividualLessonsScreen: { screen: _IndividualLessonsScreen2.default }
 }, { initialRouteName: 'Home' });
 
 var Routes = {

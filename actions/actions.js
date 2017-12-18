@@ -9,6 +9,7 @@ export const PUT_SETTINGS_SUCCESS = 'PUT_SETTINGS_SUCCESS';
 export const PUT_SETTINGS_FAILURE = 'PUT_SETTINGS_FAILURE';
 export const GET_LESSONS_SUCCESS = 'GET_LESSONS_SUCCESS';
 export const GET_LESSONS_FAILURE = 'GET_LESSONS_FAILURE';
+export const SET_REQUEST_ID_SUCCESS = 'SET_REQUEST_ID_SUCCESS';
 
 export function requestLogin(userCredentials){
     return function(dispatch){
@@ -23,14 +24,12 @@ export function requestLogin(userCredentials){
         .then((response) => {
             switch(response.status) {
                 case 200:
-                    //console.log(response.headers.get('Token'));
                     response.json()
                     .then((json) => dispatch(loginSuccess({...json,token: response.headers.get('Token')})))
                     .then(() => dispatch(requestSettings(response.headers.get('Token'))));
                     break;
                 default:
                     dispatch(loginFailure(response));
-                    // console.log(response)
                     break;
             }
         })
@@ -39,7 +38,6 @@ export function requestLogin(userCredentials){
 }
 
 function loginSuccess(response){
-    // console.log(response)
     return{
         type: LOGIN_SUCCESS,
         data: response
@@ -161,7 +159,7 @@ export function requestLessons(userLessons){
 
 function getLessonsSuccess(response){
     console.log('success')
-    // console.log(response)
+    console.log(response)
     return{
         type: GET_LESSONS_SUCCESS,
         data: response
@@ -170,9 +168,22 @@ function getLessonsSuccess(response){
 
 function getLessonsFailure(response){
     console.log('failure')
-    // console.log(response)
     return{
         type: GET_LESSONS_FAILURE,
         response: response.status
     }
+}
+
+export function setRequestId(response){
+    return function(dispatch){
+      dispatch(setRequestIdSuccess(response));
+    }
+}
+
+function setRequestIdSuccess(response){
+  console.log('set request id success')
+  return{
+    type: SET_REQUEST_ID_SUCCESS,
+    data: response
+  }
 }
