@@ -1,0 +1,71 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.YouTubeStandaloneAndroid = undefined;
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactNative = require('react-native');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var YouTubeStandaloneModule = _reactNative.NativeModules.YouTubeStandaloneModule;
+var YouTubeStandaloneAndroid = exports.YouTubeStandaloneAndroid = !YouTubeStandaloneModule ? null : {
+  playVideo: function playVideo(_ref) {
+    var apiKey = _ref.apiKey,
+        videoId = _ref.videoId,
+        _ref$autoplay = _ref.autoplay,
+        autoplay = _ref$autoplay === undefined ? false : _ref$autoplay,
+        _ref$lightboxMode = _ref.lightboxMode,
+        lightboxMode = _ref$lightboxMode === undefined ? false : _ref$lightboxMode,
+        _ref$startTime = _ref.startTime,
+        startTime = _ref$startTime === undefined ? 0 : _ref$startTime;
+    return new Promise(function (resolve, reject) {
+      return YouTubeStandaloneModule.playVideo(apiKey, videoId, autoplay, lightboxMode, Number.parseInt(startTime * 1000, 10)).then(function () {
+        return resolve();
+      }).catch(function (errorMessage) {
+        return reject(errorMessage);
+      });
+    });
+  },
+  playVideos: function playVideos(_ref2) {
+    var apiKey = _ref2.apiKey,
+        videoIds = _ref2.videoIds,
+        _ref2$autoplay = _ref2.autoplay,
+        autoplay = _ref2$autoplay === undefined ? false : _ref2$autoplay,
+        _ref2$lightboxMode = _ref2.lightboxMode,
+        lightboxMode = _ref2$lightboxMode === undefined ? false : _ref2$lightboxMode,
+        _ref2$startIndex = _ref2.startIndex,
+        startIndex = _ref2$startIndex === undefined ? 0 : _ref2$startIndex,
+        _ref2$startTime = _ref2.startTime,
+        startTime = _ref2$startTime === undefined ? 0 : _ref2$startTime;
+    return new Promise(function (resolve, reject) {
+      return YouTubeStandaloneModule.playVideos(apiKey, videoIds, autoplay, lightboxMode, Number.parseInt(startIndex, 10), Number.parseInt(startTime * 1000, 10)).then(function () {
+        return resolve();
+      }).catch(function (errorMessage) {
+        return reject(errorMessage);
+      });
+    });
+  },
+  playPlaylist: function playPlaylist(_ref3) {
+    var apiKey = _ref3.apiKey,
+        playlistId = _ref3.playlistId,
+        _ref3$autoplay = _ref3.autoplay,
+        autoplay = _ref3$autoplay === undefined ? false : _ref3$autoplay,
+        _ref3$lightboxMode = _ref3.lightboxMode,
+        lightboxMode = _ref3$lightboxMode === undefined ? false : _ref3$lightboxMode,
+        _ref3$startIndex = _ref3.startIndex,
+        startIndex = _ref3$startIndex === undefined ? 0 : _ref3$startIndex,
+        _ref3$startTime = _ref3.startTime,
+        startTime = _ref3$startTime === undefined ? 0 : _ref3$startTime;
+    return new Promise(function (resolve, reject) {
+      return YouTubeStandaloneModule.playPlaylist(apiKey, playlistId, autoplay, lightboxMode, Number.parseInt(startIndex, 10), Number.parseInt(startTime * 1000, 10)).then(function () {
+        return resolve();
+      }).catch(function (errorMessage) {
+        return reject(errorMessage);
+      });
+    });
+  }
+};

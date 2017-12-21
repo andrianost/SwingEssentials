@@ -1,0 +1,30 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.YouTubeStandaloneAndroid = exports.YouTubeStandaloneIOS = undefined;
+
+var _YouTubeStandalone = require('./YouTubeStandalone.ios');
+
+Object.defineProperty(exports, 'YouTubeStandaloneIOS', {
+  enumerable: true,
+  get: function get() {
+    return _YouTubeStandalone.YouTubeStandaloneIOS;
+  }
+});
+
+var _YouTubeStandalone2 = require('./YouTubeStandalone.android');
+
+Object.defineProperty(exports, 'YouTubeStandaloneAndroid', {
+  enumerable: true,
+  get: function get() {
+    return _YouTubeStandalone2.YouTubeStandaloneAndroid;
+  }
+});
+
+var _YouTube = require('./YouTube');
+
+var _YouTube2 = _interopRequireDefault(_YouTube);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _YouTube2.default;

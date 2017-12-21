@@ -4,7 +4,7 @@ import {NavigationActions, StackNavigator} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
-import VideoPlayer from 'react-native-video-player';
+// import VideoPlayer from 'react-native-video-player';
 import YouTube from 'react-native-youtube';
 
 import { Component } from 'react';
@@ -26,7 +26,7 @@ function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }
 
-const YOUTUBE_ID = 'https://www.youtube.com/watch?v=ogaxg5J_F_8';
+// const YOUTUBE_ID = 'https://www.youtube.com/watch?v=ogaxg5J_F_8';
 
 class IndividualLessonsScreen extends Component {
   constructor(props){
@@ -49,16 +49,6 @@ class IndividualLessonsScreen extends Component {
         <Text>{this.props.request_id}</Text>
         <Text>{this.props.request_date}</Text>
         <Text>{this.props.request_url}</Text>
-        <VideoPlayer
-          video={{ uri: 'https://www.youtube.com/embed/ogaxg5J_F_8' }}
-          // endWithThumbnail
-          // thumbnail={{ uri: this.state.thumbnailUrl }}
-          // video={{ uri: this.state.videoUrl }}
-          // videoWidth={this.state.video.width}
-          // videoHeight={this.state.video.height}
-          // duration={this.state.video.duration/* I'm using a hls stream here, react-native-video
-          //   can't figure out the length, so I pass it here from the vimeo config */}
-        />
       </View>
     );
   }

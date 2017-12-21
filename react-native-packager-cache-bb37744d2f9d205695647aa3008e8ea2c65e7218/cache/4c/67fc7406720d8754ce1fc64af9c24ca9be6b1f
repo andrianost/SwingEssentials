@@ -20,13 +20,13 @@ var _reactNavigation = require('react-navigation');
 
 var _reactRedux = require('react-redux');
 
-var _reactNativeVideoPlayer = require('react-native-video-player');
-
-var _reactNativeVideoPlayer2 = _interopRequireDefault(_reactNativeVideoPlayer);
-
 var _actions = require('../actions/actions.js');
 
 var Actions = _interopRequireWildcard(_actions);
+
+var _reactNativeYoutube = require('react-native-youtube');
+
+var _reactNativeYoutube2 = _interopRequireDefault(_reactNativeYoutube);
 
 var _reactNative = require('react-native');
 
@@ -75,8 +75,6 @@ function mapDispatchToProps(dispatch) {
   return (0, _redux.bindActionCreators)(Actions, dispatch);
 }
 
-var YOUTUBE_ID = 'https://www.youtube.com/watch?v=ogaxg5J_F_8';
-
 var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function (_Component) {
   _inherits(IndividualLessonsScreen, _Component);
 
@@ -105,7 +103,7 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 45
+            lineNumber: 47
           }
         },
         _react3.default.createElement(
@@ -113,7 +111,7 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 46
+              lineNumber: 48
             }
           },
           'Individual Lessons Screen'
@@ -123,7 +121,7 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 47
+              lineNumber: 49
             }
           },
           this.props.request_id
@@ -133,7 +131,7 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 48
+              lineNumber: 50
             }
           },
           this.props.request_date
@@ -143,18 +141,11 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 49
+              lineNumber: 51
             }
           },
           this.props.request_url
-        ),
-        _react3.default.createElement(_reactNativeVideoPlayer2.default, {
-          video: { uri: 'https://www.youtube.com/embed/ogaxg5J_F_8' },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 50
-          }
-        })
+        )
       );
     }
   }]);
