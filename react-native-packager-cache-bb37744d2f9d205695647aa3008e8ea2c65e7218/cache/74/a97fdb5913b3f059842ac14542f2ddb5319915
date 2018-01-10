@@ -1,7 +1,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.SET_REQUEST_ID_SUCCESS = exports.GET_LESSONS_FAILURE = exports.GET_LESSONS_SUCCESS = exports.PUT_SETTINGS_FAILURE = exports.PUT_SETTINGS_SUCCESS = exports.GET_SETTINGS_FAILURE = exports.GET_SETTINGS_SUCCESS = exports.LOGIN_ERROR = exports.LOGIN_SUCCESS = undefined;
+exports.GET_PACKAGES_FAILURE = exports.GET_PACKAGES_SUCCESS = exports.SET_REQUEST_ID_SUCCESS = exports.GET_LESSONS_FAILURE = exports.GET_LESSONS_SUCCESS = exports.PUT_SETTINGS_FAILURE = exports.PUT_SETTINGS_SUCCESS = exports.GET_SETTINGS_FAILURE = exports.GET_SETTINGS_SUCCESS = exports.LOGIN_ERROR = exports.LOGIN_SUCCESS = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -10,6 +10,7 @@ exports.requestSettings = requestSettings;
 exports.userSettingsUpdate = userSettingsUpdate;
 exports.requestLessons = requestLessons;
 exports.setRequestId = setRequestId;
+exports.requestPackages = requestPackages;
 
 var _store = require('../store/store.js');
 
@@ -24,6 +25,8 @@ var PUT_SETTINGS_FAILURE = exports.PUT_SETTINGS_FAILURE = 'PUT_SETTINGS_FAILURE'
 var GET_LESSONS_SUCCESS = exports.GET_LESSONS_SUCCESS = 'GET_LESSONS_SUCCESS';
 var GET_LESSONS_FAILURE = exports.GET_LESSONS_FAILURE = 'GET_LESSONS_FAILURE';
 var SET_REQUEST_ID_SUCCESS = exports.SET_REQUEST_ID_SUCCESS = 'SET_REQUEST_ID_SUCCESS';
+var GET_PACKAGES_SUCCESS = exports.GET_PACKAGES_SUCCESS = 'GET_PACKAGES_SUCCESS';
+var GET_PACKAGES_FAILURE = exports.GET_PACKAGES_FAILURE = 'GET_PACKAGES_FAILURE';
 
 function requestLogin(userCredentials) {
     return function (dispatch) {
@@ -125,8 +128,6 @@ function userSettingsUpdate(userSettings) {
                     dispatch(requestSettings(userSettings.bearerToken));
                     break;
                 default:
-                    console.log(response.status);
-                    console.log(userSettings.bearerToken);
                     dispatch(putSettingsFailure(response));
                     dispatch(requestSettings(userSettings.bearerToken));
                     break;
@@ -176,7 +177,7 @@ function requestLessons(userLessons) {
 }
 
 function getLessonsSuccess(response) {
-    console.log('success');
+    console.log('get lessons success');
     console.log(response);
     return {
         type: GET_LESSONS_SUCCESS,
@@ -185,7 +186,7 @@ function getLessonsSuccess(response) {
 }
 
 function getLessonsFailure(response) {
-    console.log('failure');
+    console.log('get lessons failure');
     return {
         type: GET_LESSONS_FAILURE,
         response: response.status
@@ -203,5 +204,41 @@ function setRequestIdSuccess(response) {
     return {
         type: SET_REQUEST_ID_SUCCESS,
         data: response
+    };
+}
+
+function requestPackages() {
+    return function (dispatch) {
+        return fetch('http://www.josephpboyle.com/api/myapi.php/packages', {
+            method: 'GET'
+        }).then(function (response) {
+            switch (response.status) {
+                case 200:
+                    response.json().then(function (json) {
+                        return dispatch(getPackagesSuccess(json));
+                    });
+                    break;
+                default:
+                    dispatch(getPackagesFailure(response));
+                    break;
+            }
+        }).catch(function (error) {
+            return console.error(error);
+        });
+    };
+}
+
+function getPackagesSuccess(response) {
+    return {
+        type: GET_PACKAGES_SUCCESS,
+        data: response
+    };
+}
+
+function getPackagesFailure(response) {
+    console.log('get packages failure');
+    return {
+        type: GET_PACKAGES_FAILURE,
+        response: response.status
     };
 }

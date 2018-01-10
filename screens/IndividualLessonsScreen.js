@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
 // import VideoPlayer from 'react-native-video-player';
-import YouTube from 'react-native-youtube';
+// import YouTube from 'react-native-youtube';
 
 import { Component } from 'react';
 import { StyleSheet, View, Text, Button, FlatList } from 'react-native';

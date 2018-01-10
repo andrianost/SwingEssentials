@@ -11,31 +11,44 @@ import { Button, FormInput, FormLabel } from 'react-native-elements'
 
 function mapStateToProps(state){
     return {
-        username: state.userData.username
+        // username: state.userData.username,
+        // packages:
     };
 }
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }
 
+
+
 class HomeScreen extends Component {
+  constructor(props){
+      super(props);
+      this.state = {
+          // username: this.props.username,
+      }
+  }
+
+  _getLessonsPackages(){
+    this.props.requestPackages();
+    this.props.navigation.navigate('OrderLessons');
+  }
+
   render() {
     return (
       <View style={styles.container}>
       <View style={styles.container}>
         <Button
-          raised
           title="Redeem a Lesson"
           buttonStyle={styles.CircleShapeView}
-          onPress={() => this.props.navigation.navigate('RedeemLessonsScreen')}
+          onPress={() => this.props.navigation.navigate('RedeemLessons')}
         />
       </View>
       <View style={styles.container}>
         <Button
-          raised
           title="Order a Lesson"
           buttonStyle={styles.CircleShapeView}
-          onPress={() => this.props.navigation.navigate('OrderLessonsScreen')}
+          onPress={() => this._getLessonsPackages()}
         />
       </View>
       </View>

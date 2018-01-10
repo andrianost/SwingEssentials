@@ -77,6 +77,10 @@ var _IndividualLessonsScreen = require('../screens/IndividualLessonsScreen.js');
 
 var _IndividualLessonsScreen2 = _interopRequireDefault(_IndividualLessonsScreen);
 
+var _OrderDetailsScreen = require('../screens/OrderDetailsScreen.js');
+
+var _OrderDetailsScreen2 = _interopRequireDefault(_OrderDetailsScreen);
+
 var _CustomDrawer = require('../screens/CustomDrawer.js');
 
 var _CustomDrawer2 = _interopRequireDefault(_CustomDrawer);
@@ -138,7 +142,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 47
+                                lineNumber: 48
                             }
                         }) };
                 }
@@ -148,7 +152,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             drawerLabel: 'Home',
             drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 52
+                    lineNumber: 53
                 }
             })
         }
@@ -166,7 +170,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 63
+                                lineNumber: 64
                             }
                         })
                     };
@@ -182,7 +186,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('YourLessons');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 70
+                                lineNumber: 71
                             }
                         })
                     };
@@ -196,7 +200,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             drawerLabel: 'Your Lessons',
             drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 79
+                    lineNumber: 80
                 }
             })
         }
@@ -213,7 +217,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 88
+                                lineNumber: 89
                             }
                         })
                     };
@@ -227,7 +231,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             drawerLabel: 'Redeem Lessons',
             drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 97
+                    lineNumber: 98
                 }
             })
         }
@@ -244,7 +248,23 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 106
+                                lineNumber: 107
+                            }
+                        })
+                    };
+                }
+            },
+            OrderDetailsScreen: {
+                screen: _OrderDetailsScreen2.default,
+                navigationOptions: function navigationOptions(_ref6) {
+                    var navigation = _ref6.navigation;
+                    return {
+                        title: 'Order Details',
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                                return navigation.navigate('OrderLessons');
+                            }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 114
                             }
                         })
                     };
@@ -265,8 +285,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
         screen: (0, _reactNavigation.StackNavigator)({
             HelpScreen: {
                 screen: _HelpScreen2.default,
-                navigationOptions: function navigationOptions(_ref6) {
-                    var navigation = _ref6.navigation;
+                navigationOptions: function navigationOptions(_ref7) {
+                    var navigation = _ref7.navigation;
                     return {
                         title: 'Help',
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
@@ -293,8 +313,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
         screen: (0, _reactNavigation.StackNavigator)({
             AboutScreen: {
                 screen: _AboutScreen2.default,
-                navigationOptions: function navigationOptions(_ref7) {
-                    var navigation = _ref7.navigation;
+                navigationOptions: function navigationOptions(_ref8) {
+                    var navigation = _ref8.navigation;
                     return {
                         title: 'About',
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
@@ -321,8 +341,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
         screen: (0, _reactNavigation.StackNavigator)({
             SettingsScreen: {
                 screen: _SettingsScreen2.default,
-                navigationOptions: function navigationOptions(_ref8) {
-                    var navigation = _ref8.navigation;
+                navigationOptions: function navigationOptions(_ref9) {
+                    var navigation = _ref9.navigation;
                     return {
                         title: 'Settings',
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
@@ -337,8 +357,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             },
             UserData: {
                 screen: _UserData2.default,
-                navigationOptions: function navigationOptions(_ref9) {
-                    var navigation = _ref9.navigation;
+                navigationOptions: function navigationOptions(_ref10) {
+                    var navigation = _ref10.navigation;
                     return {
                         title: 'User Data',
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
@@ -353,8 +373,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             },
             CameraData: {
                 screen: _CameraData2.default,
-                navigationOptions: function navigationOptions(_ref10) {
-                    var navigation = _ref10.navigation;
+                navigationOptions: function navigationOptions(_ref11) {
+                    var navigation = _ref11.navigation;
                     return {
                         title: 'Camera Data',
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {

@@ -24,10 +24,6 @@ var _actions = require('../actions/actions.js');
 
 var Actions = _interopRequireWildcard(_actions);
 
-var _reactNativeYoutube = require('react-native-youtube');
-
-var _reactNativeYoutube2 = _interopRequireDefault(_reactNativeYoutube);
-
 var _reactNative = require('react-native');
 
 var _reactNativeElements = require('react-native-elements');

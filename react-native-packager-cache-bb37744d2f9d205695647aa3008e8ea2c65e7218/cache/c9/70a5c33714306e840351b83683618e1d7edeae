@@ -126,6 +126,7 @@ var CameraData = _wrapComponent('CameraData')(function (_Component) {
           {
             selectedValue: this.state.duration,
             label: 'Select your duration:',
+            value: this.state.duration,
             onValueChange: function onValueChange(newSelection) {
               return _this2._onDurationUpdate(newSelection);
             },
@@ -134,54 +135,54 @@ var CameraData = _wrapComponent('CameraData')(function (_Component) {
               lineNumber: 54
             }
           },
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'One', value: '1', __source: {
-              fileName: _jsxFileName,
-              lineNumber: 59
-            }
-          }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Two', value: '2', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '1s', value: '1', __source: {
               fileName: _jsxFileName,
               lineNumber: 60
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Three', value: '3', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '2s', value: '2', __source: {
               fileName: _jsxFileName,
               lineNumber: 61
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Four', value: '4', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '3s', value: '3', __source: {
               fileName: _jsxFileName,
               lineNumber: 62
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Five', value: '5', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '4s', value: '4', __source: {
               fileName: _jsxFileName,
               lineNumber: 63
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Six', value: '6', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '5s', value: '5', __source: {
               fileName: _jsxFileName,
               lineNumber: 64
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Seven', value: '7', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '6s', value: '6', __source: {
               fileName: _jsxFileName,
               lineNumber: 65
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Eight', value: '8', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '7s', value: '7', __source: {
               fileName: _jsxFileName,
               lineNumber: 66
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Nine', value: '9', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '8s', value: '8', __source: {
               fileName: _jsxFileName,
               lineNumber: 67
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Ten', value: '10', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '9s', value: '9', __source: {
               fileName: _jsxFileName,
               lineNumber: 68
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '10s', value: '10', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 69
             }
           })
         ),
@@ -190,62 +191,63 @@ var CameraData = _wrapComponent('CameraData')(function (_Component) {
           {
             selectedValue: this.state.delay,
             label: 'Select your delay:',
+            value: this.state.delay,
             onValueChange: function onValueChange(newSelection) {
               return _this2._onDelayUpdate(newSelection);
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 70
+              lineNumber: 71
             }
           },
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'One', value: '1', __source: {
-              fileName: _jsxFileName,
-              lineNumber: 75
-            }
-          }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Two', value: '2', __source: {
-              fileName: _jsxFileName,
-              lineNumber: 76
-            }
-          }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Three', value: '3', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '1s', value: '1', __source: {
               fileName: _jsxFileName,
               lineNumber: 77
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Four', value: '4', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '2s', value: '2', __source: {
               fileName: _jsxFileName,
               lineNumber: 78
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Five', value: '5', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '3s', value: '3', __source: {
               fileName: _jsxFileName,
               lineNumber: 79
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Six', value: '6', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '4s', value: '4', __source: {
               fileName: _jsxFileName,
               lineNumber: 80
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Seven', value: '7', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '5s', value: '5', __source: {
               fileName: _jsxFileName,
               lineNumber: 81
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Eight', value: '8', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '6s', value: '6', __source: {
               fileName: _jsxFileName,
               lineNumber: 82
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Nine', value: '9', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '7s', value: '7', __source: {
               fileName: _jsxFileName,
               lineNumber: 83
             }
           }),
-          _react3.default.createElement(_reactNative.Picker.Item, { label: 'Ten', value: '10', __source: {
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '8s', value: '8', __source: {
               fileName: _jsxFileName,
               lineNumber: 84
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '9s', value: '9', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 85
+            }
+          }),
+          _react3.default.createElement(_reactNative.Picker.Item, { label: '10s', value: '10', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 86
             }
           })
         ),
@@ -259,17 +261,17 @@ var CameraData = _wrapComponent('CameraData')(function (_Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 86
+              lineNumber: 88
             }
           },
           _react3.default.createElement(_reactNative.Picker.Item, { label: 'True', value: true, __source: {
               fileName: _jsxFileName,
-              lineNumber: 91
+              lineNumber: 93
             }
           }),
           _react3.default.createElement(_reactNative.Picker.Item, { label: 'False', value: false, __source: {
               fileName: _jsxFileName,
-              lineNumber: 92
+              lineNumber: 94
             }
           })
         )

@@ -9,6 +9,8 @@ import SettingsScreen from '../screens/SettingsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import IndividualLessonsScreen from '../screens/IndividualLessonsScreen';
+import OrderDetailsScreen from '../screens/OrderDetailsScreen';
+
 
 const AppRoutes = DrawerNavigator({
   Home: { screen: HomeScreen },
@@ -18,7 +20,8 @@ const AppRoutes = DrawerNavigator({
   HelpScreen: { screen: HelpScreen },
   AboutScreen: { screen: AboutScreen },
   SettingsScreen: { screen: SettingsScreen },
-  IndividualLessonsScreen: { screen: IndividualLessonsScreen }
+  IndividualLessonsScreen: { screen: IndividualLessonsScreen },
+  OrderDetailsScreen: { screen: OrderDetailsScreen }
 }, {initialRouteName: 'Home'});
 
 const Routes = {

@@ -10,7 +10,7 @@ var _index = require('./../node_modules/react-transform-hmr/lib/index.js');
 
 var _index2 = _interopRequireDefault(_index);
 
-var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/screens/OrderLessonsScreen.js';
+var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/screens/OrderDetailsScreen.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -39,13 +39,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-  OrderLessonsScreen: {
-    displayName: 'OrderLessonsScreen'
+  OrderDetailsScreen: {
+    displayName: 'OrderDetailsScreen'
   }
 };
 
 var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-  filename: '/Users/andrianost/projects/SwingEssentials/screens/OrderLessonsScreen.js',
+  filename: '/Users/andrianost/projects/SwingEssentials/screens/OrderDetailsScreen.js',
   components: _components,
   locals: [module],
   imports: [_react3.default]
@@ -59,100 +59,48 @@ function _wrapComponent(id) {
 
 function mapStateToProps(state) {
   return {
-    packages: state.packages
+    username: state.userData.username
   };
 }
 function mapDispatchToProps(dispatch) {
   return (0, _redux.bindActionCreators)(Actions, dispatch);
 }
 
-var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Component) {
-  _inherits(OrderLessonsScreen, _Component);
+var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Component) {
+  _inherits(OrderDetailsScreen, _Component);
 
-  function OrderLessonsScreen(props) {
-    _classCallCheck(this, OrderLessonsScreen);
+  function OrderDetailsScreen() {
+    _classCallCheck(this, OrderDetailsScreen);
 
-    var _this = _possibleConstructorReturn(this, (OrderLessonsScreen.__proto__ || Object.getPrototypeOf(OrderLessonsScreen)).call(this, props));
-
-    _this.state = {
-      packages: _this.props.packages
-    };
-    return _this;
+    return _possibleConstructorReturn(this, (OrderDetailsScreen.__proto__ || Object.getPrototypeOf(OrderDetailsScreen)).apply(this, arguments));
   }
 
-  _createClass(OrderLessonsScreen, [{
-    key: '_renderItem',
-    value: function _renderItem(_ref) {
-      var item = _ref.item,
-          index = _ref.index;
-
-      return _react3.default.createElement(_reactNativeElements.ListItem, {
-        key: index,
-        title: item.name,
-        subtitle: item.description,
-        rightTitle: item.price,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        }
-      });
-    }
-  }, {
+  _createClass(OrderDetailsScreen, [{
     key: 'render',
     value: function render() {
-      console.log(this.props.packages.packages);
       return _react3.default.createElement(
         _reactNative.View,
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 43
+            lineNumber: 23
           }
         },
         _react3.default.createElement(
-          _reactNative.View,
-          { style: styles.title, __source: {
+          _reactNative.Text,
+          {
+            __source: {
               fileName: _jsxFileName,
-              lineNumber: 44
+              lineNumber: 24
             }
           },
-          _react3.default.createElement(
-            _reactNative.Text,
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 45
-              }
-            },
-            'Order a lesson'
-          ),
-          _react3.default.createElement(
-            _reactNative.Text,
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 46
-              }
-            },
-            '3 packages available'
-          )
-        ),
-        _react3.default.createElement(_reactNative.FlatList, {
-          data: this.props.packages.packages,
-          keyExtractor: function keyExtractor(item) {
-            return item.count;
-          },
-          renderItem: this._renderItem.bind(this),
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 49
-          }
-        })
+          'Order Details'
+        )
       );
     }
   }]);
 
-  return OrderLessonsScreen;
+  return OrderDetailsScreen;
 }(_react2.Component));
 
 var styles = _reactNative.StyleSheet.create({
@@ -195,4 +143,4 @@ var styles = _reactNative.StyleSheet.create({
   }
 });
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(OrderLessonsScreen);
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(OrderDetailsScreen);

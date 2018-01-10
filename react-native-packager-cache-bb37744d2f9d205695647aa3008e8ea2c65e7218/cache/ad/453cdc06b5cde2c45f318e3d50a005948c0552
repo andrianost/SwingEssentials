@@ -18,6 +18,8 @@ var userReducer = function userReducer() {
 
 	switch (action.type) {
 		case _actions.LOGIN_SUCCESS:
+			console.log('user reducer');
+			console.log(action);
 			return _extends({}, state, {
 				username: action.data.personal.username,
 				firstName: action.data.personal.first_name,
@@ -34,6 +36,8 @@ var settingsReducer = function settingsReducer() {
 
 	switch (action.type) {
 		case _actions.GET_SETTINGS_SUCCESS:
+			console.log('settings reducer');
+			console.log(action);
 			return _extends({}, state, {
 				avatar: action.data.avatar,
 				handedness: action.data.handed,
@@ -65,6 +69,8 @@ var lessonsReducer = function lessonsReducer() {
 
 	switch (action.type) {
 		case _actions.GET_LESSONS_SUCCESS:
+			console.log('get lessons success reducer');
+			console.log(action);
 			return _extends({}, state, {
 				loading: false,
 				pending: action.data.pending,
@@ -73,6 +79,8 @@ var lessonsReducer = function lessonsReducer() {
 		case _actions.GET_LESSONS_FAILURE:
 			return state;
 		case _actions.SET_REQUEST_ID_SUCCESS:
+			console.log('set request id reducer');
+			console.log(action);
 			return _extends({}, state, {
 				request_id: action.data.request_id,
 				request_date: action.data.request_date,
@@ -86,7 +94,18 @@ var packagesReducer = function packagesReducer() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 	var action = arguments[1];
 
-	return state;
+	switch (action.type) {
+		case _actions.GET_PACKAGES_SUCCESS:
+			console.log('get packages success reducer');
+			console.log(action.data);
+			return _extends({}, state, {
+				packages: action.data
+			});
+		case _actions.GET_PACKAGES_FAILURE:
+			return state;
+		default:
+			return state;
+	}
 };
 var loginReducer = function loginReducer() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];

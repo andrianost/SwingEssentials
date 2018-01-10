@@ -10,6 +10,9 @@ export const PUT_SETTINGS_FAILURE = 'PUT_SETTINGS_FAILURE';
 export const GET_LESSONS_SUCCESS = 'GET_LESSONS_SUCCESS';
 export const GET_LESSONS_FAILURE = 'GET_LESSONS_FAILURE';
 export const SET_REQUEST_ID_SUCCESS = 'SET_REQUEST_ID_SUCCESS';
+export const GET_PACKAGES_SUCCESS = 'GET_PACKAGES_SUCCESS';
+export const GET_PACKAGES_FAILURE = 'GET_PACKAGES_FAILURE';
+
 
 export function requestLogin(userCredentials){
     return function(dispatch){
@@ -109,8 +112,8 @@ export function userSettingsUpdate(userSettings){
                 dispatch(requestSettings(userSettings.bearerToken))
                 break;
             default:
-                console.log(response.status);
-                console.log(userSettings.bearerToken)
+                // console.log(response.status);
+                // console.log(userSettings.bearerToken)
                 dispatch(putSettingsFailure(response))
                 dispatch(requestSettings(userSettings.bearerToken));
                 break;
@@ -158,7 +161,7 @@ export function requestLessons(userLessons){
 }
 
 function getLessonsSuccess(response){
-    console.log('success')
+    console.log('get lessons success')
     console.log(response)
     return{
         type: GET_LESSONS_SUCCESS,
@@ -167,7 +170,7 @@ function getLessonsSuccess(response){
 }
 
 function getLessonsFailure(response){
-    console.log('failure')
+    console.log('get lessons failure')
     return{
         type: GET_LESSONS_FAILURE,
         response: response.status
@@ -186,4 +189,41 @@ function setRequestIdSuccess(response){
     type: SET_REQUEST_ID_SUCCESS,
     data: response
   }
+}
+
+export function requestPackages(){
+    return function(dispatch){
+        return fetch('http://www.josephpboyle.com/api/myapi.php/packages', {
+            method: 'GET'
+        })
+        .then((response) => {
+            switch(response.status) {
+                case 200:
+                    response.json()
+                    .then((json) => dispatch(getPackagesSuccess(json)));
+                    break;
+                default:
+                    dispatch(getPackagesFailure(response));
+                    break;
+            }
+        })
+        .catch((error) => console.error(error));
+    }
+}
+
+function getPackagesSuccess(response){
+    // console.log('get packages success')
+    // console.log(response)
+    return{
+        type: GET_PACKAGES_SUCCESS,
+        data: response
+    }
+}
+
+function getPackagesFailure(response){
+    console.log('get packages failure')
+    return{
+        type: GET_PACKAGES_FAILURE,
+        response: response.status
+    }
 }

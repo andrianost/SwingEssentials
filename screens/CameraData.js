@@ -54,34 +54,36 @@ class CameraData extends Component {
         <SmartPicker
           selectedValue={this.state.duration}
           label='Select your duration:'
+          value={this.state.duration}
           onValueChange={ (newSelection) => this._onDurationUpdate(newSelection)}
         >
-          <Picker.Item label='One' value='1' />
-          <Picker.Item label='Two' value='2' />
-          <Picker.Item label='Three' value='3' />
-          <Picker.Item label='Four' value='4' />
-          <Picker.Item label='Five' value='5' />
-          <Picker.Item label='Six' value='6' />
-          <Picker.Item label='Seven' value='7' />
-          <Picker.Item label='Eight' value='8' />
-          <Picker.Item label='Nine' value='9' />
-          <Picker.Item label='Ten' value='10' />
+          <Picker.Item label='1s' value='1' />
+          <Picker.Item label='2s' value='2' />
+          <Picker.Item label='3s' value='3' />
+          <Picker.Item label='4s' value='4' />
+          <Picker.Item label='5s' value='5' />
+          <Picker.Item label='6s' value='6' />
+          <Picker.Item label='7s' value='7' />
+          <Picker.Item label='8s' value='8' />
+          <Picker.Item label='9s' value='9' />
+          <Picker.Item label='10s' value='10' />
         </SmartPicker>
         <SmartPicker
           selectedValue={this.state.delay}
           label='Select your delay:'
+          value={this.state.delay}
           onValueChange={ (newSelection) => this._onDelayUpdate(newSelection)}
         >
-          <Picker.Item label='One' value='1' />
-          <Picker.Item label='Two' value='2' />
-          <Picker.Item label='Three' value='3' />
-          <Picker.Item label='Four' value='4' />
-          <Picker.Item label='Five' value='5' />
-          <Picker.Item label='Six' value='6' />
-          <Picker.Item label='Seven' value='7' />
-          <Picker.Item label='Eight' value='8' />
-          <Picker.Item label='Nine' value='9' />
-          <Picker.Item label='Ten' value='10' />
+          <Picker.Item label='1s' value='1' />
+          <Picker.Item label='2s' value='2' />
+          <Picker.Item label='3s' value='3' />
+          <Picker.Item label='4s' value='4' />
+          <Picker.Item label='5s' value='5' />
+          <Picker.Item label='6s' value='6' />
+          <Picker.Item label='7s' value='7' />
+          <Picker.Item label='8s' value='8' />
+          <Picker.Item label='9s' value='9' />
+          <Picker.Item label='10s' value='10' />
         </SmartPicker>
         <SmartPicker
           selectedValue={this.state.overlay}

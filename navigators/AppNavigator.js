@@ -17,6 +17,7 @@ import LoginScreen from '../screens/LoginScreen.js';
 import UserData from '../screens/UserData.js';
 import CameraData from '../screens/CameraData.js';
 import IndividualLessonsScreen from '../screens/IndividualLessonsScreen.js';
+import OrderDetailsScreen from '../screens/OrderDetailsScreen.js';
 
 import CustomDrawer from '../screens/CustomDrawer.js';
 
@@ -106,14 +107,13 @@ export const AppNavigator = DrawerNavigator(
                       headerLeft: <MaterialIcons name="dehaze" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
-              // OrderDetails: {
-              //     screen: OrderDetails,
-              //     path: '/orderdetails',
-              //     navigationOptions: ({ navigation }) => ({
-              //         title: 'Order Details',
-              //         headerLeft: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
-              //     })
-              // }
+              OrderDetailsScreen: {
+                  screen: OrderDetailsScreen,
+                  navigationOptions: ({ navigation }) => ({
+                      title: 'Order Details',
+                      headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#e91e63' }} onPress={ () => navigation.navigate('OrderLessons')}/>
+                  })
+              }
           }),
           navigationOptions:{
               drawerLabel: 'Order Lessons',
