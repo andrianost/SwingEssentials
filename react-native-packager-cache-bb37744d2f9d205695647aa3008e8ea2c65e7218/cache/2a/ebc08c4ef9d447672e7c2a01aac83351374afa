@@ -77,12 +77,6 @@ var HomeScreen = _wrapComponent('HomeScreen')(function (_Component) {
   }
 
   _createClass(HomeScreen, [{
-    key: '_getLessonsPackages',
-    value: function _getLessonsPackages() {
-      this.props.requestPackages();
-      this.props.navigation.navigate('OrderLessons');
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -124,7 +118,7 @@ var HomeScreen = _wrapComponent('HomeScreen')(function (_Component) {
             title: 'Order a Lesson',
             buttonStyle: styles.CircleShapeView,
             onPress: function onPress() {
-              return _this2._getLessonsPackages();
+              return _this2.props.navigation.navigate('OrderLessons');
             },
             __source: {
               fileName: _jsxFileName,

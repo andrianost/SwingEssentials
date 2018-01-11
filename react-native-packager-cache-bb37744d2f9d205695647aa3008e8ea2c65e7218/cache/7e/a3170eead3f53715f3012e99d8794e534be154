@@ -59,7 +59,9 @@ function _wrapComponent(id) {
 
 function mapStateToProps(state) {
   return {
-    username: state.userData.username
+    name: state.packages.name,
+    description: state.packages.description,
+    price: state.packages.price
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -69,10 +71,17 @@ function mapDispatchToProps(dispatch) {
 var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Component) {
   _inherits(OrderDetailsScreen, _Component);
 
-  function OrderDetailsScreen() {
+  function OrderDetailsScreen(props) {
     _classCallCheck(this, OrderDetailsScreen);
 
-    return _possibleConstructorReturn(this, (OrderDetailsScreen.__proto__ || Object.getPrototypeOf(OrderDetailsScreen)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (OrderDetailsScreen.__proto__ || Object.getPrototypeOf(OrderDetailsScreen)).call(this, props));
+
+    _this.state = {
+      name: _this.props.name,
+      description: _this.props.description,
+      price: _this.props.price
+    };
+    return _this;
   }
 
   _createClass(OrderDetailsScreen, [{
@@ -83,7 +92,7 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23
+            lineNumber: 34
           }
         },
         _react3.default.createElement(
@@ -91,10 +100,40 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 24
+              lineNumber: 35
             }
           },
           'Order Details'
+        ),
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 36
+            }
+          },
+          this.props.name
+        ),
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 37
+            }
+          },
+          this.props.description
+        ),
+        _react3.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 38
+            }
+          },
+          this.props.price
         )
       );
     }

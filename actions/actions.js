@@ -12,6 +12,8 @@ export const GET_LESSONS_FAILURE = 'GET_LESSONS_FAILURE';
 export const SET_REQUEST_ID_SUCCESS = 'SET_REQUEST_ID_SUCCESS';
 export const GET_PACKAGES_SUCCESS = 'GET_PACKAGES_SUCCESS';
 export const GET_PACKAGES_FAILURE = 'GET_PACKAGES_FAILURE';
+export const ORDER_LESSONS_SUCCESS = 'ORDER_LESSONS_SUCCESS';
+
 
 
 export function requestLogin(userCredentials){
@@ -29,7 +31,9 @@ export function requestLogin(userCredentials){
                 case 200:
                     response.json()
                     .then((json) => dispatch(loginSuccess({...json,token: response.headers.get('Token')})))
-                    .then(() => dispatch(requestSettings(response.headers.get('Token'))));
+                    .then(() => dispatch(requestSettings(response.headers.get('Token'))))
+                    .then(() => dispatch(requestLessons(response.headers.get('Token'))))
+                    .then(() => dispatch(requestPackages()));  
                     break;
                 default:
                     dispatch(loginFailure(response));
@@ -139,11 +143,12 @@ function putSettingsFailure(response){
     }
 }
 
-export function requestLessons(userLessons){
+export function requestLessons(token){
     return function(dispatch){
         return fetch('http://www.josephpboyle.com/api/myapi.php/lessons', {
             method: 'GET',
-            headers: {'Authorization': 'bearer ' + userLessons.bearerToken}
+            headers: {'Authorization': 'bearer ' + token}
+            // headers: {'Authorization': 'bearer ' + userLessons.bearerToken}
         })
         .then((response) => {
             switch(response.status) {
@@ -226,4 +231,18 @@ function getPackagesFailure(response){
         type: GET_PACKAGES_FAILURE,
         response: response.status
     }
+}
+
+export function orderLessons(response){
+    return function(dispatch){
+      dispatch(orderLessonsSuccess(response));
+    }
+}
+
+function orderLessonsSuccess(response){
+  console.log('order lessons success')
+  return{
+    type: ORDER_LESSONS_SUCCESS,
+    data: response
+  }
 }

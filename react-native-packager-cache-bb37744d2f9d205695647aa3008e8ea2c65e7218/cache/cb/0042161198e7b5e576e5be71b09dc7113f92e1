@@ -48,7 +48,12 @@ var initialStore = exports.initialStore = {
         request_url: ''
     },
 
-    packages: [],
+    packages: {
+        packages: [],
+        name: '',
+        description: '',
+        price: 0
+    },
 
     login: {
         token: null,

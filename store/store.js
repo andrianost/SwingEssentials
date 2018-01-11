@@ -42,7 +42,12 @@ export const initialStore = {
     },
 
     // swingessentials available lesson packages
-    packages:[],
+    packages:{
+      packages: [],
+      name: '',
+      description: '',
+      price: 0
+    },
 
     // api validation token
     login:{

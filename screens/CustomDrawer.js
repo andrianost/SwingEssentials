@@ -13,7 +13,7 @@ class CustomDrawer extends React.Component {
   render() {
     return (
         <View>
-            <View style={{height:120,backgroundColor:"#f50057",justifyContent:'center',alignItems: 'center'}}>
+            <View style={{height:120,backgroundColor:"#231f61",justifyContent:'center',alignItems: 'center'}}>
                 <Text style={{color:"white", fontSize: 24}}>Welcome {this.props.firstName}</Text>
             </View>
             <DrawerItems {...this.props} />{/* this.props merges the navigator props with the props we care about above (e.g.username) */}

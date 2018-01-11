@@ -103,6 +103,14 @@ var packagesReducer = function packagesReducer() {
 			});
 		case _actions.GET_PACKAGES_FAILURE:
 			return state;
+		case _actions.ORDER_LESSONS_SUCCESS:
+			console.log('order lessons success reducer');
+			console.log(action);
+			return _extends({}, state, {
+				name: action.data.name,
+				description: action.data.description,
+				price: action.data.price
+			});
 		default:
 			return state;
 	}

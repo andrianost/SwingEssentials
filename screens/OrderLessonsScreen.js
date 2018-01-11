@@ -11,6 +11,9 @@ import { Button, List, ListItem } from 'react-native-elements'
 function mapStateToProps(state){
     return {
         packages: state.packages,
+        name: state.packages.name,
+        description: state.packages.description,
+        price: state.packages.price
     };
 }
 function mapDispatchToProps(dispatch){
@@ -22,30 +25,36 @@ class OrderLessonsScreen extends Component {
       super(props);
       this.state = {
           packages: this.props.packages,
+          name: this.props.name,
+          description: this.props.description,
+          price: this.props.price
       }
+  }
+
+  _orderLessons(data){
+    this.props.orderLessons(data)
+    this.props.navigation.navigate('OrderDetailsScreen')
   }
 
   _renderItem({ item, index }) {
     return (
       <ListItem
+        containerStyle = {{height: 80, justifyContent: 'center', backgroundColor: 'powderblue'}}
+        titleStyle = {{fontSize: 18}}
+        rightTitleStyle = {{fontWeight: 'bold', color: 'black'}}
         key={index}
         title={item.name}
         subtitle={item.description}
         rightTitle={item.price}
-        // onPress={ () => this._requestID({request_id: item.request_id, request_date: item.request_date, request_url: item.request_url})}
+        onPress={ () => this._orderLessons({name: item.name, description: item.description, price: item.price})}
       />
     )
   }
 
   render() {
-    console.log(this.props.packages.packages)
+    // console.log(this.props.packages.packages)
     return (
       <View>
-        <View style={styles.title}>
-          <Text>Order a lesson</Text>
-          <Text>3 packages available</Text>
-        </View>
-
         <FlatList
           data={this.props.packages.packages}
           keyExtractor={item => item.count}

@@ -29,10 +29,10 @@ class HomeScreen extends Component {
       }
   }
 
-  _getLessonsPackages(){
-    this.props.requestPackages();
-    this.props.navigation.navigate('OrderLessons');
-  }
+  // _getLessonsPackages(){
+  //   this.props.requestPackages();
+  //   this.props.navigation.navigate('OrderLessons');
+  // }
 
   render() {
     return (
@@ -48,7 +48,7 @@ class HomeScreen extends Component {
         <Button
           title="Order a Lesson"
           buttonStyle={styles.CircleShapeView}
-          onPress={() => this._getLessonsPackages()}
+          onPress={() => this.props.navigation.navigate('OrderLessons')}
         />
       </View>
       </View>

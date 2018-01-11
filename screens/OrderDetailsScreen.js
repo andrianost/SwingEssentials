@@ -10,7 +10,9 @@ import { Button } from 'react-native-elements'
 
 function mapStateToProps(state){
     return {
-        username: state.userData.username
+      name: state.packages.name,
+      description: state.packages.description,
+      price: state.packages.price
     };
 }
 function mapDispatchToProps(dispatch){
@@ -18,10 +20,22 @@ function mapDispatchToProps(dispatch){
 }
 
 class OrderDetailsScreen extends Component {
+  constructor(props){
+      super(props);
+      this.state = {
+        name: this.props.name,
+        description: this.props.description,
+        price: this.props.price
+      }
+  }
+
   render() {
     return (
       <View>
         <Text>Order Details</Text>
+        <Text>{this.props.name}</Text>
+        <Text>{this.props.description}</Text>
+        <Text>{this.props.price}</Text>
       </View>
     );
   }

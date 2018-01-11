@@ -59,7 +59,10 @@ function _wrapComponent(id) {
 
 function mapStateToProps(state) {
   return {
-    packages: state.packages
+    packages: state.packages,
+    name: state.packages.name,
+    description: state.packages.description,
+    price: state.packages.price
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -75,68 +78,56 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
     var _this = _possibleConstructorReturn(this, (OrderLessonsScreen.__proto__ || Object.getPrototypeOf(OrderLessonsScreen)).call(this, props));
 
     _this.state = {
-      packages: _this.props.packages
+      packages: _this.props.packages,
+      name: _this.props.name,
+      description: _this.props.description,
+      price: _this.props.price
     };
     return _this;
   }
 
   _createClass(OrderLessonsScreen, [{
+    key: '_orderLessons',
+    value: function _orderLessons(data) {
+      this.props.orderLessons(data);
+      this.props.navigation.navigate('OrderDetailsScreen');
+    }
+  }, {
     key: '_renderItem',
     value: function _renderItem(_ref) {
+      var _this2 = this;
+
       var item = _ref.item,
           index = _ref.index;
 
       return _react3.default.createElement(_reactNativeElements.ListItem, {
+        containerStyle: { height: 80, justifyContent: 'center', backgroundColor: 'powderblue' },
+        titleStyle: { fontSize: 18 },
+        rightTitleStyle: { fontWeight: 'bold', color: 'black' },
         key: index,
         title: item.name,
         subtitle: item.description,
         rightTitle: item.price,
+        onPress: function onPress() {
+          return _this2._orderLessons({ name: item.name, description: item.description, price: item.price });
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 41
         }
       });
     }
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.props.packages.packages);
       return _react3.default.createElement(
         _reactNative.View,
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 43
+            lineNumber: 57
           }
         },
-        _react3.default.createElement(
-          _reactNative.View,
-          { style: styles.title, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 44
-            }
-          },
-          _react3.default.createElement(
-            _reactNative.Text,
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 45
-              }
-            },
-            'Order a lesson'
-          ),
-          _react3.default.createElement(
-            _reactNative.Text,
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 46
-              }
-            },
-            '3 packages available'
-          )
-        ),
         _react3.default.createElement(_reactNative.FlatList, {
           data: this.props.packages.packages,
           keyExtractor: function keyExtractor(item) {
@@ -145,7 +136,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
           renderItem: this._renderItem.bind(this),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 49
+            lineNumber: 58
           }
         })
       );

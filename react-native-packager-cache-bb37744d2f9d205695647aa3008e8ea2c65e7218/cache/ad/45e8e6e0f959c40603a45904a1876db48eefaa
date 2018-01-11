@@ -77,7 +77,7 @@ var CustomDrawer = _wrapComponent('CustomDrawer')(function (_React$Component) {
                 },
                 _react3.default.createElement(
                     _reactNative.View,
-                    { style: { height: 120, backgroundColor: "#f50057", justifyContent: 'center', alignItems: 'center' }, __source: {
+                    { style: { height: 120, backgroundColor: "#231f61", justifyContent: 'center', alignItems: 'center' }, __source: {
                             fileName: _jsxFileName,
                             lineNumber: 16
                         }

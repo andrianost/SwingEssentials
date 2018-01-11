@@ -91,11 +91,6 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
   }
 
   _createClass(YourLessonsScreen, [{
-    key: '_getLessons',
-    value: function _getLessons() {
-      this.props.requestLessons({ bearerToken: this.state.bearerToken });
-    }
-  }, {
     key: '_requestID',
     value: function _requestID(data) {
       this.props.setRequestId(data);
@@ -112,7 +107,8 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
       return _react3.default.createElement(_reactNativeElements.ListItem, {
         key: index,
         title: item.request_date,
-        subtitle: item.request_id,
+        titleStyle: { fontSize: 18 },
+
         onPress: function onPress() {
           return _this2._requestID({ request_id: item.request_id, request_date: item.request_date, request_url: item.request_url });
         },
@@ -126,53 +122,55 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
     key: '_pendingHeader',
     value: function _pendingHeader() {
       return _react3.default.createElement(
-        _reactNative.Text,
-        {
-          __source: {
+        _reactNative.View,
+        { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 62
           }
         },
-        'Pending'
+        _react3.default.createElement(
+          _reactNative.Text,
+          { style: { color: "white", fontWeight: "bold" }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 63
+            }
+          },
+          'In Progress'
+        )
       );
     }
   }, {
     key: '_closedHeader',
     value: function _closedHeader() {
       return _react3.default.createElement(
-        _reactNative.Text,
-        {
-          __source: {
+        _reactNative.View,
+        { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 67
+            lineNumber: 70
           }
         },
-        'Closed'
+        _react3.default.createElement(
+          _reactNative.Text,
+          { style: { color: "white", fontWeight: "bold" }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 71
+            }
+          },
+          'Completed'
+        )
       );
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
-
       return _react3.default.createElement(
         _reactNative.View,
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 73
+            lineNumber: 78
           }
         },
-        _react3.default.createElement(_reactNative.Button, {
-          title: 'Get Lessons',
-          onPress: function onPress() {
-            return _this3._getLessons();
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 74
-          }
-        }),
         _react3.default.createElement(_reactNative.FlatList, {
           data: this.props.pending,
           keyExtractor: function keyExtractor(item) {
@@ -182,7 +180,7 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
           ListHeaderComponent: this._pendingHeader,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 78
+            lineNumber: 79
           }
         }),
         _react3.default.createElement(_reactNative.FlatList, {
@@ -194,7 +192,7 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
           ListHeaderComponent: this._closedHeader,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91
+            lineNumber: 92
           }
         })
       );
@@ -210,8 +208,9 @@ var styles = _reactNative.StyleSheet.create({
     height: 24
   },
   container: {
-    alignItems: 'center',
-    paddingTop: 50
+    paddingTop: 20,
+    paddingBottom: 20,
+    backgroundColor: '#231f61'
   }
 });
 

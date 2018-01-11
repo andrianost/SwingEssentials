@@ -36,9 +36,9 @@ class YourLessonsScreen extends Component {
       }
   }
 
-  _getLessons(){
-    this.props.requestLessons({bearerToken: this.state.bearerToken});
-  }
+  // _getLessons(){
+  //   this.props.requestLessons({bearerToken: this.state.bearerToken});
+  // }
 
   _requestID(data){
     this.props.setRequestId(data)
@@ -50,7 +50,8 @@ class YourLessonsScreen extends Component {
       <ListItem
         key={index}
         title={item.request_date}
-        subtitle={item.request_id}
+        titleStyle = {{fontSize: 18}}
+        // subtitle={item.request_id}
         onPress={ () => this._requestID({request_id: item.request_id, request_date: item.request_date, request_url: item.request_url})}
       />
     )
@@ -58,23 +59,23 @@ class YourLessonsScreen extends Component {
 
   _pendingHeader() {
     return (
-      <Text>Pending</Text>
+      <View style={styles.container}>
+        <Text style={{color:"white", fontWeight:"bold"}}>In Progress</Text>
+      </View>
     )
   }
 
   _closedHeader() {
     return (
-      <Text>Closed</Text>
+      <View style={styles.container}>
+        <Text style={{color:"white", fontWeight:"bold"}}>Completed</Text>
+      </View>
     )
   }
 
   render() {
     return (
       <View>
-        <Button
-          title="Get Lessons"
-          onPress={ () => this._getLessons()}
-        />
         <FlatList
           data={this.props.pending}
           keyExtractor={item => item.request_id}
@@ -105,8 +106,11 @@ const styles = StyleSheet.create({
     height: 24,
   },
   container: {
-    alignItems: 'center',
-    paddingTop: 50
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    paddingTop: 20,
+    paddingBottom: 20,
+    backgroundColor: '#231f61',
   }
 });
 

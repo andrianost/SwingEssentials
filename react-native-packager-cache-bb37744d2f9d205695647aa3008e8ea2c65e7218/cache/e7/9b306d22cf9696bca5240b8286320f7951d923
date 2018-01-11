@@ -194,6 +194,7 @@ var styles = _reactNative.StyleSheet.create({
     },
     container: {
         paddingTop: 30
+
     }
 });
 

@@ -2,7 +2,7 @@ import {combineReducers} from 'redux';
 import {NavigationActions} from 'react-navigation';
 import {AppNavigator} from '../navigators/AppNavigator.js';
 
-import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE, PUT_SETTINGS_SUCCESS, PUT_SETTINGS_FAILURE, GET_LESSONS_SUCCESS, GET_LESSONS_FAILURE, SET_REQUEST_ID_SUCCESS, GET_PACKAGES_SUCCESS, GET_PACKAGES_FAILURE} from '../actions/actions.js';
+import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE, PUT_SETTINGS_SUCCESS, PUT_SETTINGS_FAILURE, GET_LESSONS_SUCCESS, GET_LESSONS_FAILURE, SET_REQUEST_ID_SUCCESS, GET_PACKAGES_SUCCESS, GET_PACKAGES_FAILURE, ORDER_LESSONS_SUCCESS} from '../actions/actions.js';
 
 const userReducer = (state=[], action) => {
 	switch(action.type){
@@ -82,6 +82,14 @@ const packagesReducer = (state=[], action) => {
 			}
 		case GET_PACKAGES_FAILURE:
 			return state;
+		case ORDER_LESSONS_SUCCESS:
+		console.log('order lessons success reducer')
+		console.log(action)
+			return{...state,
+				name: action.data.name,
+				description: action.data.description,
+				price: action.data.price
+			}
 		default:
 			return state;
 		}

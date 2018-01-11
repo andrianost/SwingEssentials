@@ -84,7 +84,8 @@ const styles = StyleSheet.create({
     height: 24,
   },
   container: {
-    paddingTop: 30
+    paddingTop: 30,
+    
   },
 });
 

@@ -138,7 +138,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref.navigation;
                     return {
                         title: 'Home',
-                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 30, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
@@ -149,12 +149,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             }
         }),
         navigationOptions: {
-            drawerLabel: 'Home',
-            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 53
-                }
-            })
+            drawerLabel: 'Home'
         }
     },
 
@@ -166,7 +161,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref2.navigation;
                     return {
                         title: 'Your Lessons',
-                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 30, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
@@ -182,7 +177,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref3.navigation;
                     return {
                         title: 'Lessons Screen',
-                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('YourLessons');
                             }, __source: {
                                 fileName: _jsxFileName,
@@ -194,15 +189,10 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             }
         }, {
             initialRouteName: 'YourLessons',
-            contentOptions: { activeTintColor: '#e91e63' }
+            contentOptions: { activeTintColor: '#231f61' }
         }),
         navigationOptions: {
-            drawerLabel: 'Your Lessons',
-            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 80
-                }
-            })
+            drawerLabel: 'Your Lessons'
         }
     },
     RedeemLessons: {
@@ -213,7 +203,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref4.navigation;
                     return {
                         title: 'Redeem Lessons',
-                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 30, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
@@ -225,15 +215,10 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             }
         }, {
             initialRouteName: 'RedeemLessons',
-            contentOptions: { activeTintColor: '#e91e63' }
+            contentOptions: { activeTintColor: '#231f61' }
         }),
         navigationOptions: {
-            drawerLabel: 'Redeem Lessons',
-            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 98
-                }
-            })
+            drawerLabel: 'Redeem Lessons'
         }
     },
     OrderLessons: {
@@ -243,8 +228,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                 navigationOptions: function navigationOptions(_ref5) {
                     var navigation = _ref5.navigation;
                     return {
-                        title: 'Order Lessons',
-                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                        title: 'Select a Package',
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
@@ -260,7 +245,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref6.navigation;
                     return {
                         title: 'Order Details',
-                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('OrderLessons');
                             }, __source: {
                                 fileName: _jsxFileName,
@@ -272,12 +257,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             }
         }),
         navigationOptions: {
-            drawerLabel: 'Order Lessons',
-            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 120
-                }
-            })
+            drawerLabel: 'Order Lessons'
         }
     },
 
@@ -289,7 +269,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref7.navigation;
                     return {
                         title: 'Help',
-                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 30, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
@@ -301,12 +281,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             }
         }),
         navigationOptions: {
-            drawerLabel: 'Help',
-            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 136
-                }
-            })
+            drawerLabel: 'Help'
         }
     },
     About: {
@@ -317,7 +292,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref8.navigation;
                     return {
                         title: 'About',
-                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 30, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
@@ -329,12 +304,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             }
         }),
         navigationOptions: {
-            drawerLabel: 'About',
-            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 151
-                }
-            })
+            drawerLabel: 'About'
         }
     },
     Settings: {
@@ -345,7 +315,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref9.navigation;
                     return {
                         title: 'Settings',
-                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 30, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
@@ -361,7 +331,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref10.navigation;
                     return {
                         title: 'User Data',
-                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('SettingsScreen');
                             }, __source: {
                                 fileName: _jsxFileName,
@@ -377,7 +347,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref11.navigation;
                     return {
                         title: 'Camera Data',
-                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#e91e63' }, onPress: function onPress() {
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('SettingsScreen');
                             }, __source: {
                                 fileName: _jsxFileName,
@@ -389,17 +359,13 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             }
         }),
         navigationOptions: {
-            drawerLabel: 'Settings',
-            drawerIcon: _react3.default.createElement(_MaterialIcons2.default, { name: 'move-to-inbox', size: 24, style: { color: '#e91e63' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 180
-                }
-            })
+            drawerLabel: 'Settings'
         }
     }
 }, {
     initialRouteName: 'Login',
-    contentOptions: { activeTintColor: '#e91e63' },
+    drawerBackgroundColor: '#f2f2f2',
+    contentOptions: { activeTintColor: '#231f61' },
     contentComponent: _CustomDrawer2.default
 });
 
@@ -422,7 +388,7 @@ var AppWithNavigationState = _wrapComponent('AppWithNavigationState')(function (
                 }),
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 202
+                    lineNumber: 203
                 }
             });
         }
