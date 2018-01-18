@@ -84,7 +84,8 @@ var lessonsReducer = function lessonsReducer() {
 			return _extends({}, state, {
 				request_id: action.data.request_id,
 				request_date: action.data.request_date,
-				request_url: action.data.request_url
+				request_url: action.data.request_url,
+				request_notes: action.data.request_notes
 			});
 		default:
 			return state;
@@ -111,6 +112,17 @@ var packagesReducer = function packagesReducer() {
 				description: action.data.description,
 				price: action.data.price
 			});
+		case _actions.DISCOUNT_SUCCESS:
+			console.log('discount success reducer');
+			console.log(action);
+			return _extends({}, state, {
+				type: action.data.type,
+				value: action.data.value
+			});
+		case _actions.DISCOUNT_FAILURE:
+			console.log('discount failure reducer');
+			console.log(action);
+			return state;
 		default:
 			return state;
 	}

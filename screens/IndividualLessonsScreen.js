@@ -4,7 +4,7 @@ import {NavigationActions, StackNavigator} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
-// import VideoPlayer from 'react-native-video-player';
+import VideoPlayer from 'react-native-video-player';
 // import YouTube from 'react-native-youtube';
 
 import { Component } from 'react';
@@ -19,7 +19,8 @@ function mapStateToProps(state){
       closed: state.lessons.closed,
       request_id: state.lessons.request_id,
       request_date: state.lessons.request_date,
-      request_url: state.lessons.request_url
+      request_url: state.lessons.request_url,
+      request_notes: state.lessons.request_notes,
     };
 }
 function mapDispatchToProps(dispatch){
@@ -37,7 +38,8 @@ class IndividualLessonsScreen extends Component {
           closed: this.props.closed,
           request_id: this.props.request_id,
           request_date: this.props.request_date,
-          request_url: this.props.request_url
+          request_url: this.props.request_url,
+          request_notes: this.props.request_notes,
       }
   }
 
@@ -45,23 +47,39 @@ class IndividualLessonsScreen extends Component {
     console.log(this.props.request_id)
     return (
       <View>
-        <Text>Individual Lessons Screen</Text>
-        <Text>{this.props.request_id}</Text>
-        <Text>{this.props.request_date}</Text>
-        <Text>{this.props.request_url}</Text>
+        <View style={styles.container}>
+          <Text style={{fontSize: 25}}>{this.props.request_date}</Text>
+        </View>
+        <View>
+          <VideoPlayer/>
+        </View>
+        <View style={styles.container}>
+          <Text style={styles.notes}>Comments</Text>
+          <Text style={styles.border}>{this.props.request_notes}</Text>
+        </View>
       </View>
+
     );
   }
 }
 
 const styles = StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24,
-  },
   container: {
     alignItems: 'center',
-    paddingTop: 50
+    paddingTop: 25,
+    paddingBottom: 10,
+  },
+  border: {
+    borderColor: 'black',
+    borderWidth: 1,
+    paddingTop: 50,
+    paddingBottom: 50,
+    paddingLeft: 150,
+    paddingRight: 150,
+  },
+  notes: {
+    fontWeight: 'bold',
+    fontSize: 25,
   }
 });
 

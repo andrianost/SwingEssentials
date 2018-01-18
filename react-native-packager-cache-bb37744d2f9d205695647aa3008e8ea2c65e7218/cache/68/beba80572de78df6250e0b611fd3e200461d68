@@ -137,12 +137,13 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                 navigationOptions: function navigationOptions(_ref) {
                     var navigation = _ref.navigation;
                     return {
-                        title: 'Home',
+                        title: 'Swing Essentials',
+                        headerStyle: { backgroundColor: '#d3d3d3' },
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 30, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 48
+                                lineNumber: 49
                             }
                         }) };
                 }
@@ -160,12 +161,13 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                 navigationOptions: function navigationOptions(_ref2) {
                     var navigation = _ref2.navigation;
                     return {
-                        title: 'Your Lessons',
+                        title: 'Swing Essentials',
+                        headerStyle: { backgroundColor: '#d3d3d3' },
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 30, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 64
+                                lineNumber: 66
                             }
                         })
                     };
@@ -176,12 +178,13 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                 navigationOptions: function navigationOptions(_ref3) {
                     var navigation = _ref3.navigation;
                     return {
-                        title: 'Lessons Screen',
+                        title: 'Swing Essentials',
+                        headerStyle: { backgroundColor: '#d3d3d3' },
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('YourLessons');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 71
+                                lineNumber: 74
                             }
                         })
                     };
@@ -202,12 +205,13 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                 navigationOptions: function navigationOptions(_ref4) {
                     var navigation = _ref4.navigation;
                     return {
-                        title: 'Redeem Lessons',
+                        title: 'Swing Essentials',
+                        headerStyle: { backgroundColor: '#d3d3d3' },
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 30, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 89
+                                lineNumber: 93
                             }
                         })
                     };
@@ -228,12 +232,13 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                 navigationOptions: function navigationOptions(_ref5) {
                     var navigation = _ref5.navigation;
                     return {
-                        title: 'Select a Package',
+                        title: 'Swing Essentials',
+                        headerStyle: { backgroundColor: '#d3d3d3' },
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 24, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 107
+                                lineNumber: 112
                             }
                         })
                     };
@@ -244,12 +249,13 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                 navigationOptions: function navigationOptions(_ref6) {
                     var navigation = _ref6.navigation;
                     return {
-                        title: 'Order Details',
+                        title: 'Swing Essentials',
+                        headerStyle: { backgroundColor: '#d3d3d3' },
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('OrderLessons');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 114
+                                lineNumber: 120
                             }
                         })
                     };
@@ -268,12 +274,13 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                 navigationOptions: function navigationOptions(_ref7) {
                     var navigation = _ref7.navigation;
                     return {
-                        title: 'Help',
+                        title: 'Swing Essentials',
+                        headerStyle: { backgroundColor: '#d3d3d3' },
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 30, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 130
+                                lineNumber: 137
                             }
                         })
                     };
@@ -291,12 +298,13 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                 navigationOptions: function navigationOptions(_ref8) {
                     var navigation = _ref8.navigation;
                     return {
-                        title: 'About',
+                        title: 'Swing Essentials',
+                        headerStyle: { backgroundColor: '#d3d3d3' },
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 30, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 145
+                                lineNumber: 153
                             }
                         })
                     };
@@ -314,12 +322,13 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                 navigationOptions: function navigationOptions(_ref9) {
                     var navigation = _ref9.navigation;
                     return {
-                        title: 'Settings',
+                        title: 'Swing Essentials',
+                        headerStyle: { backgroundColor: '#d3d3d3' },
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'dehaze', size: 30, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 160
+                                lineNumber: 169
                             }
                         })
                     };
@@ -331,11 +340,12 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref10.navigation;
                     return {
                         title: 'User Data',
+                        headerStyle: { backgroundColor: '#d3d3d3' },
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('SettingsScreen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 167
+                                lineNumber: 177
                             }
                         })
                     };
@@ -347,11 +357,12 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref11.navigation;
                     return {
                         title: 'Camera Data',
+                        headerStyle: { backgroundColor: '#d3d3d3' },
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('SettingsScreen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 174
+                                lineNumber: 185
                             }
                         })
                     };
@@ -388,7 +399,7 @@ var AppWithNavigationState = _wrapComponent('AppWithNavigationState')(function (
                 }),
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 203
+                    lineNumber: 214
                 }
             });
         }

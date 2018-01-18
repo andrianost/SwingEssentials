@@ -38,7 +38,8 @@ export const initialStore = {
         closed:[],
         request_id: '',
         request_date: '',
-        request_url: ''
+        request_url: '',
+        request_notes: ''
     },
 
     // swingessentials available lesson packages
@@ -46,7 +47,10 @@ export const initialStore = {
       packages: [],
       name: '',
       description: '',
-      price: 0
+      price: 0,
+      discount: '',
+      type: '',
+      value: ''
     },
 
     // api validation token

@@ -1,7 +1,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.ORDER_LESSONS_SUCCESS = exports.GET_PACKAGES_FAILURE = exports.GET_PACKAGES_SUCCESS = exports.SET_REQUEST_ID_SUCCESS = exports.GET_LESSONS_FAILURE = exports.GET_LESSONS_SUCCESS = exports.PUT_SETTINGS_FAILURE = exports.PUT_SETTINGS_SUCCESS = exports.GET_SETTINGS_FAILURE = exports.GET_SETTINGS_SUCCESS = exports.LOGIN_ERROR = exports.LOGIN_SUCCESS = undefined;
+exports.DISCOUNT_FAILURE = exports.DISCOUNT_SUCCESS = exports.ORDER_LESSONS_SUCCESS = exports.GET_PACKAGES_FAILURE = exports.GET_PACKAGES_SUCCESS = exports.SET_REQUEST_ID_SUCCESS = exports.GET_LESSONS_FAILURE = exports.GET_LESSONS_SUCCESS = exports.PUT_SETTINGS_FAILURE = exports.PUT_SETTINGS_SUCCESS = exports.GET_SETTINGS_FAILURE = exports.GET_SETTINGS_SUCCESS = exports.LOGIN_ERROR = exports.LOGIN_SUCCESS = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -12,6 +12,8 @@ exports.requestLessons = requestLessons;
 exports.setRequestId = setRequestId;
 exports.requestPackages = requestPackages;
 exports.orderLessons = orderLessons;
+exports.requestDiscount = requestDiscount;
+exports.updatePrice = updatePrice;
 
 var _store = require('../store/store.js');
 
@@ -29,6 +31,8 @@ var SET_REQUEST_ID_SUCCESS = exports.SET_REQUEST_ID_SUCCESS = 'SET_REQUEST_ID_SU
 var GET_PACKAGES_SUCCESS = exports.GET_PACKAGES_SUCCESS = 'GET_PACKAGES_SUCCESS';
 var GET_PACKAGES_FAILURE = exports.GET_PACKAGES_FAILURE = 'GET_PACKAGES_FAILURE';
 var ORDER_LESSONS_SUCCESS = exports.ORDER_LESSONS_SUCCESS = 'ORDER_LESSONS_SUCCESS';
+var DISCOUNT_SUCCESS = exports.DISCOUNT_SUCCESS = 'DISCOUNT_SUCCESS';
+var DISCOUNT_FAILURE = exports.DISCOUNT_FAILURE = 'DISCOUNT_FAILURE';
 
 function requestLogin(userCredentials) {
     return function (dispatch) {
@@ -260,5 +264,49 @@ function orderLessonsSuccess(response) {
     return {
         type: ORDER_LESSONS_SUCCESS,
         data: response
+    };
+}
+
+function requestDiscount(discountCode) {
+    return function (dispatch) {
+        var data = new FormData();
+        data.append('discount', discountCode.discount);
+
+        return fetch('http://www.josephpboyle.com/api/swingessentials.php/coupon/' + discountCode.discount, {
+            method: 'GET'
+        }).then(function (response) {
+            switch (response.status) {
+                case 200:
+                    response.json().then(function (json) {
+                        return dispatch(discountSuccess(json));
+                    });
+                    break;
+                default:
+                    dispatch(discountFailure(response));
+                    break;
+            }
+        }).catch(function (error) {
+            return console.error(error);
+        });
+    };
+}
+
+function discountSuccess(response) {
+    return {
+        type: DISCOUNT_SUCCESS,
+        data: response
+    };
+}
+
+function discountFailure(response) {
+    return {
+        type: DISCOUNT_FAILURE,
+        response: response.status
+    };
+}
+
+function updatePrice(response) {
+    return function (dispatch) {
+        dispatch(orderLessonsSuccess(response));
     };
 }

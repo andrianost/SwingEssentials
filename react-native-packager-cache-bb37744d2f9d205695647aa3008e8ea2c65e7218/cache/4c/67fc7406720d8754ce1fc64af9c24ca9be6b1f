@@ -24,6 +24,10 @@ var _actions = require('../actions/actions.js');
 
 var Actions = _interopRequireWildcard(_actions);
 
+var _reactNativeVideoPlayer = require('react-native-video-player');
+
+var _reactNativeVideoPlayer2 = _interopRequireDefault(_reactNativeVideoPlayer);
+
 var _reactNative = require('react-native');
 
 var _reactNativeElements = require('react-native-elements');
@@ -64,7 +68,8 @@ function mapStateToProps(state) {
     closed: state.lessons.closed,
     request_id: state.lessons.request_id,
     request_date: state.lessons.request_date,
-    request_url: state.lessons.request_url
+    request_url: state.lessons.request_url,
+    request_notes: state.lessons.request_notes
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -85,7 +90,8 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
       closed: _this.props.closed,
       request_id: _this.props.request_id,
       request_date: _this.props.request_date,
-      request_url: _this.props.request_url
+      request_url: _this.props.request_url,
+      request_notes: _this.props.request_notes
     };
     return _this;
   }
@@ -99,48 +105,66 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 47
+            lineNumber: 49
           }
         },
         _react3.default.createElement(
-          _reactNative.Text,
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 48
-            }
-          },
-          'Individual Lessons Screen'
-        ),
-        _react3.default.createElement(
-          _reactNative.Text,
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 49
-            }
-          },
-          this.props.request_id
-        ),
-        _react3.default.createElement(
-          _reactNative.Text,
-          {
-            __source: {
+          _reactNative.View,
+          { style: styles.container, __source: {
               fileName: _jsxFileName,
               lineNumber: 50
             }
           },
-          this.props.request_date
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: { fontSize: 25 }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 51
+              }
+            },
+            this.props.request_date
+          )
         ),
         _react3.default.createElement(
-          _reactNative.Text,
+          _reactNative.View,
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 51
+              lineNumber: 53
             }
           },
-          this.props.request_url
+          _react3.default.createElement(_reactNativeVideoPlayer2.default, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 54
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: styles.container, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 56
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.notes, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 57
+              }
+            },
+            'Comments'
+          ),
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.border, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 58
+              }
+            },
+            this.props.request_notes
+          )
         )
       );
     }
@@ -150,13 +174,22 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
 }(_react2.Component));
 
 var styles = _reactNative.StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24
-  },
   container: {
     alignItems: 'center',
-    paddingTop: 50
+    paddingTop: 25,
+    paddingBottom: 10
+  },
+  border: {
+    borderColor: 'black',
+    borderWidth: 1,
+    paddingTop: 50,
+    paddingBottom: 50,
+    paddingLeft: 150,
+    paddingRight: 150
+  },
+  notes: {
+    fontWeight: 'bold',
+    fontSize: 25
   }
 });
 

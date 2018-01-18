@@ -15,7 +15,8 @@ function mapStateToProps(state){
       closed: state.lessons.closed,
       request_id: state.lessons.request_id,
       request_date: state.lessons.request_date,
-      request_url: state.lessons.request_url
+      request_url: state.lessons.request_url,
+      request_notes: state.lessons.request_notes,
     };
 }
 function mapDispatchToProps(dispatch){
@@ -32,13 +33,10 @@ class YourLessonsScreen extends Component {
           closed: this.props.closed,
           request_id: this.props.request_id,
           request_date: this.props.request_date,
-          request_url: this.props.request_url
+          request_url: this.props.request_url,
+          request_notes: this.props.request_notes,
       }
   }
-
-  // _getLessons(){
-  //   this.props.requestLessons({bearerToken: this.state.bearerToken});
-  // }
 
   _requestID(data){
     this.props.setRequestId(data)
@@ -52,7 +50,7 @@ class YourLessonsScreen extends Component {
         title={item.request_date}
         titleStyle = {{fontSize: 18}}
         // subtitle={item.request_id}
-        onPress={ () => this._requestID({request_id: item.request_id, request_date: item.request_date, request_url: item.request_url})}
+        onPress={ () => this._requestID({request_id: item.request_id, request_date: item.request_date, request_url: item.request_url, request_notes: item.request_notes})}
       />
     )
   }
@@ -101,10 +99,6 @@ class YourLessonsScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24,
-  },
   container: {
     // alignItems: 'center',
     // justifyContent: 'center',

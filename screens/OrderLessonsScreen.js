@@ -36,6 +36,14 @@ class OrderLessonsScreen extends Component {
     this.props.navigation.navigate('OrderDetailsScreen')
   }
 
+  _packagesHeader() {
+    return (
+      <View style={styles.container}>
+        <Text style={{color:"white", fontWeight:"bold"}}>Available Packages</Text>
+      </View>
+    )
+  }
+
   _renderItem({ item, index }) {
     return (
       <ListItem
@@ -59,7 +67,7 @@ class OrderLessonsScreen extends Component {
           data={this.props.packages.packages}
           keyExtractor={item => item.count}
           renderItem={this._renderItem.bind(this)}
-          // ListHeaderComponent={this._closedHeader}
+          ListHeaderComponent={this._packagesHeader}
         />
       </View>
     );
@@ -92,13 +100,10 @@ class OrderLessonsScreen extends Component {
 // />
 
 const styles = StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24,
-  },
   container: {
-    alignItems: 'center',
-    paddingTop: 50
+    paddingTop: 20,
+    paddingBottom: 20,
+    backgroundColor: '#231f61',
   },
   buttonContainer: {
     alignItems: 'center',
@@ -107,27 +112,6 @@ const styles = StyleSheet.create({
     width: 400,
     height: 120,
     alignItems: 'center',
-  },
-  button1: {
-    width: 400,
-    height: 120,
-    backgroundColor: 'grey',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  button2: {
-    width: 400,
-    height: 120,
-    backgroundColor: 'blue',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  button3: {
-    width: 400,
-    height: 120,
-    backgroundColor: 'green',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
   },
 });
 

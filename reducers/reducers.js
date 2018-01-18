@@ -2,7 +2,7 @@ import {combineReducers} from 'redux';
 import {NavigationActions} from 'react-navigation';
 import {AppNavigator} from '../navigators/AppNavigator.js';
 
-import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE, PUT_SETTINGS_SUCCESS, PUT_SETTINGS_FAILURE, GET_LESSONS_SUCCESS, GET_LESSONS_FAILURE, SET_REQUEST_ID_SUCCESS, GET_PACKAGES_SUCCESS, GET_PACKAGES_FAILURE, ORDER_LESSONS_SUCCESS} from '../actions/actions.js';
+import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE, PUT_SETTINGS_SUCCESS, PUT_SETTINGS_FAILURE, GET_LESSONS_SUCCESS, GET_LESSONS_FAILURE, SET_REQUEST_ID_SUCCESS, GET_PACKAGES_SUCCESS, GET_PACKAGES_FAILURE, ORDER_LESSONS_SUCCESS, DISCOUNT_SUCCESS, DISCOUNT_FAILURE} from '../actions/actions.js';
 
 const userReducer = (state=[], action) => {
 	switch(action.type){
@@ -64,7 +64,8 @@ const lessonsReducer = (state=[], action) => {
 			return{...state,
 				request_id: action.data.request_id,
 				request_date: action.data.request_date,
-				request_url: action.data.request_url
+				request_url: action.data.request_url,
+				request_notes: action.data.request_notes,
 			}
 		default:
 			return state;
@@ -90,6 +91,17 @@ const packagesReducer = (state=[], action) => {
 				description: action.data.description,
 				price: action.data.price
 			}
+		case DISCOUNT_SUCCESS:
+		console.log('discount success reducer')
+		console.log(action)
+			return{...state,
+				type: action.data.type,
+				value: action.data.value,
+			}
+		case DISCOUNT_FAILURE:
+		console.log('discount failure reducer')
+		console.log(action)
+			return state;
 		default:
 			return state;
 		}

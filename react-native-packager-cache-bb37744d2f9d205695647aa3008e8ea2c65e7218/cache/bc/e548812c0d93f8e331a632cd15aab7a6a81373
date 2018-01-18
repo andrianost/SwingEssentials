@@ -64,7 +64,8 @@ function mapStateToProps(state) {
     closed: state.lessons.closed,
     request_id: state.lessons.request_id,
     request_date: state.lessons.request_date,
-    request_url: state.lessons.request_url
+    request_url: state.lessons.request_url,
+    request_notes: state.lessons.request_notes
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -85,7 +86,8 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
       closed: _this.props.closed,
       request_id: _this.props.request_id,
       request_date: _this.props.request_date,
-      request_url: _this.props.request_url
+      request_url: _this.props.request_url,
+      request_notes: _this.props.request_notes
     };
     return _this;
   }
@@ -110,11 +112,11 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
         titleStyle: { fontSize: 18 },
 
         onPress: function onPress() {
-          return _this2._requestID({ request_id: item.request_id, request_date: item.request_date, request_url: item.request_url });
+          return _this2._requestID({ request_id: item.request_id, request_date: item.request_date, request_url: item.request_url, request_notes: item.request_notes });
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 48
         }
       });
     }
@@ -125,14 +127,14 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 62
+            lineNumber: 60
           }
         },
         _react3.default.createElement(
           _reactNative.Text,
           { style: { color: "white", fontWeight: "bold" }, __source: {
               fileName: _jsxFileName,
-              lineNumber: 63
+              lineNumber: 61
             }
           },
           'In Progress'
@@ -146,14 +148,14 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 70
+            lineNumber: 68
           }
         },
         _react3.default.createElement(
           _reactNative.Text,
           { style: { color: "white", fontWeight: "bold" }, __source: {
               fileName: _jsxFileName,
-              lineNumber: 71
+              lineNumber: 69
             }
           },
           'Completed'
@@ -168,7 +170,7 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 78
+            lineNumber: 76
           }
         },
         _react3.default.createElement(_reactNative.FlatList, {
@@ -180,7 +182,7 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
           ListHeaderComponent: this._pendingHeader,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 79
+            lineNumber: 77
           }
         }),
         _react3.default.createElement(_reactNative.FlatList, {
@@ -192,7 +194,7 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
           ListHeaderComponent: this._closedHeader,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92
+            lineNumber: 90
           }
         })
       );
@@ -203,10 +205,6 @@ var YourLessonsScreen = _wrapComponent('YourLessonsScreen')(function (_Component
 }(_react2.Component));
 
 var styles = _reactNative.StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24
-  },
   container: {
     paddingTop: 20,
     paddingBottom: 20,

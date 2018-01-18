@@ -10,11 +10,13 @@ export const PUT_SETTINGS_FAILURE = 'PUT_SETTINGS_FAILURE';
 export const GET_LESSONS_SUCCESS = 'GET_LESSONS_SUCCESS';
 export const GET_LESSONS_FAILURE = 'GET_LESSONS_FAILURE';
 export const SET_REQUEST_ID_SUCCESS = 'SET_REQUEST_ID_SUCCESS';
+// ADD FAILURE CASE
 export const GET_PACKAGES_SUCCESS = 'GET_PACKAGES_SUCCESS';
 export const GET_PACKAGES_FAILURE = 'GET_PACKAGES_FAILURE';
 export const ORDER_LESSONS_SUCCESS = 'ORDER_LESSONS_SUCCESS';
-
-
+// ADD FAILURE CASE
+export const DISCOUNT_SUCCESS = 'DISCOUNT_SUCCESS';
+export const DISCOUNT_FAILURE = 'DISCOUNT_FAILURE';
 
 export function requestLogin(userCredentials){
     return function(dispatch){
@@ -33,7 +35,7 @@ export function requestLogin(userCredentials){
                     .then((json) => dispatch(loginSuccess({...json,token: response.headers.get('Token')})))
                     .then(() => dispatch(requestSettings(response.headers.get('Token'))))
                     .then(() => dispatch(requestLessons(response.headers.get('Token'))))
-                    .then(() => dispatch(requestPackages()));  
+                    .then(() => dispatch(requestPackages()));
                     break;
                 default:
                     dispatch(loginFailure(response));
@@ -245,4 +247,47 @@ function orderLessonsSuccess(response){
     type: ORDER_LESSONS_SUCCESS,
     data: response
   }
+}
+
+export function requestDiscount(discountCode){
+    return function(dispatch){
+        const data = new FormData();
+        data.append('discount', discountCode.discount);
+
+        return fetch('http://www.josephpboyle.com/api/swingessentials.php/coupon/' + discountCode.discount, {
+            method: 'GET',
+        })
+        .then((response) => {
+            switch(response.status) {
+                case 200:
+                    response.json()
+                    .then((json) => dispatch(discountSuccess(json)));
+                    break;
+                default:
+                    dispatch(discountFailure(response));
+                    break;
+            }
+        })
+        .catch((error) => console.error(error));
+    }
+}
+
+function discountSuccess(response){
+    return{
+        type: DISCOUNT_SUCCESS,
+        data: response
+    }
+}
+
+function discountFailure(response){
+    return{
+        type: DISCOUNT_FAILURE,
+        response: response.status
+    }
+}
+
+export function updatePrice(response){
+    return function(dispatch){
+      dispatch(orderLessonsSuccess(response));
+    }
 }

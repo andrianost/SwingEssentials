@@ -93,6 +93,27 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
       this.props.navigation.navigate('OrderDetailsScreen');
     }
   }, {
+    key: '_packagesHeader',
+    value: function _packagesHeader() {
+      return _react3.default.createElement(
+        _reactNative.View,
+        { style: styles.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 41
+          }
+        },
+        _react3.default.createElement(
+          _reactNative.Text,
+          { style: { color: "white", fontWeight: "bold" }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 42
+            }
+          },
+          'Available Packages'
+        )
+      );
+    }
+  }, {
     key: '_renderItem',
     value: function _renderItem(_ref) {
       var _this2 = this;
@@ -113,7 +134,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 49
         }
       });
     }
@@ -125,7 +146,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 65
           }
         },
         _react3.default.createElement(_reactNative.FlatList, {
@@ -134,9 +155,10 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
             return item.count;
           },
           renderItem: this._renderItem.bind(this),
+          ListHeaderComponent: this._packagesHeader,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 58
+            lineNumber: 66
           }
         })
       );
@@ -147,13 +169,10 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
 }(_react2.Component));
 
 var styles = _reactNative.StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24
-  },
   container: {
-    alignItems: 'center',
-    paddingTop: 50
+    paddingTop: 20,
+    paddingBottom: 20,
+    backgroundColor: '#231f61'
   },
   buttonContainer: {
     alignItems: 'center'
@@ -162,27 +181,6 @@ var styles = _reactNative.StyleSheet.create({
     width: 400,
     height: 120,
     alignItems: 'center'
-  },
-  button1: {
-    width: 400,
-    height: 120,
-    backgroundColor: 'grey',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  button2: {
-    width: 400,
-    height: 120,
-    backgroundColor: 'blue',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  button3: {
-    width: 400,
-    height: 120,
-    backgroundColor: 'green',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
   }
 });
 

@@ -45,14 +45,18 @@ var initialStore = exports.initialStore = {
         closed: [],
         request_id: '',
         request_date: '',
-        request_url: ''
+        request_url: '',
+        request_notes: ''
     },
 
     packages: {
         packages: [],
         name: '',
         description: '',
-        price: 0
+        price: 0,
+        discount: '',
+        type: '',
+        value: ''
     },
 
     login: {
