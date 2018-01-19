@@ -27,10 +27,6 @@ class RedeemLessonsScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24,
-  },
   container: {
     alignItems: 'center',
     paddingTop: 50

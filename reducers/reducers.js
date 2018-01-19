@@ -2,7 +2,12 @@ import {combineReducers} from 'redux';
 import {NavigationActions} from 'react-navigation';
 import {AppNavigator} from '../navigators/AppNavigator.js';
 
-import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE, PUT_SETTINGS_SUCCESS, PUT_SETTINGS_FAILURE, GET_LESSONS_SUCCESS, GET_LESSONS_FAILURE, SET_REQUEST_ID_SUCCESS, GET_PACKAGES_SUCCESS, GET_PACKAGES_FAILURE, ORDER_LESSONS_SUCCESS, DISCOUNT_SUCCESS, DISCOUNT_FAILURE} from '../actions/actions.js';
+import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE,
+				PUT_SETTINGS_SUCCESS, PUT_SETTINGS_FAILURE, GET_LESSONS_SUCCESS,
+				GET_LESSONS_FAILURE, SET_REQUEST_ID_SUCCESS, GET_PACKAGES_SUCCESS,
+				GET_PACKAGES_FAILURE, ORDER_LESSONS_SUCCESS, DISCOUNT_SUCCESS,
+				DISCOUNT_FAILURE, UPDATE_VIEWED_STATUS_SUCCESS,
+				UPDATE_VIEWED_STATUS_FAILURE, UPDATE_PRICE_SUCCESS} from '../actions/actions.js';
 
 const userReducer = (state=[], action) => {
 	switch(action.type){
@@ -50,7 +55,7 @@ const lessonsReducer = (state=[], action) => {
 	switch(action.type){
 		case GET_LESSONS_SUCCESS:
 			console.log('get lessons success reducer')
-			console.log(action)
+			// console.log(action)
 			return{...state,
 				loading: false,
 				pending: action.data.pending,
@@ -60,13 +65,24 @@ const lessonsReducer = (state=[], action) => {
 			return state;
 		case SET_REQUEST_ID_SUCCESS:
 		console.log('set request id reducer')
-		console.log(action)
+		// console.log(action)
 			return{...state,
 				request_id: action.data.request_id,
 				request_date: action.data.request_date,
 				request_url: action.data.request_url,
 				request_notes: action.data.request_notes,
+				viewed: action.data.viewed,
+				response_notes: action.data.response_notes
 			}
+		case UPDATE_VIEWED_STATUS_SUCCESS:
+		console.log('update viewed status success reducer')
+		// console.log(action)
+			return{...state,
+				viewed: action.data.viewed
+			}
+		case UPDATE_VIEWED_STATUS_FAILURE:
+		console.log('update viewed status failed reducer')
+			return state;
 		default:
 			return state;
 		}
@@ -75,7 +91,7 @@ const packagesReducer = (state=[], action) => {
 	switch(action.type){
 		case GET_PACKAGES_SUCCESS:
 		console.log('get packages success reducer')
-		console.log(action.data)
+		// console.log(action.data)
 			return{...state,
 				packages: action.data,
 				// count: action.data.count,
@@ -85,22 +101,29 @@ const packagesReducer = (state=[], action) => {
 			return state;
 		case ORDER_LESSONS_SUCCESS:
 		console.log('order lessons success reducer')
-		console.log(action)
+		// console.log(action)
 			return{...state,
 				name: action.data.name,
 				description: action.data.description,
 				price: action.data.price
 			}
+		case UPDATE_PRICE_SUCCESS:
+		console.log('update price success reducer')
+		// console.log(action.data.price)
+		// console.log(typeof action.data.price)
+			return{...state,
+				price: action.data.price
+			}
 		case DISCOUNT_SUCCESS:
 		console.log('discount success reducer')
-		console.log(action)
+		// console.log(action)
 			return{...state,
 				type: action.data.type,
 				value: action.data.value,
 			}
 		case DISCOUNT_FAILURE:
 		console.log('discount failure reducer')
-		console.log(action)
+		// console.log(action)
 			return state;
 		default:
 			return state;

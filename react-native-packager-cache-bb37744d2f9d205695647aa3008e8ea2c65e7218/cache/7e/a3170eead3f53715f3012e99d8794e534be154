@@ -85,7 +85,9 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
       price: _this.props.price,
       discount: _this.props.discount,
       type: _this.props.type,
-      value: _this.props.value
+      value: _this.props.value,
+      coupon: false,
+      savings: ''
     };
     return _this;
   }
@@ -97,13 +99,17 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
 
       this.props.requestDiscount({ discount: this.state.discount }).then(function () {
         if (_this2.props.type == 'percent') {
-          console.log(_this2.props.type);
-          console.log(_this2.props.value);
+          _this2.setState({ savings: parseInt(_this2.props.value) / 100 * parseInt(_this2.props.price) });
           _this2.props.updatePrice({ price: parseInt(_this2.props.price) - parseInt(_this2.props.value) / 100 * parseInt(_this2.props.price) });
+          _this2.setState({ coupon: true });
+          console.log(typeof _this2.props.price);
         } else if (_this2.props.type == 'amount') {
+          _this2.setState({ savings: parseInt(_this2.props.value) / 100 * parseInt(_this2.props.price) });
           _this2.props.updatePrice({ price: parseInt(_this2.props.price) - parseInt(_this2.props.value) });
+          _this2.setState({ coupon: true });
         } else {
           console.log('invalid code');
+          _this2.props.discountSuccess({ type: 'invalid' });
         }
       });
     }
@@ -117,21 +123,21 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 64
+            lineNumber: 61
           }
         },
         _react3.default.createElement(
           _reactNative.View,
           { style: styles.header, __source: {
               fileName: _jsxFileName,
-              lineNumber: 65
+              lineNumber: 62
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: { color: "white", fontWeight: "bold" }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 66
+                lineNumber: 63
               }
             },
             'Discount Code'
@@ -145,24 +151,34 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 68
+            lineNumber: 65
           }
         }),
+        this.props.type == 'invalid' && _react3.default.createElement(
+          _reactNativeElements.FormValidationMessage,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 70
+            }
+          },
+          'Invalid discount code'
+        ),
         _react3.default.createElement(
           _reactNative.View,
           { style: { paddingBottom: 20 }, __source: {
               fileName: _jsxFileName,
-              lineNumber: 73
+              lineNumber: 71
             }
           },
           _react3.default.createElement(_reactNativeElements.Button, {
             raised: true,
             title: 'Apply Code',
-            disabled: !this.state.discount,
+            disabled: !this.state.discount || this.state.coupon == true,
             onPress: this._onDiscount.bind(this),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 74
+              lineNumber: 72
             }
           })
         ),
@@ -170,49 +186,68 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.header, __source: {
               fileName: _jsxFileName,
-              lineNumber: 81
+              lineNumber: 79
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: { color: "white", fontWeight: "bold" }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 82
+                lineNumber: 80
               }
             },
-            'Order Details'
+            'Order Details:  ',
+            this.props.name
           )
         ),
         _react3.default.createElement(
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 84
+              lineNumber: 82
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: { fontWeight: "bold" }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 83
+              }
+            },
+            'Sub-total:                                                        $',
+            parseFloat(this.state.price).toFixed(2)
+          )
+        ),
+        this.state.coupon == true && _react3.default.createElement(
+          _reactNative.View,
+          { style: styles.container, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 85
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: { fontWeight: "bold", fontStyle: "italic" }, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 85
               }
             },
-            'Sub-total:                                                        $',
-            this.props.price
+            'Savings: -$',
+            this.state.savings.toFixed(2)
           )
         ),
         _react3.default.createElement(
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 87
+              lineNumber: 86
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: { fontWeight: "bold" }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 88
+                lineNumber: 87
               }
             },
             'Tax:                                                                     $0.00'
@@ -222,18 +257,18 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 90
+              lineNumber: 89
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: { fontWeight: "bold" }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 91
+                lineNumber: 90
               }
             },
             'Total:                                                                $',
-            this.props.price
+            parseFloat(this.props.price).toFixed(2)
           )
         )
       );

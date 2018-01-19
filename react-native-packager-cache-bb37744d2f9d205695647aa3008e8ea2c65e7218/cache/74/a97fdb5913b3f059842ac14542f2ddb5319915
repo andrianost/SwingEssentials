@@ -1,7 +1,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.DISCOUNT_FAILURE = exports.DISCOUNT_SUCCESS = exports.ORDER_LESSONS_SUCCESS = exports.GET_PACKAGES_FAILURE = exports.GET_PACKAGES_SUCCESS = exports.SET_REQUEST_ID_SUCCESS = exports.GET_LESSONS_FAILURE = exports.GET_LESSONS_SUCCESS = exports.PUT_SETTINGS_FAILURE = exports.PUT_SETTINGS_SUCCESS = exports.GET_SETTINGS_FAILURE = exports.GET_SETTINGS_SUCCESS = exports.LOGIN_ERROR = exports.LOGIN_SUCCESS = undefined;
+exports.UPDATE_PRICE_SUCCESS = exports.UPDATE_VIEWED_STATUS_FAILURE = exports.UPDATE_VIEWED_STATUS_SUCCESS = exports.DISCOUNT_FAILURE = exports.DISCOUNT_SUCCESS = exports.ORDER_LESSONS_SUCCESS = exports.GET_PACKAGES_FAILURE = exports.GET_PACKAGES_SUCCESS = exports.SET_REQUEST_ID_SUCCESS = exports.GET_LESSONS_FAILURE = exports.GET_LESSONS_SUCCESS = exports.PUT_SETTINGS_FAILURE = exports.PUT_SETTINGS_SUCCESS = exports.GET_SETTINGS_FAILURE = exports.GET_SETTINGS_SUCCESS = exports.LOGIN_ERROR = exports.LOGIN_SUCCESS = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -13,7 +13,9 @@ exports.setRequestId = setRequestId;
 exports.requestPackages = requestPackages;
 exports.orderLessons = orderLessons;
 exports.requestDiscount = requestDiscount;
+exports.discountSuccess = discountSuccess;
 exports.updatePrice = updatePrice;
+exports.updateViewedStatus = updateViewedStatus;
 
 var _store = require('../store/store.js');
 
@@ -33,6 +35,9 @@ var GET_PACKAGES_FAILURE = exports.GET_PACKAGES_FAILURE = 'GET_PACKAGES_FAILURE'
 var ORDER_LESSONS_SUCCESS = exports.ORDER_LESSONS_SUCCESS = 'ORDER_LESSONS_SUCCESS';
 var DISCOUNT_SUCCESS = exports.DISCOUNT_SUCCESS = 'DISCOUNT_SUCCESS';
 var DISCOUNT_FAILURE = exports.DISCOUNT_FAILURE = 'DISCOUNT_FAILURE';
+var UPDATE_VIEWED_STATUS_SUCCESS = exports.UPDATE_VIEWED_STATUS_SUCCESS = 'UPDATE_VIEWED_STATUS_SUCCESS';
+var UPDATE_VIEWED_STATUS_FAILURE = exports.UPDATE_VIEWED_STATUS_FAILURE = 'UPDATE_VIEWED_STATUS_FAILURE';
+var UPDATE_PRICE_SUCCESS = exports.UPDATE_PRICE_SUCCESS = 'UPDATE_PRICE_SUCCESS';
 
 function requestLogin(userCredentials) {
     return function (dispatch) {
@@ -304,9 +309,58 @@ function discountFailure(response) {
         response: response.status
     };
 }
-
 function updatePrice(response) {
     return function (dispatch) {
-        dispatch(orderLessonsSuccess(response));
+        dispatch(updatePriceSuccess(response));
+    };
+}
+
+function updatePriceSuccess(response) {
+    return {
+        type: UPDATE_PRICE_SUCCESS,
+        data: response
+    };
+}
+
+function updateViewedStatus(viewedStatus) {
+    return function (dispatch) {
+        return fetch('http://www.josephpboyle.com/api/myapi.php/viewed', {
+            method: 'PUT',
+            headers: {
+                'Authorization': 'bearer ' + viewedStatus.bearerToken
+            },
+            body: JSON.stringify({
+                'id': parseInt(viewedStatus.request_id)
+            })
+        }).then(function (response) {
+            switch (response.status) {
+                case 200:
+                    dispatch(updateViewedStatusSuccess(response));
+                    dispatch(requestLessons(viewedStatus.bearerToken));
+                    break;
+                default:
+                    dispatch(updateViewedStatusFailure(response));
+                    break;
+            }
+        }).catch(function (error) {
+            return console.error(error);
+        });
+    };
+}
+
+function updateViewedStatusSuccess(response) {
+    console.log('update viewed status success');
+    return {
+        type: UPDATE_VIEWED_STATUS_SUCCESS,
+        data: response
+    };
+}
+
+function updateViewedStatusFailure(response) {
+    console.log('update viewed status failure');
+    console.log(response);
+    return {
+        type: UPDATE_VIEWED_STATUS_FAILURE,
+        response: response.status
     };
 }

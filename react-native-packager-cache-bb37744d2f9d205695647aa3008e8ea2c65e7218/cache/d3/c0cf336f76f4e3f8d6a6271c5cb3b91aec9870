@@ -101,10 +101,6 @@ var RedeemLessonsScreen = _wrapComponent('RedeemLessonsScreen')(function (_Compo
 }(_react2.Component));
 
 var styles = _reactNative.StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24
-  },
   container: {
     alignItems: 'center',
     paddingTop: 50

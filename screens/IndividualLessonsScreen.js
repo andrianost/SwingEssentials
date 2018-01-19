@@ -21,6 +21,7 @@ function mapStateToProps(state){
       request_date: state.lessons.request_date,
       request_url: state.lessons.request_url,
       request_notes: state.lessons.request_notes,
+      response_notes: state.lessons.response_notes,
     };
 }
 function mapDispatchToProps(dispatch){
@@ -40,6 +41,7 @@ class IndividualLessonsScreen extends Component {
           request_date: this.props.request_date,
           request_url: this.props.request_url,
           request_notes: this.props.request_notes,
+          response_notes: this.props.response_notes,
       }
   }
 
@@ -55,7 +57,7 @@ class IndividualLessonsScreen extends Component {
         </View>
         <View style={styles.container}>
           <Text style={styles.notes}>Comments</Text>
-          <Text style={styles.border}>{this.props.request_notes}</Text>
+          <Text style={styles.border}>{this.props.response_notes}</Text>
         </View>
       </View>
 

@@ -70,7 +70,7 @@ var lessonsReducer = function lessonsReducer() {
 	switch (action.type) {
 		case _actions.GET_LESSONS_SUCCESS:
 			console.log('get lessons success reducer');
-			console.log(action);
+
 			return _extends({}, state, {
 				loading: false,
 				pending: action.data.pending,
@@ -80,13 +80,24 @@ var lessonsReducer = function lessonsReducer() {
 			return state;
 		case _actions.SET_REQUEST_ID_SUCCESS:
 			console.log('set request id reducer');
-			console.log(action);
+
 			return _extends({}, state, {
 				request_id: action.data.request_id,
 				request_date: action.data.request_date,
 				request_url: action.data.request_url,
-				request_notes: action.data.request_notes
+				request_notes: action.data.request_notes,
+				viewed: action.data.viewed,
+				response_notes: action.data.response_notes
 			});
+		case _actions.UPDATE_VIEWED_STATUS_SUCCESS:
+			console.log('update viewed status success reducer');
+
+			return _extends({}, state, {
+				viewed: action.data.viewed
+			});
+		case _actions.UPDATE_VIEWED_STATUS_FAILURE:
+			console.log('update viewed status failed reducer');
+			return state;
 		default:
 			return state;
 	}
@@ -98,7 +109,7 @@ var packagesReducer = function packagesReducer() {
 	switch (action.type) {
 		case _actions.GET_PACKAGES_SUCCESS:
 			console.log('get packages success reducer');
-			console.log(action.data);
+
 			return _extends({}, state, {
 				packages: action.data
 			});
@@ -106,22 +117,28 @@ var packagesReducer = function packagesReducer() {
 			return state;
 		case _actions.ORDER_LESSONS_SUCCESS:
 			console.log('order lessons success reducer');
-			console.log(action);
+
 			return _extends({}, state, {
 				name: action.data.name,
 				description: action.data.description,
 				price: action.data.price
 			});
+		case _actions.UPDATE_PRICE_SUCCESS:
+			console.log('update price success reducer');
+
+			return _extends({}, state, {
+				price: action.data.price
+			});
 		case _actions.DISCOUNT_SUCCESS:
 			console.log('discount success reducer');
-			console.log(action);
+
 			return _extends({}, state, {
 				type: action.data.type,
 				value: action.data.value
 			});
 		case _actions.DISCOUNT_FAILURE:
 			console.log('discount failure reducer');
-			console.log(action);
+
 			return state;
 		default:
 			return state;

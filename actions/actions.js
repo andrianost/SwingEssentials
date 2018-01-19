@@ -17,6 +17,10 @@ export const ORDER_LESSONS_SUCCESS = 'ORDER_LESSONS_SUCCESS';
 // ADD FAILURE CASE
 export const DISCOUNT_SUCCESS = 'DISCOUNT_SUCCESS';
 export const DISCOUNT_FAILURE = 'DISCOUNT_FAILURE';
+export const UPDATE_VIEWED_STATUS_SUCCESS = 'UPDATE_VIEWED_STATUS_SUCCESS';
+export const UPDATE_VIEWED_STATUS_FAILURE = 'UPDATE_VIEWED_STATUS_FAILURE';
+export const UPDATE_PRICE_SUCCESS = 'UPDATE_PRICE_SUCCESS';
+
 
 export function requestLogin(userCredentials){
     return function(dispatch){
@@ -118,8 +122,6 @@ export function userSettingsUpdate(userSettings){
                 dispatch(requestSettings(userSettings.bearerToken))
                 break;
             default:
-                // console.log(response.status);
-                // console.log(userSettings.bearerToken)
                 dispatch(putSettingsFailure(response))
                 dispatch(requestSettings(userSettings.bearerToken));
                 break;
@@ -150,7 +152,6 @@ export function requestLessons(token){
         return fetch('http://www.josephpboyle.com/api/myapi.php/lessons', {
             method: 'GET',
             headers: {'Authorization': 'bearer ' + token}
-            // headers: {'Authorization': 'bearer ' + userLessons.bearerToken}
         })
         .then((response) => {
             switch(response.status) {
@@ -219,8 +220,6 @@ export function requestPackages(){
 }
 
 function getPackagesSuccess(response){
-    // console.log('get packages success')
-    // console.log(response)
     return{
         type: GET_PACKAGES_SUCCESS,
         data: response
@@ -272,7 +271,7 @@ export function requestDiscount(discountCode){
     }
 }
 
-function discountSuccess(response){
+export function discountSuccess(response){
     return{
         type: DISCOUNT_SUCCESS,
         data: response
@@ -285,9 +284,58 @@ function discountFailure(response){
         response: response.status
     }
 }
-
 export function updatePrice(response){
     return function(dispatch){
-      dispatch(orderLessonsSuccess(response));
+      dispatch(updatePriceSuccess(response));
+    }
+}
+
+function updatePriceSuccess(response){
+    return{
+        type: UPDATE_PRICE_SUCCESS,
+        data: response
+    }
+}
+
+export function updateViewedStatus(viewedStatus){
+  return function(dispatch){
+    return fetch('http://www.josephpboyle.com/api/myapi.php/viewed', {
+        method: 'PUT',
+        headers: {
+          'Authorization': 'bearer ' + viewedStatus.bearerToken,
+        },
+        body: JSON.stringify( {
+          'id': parseInt(viewedStatus.request_id),
+        })
+    })
+    .then((response) => {
+        switch(response.status) {
+            case 200:
+                dispatch(updateViewedStatusSuccess(response));
+                dispatch(requestLessons(viewedStatus.bearerToken));
+                break;
+            default:
+                dispatch(updateViewedStatusFailure(response))
+                break;
+        }
+    })
+    .catch((error) => console.error(error));
+  }
+}
+
+function updateViewedStatusSuccess(response){
+    console.log('update viewed status success')
+    return{
+        type: UPDATE_VIEWED_STATUS_SUCCESS,
+        data: response
+    }
+}
+
+function updateViewedStatusFailure(response){
+    console.log('update viewed status failure')
+    console.log(response)
+    return{
+        type: UPDATE_VIEWED_STATUS_FAILURE,
+        response: response.status
     }
 }

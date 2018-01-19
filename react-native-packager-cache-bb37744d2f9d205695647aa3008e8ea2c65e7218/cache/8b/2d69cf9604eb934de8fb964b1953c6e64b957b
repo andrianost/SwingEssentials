@@ -146,7 +146,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 65
+            lineNumber: 64
           }
         },
         _react3.default.createElement(_reactNative.FlatList, {
@@ -158,7 +158,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
           ListHeaderComponent: this._packagesHeader,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66
+            lineNumber: 65
           }
         })
       );
@@ -173,14 +173,6 @@ var styles = _reactNative.StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 20,
     backgroundColor: '#231f61'
-  },
-  buttonContainer: {
-    alignItems: 'center'
-  },
-  title: {
-    width: 400,
-    height: 120,
-    alignItems: 'center'
   }
 });
 

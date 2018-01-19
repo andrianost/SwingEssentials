@@ -77,15 +77,10 @@ class LoginScreen extends React.Component{
     }
 };
 
-//Styling
 const styles = StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24,
-  },
   container: {
     paddingTop: 30,
-    
+
   },
 });
 

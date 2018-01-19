@@ -39,7 +39,9 @@ export const initialStore = {
         request_id: '',
         request_date: '',
         request_url: '',
-        request_notes: ''
+        request_notes: '',
+        viewed: '',
+        response_notes: '',
     },
 
     // swingessentials available lesson packages

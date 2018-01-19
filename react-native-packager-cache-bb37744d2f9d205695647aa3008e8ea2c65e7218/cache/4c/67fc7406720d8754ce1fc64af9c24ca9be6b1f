@@ -69,7 +69,8 @@ function mapStateToProps(state) {
     request_id: state.lessons.request_id,
     request_date: state.lessons.request_date,
     request_url: state.lessons.request_url,
-    request_notes: state.lessons.request_notes
+    request_notes: state.lessons.request_notes,
+    response_notes: state.lessons.response_notes
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -91,7 +92,8 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
       request_id: _this.props.request_id,
       request_date: _this.props.request_date,
       request_url: _this.props.request_url,
-      request_notes: _this.props.request_notes
+      request_notes: _this.props.request_notes,
+      response_notes: _this.props.response_notes
     };
     return _this;
   }
@@ -105,21 +107,21 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 49
+            lineNumber: 51
           }
         },
         _react3.default.createElement(
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 50
+              lineNumber: 52
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: { fontSize: 25 }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 51
+                lineNumber: 53
               }
             },
             this.props.request_date
@@ -130,13 +132,13 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 53
+              lineNumber: 55
             }
           },
           _react3.default.createElement(_reactNativeVideoPlayer2.default, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 54
+              lineNumber: 56
             }
           })
         ),
@@ -144,14 +146,14 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 56
+              lineNumber: 58
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: styles.notes, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 57
+                lineNumber: 59
               }
             },
             'Comments'
@@ -160,10 +162,10 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
             _reactNative.Text,
             { style: styles.border, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 58
+                lineNumber: 60
               }
             },
-            this.props.request_notes
+            this.props.response_notes
           )
         )
       );

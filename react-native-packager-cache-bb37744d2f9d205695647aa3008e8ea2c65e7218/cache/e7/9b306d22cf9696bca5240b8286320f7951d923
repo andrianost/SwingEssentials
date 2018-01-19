@@ -188,10 +188,6 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_React$Component) {
 ;
 
 var styles = _reactNative.StyleSheet.create({
-    icon: {
-        width: 24,
-        height: 24
-    },
     container: {
         paddingTop: 30
 

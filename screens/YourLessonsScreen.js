@@ -17,6 +17,7 @@ function mapStateToProps(state){
       request_date: state.lessons.request_date,
       request_url: state.lessons.request_url,
       request_notes: state.lessons.request_notes,
+      response_notes: state.lessons.response_notes,
     };
 }
 function mapDispatchToProps(dispatch){
@@ -35,6 +36,8 @@ class YourLessonsScreen extends Component {
           request_date: this.props.request_date,
           request_url: this.props.request_url,
           request_notes: this.props.request_notes,
+          response_notes: this.props.response_notes,
+          viewed: this.props.viewed,
       }
   }
 
@@ -43,14 +46,25 @@ class YourLessonsScreen extends Component {
     this.props.navigation.navigate('IndividualLessonsScreen')
   }
 
+  _updateViewedStatus(data){
+    this.props.updateViewedStatus(data)
+  }
+
   _renderItem({ item, index }) {
     return (
       <ListItem
         key={index}
         title={item.request_date}
         titleStyle = {{fontSize: 18}}
+        rightTitle={(item.viewed && item.viewed==='0')?'NEW!':null}
+        rightTitleStyle = {{fontSize: 18, fontWeight: 'bold', color: 'red'}}
         // subtitle={item.request_id}
-        onPress={ () => this._requestID({request_id: item.request_id, request_date: item.request_date, request_url: item.request_url, request_notes: item.request_notes})}
+        onPress={ () => {this._requestID({request_id: item.request_id,
+                                          request_date: item.request_date,
+                                          request_url: item.request_url,
+                                          request_notes: item.request_notes,
+                                          response_notes: item.response_notes});
+                        this._updateViewedStatus({request_id: item.request_id, bearerToken: this.props.token});}}
       />
     )
   }

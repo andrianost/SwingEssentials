@@ -6,7 +6,7 @@ import * as Actions from '../actions/actions.js';
 
 import { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { Button, FormInput } from 'react-native-elements'
+import { Button, FormInput, FormValidationMessage } from 'react-native-elements'
 
 function mapStateToProps(state){
     return {
@@ -32,32 +32,29 @@ class OrderDetailsScreen extends Component {
         discount: this.props.discount,
         type: this.props.type,
         value: this.props.value,
+        coupon: false,
+        savings: ''
       }
   }
 
   _onDiscount(){
       this.props.requestDiscount({discount: this.state.discount})
-
-      // .then(this._calcDiscount());
-
       .then(() => {
         if (this.props.type == 'percent') {
-          console.log(this.props.type)
-          console.log(this.props.value)
-          this.props.updatePrice({price: (parseInt(this.props.price) - ((parseInt(this.props.value)/100) * (parseInt(this.props.price))))})
+            this.setState({savings: ((parseInt(this.props.value)/100) * (parseInt(this.props.price)))})
+            this.props.updatePrice({price: (parseInt(this.props.price) - ((parseInt(this.props.value)/100) * (parseInt(this.props.price))))});
+            this.setState({coupon: true})
+            console.log(typeof this.props.price)
         } else if (this.props.type == 'amount') {
-            this.props.updatePrice({price: (parseInt(this.props.price) - parseInt(this.props.value))})
+            this.setState({savings: ((parseInt(this.props.value)/100) * (parseInt(this.props.price)))})
+            this.props.updatePrice({price: (parseInt(this.props.price) - parseInt(this.props.value))});
+            this.setState({coupon: true})
         } else {
             console.log('invalid code')
+            this.props.discountSuccess({type: 'invalid'}) // create proper action and reducer..noob
         }
       })
   }
-
-  // _calcDiscount(){
-  //   console.log('calc discount')
-  //   console.log(this.props.type)
-  //   console.log(this.props.value)
-  // }
 
   render() {
     return (
@@ -70,25 +67,27 @@ class OrderDetailsScreen extends Component {
             placeholder="Please enter your discount code"
             onChangeText={(newText) => this.setState({discount: newText})}
         />
+        {this.props.type == 'invalid' && <FormValidationMessage>Invalid discount code</FormValidationMessage>}
         <View style={{paddingBottom:20}}>
           <Button
               raised
               title="Apply Code"
-              disabled={!this.state.discount}
+              disabled={!this.state.discount || this.state.coupon == true}
               onPress={this._onDiscount.bind(this)}
           />
         </View>
         <View style={styles.header}>
-          <Text style={{color:"white", fontWeight:"bold"}}>Order Details</Text>
+          <Text style={{color:"white", fontWeight:"bold"}}>Order Details:  {this.props.name}</Text>
         </View>
         <View style={styles.container}>
-          <Text style={{fontWeight:"bold"}}>Sub-total:                                                        ${this.props.price}</Text>
+          <Text style={{fontWeight:"bold"}}>Sub-total:                                                        ${parseFloat(this.state.price).toFixed(2)}</Text>
         </View>
+        {this.state.coupon == true && <View style={styles.container}><Text style={{fontWeight:"bold", fontStyle:"italic"}}>Savings: -${this.state.savings.toFixed(2)}</Text></View>}
         <View style={styles.container}>
           <Text style={{fontWeight:"bold"}}>Tax:                                                                     $0.00</Text>
         </View>
         <View style={styles.container}>
-          <Text style={{fontWeight:"bold"}}>Total:                                                                ${this.props.price}</Text>
+          <Text style={{fontWeight:"bold"}}>Total:                                                                ${parseFloat(this.props.price).toFixed(2)}</Text>
         </View>
       </View>
     );

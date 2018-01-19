@@ -60,7 +60,6 @@ class OrderLessonsScreen extends Component {
   }
 
   render() {
-    // console.log(this.props.packages.packages)
     return (
       <View>
         <FlatList
@@ -74,44 +73,11 @@ class OrderLessonsScreen extends Component {
   }
 }
 
-// <Button
-//   large
-//   iconRight={{name: 'chevron-right', color: 'black', size: 40}}
-//   buttonStyle={styles.button1}
-//   raised
-//   title="Par: 1 Lesson $14.99"
-//   onPress={() =>  this.props.navigation.navigate('OrderDetailsScreen')}
-// />
-// <Button
-//   large
-//   iconRight={{name: 'chevron-right', color: 'black', size: 40}}
-//   buttonStyle={styles.button2}
-//   raised
-//   title="Eagle: 5 Lessons $39.99"
-//   onPress={() =>  this.props.navigation.navigate('OrderDetailsScreen')}
-// />
-// <Button
-//   large
-//   iconRight={{name: 'chevron-right', color: 'black', size: 40}}
-//   buttonStyle={styles.button3}
-//   raised
-//   title="Albatrose: Unlimited $59.99"
-//   onPress={() =>  this.props.navigation.navigate('OrderDetailsScreen')}
-// />
-
 const styles = StyleSheet.create({
   container: {
     paddingTop: 20,
     paddingBottom: 20,
     backgroundColor: '#231f61',
-  },
-  buttonContainer: {
-    alignItems: 'center',
-  },
-  title: {
-    width: 400,
-    height: 120,
-    alignItems: 'center',
   },
 });
 

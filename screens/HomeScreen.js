@@ -57,10 +57,6 @@ class HomeScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24,
-  },
   container: {
     alignItems: 'center',
     paddingTop: 50
@@ -69,7 +65,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     borderRadius: 150/2,
-    backgroundColor: '#00BCD4'
+    backgroundColor: '#231f61'
   },
 });
 
