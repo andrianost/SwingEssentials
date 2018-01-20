@@ -64,7 +64,10 @@ function mapStateToProps(state) {
     price: state.packages.price,
     discount: state.packages.discount,
     type: state.packages.type,
-    value: state.packages.value
+    value: state.packages.value,
+    token: state.login.token,
+    shortcode: state.packages.shortcode,
+    response: state.packages.response.status
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -86,8 +89,12 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
       discount: _this.props.discount,
       type: _this.props.type,
       value: _this.props.value,
+      bearerToken: _this.props.token,
+      shortcode: _this.props.shortcode,
+      response: _this.props.response,
       coupon: false,
-      savings: ''
+      savings: '',
+      orderComplete: false
     };
     return _this;
   }
@@ -99,45 +106,54 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
 
       this.props.requestDiscount({ discount: this.state.discount }).then(function () {
         if (_this2.props.type == 'percent') {
-          _this2.setState({ savings: parseInt(_this2.props.value) / 100 * parseInt(_this2.props.price) });
-          _this2.props.updatePrice({ price: parseInt(_this2.props.price) - parseInt(_this2.props.value) / 100 * parseInt(_this2.props.price) });
+          _this2.setState({ savings: parseFloat(_this2.props.value).toFixed(2) / 100 * parseFloat(_this2.props.price).toFixed(2) });
+          _this2.props.updatePrice({ price: parseFloat(_this2.props.price).toFixed(2) - parseFloat(_this2.props.value).toFixed(2) / 100 * parseFloat(_this2.props.price).toFixed(2) });
           _this2.setState({ coupon: true });
-          console.log(typeof _this2.props.price);
         } else if (_this2.props.type == 'amount') {
-          _this2.setState({ savings: parseInt(_this2.props.value) / 100 * parseInt(_this2.props.price) });
-          _this2.props.updatePrice({ price: parseInt(_this2.props.price) - parseInt(_this2.props.value) });
+          _this2.setState({ savings: parseFloat(_this2.props.value).toFixed(2) });
+          _this2.props.updatePrice({ price: parseFloat(_this2.props.price).toFixed(2) - parseFloat(_this2.props.value).toFixed(2) });
           _this2.setState({ coupon: true });
         } else {
-          console.log('invalid code');
           _this2.props.discountSuccess({ type: 'invalid' });
+        }
+      });
+    }
+  }, {
+    key: '_submitOrder',
+    value: function _submitOrder() {
+      var _this3 = this;
+
+      this.props.submitOrder({ bearerToken: this.state.bearerToken, shortcode: this.state.shortcode }).then(function () {
+        if (_this3.props.response == 200) {
+          _this3.setState({ orderComplete: true });
         }
       });
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       return _react3.default.createElement(
         _reactNative.View,
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 77
           }
         },
         _react3.default.createElement(
           _reactNative.View,
           { style: styles.header, __source: {
               fileName: _jsxFileName,
-              lineNumber: 62
+              lineNumber: 78
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
-            { style: { color: "white", fontWeight: "bold" }, __source: {
+            { style: styles.headerText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 63
+                lineNumber: 79
               }
             },
             'Discount Code'
@@ -147,11 +163,11 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           value: this.state.discount,
           placeholder: 'Please enter your discount code',
           onChangeText: function onChangeText(newText) {
-            return _this3.setState({ discount: newText });
+            return _this4.setState({ discount: newText });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 65
+            lineNumber: 81
           }
         }),
         this.props.type == 'invalid' && _react3.default.createElement(
@@ -159,16 +175,16 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 70
+              lineNumber: 86
             }
           },
           'Invalid discount code'
         ),
         _react3.default.createElement(
           _reactNative.View,
-          { style: { paddingBottom: 20 }, __source: {
+          { style: styles.button, __source: {
               fileName: _jsxFileName,
-              lineNumber: 71
+              lineNumber: 87
             }
           },
           _react3.default.createElement(_reactNativeElements.Button, {
@@ -178,7 +194,7 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
             onPress: this._onDiscount.bind(this),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 72
+              lineNumber: 88
             }
           })
         ),
@@ -186,14 +202,14 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.header, __source: {
               fileName: _jsxFileName,
-              lineNumber: 79
+              lineNumber: 95
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
-            { style: { color: "white", fontWeight: "bold" }, __source: {
+            { style: styles.headerText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 80
+                lineNumber: 96
               }
             },
             'Order Details:  ',
@@ -204,14 +220,14 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 82
+              lineNumber: 98
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
-            { style: { fontWeight: "bold" }, __source: {
+            { style: styles.containerText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 83
+                lineNumber: 99
               }
             },
             'Sub-total:                                                        $',
@@ -222,32 +238,32 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 85
+              lineNumber: 101
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
-            { style: { fontWeight: "bold", fontStyle: "italic" }, __source: {
+            { style: styles.savingsText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 85
+                lineNumber: 101
               }
             },
             'Savings: -$',
-            this.state.savings.toFixed(2)
+            parseFloat(this.state.savings).toFixed(2)
           )
         ),
         _react3.default.createElement(
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 86
+              lineNumber: 102
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
-            { style: { fontWeight: "bold" }, __source: {
+            { style: styles.containerText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 87
+                lineNumber: 103
               }
             },
             'Tax:                                                                     $0.00'
@@ -257,18 +273,46 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 89
+              lineNumber: 105
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
-            { style: { fontWeight: "bold" }, __source: {
+            { style: styles.containerText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 90
+                lineNumber: 106
               }
             },
             'Total:                                                                $',
             parseFloat(this.props.price).toFixed(2)
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: styles.button, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 108
+            }
+          },
+          _react3.default.createElement(_reactNativeElements.Button, {
+            raised: true,
+            title: 'Submit Order',
+            disabled: this.state.orderComplete == true,
+            onPress: this._submitOrder.bind(this),
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 109
+            }
+          }),
+          this.state.orderComplete == true && _react3.default.createElement(
+            _reactNativeElements.FormValidationMessage,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 115
+              }
+            },
+            'Your order has been completed!'
           )
         )
       );
@@ -292,6 +336,20 @@ var styles = _reactNative.StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 20,
     backgroundColor: '#231f61'
+  },
+  containerText: {
+    fontWeight: 'bold'
+  },
+  headerText: {
+    fontWeight: 'bold',
+    color: 'white'
+  },
+  savingsText: {
+    fontWeight: 'bold',
+    fontStyle: 'italic'
+  },
+  button: {
+    paddingBottom: 20
   }
 });
 

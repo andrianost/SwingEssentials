@@ -112,14 +112,14 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
         },
         _react3.default.createElement(
           _reactNative.View,
-          { style: styles.container, __source: {
+          { style: styles.header, __source: {
               fileName: _jsxFileName,
               lineNumber: 52
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
-            { style: { fontSize: 25 }, __source: {
+            { style: styles.text, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 53
               }
@@ -144,25 +144,34 @@ var IndividualLessonsScreen = _wrapComponent('IndividualLessonsScreen')(function
         ),
         _react3.default.createElement(
           _reactNative.View,
-          { style: styles.container, __source: {
+          { style: styles.header, __source: {
               fileName: _jsxFileName,
               lineNumber: 58
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
-            { style: styles.notes, __source: {
+            { style: styles.text, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 59
               }
             },
             'Comments'
-          ),
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: styles.container, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 61
+            }
+          },
           _react3.default.createElement(
             _reactNative.Text,
-            { style: styles.border, __source: {
+            {
+              __source: {
                 fileName: _jsxFileName,
-                lineNumber: 60
+                lineNumber: 62
               }
             },
             this.props.response_notes
@@ -189,9 +198,14 @@ var styles = _reactNative.StyleSheet.create({
     paddingLeft: 150,
     paddingRight: 150
   },
-  notes: {
+  text: {
     fontWeight: 'bold',
-    fontSize: 25
+    color: 'white'
+  },
+  header: {
+    paddingTop: 20,
+    paddingBottom: 20,
+    backgroundColor: '#231f61'
   }
 });
 

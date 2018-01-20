@@ -52,7 +52,10 @@ export const initialStore = {
       price: 0,
       discount: '',
       type: '',
-      value: ''
+      value: '',
+      count: '',
+      shortcode: '',
+      response: '',
     },
 
     // api validation token

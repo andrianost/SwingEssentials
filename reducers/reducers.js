@@ -7,13 +7,13 @@ import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE,
 				GET_LESSONS_FAILURE, SET_REQUEST_ID_SUCCESS, GET_PACKAGES_SUCCESS,
 				GET_PACKAGES_FAILURE, ORDER_LESSONS_SUCCESS, DISCOUNT_SUCCESS,
 				DISCOUNT_FAILURE, UPDATE_VIEWED_STATUS_SUCCESS,
-				UPDATE_VIEWED_STATUS_FAILURE, UPDATE_PRICE_SUCCESS} from '../actions/actions.js';
+				UPDATE_VIEWED_STATUS_FAILURE, UPDATE_PRICE_SUCCESS, SUBMIT_ORDER_SUCCESS,
+				SUBMIT_ORDER_FAILURE} from '../actions/actions.js';
 
 const userReducer = (state=[], action) => {
 	switch(action.type){
 		case LOGIN_SUCCESS:
 			console.log('user reducer')
-			console.log(action)
 			return{...state,
 				username: action.data.personal.username,
 				firstName: action.data.personal.first_name,
@@ -28,7 +28,6 @@ const settingsReducer = (state=[], action) => {
 	switch(action.type){
 		case GET_SETTINGS_SUCCESS:
 			console.log('settings reducer')
-			console.log(action)
 			return{...state,
 				avatar: action.data.avatar,
 				handedness: action.data.handed,
@@ -55,7 +54,6 @@ const lessonsReducer = (state=[], action) => {
 	switch(action.type){
 		case GET_LESSONS_SUCCESS:
 			console.log('get lessons success reducer')
-			// console.log(action)
 			return{...state,
 				loading: false,
 				pending: action.data.pending,
@@ -65,7 +63,6 @@ const lessonsReducer = (state=[], action) => {
 			return state;
 		case SET_REQUEST_ID_SUCCESS:
 		console.log('set request id reducer')
-		// console.log(action)
 			return{...state,
 				request_id: action.data.request_id,
 				request_date: action.data.request_date,
@@ -76,7 +73,6 @@ const lessonsReducer = (state=[], action) => {
 			}
 		case UPDATE_VIEWED_STATUS_SUCCESS:
 		console.log('update viewed status success reducer')
-		// console.log(action)
 			return{...state,
 				viewed: action.data.viewed
 			}
@@ -91,11 +87,8 @@ const packagesReducer = (state=[], action) => {
 	switch(action.type){
 		case GET_PACKAGES_SUCCESS:
 		console.log('get packages success reducer')
-		// console.log(action.data)
 			return{...state,
 				packages: action.data,
-				// count: action.data.count,
-				// description: action.data.description,
 			}
 		case GET_PACKAGES_FAILURE:
 			return state;
@@ -105,7 +98,8 @@ const packagesReducer = (state=[], action) => {
 			return{...state,
 				name: action.data.name,
 				description: action.data.description,
-				price: action.data.price
+				price: action.data.price,
+				shortcode: action.data.shortcode
 			}
 		case UPDATE_PRICE_SUCCESS:
 		console.log('update price success reducer')
@@ -116,13 +110,23 @@ const packagesReducer = (state=[], action) => {
 			}
 		case DISCOUNT_SUCCESS:
 		console.log('discount success reducer')
-		// console.log(action)
+		console.log(action)
 			return{...state,
 				type: action.data.type,
 				value: action.data.value,
 			}
 		case DISCOUNT_FAILURE:
 		console.log('discount failure reducer')
+		// console.log(action)
+			return state;
+		case SUBMIT_ORDER_SUCCESS:
+		console.log('submit order success reducer')
+		console.log(action.data)
+			return{...state,
+				response: action.data
+			}
+		case SUBMIT_ORDER_FAILURE:
+		console.log('submit order failure reducer')
 		// console.log(action)
 			return state;
 		default:

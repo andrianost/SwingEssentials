@@ -16,6 +16,9 @@ function mapStateToProps(state){
       discount: state.packages.discount,
       type: state.packages.type,
       value: state.packages.value,
+      token: state.login.token,
+      shortcode: state.packages.shortcode,
+      response: state.packages.response.status,
     };
 }
 function mapDispatchToProps(dispatch){
@@ -32,8 +35,12 @@ class OrderDetailsScreen extends Component {
         discount: this.props.discount,
         type: this.props.type,
         value: this.props.value,
+        bearerToken: this.props.token,
+        shortcode: this.props.shortcode,
+        response: this.props.response,
         coupon: false,
-        savings: ''
+        savings: '',
+        orderComplete: false,
       }
   }
 
@@ -41,26 +48,35 @@ class OrderDetailsScreen extends Component {
       this.props.requestDiscount({discount: this.state.discount})
       .then(() => {
         if (this.props.type == 'percent') {
-            this.setState({savings: ((parseInt(this.props.value)/100) * (parseInt(this.props.price)))})
-            this.props.updatePrice({price: (parseInt(this.props.price) - ((parseInt(this.props.value)/100) * (parseInt(this.props.price))))});
-            this.setState({coupon: true})
-            console.log(typeof this.props.price)
+            this.setState({savings: ((parseFloat(this.props.value).toFixed(2)/100) * (parseFloat(this.props.price).toFixed(2)))});
+            this.props.updatePrice({price: (parseFloat(this.props.price).toFixed(2) - ((parseFloat(this.props.value).toFixed(2)/100) * (parseFloat(this.props.price).toFixed(2))))});
+            this.setState({coupon: true});
+            // console.log(typeof this.props.price)
         } else if (this.props.type == 'amount') {
-            this.setState({savings: ((parseInt(this.props.value)/100) * (parseInt(this.props.price)))})
-            this.props.updatePrice({price: (parseInt(this.props.price) - parseInt(this.props.value))});
-            this.setState({coupon: true})
+            this.setState({savings: parseFloat(this.props.value).toFixed(2)});
+            this.props.updatePrice({price: (parseFloat(this.props.price).toFixed(2) - parseFloat(this.props.value).toFixed(2))});
+            this.setState({coupon: true});
         } else {
-            console.log('invalid code')
-            this.props.discountSuccess({type: 'invalid'}) // create proper action and reducer..noob
+            // console.log('invalid code')
+            this.props.discountSuccess({type: 'invalid'}); // create proper action and reducer..noob
         }
       })
+  }
+
+  _submitOrder(){
+    this.props.submitOrder({bearerToken: this.state.bearerToken, shortcode: this.state.shortcode})
+    .then(() => {
+      if (this.props.response == 200) {
+        this.setState({orderComplete: true});
+      }
+    })
   }
 
   render() {
     return (
       <View>
         <View style={styles.header}>
-          <Text style={{color:"white", fontWeight:"bold"}}>Discount Code</Text>
+          <Text style={styles.headerText}>Discount Code</Text>
         </View>
         <FormInput
             value={this.state.discount}
@@ -68,7 +84,7 @@ class OrderDetailsScreen extends Component {
             onChangeText={(newText) => this.setState({discount: newText})}
         />
         {this.props.type == 'invalid' && <FormValidationMessage>Invalid discount code</FormValidationMessage>}
-        <View style={{paddingBottom:20}}>
+        <View style={styles.button}>
           <Button
               raised
               title="Apply Code"
@@ -77,17 +93,26 @@ class OrderDetailsScreen extends Component {
           />
         </View>
         <View style={styles.header}>
-          <Text style={{color:"white", fontWeight:"bold"}}>Order Details:  {this.props.name}</Text>
+          <Text style={styles.headerText}>Order Details:  {this.props.name}</Text>
         </View>
         <View style={styles.container}>
-          <Text style={{fontWeight:"bold"}}>Sub-total:                                                        ${parseFloat(this.state.price).toFixed(2)}</Text>
+          <Text style={styles.containerText}>Sub-total:                                                        ${parseFloat(this.state.price).toFixed(2)}</Text>
         </View>
-        {this.state.coupon == true && <View style={styles.container}><Text style={{fontWeight:"bold", fontStyle:"italic"}}>Savings: -${this.state.savings.toFixed(2)}</Text></View>}
+        {this.state.coupon == true && <View style={styles.container}><Text style={styles.savingsText}>Savings: -${parseFloat(this.state.savings).toFixed(2)}</Text></View>}
         <View style={styles.container}>
-          <Text style={{fontWeight:"bold"}}>Tax:                                                                     $0.00</Text>
+          <Text style={styles.containerText}>Tax:                                                                     $0.00</Text>
         </View>
         <View style={styles.container}>
-          <Text style={{fontWeight:"bold"}}>Total:                                                                ${parseFloat(this.props.price).toFixed(2)}</Text>
+          <Text style={styles.containerText}>Total:                                                                ${parseFloat(this.props.price).toFixed(2)}</Text>
+        </View>
+        <View style={styles.button}>
+          <Button
+              raised
+              title="Submit Order"
+              disabled={this.state.orderComplete == true}
+              onPress={this._submitOrder.bind(this)}
+          />
+          {this.state.orderComplete == true && <FormValidationMessage>Your order has been completed!</FormValidationMessage>}
         </View>
       </View>
     );
@@ -109,6 +134,20 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     backgroundColor: '#231f61',
   },
+  containerText: {
+    fontWeight: 'bold',
+  },
+  headerText: {
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  savingsText: {
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+  },
+  button: {
+    paddingBottom: 20,
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(OrderDetailsScreen);

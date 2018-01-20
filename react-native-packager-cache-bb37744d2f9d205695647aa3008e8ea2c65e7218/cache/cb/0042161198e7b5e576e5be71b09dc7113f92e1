@@ -58,7 +58,10 @@ var initialStore = exports.initialStore = {
         price: 0,
         discount: '',
         type: '',
-        value: ''
+        value: '',
+        count: '',
+        shortcode: '',
+        response: ''
     },
 
     login: {

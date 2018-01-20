@@ -1,7 +1,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.UPDATE_PRICE_SUCCESS = exports.UPDATE_VIEWED_STATUS_FAILURE = exports.UPDATE_VIEWED_STATUS_SUCCESS = exports.DISCOUNT_FAILURE = exports.DISCOUNT_SUCCESS = exports.ORDER_LESSONS_SUCCESS = exports.GET_PACKAGES_FAILURE = exports.GET_PACKAGES_SUCCESS = exports.SET_REQUEST_ID_SUCCESS = exports.GET_LESSONS_FAILURE = exports.GET_LESSONS_SUCCESS = exports.PUT_SETTINGS_FAILURE = exports.PUT_SETTINGS_SUCCESS = exports.GET_SETTINGS_FAILURE = exports.GET_SETTINGS_SUCCESS = exports.LOGIN_ERROR = exports.LOGIN_SUCCESS = undefined;
+exports.SUBMIT_ORDER_FAILURE = exports.SUBMIT_ORDER_SUCCESS = exports.UPDATE_PRICE_SUCCESS = exports.UPDATE_VIEWED_STATUS_FAILURE = exports.UPDATE_VIEWED_STATUS_SUCCESS = exports.DISCOUNT_FAILURE = exports.DISCOUNT_SUCCESS = exports.ORDER_LESSONS_SUCCESS = exports.GET_PACKAGES_FAILURE = exports.GET_PACKAGES_SUCCESS = exports.SET_REQUEST_ID_SUCCESS = exports.GET_LESSONS_FAILURE = exports.GET_LESSONS_SUCCESS = exports.PUT_SETTINGS_FAILURE = exports.PUT_SETTINGS_SUCCESS = exports.GET_SETTINGS_FAILURE = exports.GET_SETTINGS_SUCCESS = exports.LOGIN_ERROR = exports.LOGIN_SUCCESS = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -16,6 +16,7 @@ exports.requestDiscount = requestDiscount;
 exports.discountSuccess = discountSuccess;
 exports.updatePrice = updatePrice;
 exports.updateViewedStatus = updateViewedStatus;
+exports.submitOrder = submitOrder;
 
 var _store = require('../store/store.js');
 
@@ -38,6 +39,8 @@ var DISCOUNT_FAILURE = exports.DISCOUNT_FAILURE = 'DISCOUNT_FAILURE';
 var UPDATE_VIEWED_STATUS_SUCCESS = exports.UPDATE_VIEWED_STATUS_SUCCESS = 'UPDATE_VIEWED_STATUS_SUCCESS';
 var UPDATE_VIEWED_STATUS_FAILURE = exports.UPDATE_VIEWED_STATUS_FAILURE = 'UPDATE_VIEWED_STATUS_FAILURE';
 var UPDATE_PRICE_SUCCESS = exports.UPDATE_PRICE_SUCCESS = 'UPDATE_PRICE_SUCCESS';
+var SUBMIT_ORDER_SUCCESS = exports.SUBMIT_ORDER_SUCCESS = 'SUBMIT_ORDER_SUCCESS';
+var SUBMIT_ORDER_FAILURE = exports.SUBMIT_ORDER_FAILURE = 'SUBMIT_ORDER_FAILURE';
 
 function requestLogin(userCredentials) {
     return function (dispatch) {
@@ -72,6 +75,7 @@ function requestLogin(userCredentials) {
 }
 
 function loginSuccess(response) {
+    console.log('login success');
     return {
         type: LOGIN_SUCCESS,
         data: response
@@ -79,6 +83,7 @@ function loginSuccess(response) {
 }
 
 function loginFailure(response) {
+    console.log('login failure');
     return {
         type: LOGIN_ERROR,
         response: response.status
@@ -108,6 +113,7 @@ function requestSettings(token) {
 }
 
 function getSettingsSuccess(response) {
+    console.log('get settings success');
     return {
         type: GET_SETTINGS_SUCCESS,
         data: response
@@ -115,6 +121,7 @@ function getSettingsSuccess(response) {
 }
 
 function getSettingsFailure(response) {
+    console.log('get settings failure');
     return {
         type: GET_SETTINGS_FAILURE,
         response: response.status
@@ -154,7 +161,7 @@ function userSettingsUpdate(userSettings) {
 }
 
 function putSettingsSuccess(response) {
-    console.log('put success');
+    console.log('put settings success');
     return {
         type: PUT_SETTINGS_SUCCESS,
         data: response
@@ -162,7 +169,7 @@ function putSettingsSuccess(response) {
 }
 
 function putSettingsFailure(response) {
-    console.log('put failure');
+    console.log('put settings failure');
     return {
         type: PUT_SETTINGS_FAILURE,
         response: response.status
@@ -193,7 +200,6 @@ function requestLessons(token) {
 
 function getLessonsSuccess(response) {
     console.log('get lessons success');
-    console.log(response);
     return {
         type: GET_LESSONS_SUCCESS,
         data: response
@@ -244,6 +250,8 @@ function requestPackages() {
 }
 
 function getPackagesSuccess(response) {
+    console.log('get packages success');
+
     return {
         type: GET_PACKAGES_SUCCESS,
         data: response
@@ -297,6 +305,7 @@ function requestDiscount(discountCode) {
 }
 
 function discountSuccess(response) {
+    console.log('discount success');
     return {
         type: DISCOUNT_SUCCESS,
         data: response
@@ -304,11 +313,13 @@ function discountSuccess(response) {
 }
 
 function discountFailure(response) {
+    console.log('discount failure');
     return {
         type: DISCOUNT_FAILURE,
         response: response.status
     };
 }
+
 function updatePrice(response) {
     return function (dispatch) {
         dispatch(updatePriceSuccess(response));
@@ -316,6 +327,7 @@ function updatePrice(response) {
 }
 
 function updatePriceSuccess(response) {
+    console.log('update prices success');
     return {
         type: UPDATE_PRICE_SUCCESS,
         data: response
@@ -358,9 +370,46 @@ function updateViewedStatusSuccess(response) {
 
 function updateViewedStatusFailure(response) {
     console.log('update viewed status failure');
-    console.log(response);
     return {
         type: UPDATE_VIEWED_STATUS_FAILURE,
+        response: response.status
+    };
+}
+
+function submitOrder(data) {
+    return function (dispatch) {
+        return fetch('http://www.josephpboyle.com/api/myapi.php/purchase/' + data.shortcode, {
+            method: 'POST',
+            headers: {
+                'Authorization': 'bearer ' + data.bearerToken
+            }
+        }).then(function (response) {
+            switch (response.status) {
+                case 200:
+                    dispatch(submitOrderSuccess(response));
+                    break;
+                default:
+                    dispatch(submitOrderFailure(response));
+                    break;
+            }
+        }).catch(function (error) {
+            return console.error(error);
+        });
+    };
+}
+
+function submitOrderSuccess(response) {
+    console.log('submit order success');
+    return {
+        type: SUBMIT_ORDER_SUCCESS,
+        data: response
+    };
+}
+
+function submitOrderFailure(response) {
+    console.log('submit order failure');
+    return {
+        type: SUBMIT_ORDER_FAILURE,
         response: response.status
     };
 }

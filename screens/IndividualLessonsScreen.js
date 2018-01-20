@@ -49,18 +49,19 @@ class IndividualLessonsScreen extends Component {
     console.log(this.props.request_id)
     return (
       <View>
-        <View style={styles.container}>
-          <Text style={{fontSize: 25}}>{this.props.request_date}</Text>
+        <View style={styles.header}>
+          <Text style={styles.text}>{this.props.request_date}</Text>
         </View>
         <View>
           <VideoPlayer/>
         </View>
+        <View style={styles.header}>
+          <Text style={styles.text}>Comments</Text>
+        </View>
         <View style={styles.container}>
-          <Text style={styles.notes}>Comments</Text>
-          <Text style={styles.border}>{this.props.response_notes}</Text>
+          <Text>{this.props.response_notes}</Text>
         </View>
       </View>
-
     );
   }
 }
@@ -79,10 +80,15 @@ const styles = StyleSheet.create({
     paddingLeft: 150,
     paddingRight: 150,
   },
-  notes: {
+  text: {
     fontWeight: 'bold',
-    fontSize: 25,
-  }
+    color: 'white',
+  },
+  header: {
+    paddingTop: 20,
+    paddingBottom: 20,
+    backgroundColor: '#231f61',
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(IndividualLessonsScreen);

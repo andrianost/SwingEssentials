@@ -20,7 +20,9 @@ export const DISCOUNT_FAILURE = 'DISCOUNT_FAILURE';
 export const UPDATE_VIEWED_STATUS_SUCCESS = 'UPDATE_VIEWED_STATUS_SUCCESS';
 export const UPDATE_VIEWED_STATUS_FAILURE = 'UPDATE_VIEWED_STATUS_FAILURE';
 export const UPDATE_PRICE_SUCCESS = 'UPDATE_PRICE_SUCCESS';
-
+//ADD FAILURE case
+export const SUBMIT_ORDER_SUCCESS = 'SUBMIT_ORDER_SUCCESS';
+export const SUBMIT_ORDER_FAILURE = 'SUBMIT_ORDER_FAILURE';
 
 export function requestLogin(userCredentials){
     return function(dispatch){
@@ -51,6 +53,7 @@ export function requestLogin(userCredentials){
 }
 
 function loginSuccess(response){
+  console.log('login success')
     return{
         type: LOGIN_SUCCESS,
         data: response
@@ -58,6 +61,7 @@ function loginSuccess(response){
 }
 
 function loginFailure(response){
+  console.log('login failure')
     return{
         type: LOGIN_ERROR,
         response: response.status
@@ -86,6 +90,7 @@ export function requestSettings(token){
 }
 
 function getSettingsSuccess(response){
+  console.log('get settings success')
     return{
         type: GET_SETTINGS_SUCCESS,
         data: response
@@ -93,6 +98,7 @@ function getSettingsSuccess(response){
 }
 
 function getSettingsFailure(response){
+  console.log('get settings failure')
     return{
         type: GET_SETTINGS_FAILURE,
         response: response.status
@@ -132,7 +138,7 @@ export function userSettingsUpdate(userSettings){
 }
 
 function putSettingsSuccess(response){
-    console.log('put success')
+    console.log('put settings success')
     return{
         type: PUT_SETTINGS_SUCCESS,
         data: response
@@ -140,7 +146,7 @@ function putSettingsSuccess(response){
 }
 
 function putSettingsFailure(response){
-    console.log('put failure')
+    console.log('put settings failure')
     return{
         type: PUT_SETTINGS_FAILURE,
         response: response.status
@@ -169,8 +175,7 @@ export function requestLessons(token){
 }
 
 function getLessonsSuccess(response){
-    console.log('get lessons success')
-    console.log(response)
+  console.log('get lessons success')
     return{
         type: GET_LESSONS_SUCCESS,
         data: response
@@ -178,7 +183,7 @@ function getLessonsSuccess(response){
 }
 
 function getLessonsFailure(response){
-    console.log('get lessons failure')
+  console.log('get lessons failure')
     return{
         type: GET_LESSONS_FAILURE,
         response: response.status
@@ -220,6 +225,8 @@ export function requestPackages(){
 }
 
 function getPackagesSuccess(response){
+  console.log('get packages success')
+  // console.log(response)
     return{
         type: GET_PACKAGES_SUCCESS,
         data: response
@@ -227,11 +234,11 @@ function getPackagesSuccess(response){
 }
 
 function getPackagesFailure(response){
-    console.log('get packages failure')
-    return{
-        type: GET_PACKAGES_FAILURE,
-        response: response.status
-    }
+  console.log('get packages failure')
+  return{
+      type: GET_PACKAGES_FAILURE,
+      response: response.status
+  }
 }
 
 export function orderLessons(response){
@@ -272,6 +279,7 @@ export function requestDiscount(discountCode){
 }
 
 export function discountSuccess(response){
+  console.log('discount success')
     return{
         type: DISCOUNT_SUCCESS,
         data: response
@@ -279,11 +287,13 @@ export function discountSuccess(response){
 }
 
 function discountFailure(response){
+  console.log('discount failure')
     return{
         type: DISCOUNT_FAILURE,
         response: response.status
     }
 }
+
 export function updatePrice(response){
     return function(dispatch){
       dispatch(updatePriceSuccess(response));
@@ -291,6 +301,7 @@ export function updatePrice(response){
 }
 
 function updatePriceSuccess(response){
+  console.log('update prices success')
     return{
         type: UPDATE_PRICE_SUCCESS,
         data: response
@@ -333,9 +344,46 @@ function updateViewedStatusSuccess(response){
 
 function updateViewedStatusFailure(response){
     console.log('update viewed status failure')
-    console.log(response)
     return{
         type: UPDATE_VIEWED_STATUS_FAILURE,
+        response: response.status
+    }
+}
+
+export function submitOrder(data){
+  return function(dispatch){
+    return fetch('http://www.josephpboyle.com/api/myapi.php/purchase/' + data.shortcode, {
+        method: 'POST',
+        headers: {
+          'Authorization': 'bearer ' + data.bearerToken,
+        }
+    })
+    .then((response) => {
+        switch(response.status) {
+            case 200:
+                dispatch(submitOrderSuccess(response))
+                break;
+            default:
+                dispatch(submitOrderFailure(response))
+                break;
+        }
+    })
+    .catch((error) => console.error(error));
+  }
+}
+
+function submitOrderSuccess(response){
+    console.log('submit order success')
+    return{
+        type: SUBMIT_ORDER_SUCCESS,
+        data: response
+    }
+}
+
+function submitOrderFailure(response){
+    console.log('submit order failure')
+    return{
+        type: SUBMIT_ORDER_FAILURE,
         response: response.status
     }
 }

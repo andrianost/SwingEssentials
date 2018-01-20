@@ -62,7 +62,8 @@ function mapStateToProps(state) {
     packages: state.packages,
     name: state.packages.name,
     description: state.packages.description,
-    price: state.packages.price
+    price: state.packages.price,
+    shortcode: state.packages.shortcode
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -81,7 +82,8 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
       packages: _this.props.packages,
       name: _this.props.name,
       description: _this.props.description,
-      price: _this.props.price
+      price: _this.props.price,
+      shortcode: _this.props.shortcode
     };
     return _this;
   }
@@ -89,6 +91,8 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
   _createClass(OrderLessonsScreen, [{
     key: '_orderLessons',
     value: function _orderLessons(data) {
+      console.log('data');
+      console.log(data);
       this.props.orderLessons(data);
       this.props.navigation.navigate('OrderDetailsScreen');
     }
@@ -99,14 +103,14 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 45
           }
         },
         _react3.default.createElement(
           _reactNative.Text,
           { style: { color: "white", fontWeight: "bold" }, __source: {
               fileName: _jsxFileName,
-              lineNumber: 42
+              lineNumber: 46
             }
           },
           'Available Packages'
@@ -130,11 +134,11 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
         subtitle: item.description,
         rightTitle: item.price,
         onPress: function onPress() {
-          return _this2._orderLessons({ name: item.name, description: item.description, price: item.price });
+          return _this2._orderLessons({ name: item.name, description: item.description, price: item.price, shortcode: item.shortcode });
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 53
         }
       });
     }
@@ -146,7 +150,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 64
+            lineNumber: 68
           }
         },
         _react3.default.createElement(_reactNative.FlatList, {
@@ -158,7 +162,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
           ListHeaderComponent: this._packagesHeader,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 65
+            lineNumber: 69
           }
         })
       );

@@ -13,7 +13,8 @@ function mapStateToProps(state){
         packages: state.packages,
         name: state.packages.name,
         description: state.packages.description,
-        price: state.packages.price
+        price: state.packages.price,
+        shortcode: state.packages.shortcode,
     };
 }
 function mapDispatchToProps(dispatch){
@@ -27,11 +28,14 @@ class OrderLessonsScreen extends Component {
           packages: this.props.packages,
           name: this.props.name,
           description: this.props.description,
-          price: this.props.price
+          price: this.props.price,
+          shortcode: this.props.shortcode,
       }
   }
 
   _orderLessons(data){
+    console.log('data')
+    console.log(data)
     this.props.orderLessons(data)
     this.props.navigation.navigate('OrderDetailsScreen')
   }
@@ -54,7 +58,7 @@ class OrderLessonsScreen extends Component {
         title={item.name}
         subtitle={item.description}
         rightTitle={item.price}
-        onPress={ () => this._orderLessons({name: item.name, description: item.description, price: item.price})}
+        onPress={ () => this._orderLessons({name: item.name, description: item.description, price: item.price, shortcode: item.shortcode})}
       />
     )
   }

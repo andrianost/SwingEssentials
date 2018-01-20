@@ -19,7 +19,6 @@ var userReducer = function userReducer() {
 	switch (action.type) {
 		case _actions.LOGIN_SUCCESS:
 			console.log('user reducer');
-			console.log(action);
 			return _extends({}, state, {
 				username: action.data.personal.username,
 				firstName: action.data.personal.first_name,
@@ -37,7 +36,6 @@ var settingsReducer = function settingsReducer() {
 	switch (action.type) {
 		case _actions.GET_SETTINGS_SUCCESS:
 			console.log('settings reducer');
-			console.log(action);
 			return _extends({}, state, {
 				avatar: action.data.avatar,
 				handedness: action.data.handed,
@@ -70,7 +68,6 @@ var lessonsReducer = function lessonsReducer() {
 	switch (action.type) {
 		case _actions.GET_LESSONS_SUCCESS:
 			console.log('get lessons success reducer');
-
 			return _extends({}, state, {
 				loading: false,
 				pending: action.data.pending,
@@ -80,7 +77,6 @@ var lessonsReducer = function lessonsReducer() {
 			return state;
 		case _actions.SET_REQUEST_ID_SUCCESS:
 			console.log('set request id reducer');
-
 			return _extends({}, state, {
 				request_id: action.data.request_id,
 				request_date: action.data.request_date,
@@ -91,7 +87,6 @@ var lessonsReducer = function lessonsReducer() {
 			});
 		case _actions.UPDATE_VIEWED_STATUS_SUCCESS:
 			console.log('update viewed status success reducer');
-
 			return _extends({}, state, {
 				viewed: action.data.viewed
 			});
@@ -109,7 +104,6 @@ var packagesReducer = function packagesReducer() {
 	switch (action.type) {
 		case _actions.GET_PACKAGES_SUCCESS:
 			console.log('get packages success reducer');
-
 			return _extends({}, state, {
 				packages: action.data
 			});
@@ -121,7 +115,8 @@ var packagesReducer = function packagesReducer() {
 			return _extends({}, state, {
 				name: action.data.name,
 				description: action.data.description,
-				price: action.data.price
+				price: action.data.price,
+				shortcode: action.data.shortcode
 			});
 		case _actions.UPDATE_PRICE_SUCCESS:
 			console.log('update price success reducer');
@@ -131,13 +126,23 @@ var packagesReducer = function packagesReducer() {
 			});
 		case _actions.DISCOUNT_SUCCESS:
 			console.log('discount success reducer');
-
+			console.log(action);
 			return _extends({}, state, {
 				type: action.data.type,
 				value: action.data.value
 			});
 		case _actions.DISCOUNT_FAILURE:
 			console.log('discount failure reducer');
+
+			return state;
+		case _actions.SUBMIT_ORDER_SUCCESS:
+			console.log('submit order success reducer');
+			console.log(action.data);
+			return _extends({}, state, {
+				response: action.data
+			});
+		case _actions.SUBMIT_ORDER_FAILURE:
+			console.log('submit order failure reducer');
 
 			return state;
 		default:
