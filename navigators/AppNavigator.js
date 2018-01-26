@@ -18,6 +18,7 @@ import UserData from '../screens/UserData.js';
 import CameraData from '../screens/CameraData.js';
 import IndividualLessonsScreen from '../screens/IndividualLessonsScreen.js';
 import OrderDetailsScreen from '../screens/OrderDetailsScreen.js';
+import ResetPasswordScreen from '../screens/ResetPasswordScreen.js';
 
 import CustomDrawer from '../screens/CustomDrawer.js';
 
@@ -35,9 +36,21 @@ export const AppNavigator = DrawerNavigator(
   {
       Login: {
           screen: LoginScreen,
-          navigationOptions: true ? {
-              drawerLabel: () => null //prevents this element from showing in the drawer if we are logged in
-          } : {}
+            navigationOptions: true ? {
+                drawerLabel: () => null //prevents this element from showing in the drawer if we are logged in
+            } : {}
+          },
+      ResetPassword: {
+        screen: StackNavigator({
+          ResetPassword: {
+            screen: ResetPasswordScreen,
+            navigationOptions: ({ navigation }) => ({
+                title: 'Password Reset',
+                // headerStyle: {backgroundColor: '#d3d3d3'},
+                headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('Login')}/>
+            })
+          }
+        })
       },
       Home: {
           screen: StackNavigator({

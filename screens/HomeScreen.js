@@ -19,7 +19,7 @@ function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }
 
-
+ 
 
 class HomeScreen extends Component {
   constructor(props){

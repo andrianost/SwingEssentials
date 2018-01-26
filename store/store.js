@@ -27,8 +27,8 @@ export const initialStore = {
     // user's available credits
     credits:{
         count: 0,
-        albatross: false,
-        albatrossExpires: 0
+        unlimited_count: 0,
+        unlimited_date: ''
     },
 
     // user's lesson history
@@ -61,7 +61,8 @@ export const initialStore = {
     // api validation token
     login:{
         token: null,
-        failCount: 0
+        failCount: 0,
+        response: ''
     },
 
     nav: null,

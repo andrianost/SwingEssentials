@@ -6,7 +6,7 @@ import * as Actions from '../actions/actions.js';
 
 import { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { Button, FormInput, FormValidationMessage } from 'react-native-elements'
+import { Button, FormInput, FormValidationMessage } from 'react-native-elements';
 
 function mapStateToProps(state){
     return {
@@ -57,7 +57,6 @@ class OrderDetailsScreen extends Component {
             this.props.updatePrice({price: (parseFloat(this.props.price).toFixed(2) - parseFloat(this.props.value).toFixed(2))});
             this.setState({coupon: true});
         } else {
-            // console.log('invalid code')
             this.props.discountSuccess({type: 'invalid'}); // create proper action and reducer..noob
         }
       })

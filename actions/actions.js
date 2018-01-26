@@ -23,6 +23,12 @@ export const UPDATE_PRICE_SUCCESS = 'UPDATE_PRICE_SUCCESS';
 //ADD FAILURE case
 export const SUBMIT_ORDER_SUCCESS = 'SUBMIT_ORDER_SUCCESS';
 export const SUBMIT_ORDER_FAILURE = 'SUBMIT_ORDER_FAILURE';
+export const REQUEST_CREDITS_SUCCESS = 'REQUEST_CREDITS_SUCCESS';
+export const REQUEST_CREDITS_FAILURE = 'REQUEST_CREDITS_FAILURE';
+export const REDEEM_LESSONS_SUCCESS = 'REDEEM_LESSONS_SUCCESS';
+export const REDEEM_LESSONS_FAILURE = 'REDEEM_LESSONS_FAILURE';
+export const RESET_PASSWORD_SUCCESS = 'RESET_PASSWORD_SUCCESS';
+export const RESET_PASSWORD_FAILURE = 'RESET_PASSWORD_FAILURE';
 
 export function requestLogin(userCredentials){
     return function(dispatch){
@@ -41,7 +47,8 @@ export function requestLogin(userCredentials){
                     .then((json) => dispatch(loginSuccess({...json,token: response.headers.get('Token')})))
                     .then(() => dispatch(requestSettings(response.headers.get('Token'))))
                     .then(() => dispatch(requestLessons(response.headers.get('Token'))))
-                    .then(() => dispatch(requestPackages()));
+                    .then(() => dispatch(requestPackages()))
+                    .then(() => dispatch(requestCredits(response.headers.get('Token'))));
                     break;
                 default:
                     dispatch(loginFailure(response));
@@ -235,6 +242,7 @@ function getPackagesSuccess(response){
 
 function getPackagesFailure(response){
   console.log('get packages failure')
+  console.log(response)
   return{
       type: GET_PACKAGES_FAILURE,
       response: response.status
@@ -384,6 +392,126 @@ function submitOrderFailure(response){
     console.log('submit order failure')
     return{
         type: SUBMIT_ORDER_FAILURE,
+        response: response.status
+    }
+}
+
+export function requestCredits(token){
+    return function(dispatch){
+        return fetch('http://www.josephpboyle.com/api/myapi.php/credits', {
+            method: 'GET',
+            headers: {'Authorization': 'Bearer ' + token}
+        })
+        .then((response) => {
+            switch(response.status) {
+                case 200:
+                    response.json()
+                    .then((json) => dispatch(requestCreditsSuccess(json)));
+                    break;
+                default:
+                    dispatch(requestCreditsFailure(response));
+                    break;
+            }
+        })
+        .catch((error) => console.error(error));
+    }
+}
+
+function requestCreditsSuccess(response){
+  console.log('request credits success success')
+  console.log(response)
+    return{
+        type: REQUEST_CREDITS_SUCCESS,
+        data: response
+    }
+}
+
+function requestCreditsFailure(response){
+  console.log('request credits failure')
+    return{
+        type: REQUEST_CREDITS_FAILURE,
+        response: response.status
+    }
+}
+
+export function redeemLessons(token){
+    return function(dispatch){
+        return fetch('http://www.josephpboyle.com/api/myapi.php/redeem', {
+            method: 'POST',
+            headers: {'Authorization': 'Bearer ' + token.bearerToken}
+        })
+        .then((response) => {
+            switch(response.status) {
+                case 200:
+                    response.json()
+                    .then((json) => dispatch(redeemLessonsSuccess(json)));
+                    break;
+                default:
+                    dispatch(redeemLessonsFailure(response));
+                    break;
+            }
+        })
+        .catch((error) => console.error(error));
+    }
+}
+
+function redeemLessonsSuccess(response){
+  console.log('redeem lessons success')
+  // console.log(response)
+    return{
+        type: REDEEM_LESSONS_SUCCESS,
+        data: response
+    }
+}
+
+function redeemLessonsFailure(response){
+  console.log('redeem lessons failure')
+  console.log(response)
+    return{
+        type: REDEEM_LESSONS_FAILURE,
+        response: response.status
+    }
+}
+
+export function resetPassword(userEmail){
+  return function(dispatch){
+    return fetch('http://www.josephpboyle.com/api/myapi.php/reset', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify( {
+          'email': userEmail.userEmail,
+        })
+    })
+    .then((response) => {
+        switch(response.status) {
+            case 200:
+                dispatch(resetPasswordSuccess(response))
+                break;
+            default:
+                dispatch(resetPasswordFailure(response))
+                break;
+        }
+    })
+    .catch((error) => console.error(error));
+  }
+}
+
+function resetPasswordSuccess(response){
+    console.log('reset password success')
+    console.log(response)
+    return{
+        type: RESET_PASSWORD_SUCCESS,
+        data: response
+    }
+}
+
+function resetPasswordFailure(response){
+    console.log('reset password failure')
+    console.log(response)
+    return{
+        type: RESET_PASSWORD_FAILURE,
         response: response.status
     }
 }

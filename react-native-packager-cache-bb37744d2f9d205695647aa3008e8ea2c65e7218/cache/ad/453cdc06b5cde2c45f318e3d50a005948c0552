@@ -59,7 +59,20 @@ var creditsReducer = function creditsReducer() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 	var action = arguments[1];
 
-	return state;
+	switch (action.type) {
+		case _actions.REQUEST_CREDITS_SUCCESS:
+			console.log('request credits success reducer');
+			return _extends({}, state, {
+				count: action.data.count,
+				unlimited_count: action.data.unlimited_count,
+				unlimited_date: action.data.unlimited_date
+			});
+		case _actions.REQUEST_CREDITS_FAILURE:
+			console.log('request credits failure reducer');
+			return state;
+		default:
+			return state;
+	}
 };
 var lessonsReducer = function lessonsReducer() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
@@ -92,6 +105,12 @@ var lessonsReducer = function lessonsReducer() {
 			});
 		case _actions.UPDATE_VIEWED_STATUS_FAILURE:
 			console.log('update viewed status failed reducer');
+			return state;
+		case _actions.REDEEM_LESSONS_SUCCESS:
+			console.log('redeem lessons success reducer');
+			return state;
+		case _actions.REDEEM_LESSONS_FAILURE:
+			console.log('redeem lessons failed reducer');
 			return state;
 		default:
 			return state;
@@ -126,7 +145,7 @@ var packagesReducer = function packagesReducer() {
 			});
 		case _actions.DISCOUNT_SUCCESS:
 			console.log('discount success reducer');
-			console.log(action);
+
 			return _extends({}, state, {
 				type: action.data.type,
 				value: action.data.value
@@ -137,7 +156,7 @@ var packagesReducer = function packagesReducer() {
 			return state;
 		case _actions.SUBMIT_ORDER_SUCCESS:
 			console.log('submit order success reducer');
-			console.log(action.data);
+
 			return _extends({}, state, {
 				response: action.data
 			});
@@ -164,6 +183,16 @@ var loginReducer = function loginReducer() {
 				token: null,
 				failCount: state.failCount + 1
 			});
+		case _actions.RESET_PASSWORD_SUCCESS:
+			console.log('reset password success reducer');
+
+			return _extends({}, state, {
+				response: action.data
+			});
+		case _actions.RESET_PASSWORD_FAILURE:
+			console.log('reset password failure reducer');
+
+			return state;
 		default:
 			return state;
 	}

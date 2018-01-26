@@ -99,85 +99,118 @@ var LoginScreen = _wrapComponent('LoginScreen')(function (_React$Component) {
             this.props.requestLogin({ username: this.state.username, password: this.state.password });
         }
     }, {
+        key: '_resetPassword',
+        value: function _resetPassword() {
+            this.props.navigation.navigate('ResetPassword');
+        }
+    }, {
         key: 'render',
         value: function render() {
             var _this2 = this;
 
             return _react3.default.createElement(
                 _reactNative.View,
-                { style: styles.container, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 53
-                    }
-                },
-                _react3.default.createElement(_reactNative.Image, { source: require('./img/SE-Logo-circle.png'), __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 54
-                    }
-                }),
-                _react3.default.createElement(
-                    _reactNativeElements.FormLabel,
-                    {
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 55
-                        }
-                    },
-                    'Username'
-                ),
-                _react3.default.createElement(_reactNativeElements.FormInput, {
-                    value: this.state.username,
-                    placeholder: 'Please enter your username',
-                    onChangeText: function onChangeText(newText) {
-                        return _this2.setState({ username: newText });
-                    },
+                {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 56
+                        lineNumber: 57
                     }
-                }),
+                },
                 _react3.default.createElement(
-                    _reactNativeElements.FormLabel,
-                    {
+                    _reactNative.View,
+                    { style: styles.container, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 58
+                        }
+                    },
+                    _react3.default.createElement(_reactNative.Image, { source: require('./img/SE-Logo-circle.png'), __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 59
+                        }
+                    }),
+                    _react3.default.createElement(
+                        _reactNativeElements.FormLabel,
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 60
+                            }
+                        },
+                        'Username'
+                    ),
+                    _react3.default.createElement(_reactNativeElements.FormInput, {
+                        value: this.state.username,
+                        placeholder: 'Please enter your username',
+                        onChangeText: function onChangeText(newText) {
+                            return _this2.setState({ username: newText });
+                        },
                         __source: {
                             fileName: _jsxFileName,
                             lineNumber: 61
                         }
-                    },
-                    'Password'
+                    }),
+                    _react3.default.createElement(
+                        _reactNativeElements.FormLabel,
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 66
+                            }
+                        },
+                        'Password'
+                    ),
+                    _react3.default.createElement(_reactNativeElements.FormInput, {
+                        value: this.state.password,
+                        secureTextEntry: true,
+                        placeholder: 'Please enter your password',
+                        onChangeText: function onChangeText(newText) {
+                            return _this2.setState({ password: newText });
+                        },
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 67
+                        }
+                    }),
+                    this.props.loginFails > 0 && _react3.default.createElement(
+                        _reactNativeElements.FormValidationMessage,
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 73
+                            }
+                        },
+                        'The username/password you entered was not correct.'
+                    ),
+                    _react3.default.createElement(_reactNativeElements.Button, {
+                        raised: true,
+                        title: 'Sign In',
+                        disabled: !this.state.username || !this.state.password,
+                        onPress: this._onLogin.bind(this),
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 74
+                        }
+                    })
                 ),
-                _react3.default.createElement(_reactNativeElements.FormInput, {
-                    value: this.state.password,
-                    secureTextEntry: true,
-                    placeholder: 'Please enter your password',
-                    onChangeText: function onChangeText(newText) {
-                        return _this2.setState({ password: newText });
-                    },
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 62
-                    }
-                }),
-                this.props.loginFails > 0 && _react3.default.createElement(
-                    _reactNativeElements.FormValidationMessage,
+                _react3.default.createElement(
+                    _reactNative.View,
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 68
+                            lineNumber: 81
                         }
                     },
-                    'The username/password you entered was not correct.'
-                ),
-                _react3.default.createElement(_reactNativeElements.Button, {
-                    raised: true,
-                    title: 'Sign In',
-                    disabled: !this.state.username || !this.state.password,
-                    onPress: this._onLogin.bind(this),
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 69
-                    }
-                })
+                    _react3.default.createElement(_reactNativeElements.Button, {
+                        title: 'Forgot Password',
+                        color: 'blue',
+                        backgroundColor: 'white',
+                        onPress: this._resetPassword.bind(this),
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 82
+                        }
+                    })
+                )
             );
         }
     }]);

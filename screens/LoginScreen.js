@@ -48,32 +48,46 @@ class LoginScreen extends React.Component{
         this.props.requestLogin({username: this.state.username, password: this.state.password});
     }
 
+    _resetPassword(){
+        this.props.navigation.navigate('ResetPassword');
+    }
+
     render(){
         return(
-            <View style={styles.container}>
-                <Image source={require('./img/SE-Logo-circle.png')} />
-                <FormLabel>Username</FormLabel>
-                <FormInput
-                    value={this.state.username}
-                    placeholder="Please enter your username"
-                    onChangeText={(newText) => this.setState({username: newText})}
-                />
-                <FormLabel>Password</FormLabel>
-                <FormInput
-                    value={this.state.password}
-                    secureTextEntry={true}
-                    placeholder="Please enter your password"
-                    onChangeText={(newText) => this.setState({password: newText})}
-                />
-                {this.props.loginFails > 0 && <FormValidationMessage>The username/password you entered was not correct.</FormValidationMessage>}
+            <View>
+              <View style={styles.container}>
+                  <Image source={require('./img/SE-Logo-circle.png')} />
+                  <FormLabel>Username</FormLabel>
+                  <FormInput
+                      value={this.state.username}
+                      placeholder="Please enter your username"
+                      onChangeText={(newText) => this.setState({username: newText})}
+                  />
+                  <FormLabel>Password</FormLabel>
+                  <FormInput
+                      value={this.state.password}
+                      secureTextEntry={true}
+                      placeholder="Please enter your password"
+                      onChangeText={(newText) => this.setState({password: newText})}
+                  />
+                  {this.props.loginFails > 0 && <FormValidationMessage>The username/password you entered was not correct.</FormValidationMessage>}
+                  <Button
+                      raised
+                      title="Sign In"
+                      disabled={!this.state.username || !this.state.password}
+                      onPress={this._onLogin.bind(this)}
+                  />
+              </View>
+              <View>
                 <Button
-                    raised
-                    title="Sign In"
-                    disabled={!this.state.username || !this.state.password}
-                    onPress={this._onLogin.bind(this)}
+                    title="Forgot Password"
+                    color="blue"
+                    backgroundColor="white"
+                    onPress={this._resetPassword.bind(this)}
                 />
+              </View>
             </View>
-        )
+          )
     }
 };
 

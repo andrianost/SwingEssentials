@@ -139,21 +139,21 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 77
+            lineNumber: 76
           }
         },
         _react3.default.createElement(
           _reactNative.View,
           { style: styles.header, __source: {
               fileName: _jsxFileName,
-              lineNumber: 78
+              lineNumber: 77
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: styles.headerText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 79
+                lineNumber: 78
               }
             },
             'Discount Code'
@@ -167,7 +167,7 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 81
+            lineNumber: 80
           }
         }),
         this.props.type == 'invalid' && _react3.default.createElement(
@@ -175,7 +175,7 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 86
+              lineNumber: 85
             }
           },
           'Invalid discount code'
@@ -184,7 +184,7 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.button, __source: {
               fileName: _jsxFileName,
-              lineNumber: 87
+              lineNumber: 86
             }
           },
           _react3.default.createElement(_reactNativeElements.Button, {
@@ -194,7 +194,7 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
             onPress: this._onDiscount.bind(this),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 88
+              lineNumber: 87
             }
           })
         ),
@@ -202,14 +202,14 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.header, __source: {
               fileName: _jsxFileName,
-              lineNumber: 95
+              lineNumber: 94
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: styles.headerText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 96
+                lineNumber: 95
               }
             },
             'Order Details:  ',
@@ -220,14 +220,14 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 98
+              lineNumber: 97
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: styles.containerText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 99
+                lineNumber: 98
               }
             },
             'Sub-total:                                                        $',
@@ -238,14 +238,14 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 101
+              lineNumber: 100
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: styles.savingsText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 101
+                lineNumber: 100
               }
             },
             'Savings: -$',
@@ -256,14 +256,14 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 102
+              lineNumber: 101
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: styles.containerText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 103
+                lineNumber: 102
               }
             },
             'Tax:                                                                     $0.00'
@@ -273,14 +273,14 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 105
+              lineNumber: 104
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: styles.containerText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 106
+                lineNumber: 105
               }
             },
             'Total:                                                                $',
@@ -291,7 +291,7 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
           _reactNative.View,
           { style: styles.button, __source: {
               fileName: _jsxFileName,
-              lineNumber: 108
+              lineNumber: 107
             }
           },
           _react3.default.createElement(_reactNativeElements.Button, {
@@ -301,7 +301,7 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
             onPress: this._submitOrder.bind(this),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 109
+              lineNumber: 108
             }
           }),
           this.state.orderComplete == true && _react3.default.createElement(
@@ -309,7 +309,7 @@ var OrderDetailsScreen = _wrapComponent('OrderDetailsScreen')(function (_Compone
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 115
+                lineNumber: 114
               }
             },
             'Your order has been completed!'

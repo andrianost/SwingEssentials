@@ -8,7 +8,9 @@ import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE,
 				GET_PACKAGES_FAILURE, ORDER_LESSONS_SUCCESS, DISCOUNT_SUCCESS,
 				DISCOUNT_FAILURE, UPDATE_VIEWED_STATUS_SUCCESS,
 				UPDATE_VIEWED_STATUS_FAILURE, UPDATE_PRICE_SUCCESS, SUBMIT_ORDER_SUCCESS,
-				SUBMIT_ORDER_FAILURE} from '../actions/actions.js';
+				SUBMIT_ORDER_FAILURE, REQUEST_CREDITS_SUCCESS, REQUEST_CREDITS_FAILURE,
+				REDEEM_LESSONS_SUCCESS, REDEEM_LESSONS_FAILURE, RESET_PASSWORD_SUCCESS,
+				RESET_PASSWORD_FAILURE} from '../actions/actions.js';
 
 const userReducer = (state=[], action) => {
 	switch(action.type){
@@ -46,9 +48,22 @@ const settingsReducer = (state=[], action) => {
 		default:
 			return state;
 	}
-	}
+}
 const creditsReducer = (state=[], action) => {
-	return state;
+	switch(action.type){
+		case REQUEST_CREDITS_SUCCESS:
+			console.log('request credits success reducer')
+			return{...state,
+				count: action.data.count,
+				unlimited_count: action.data.unlimited_count,
+				unlimited_date: action.data.unlimited_date,
+			}
+		case REQUEST_CREDITS_FAILURE:
+			console.log('request credits failure reducer')
+			return state;
+	default:
+		return state;
+	}
 }
 const lessonsReducer = (state=[], action) => {
 	switch(action.type){
@@ -78,6 +93,12 @@ const lessonsReducer = (state=[], action) => {
 			}
 		case UPDATE_VIEWED_STATUS_FAILURE:
 		console.log('update viewed status failed reducer')
+			return state;
+		case REDEEM_LESSONS_SUCCESS:
+		console.log('redeem lessons success reducer')
+			return state;
+		case REDEEM_LESSONS_FAILURE:
+		console.log('redeem lessons failed reducer')
 			return state;
 		default:
 			return state;
@@ -110,7 +131,7 @@ const packagesReducer = (state=[], action) => {
 			}
 		case DISCOUNT_SUCCESS:
 		console.log('discount success reducer')
-		console.log(action)
+		// console.log(action)
 			return{...state,
 				type: action.data.type,
 				value: action.data.value,
@@ -121,7 +142,7 @@ const packagesReducer = (state=[], action) => {
 			return state;
 		case SUBMIT_ORDER_SUCCESS:
 		console.log('submit order success reducer')
-		console.log(action.data)
+		// console.log(action.data)
 			return{...state,
 				response: action.data
 			}
@@ -145,6 +166,16 @@ const loginReducer = (state=[], action) => {
 				token: null,
 				failCount: state.failCount + 1
 			}
+		case RESET_PASSWORD_SUCCESS:
+		console.log('reset password success reducer')
+		// console.log(action)
+			return{...state,
+				response: action.data
+			}
+		case RESET_PASSWORD_FAILURE:
+		console.log('reset password failure reducer')
+		// console.log(action)
+			return state;
 		default:
 			return state;
 	}
