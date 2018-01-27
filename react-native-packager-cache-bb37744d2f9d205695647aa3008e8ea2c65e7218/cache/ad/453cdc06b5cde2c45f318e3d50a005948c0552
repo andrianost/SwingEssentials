@@ -25,6 +25,15 @@ var userReducer = function userReducer() {
 				lastName: action.data.personal.last_name,
 				email: action.data.personal.email
 			});
+		case _actions.CREATE_ACCOUNT_SUCCESS:
+			console.log('create account success reducer');
+			console.log(action.data);
+			return _extends({}, state, {
+				response: action.data
+			});
+		case _actions.CREATE_ACCOUNT_FAILURE:
+			console.log('create account failure reducer');
+			return state;
 		default:
 			return state;
 	}

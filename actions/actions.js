@@ -29,7 +29,10 @@ export const REDEEM_LESSONS_SUCCESS = 'REDEEM_LESSONS_SUCCESS';
 export const REDEEM_LESSONS_FAILURE = 'REDEEM_LESSONS_FAILURE';
 export const RESET_PASSWORD_SUCCESS = 'RESET_PASSWORD_SUCCESS';
 export const RESET_PASSWORD_FAILURE = 'RESET_PASSWORD_FAILURE';
+export const CREATE_ACCOUNT_SUCCESS = 'CREATE_ACCOUNT_SUCCESS';
+export const CREATE_ACCOUNT_FAILURE = 'CREATE_ACCOUNT_FAILURE';
 
+//login function.  also requests settings, lessons, packages and credits
 export function requestLogin(userCredentials){
     return function(dispatch){
         const data = new FormData();
@@ -75,6 +78,7 @@ function loginFailure(response){
     }
 }
 
+//requests user settings
 export function requestSettings(token){
     return function(dispatch){
         return fetch('http://www.josephpboyle.com/api/swingessentials.php/settings', {
@@ -112,6 +116,7 @@ function getSettingsFailure(response){
     }
 }
 
+//updates user settings
 export function userSettingsUpdate(userSettings){
   return function(dispatch){
     return fetch('http://www.josephpboyle.com/api/swingessentials.php/settings', {
@@ -160,6 +165,7 @@ function putSettingsFailure(response){
     }
 }
 
+//requests available user lessons
 export function requestLessons(token){
     return function(dispatch){
         return fetch('http://www.josephpboyle.com/api/myapi.php/lessons', {
@@ -197,6 +203,7 @@ function getLessonsFailure(response){
     }
 }
 
+//sets a request id, which is used to pull up specific user lessons
 export function setRequestId(response){
     return function(dispatch){
       dispatch(setRequestIdSuccess(response));
@@ -211,6 +218,7 @@ function setRequestIdSuccess(response){
   }
 }
 
+//requests available packages for purchase
 export function requestPackages(){
     return function(dispatch){
         return fetch('http://www.josephpboyle.com/api/myapi.php/packages', {
@@ -249,6 +257,7 @@ function getPackagesFailure(response){
   }
 }
 
+//used when a user selects a lesson to order
 export function orderLessons(response){
     return function(dispatch){
       dispatch(orderLessonsSuccess(response));
@@ -263,6 +272,7 @@ function orderLessonsSuccess(response){
   }
 }
 
+//obtains availalbe discount codes
 export function requestDiscount(discountCode){
     return function(dispatch){
         const data = new FormData();
@@ -302,6 +312,7 @@ function discountFailure(response){
     }
 }
 
+//updates price details after coupon is used
 export function updatePrice(response){
     return function(dispatch){
       dispatch(updatePriceSuccess(response));
@@ -316,6 +327,7 @@ function updatePriceSuccess(response){
     }
 }
 
+//updates the viewed status of availalbe lessons
 export function updateViewedStatus(viewedStatus){
   return function(dispatch){
     return fetch('http://www.josephpboyle.com/api/myapi.php/viewed', {
@@ -358,6 +370,7 @@ function updateViewedStatusFailure(response){
     }
 }
 
+//submits an order
 export function submitOrder(data){
   return function(dispatch){
     return fetch('http://www.josephpboyle.com/api/myapi.php/purchase/' + data.shortcode, {
@@ -396,6 +409,7 @@ function submitOrderFailure(response){
     }
 }
 
+//obtains the available credits for a user
 export function requestCredits(token){
     return function(dispatch){
         return fetch('http://www.josephpboyle.com/api/myapi.php/credits', {
@@ -434,6 +448,7 @@ function requestCreditsFailure(response){
     }
 }
 
+//redeems lesson credits
 export function redeemLessons(token){
     return function(dispatch){
         return fetch('http://www.josephpboyle.com/api/myapi.php/redeem', {
@@ -473,6 +488,7 @@ function redeemLessonsFailure(response){
     }
 }
 
+//sends a request to trigger an email to be sent to the user to reset their password
 export function resetPassword(userEmail){
   return function(dispatch){
     return fetch('http://www.josephpboyle.com/api/myapi.php/reset', {
@@ -512,6 +528,54 @@ function resetPasswordFailure(response){
     console.log(response)
     return{
         type: RESET_PASSWORD_FAILURE,
+        response: response.status
+    }
+}
+
+export function createAccount(accountData){
+  return function(dispatch){
+    return fetch('http://www.josephpboyle.com/api/myapi.php/user', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify( {
+          'username': accountData.username,
+          'firstName': accountData.firstName,
+          'lastName': accountData.lastName,
+          'email': accountData.email,
+          'password': accountData.password,
+          'phone': accountData.phone
+        })
+    })
+    .then((response) => {
+        switch(response.status) {
+            case 200:
+                dispatch(createAccountSuccess(response))
+                break;
+            default:
+                dispatch(createAccountFailure(response))
+                break;
+        }
+    })
+    .catch((error) => console.error(error));
+  }
+}
+
+function createAccountSuccess(response){
+    console.log('create account success')
+    console.log(response)
+    return{
+        type: CREATE_ACCOUNT_SUCCESS,
+        data: response
+    }
+}
+
+function createAccountFailure(response){
+    console.log('create account failure')
+    console.log(response)
+    return{
+        type: CREATE_ACCOUNT_FAILURE,
         response: response.status
     }
 }

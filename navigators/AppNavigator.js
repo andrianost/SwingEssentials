@@ -19,6 +19,8 @@ import CameraData from '../screens/CameraData.js';
 import IndividualLessonsScreen from '../screens/IndividualLessonsScreen.js';
 import OrderDetailsScreen from '../screens/OrderDetailsScreen.js';
 import ResetPasswordScreen from '../screens/ResetPasswordScreen.js';
+import CreateAccountScreen from '../screens/CreateAccountScreen.js';
+
 
 import CustomDrawer from '../screens/CustomDrawer.js';
 
@@ -28,10 +30,12 @@ function mapStateToProps(state){
         firstName: state.userData.firstName
     };
 }
+
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }
 
+//lists all navigation details for the app
 export const AppNavigator = DrawerNavigator(
   {
       Login: {
@@ -46,6 +50,20 @@ export const AppNavigator = DrawerNavigator(
             screen: ResetPasswordScreen,
             navigationOptions: ({ navigation }) => ({
                 title: 'Password Reset',
+                drawerLabel: () => null,
+                // headerStyle: {backgroundColor: '#d3d3d3'},
+                headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('Login')}/>
+            })
+          }
+        })
+      },
+      CreateAccount: {
+        screen: StackNavigator({
+          CreateAccount: {
+            screen: CreateAccountScreen,
+            navigationOptions: ({ navigation }) => ({
+                title: 'Create Account',
+                drawerLabel: () => null,
                 // headerStyle: {backgroundColor: '#d3d3d3'},
                 headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('Login')}/>
             })

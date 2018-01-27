@@ -24,6 +24,7 @@ function mapStateToProps(state){
       response_notes: state.lessons.response_notes,
     };
 }
+
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }

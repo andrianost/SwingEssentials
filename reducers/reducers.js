@@ -10,7 +10,7 @@ import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE,
 				UPDATE_VIEWED_STATUS_FAILURE, UPDATE_PRICE_SUCCESS, SUBMIT_ORDER_SUCCESS,
 				SUBMIT_ORDER_FAILURE, REQUEST_CREDITS_SUCCESS, REQUEST_CREDITS_FAILURE,
 				REDEEM_LESSONS_SUCCESS, REDEEM_LESSONS_FAILURE, RESET_PASSWORD_SUCCESS,
-				RESET_PASSWORD_FAILURE} from '../actions/actions.js';
+				RESET_PASSWORD_FAILURE, CREATE_ACCOUNT_SUCCESS, CREATE_ACCOUNT_FAILURE} from '../actions/actions.js';
 
 const userReducer = (state=[], action) => {
 	switch(action.type){
@@ -22,6 +22,15 @@ const userReducer = (state=[], action) => {
 				lastName: action.data.personal.last_name,
 				email: action.data.personal.email
 			};
+		case CREATE_ACCOUNT_SUCCESS:
+			console.log('create account success reducer')
+			console.log(action.data)
+			return{...state,
+				response: action.data
+			}
+		case CREATE_ACCOUNT_FAILURE:
+			console.log('create account failure reducer')
+			return state;
 		default:
 			return state;
 	}

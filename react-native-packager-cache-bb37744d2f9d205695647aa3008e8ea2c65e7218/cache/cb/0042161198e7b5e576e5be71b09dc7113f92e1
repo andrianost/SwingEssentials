@@ -20,7 +20,8 @@ var initialStore = exports.initialStore = {
         username: '',
         firstName: '',
         lastName: '',
-        email: ''
+        email: '',
+        response: ''
     },
 
     settings: {

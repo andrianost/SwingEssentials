@@ -21,6 +21,7 @@ function mapStateToProps(state){
       response: state.packages.response.status,
     };
 }
+
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }

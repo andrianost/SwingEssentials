@@ -66,6 +66,7 @@ function mapStateToProps(state) {
     shortcode: state.packages.shortcode
   };
 }
+
 function mapDispatchToProps(dispatch) {
   return (0, _redux.bindActionCreators)(Actions, dispatch);
 }
@@ -103,14 +104,14 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 45
+            lineNumber: 46
           }
         },
         _react3.default.createElement(
           _reactNative.Text,
           { style: { color: "white", fontWeight: "bold" }, __source: {
               fileName: _jsxFileName,
-              lineNumber: 46
+              lineNumber: 47
             }
           },
           'Available Packages'
@@ -126,7 +127,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
           index = _ref.index;
 
       return _react3.default.createElement(_reactNativeElements.ListItem, {
-        containerStyle: { height: 80, justifyContent: 'center', backgroundColor: 'powderblue' },
+        containerStyle: { height: 80, justifyContent: 'center' },
         titleStyle: { fontSize: 18 },
         rightTitleStyle: { fontWeight: 'bold', color: 'black' },
         key: index,
@@ -138,7 +139,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 54
         }
       });
     }
@@ -150,7 +151,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 68
+            lineNumber: 69
           }
         },
         _react3.default.createElement(_reactNative.FlatList, {
@@ -162,7 +163,7 @@ var OrderLessonsScreen = _wrapComponent('OrderLessonsScreen')(function (_Compone
           ListHeaderComponent: this._packagesHeader,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 69
+            lineNumber: 70
           }
         })
       );

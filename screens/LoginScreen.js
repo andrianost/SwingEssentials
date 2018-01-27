@@ -52,6 +52,10 @@ class LoginScreen extends React.Component{
         this.props.navigation.navigate('ResetPassword');
     }
 
+    _createAccount(){
+        this.props.navigation.navigate('CreateAccount');
+    }
+
     render(){
         return(
             <View>
@@ -84,6 +88,14 @@ class LoginScreen extends React.Component{
                     color="blue"
                     backgroundColor="white"
                     onPress={this._resetPassword.bind(this)}
+                />
+              </View>
+              <View>
+                <Button
+                    title="Create Account"
+                    color="blue"
+                    backgroundColor="white"
+                    onPress={this._createAccount.bind(this)}
                 />
               </View>
             </View>

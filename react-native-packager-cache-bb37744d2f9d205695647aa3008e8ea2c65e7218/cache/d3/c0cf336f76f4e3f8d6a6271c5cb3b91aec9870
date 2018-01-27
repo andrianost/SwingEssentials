@@ -62,6 +62,7 @@ function mapStateToProps(state) {
     token: state.login.token
   };
 }
+
 function mapDispatchToProps(dispatch) {
   return (0, _redux.bindActionCreators)(Actions, dispatch);
 }
@@ -95,21 +96,21 @@ var RedeemLessonsScreen = _wrapComponent('RedeemLessonsScreen')(function (_Compo
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 42
           }
         },
         _react3.default.createElement(
           _reactNative.View,
           { style: styles.header, __source: {
               fileName: _jsxFileName,
-              lineNumber: 42
+              lineNumber: 43
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: styles.headerText, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 43
+                lineNumber: 44
               }
             },
             'Record your swing'
@@ -119,7 +120,7 @@ var RedeemLessonsScreen = _wrapComponent('RedeemLessonsScreen')(function (_Compo
           _reactNative.View,
           { style: styles.button, __source: {
               fileName: _jsxFileName,
-              lineNumber: 45
+              lineNumber: 46
             }
           },
           _react3.default.createElement(_reactNativeElements.Button, {
@@ -127,7 +128,7 @@ var RedeemLessonsScreen = _wrapComponent('RedeemLessonsScreen')(function (_Compo
             title: 'Face On',
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 46
+              lineNumber: 47
             }
           })
         ),
@@ -135,7 +136,7 @@ var RedeemLessonsScreen = _wrapComponent('RedeemLessonsScreen')(function (_Compo
           _reactNative.View,
           { style: styles.button1, __source: {
               fileName: _jsxFileName,
-              lineNumber: 52
+              lineNumber: 53
             }
           },
           _react3.default.createElement(_reactNativeElements.Button, {
@@ -143,7 +144,7 @@ var RedeemLessonsScreen = _wrapComponent('RedeemLessonsScreen')(function (_Compo
             title: 'Down the Line',
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 53
+              lineNumber: 54
             }
           })
         ),
@@ -151,7 +152,7 @@ var RedeemLessonsScreen = _wrapComponent('RedeemLessonsScreen')(function (_Compo
           _reactNative.View,
           { style: styles.button1, __source: {
               fileName: _jsxFileName,
-              lineNumber: 59
+              lineNumber: 60
             }
           },
           _react3.default.createElement(_reactNativeElements.Button, {
@@ -161,7 +162,7 @@ var RedeemLessonsScreen = _wrapComponent('RedeemLessonsScreen')(function (_Compo
             onPress: this._redeemLessons.bind(this),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 60
+              lineNumber: 61
             }
           })
         )

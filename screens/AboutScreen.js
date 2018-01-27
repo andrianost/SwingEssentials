@@ -12,6 +12,7 @@ function mapStateToProps(state){
         username: state.userData.username
     };
 }
+
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }

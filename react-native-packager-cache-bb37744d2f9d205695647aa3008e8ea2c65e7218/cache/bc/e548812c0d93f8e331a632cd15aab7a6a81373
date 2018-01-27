@@ -69,6 +69,7 @@ function mapStateToProps(state) {
     response_notes: state.lessons.response_notes
   };
 }
+
 function mapDispatchToProps(dispatch) {
   return (0, _redux.bindActionCreators)(Actions, dispatch);
 }

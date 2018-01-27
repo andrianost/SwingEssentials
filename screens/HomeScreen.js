@@ -11,28 +11,19 @@ import { Button, FormInput, FormLabel } from 'react-native-elements'
 
 function mapStateToProps(state){
     return {
-        // username: state.userData.username,
-        // packages:
     };
 }
+
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }
-
- 
 
 class HomeScreen extends Component {
   constructor(props){
       super(props);
       this.state = {
-          // username: this.props.username,
       }
   }
-
-  // _getLessonsPackages(){
-  //   this.props.requestPackages();
-  //   this.props.navigation.navigate('OrderLessons');
-  // }
 
   render() {
     return (

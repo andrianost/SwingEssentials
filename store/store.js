@@ -10,7 +10,8 @@ export const initialStore = {
         username: '',
         firstName: '',
         lastName: '',
-        email: ''
+        email: '',
+        response: ''
     },
 
     // user settings

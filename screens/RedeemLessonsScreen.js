@@ -13,6 +13,7 @@ function mapStateToProps(state){
       token: state.login.token,
     };
 }
+
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }

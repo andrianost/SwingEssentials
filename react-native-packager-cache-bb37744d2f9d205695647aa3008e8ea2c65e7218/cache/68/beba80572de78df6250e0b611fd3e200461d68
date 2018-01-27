@@ -85,6 +85,10 @@ var _ResetPasswordScreen = require('../screens/ResetPasswordScreen.js');
 
 var _ResetPasswordScreen2 = _interopRequireDefault(_ResetPasswordScreen);
 
+var _CreateAccountScreen = require('../screens/CreateAccountScreen.js');
+
+var _CreateAccountScreen2 = _interopRequireDefault(_CreateAccountScreen);
+
 var _CustomDrawer = require('../screens/CustomDrawer.js');
 
 var _CustomDrawer2 = _interopRequireDefault(_CustomDrawer);
@@ -122,6 +126,7 @@ function mapStateToProps(state) {
         firstName: state.userData.firstName
     };
 }
+
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(Actions, dispatch);
 }
@@ -142,12 +147,39 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                     var navigation = _ref.navigation;
                     return {
                         title: 'Password Reset',
+                        drawerLabel: function drawerLabel() {
+                            return null;
+                        },
 
                         headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#231f61' }, onPress: function onPress() {
                                 return navigation.navigate('Login');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 50
+                                lineNumber: 55
+                            }
+                        })
+                    };
+                }
+            }
+        })
+    },
+    CreateAccount: {
+        screen: (0, _reactNavigation.StackNavigator)({
+            CreateAccount: {
+                screen: _CreateAccountScreen2.default,
+                navigationOptions: function navigationOptions(_ref2) {
+                    var navigation = _ref2.navigation;
+                    return {
+                        title: 'Create Account',
+                        drawerLabel: function drawerLabel() {
+                            return null;
+                        },
+
+                        headerLeft: _react3.default.createElement(_MaterialIcons2.default, { name: 'navigate-before', size: 24, style: { color: '#231f61' }, onPress: function onPress() {
+                                return navigation.navigate('Login');
+                            }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 68
                             }
                         })
                     };
@@ -159,8 +191,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
         screen: (0, _reactNavigation.StackNavigator)({
             Home: {
                 screen: _HomeScreen2.default,
-                navigationOptions: function navigationOptions(_ref2) {
-                    var navigation = _ref2.navigation;
+                navigationOptions: function navigationOptions(_ref3) {
+                    var navigation = _ref3.navigation;
                     return {
                         title: 'Swing Essentials',
                         headerStyle: { backgroundColor: '#d3d3d3' },
@@ -168,7 +200,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 62
+                                lineNumber: 80
                             }
                         }) };
                 }
@@ -183,8 +215,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
         screen: (0, _reactNavigation.StackNavigator)({
             YourLessons: {
                 screen: _YourLessonsScreen2.default,
-                navigationOptions: function navigationOptions(_ref3) {
-                    var navigation = _ref3.navigation;
+                navigationOptions: function navigationOptions(_ref4) {
+                    var navigation = _ref4.navigation;
                     return {
                         title: 'Swing Essentials',
                         headerStyle: { backgroundColor: '#d3d3d3' },
@@ -192,7 +224,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 79
+                                lineNumber: 97
                             }
                         })
                     };
@@ -200,8 +232,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             },
             IndividualLessonsScreen: {
                 screen: _IndividualLessonsScreen2.default,
-                navigationOptions: function navigationOptions(_ref4) {
-                    var navigation = _ref4.navigation;
+                navigationOptions: function navigationOptions(_ref5) {
+                    var navigation = _ref5.navigation;
                     return {
                         title: 'Swing Essentials',
                         headerStyle: { backgroundColor: '#d3d3d3' },
@@ -209,7 +241,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('YourLessons');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 87
+                                lineNumber: 105
                             }
                         })
                     };
@@ -227,8 +259,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
         screen: (0, _reactNavigation.StackNavigator)({
             RedeemLessons: {
                 screen: _RedeemLessonsScreen2.default,
-                navigationOptions: function navigationOptions(_ref5) {
-                    var navigation = _ref5.navigation;
+                navigationOptions: function navigationOptions(_ref6) {
+                    var navigation = _ref6.navigation;
                     return {
                         title: 'Swing Essentials',
                         headerStyle: { backgroundColor: '#d3d3d3' },
@@ -236,7 +268,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 106
+                                lineNumber: 124
                             }
                         })
                     };
@@ -254,8 +286,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
         screen: (0, _reactNavigation.StackNavigator)({
             OrderLessons: {
                 screen: _OrderLessonsScreen2.default,
-                navigationOptions: function navigationOptions(_ref6) {
-                    var navigation = _ref6.navigation;
+                navigationOptions: function navigationOptions(_ref7) {
+                    var navigation = _ref7.navigation;
                     return {
                         title: 'Swing Essentials',
                         headerStyle: { backgroundColor: '#d3d3d3' },
@@ -263,7 +295,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 125
+                                lineNumber: 143
                             }
                         })
                     };
@@ -271,8 +303,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             },
             OrderDetailsScreen: {
                 screen: _OrderDetailsScreen2.default,
-                navigationOptions: function navigationOptions(_ref7) {
-                    var navigation = _ref7.navigation;
+                navigationOptions: function navigationOptions(_ref8) {
+                    var navigation = _ref8.navigation;
                     return {
                         title: 'Swing Essentials',
                         headerStyle: { backgroundColor: '#d3d3d3' },
@@ -280,7 +312,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('OrderLessons');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 133
+                                lineNumber: 151
                             }
                         })
                     };
@@ -296,8 +328,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
         screen: (0, _reactNavigation.StackNavigator)({
             HelpScreen: {
                 screen: _HelpScreen2.default,
-                navigationOptions: function navigationOptions(_ref8) {
-                    var navigation = _ref8.navigation;
+                navigationOptions: function navigationOptions(_ref9) {
+                    var navigation = _ref9.navigation;
                     return {
                         title: 'Swing Essentials',
                         headerStyle: { backgroundColor: '#d3d3d3' },
@@ -305,7 +337,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 150
+                                lineNumber: 168
                             }
                         })
                     };
@@ -320,8 +352,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
         screen: (0, _reactNavigation.StackNavigator)({
             AboutScreen: {
                 screen: _AboutScreen2.default,
-                navigationOptions: function navigationOptions(_ref9) {
-                    var navigation = _ref9.navigation;
+                navigationOptions: function navigationOptions(_ref10) {
+                    var navigation = _ref10.navigation;
                     return {
                         title: 'Swing Essentials',
                         headerStyle: { backgroundColor: '#d3d3d3' },
@@ -329,7 +361,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 166
+                                lineNumber: 184
                             }
                         })
                     };
@@ -344,8 +376,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
         screen: (0, _reactNavigation.StackNavigator)({
             SettingsScreen: {
                 screen: _SettingsScreen2.default,
-                navigationOptions: function navigationOptions(_ref10) {
-                    var navigation = _ref10.navigation;
+                navigationOptions: function navigationOptions(_ref11) {
+                    var navigation = _ref11.navigation;
                     return {
                         title: 'Swing Essentials',
                         headerStyle: { backgroundColor: '#d3d3d3' },
@@ -353,7 +385,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('DrawerOpen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 182
+                                lineNumber: 200
                             }
                         })
                     };
@@ -361,8 +393,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             },
             UserData: {
                 screen: _UserData2.default,
-                navigationOptions: function navigationOptions(_ref11) {
-                    var navigation = _ref11.navigation;
+                navigationOptions: function navigationOptions(_ref12) {
+                    var navigation = _ref12.navigation;
                     return {
                         title: 'User Data',
                         headerStyle: { backgroundColor: '#d3d3d3' },
@@ -370,7 +402,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('SettingsScreen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 190
+                                lineNumber: 208
                             }
                         })
                     };
@@ -378,8 +410,8 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
             },
             CameraData: {
                 screen: _CameraData2.default,
-                navigationOptions: function navigationOptions(_ref12) {
-                    var navigation = _ref12.navigation;
+                navigationOptions: function navigationOptions(_ref13) {
+                    var navigation = _ref13.navigation;
                     return {
                         title: 'Camera Data',
                         headerStyle: { backgroundColor: '#d3d3d3' },
@@ -387,7 +419,7 @@ var AppNavigator = exports.AppNavigator = (0, _reactNavigation.DrawerNavigator)(
                                 return navigation.navigate('SettingsScreen');
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 198
+                                lineNumber: 216
                             }
                         })
                     };
@@ -424,7 +456,7 @@ var AppWithNavigationState = _wrapComponent('AppWithNavigationState')(function (
                 }),
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 227
+                    lineNumber: 245
                 }
             });
         }

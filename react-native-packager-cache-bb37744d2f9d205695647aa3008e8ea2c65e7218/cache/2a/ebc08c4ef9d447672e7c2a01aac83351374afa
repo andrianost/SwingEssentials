@@ -60,6 +60,7 @@ function _wrapComponent(id) {
 function mapStateToProps(state) {
   return {};
 }
+
 function mapDispatchToProps(dispatch) {
   return (0, _redux.bindActionCreators)(Actions, dispatch);
 }
@@ -85,14 +86,14 @@ var HomeScreen = _wrapComponent('HomeScreen')(function (_Component) {
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 39
+            lineNumber: 30
           }
         },
         _react3.default.createElement(
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 40
+              lineNumber: 31
             }
           },
           _react3.default.createElement(_reactNativeElements.Button, {
@@ -103,7 +104,7 @@ var HomeScreen = _wrapComponent('HomeScreen')(function (_Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 41
+              lineNumber: 32
             }
           })
         ),
@@ -111,7 +112,7 @@ var HomeScreen = _wrapComponent('HomeScreen')(function (_Component) {
           _reactNative.View,
           { style: styles.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 47
+              lineNumber: 38
             }
           },
           _react3.default.createElement(_reactNativeElements.Button, {
@@ -122,7 +123,7 @@ var HomeScreen = _wrapComponent('HomeScreen')(function (_Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 48
+              lineNumber: 39
             }
           })
         )

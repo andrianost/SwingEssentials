@@ -17,6 +17,7 @@ function mapStateToProps(state){
         shortcode: state.packages.shortcode,
     };
 }
+
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }
@@ -51,7 +52,7 @@ class OrderLessonsScreen extends Component {
   _renderItem({ item, index }) {
     return (
       <ListItem
-        containerStyle = {{height: 80, justifyContent: 'center', backgroundColor: 'powderblue'}}
+        containerStyle = {{height: 80, justifyContent: 'center'}}
         titleStyle = {{fontSize: 18}}
         rightTitleStyle = {{fontWeight: 'bold', color: 'black'}}
         key={index}

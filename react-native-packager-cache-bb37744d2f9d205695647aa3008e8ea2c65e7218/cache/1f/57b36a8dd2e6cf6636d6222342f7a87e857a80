@@ -70,6 +70,7 @@ function mapStateToProps(state) {
     token: state.login.token
   };
 }
+
 function mapDispatchToProps(dispatch) {
   return (0, _redux.bindActionCreators)(Actions, dispatch);
 }
@@ -108,7 +109,7 @@ var UserData = _wrapComponent('UserData')(function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44
+            lineNumber: 45
           }
         },
         _react3.default.createElement(
@@ -121,17 +122,17 @@ var UserData = _wrapComponent('UserData')(function (_Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 45
+              lineNumber: 46
             }
           },
           _react3.default.createElement(_reactNative.Picker.Item, { label: 'Right', value: 'right', __source: {
               fileName: _jsxFileName,
-              lineNumber: 50
+              lineNumber: 51
             }
           }),
           _react3.default.createElement(_reactNative.Picker.Item, { label: 'Left', value: 'left', __source: {
               fileName: _jsxFileName,
-              lineNumber: 51
+              lineNumber: 52
             }
           })
         )

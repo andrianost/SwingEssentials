@@ -1,0 +1,295 @@
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./../node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _jsxFileName = '/Users/andrianost/projects/SwingEssentials/screens/CreateAccountScreen.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _redux = require('redux');
+
+var _reactNavigation = require('react-navigation');
+
+var _reactRedux = require('react-redux');
+
+var _actions = require('../actions/actions.js');
+
+var Actions = _interopRequireWildcard(_actions);
+
+var _reactNative = require('react-native');
+
+var _reactNativeElements = require('react-native-elements');
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+    CreateAccountScreen: {
+        displayName: 'CreateAccountScreen'
+    }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: '/Users/andrianost/projects/SwingEssentials/screens/CreateAccountScreen.js',
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+    return function (Component) {
+        return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+}
+
+function mapStateToProps(state) {
+    return {
+        response: state.userData.response
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return (0, _redux.bindActionCreators)(Actions, dispatch);
+}
+
+var CreateAccountScreen = _wrapComponent('CreateAccountScreen')(function (_React$Component) {
+    _inherits(CreateAccountScreen, _React$Component);
+
+    function CreateAccountScreen(props) {
+        _classCallCheck(this, CreateAccountScreen);
+
+        var _this = _possibleConstructorReturn(this, (CreateAccountScreen.__proto__ || Object.getPrototypeOf(CreateAccountScreen)).call(this, props));
+
+        _this.state = {
+            username: '',
+            firstName: '',
+            lastName: '',
+            email: '',
+            password: '',
+            phone: '',
+            createAccount: false,
+            createAccountFailure: false,
+            response: _this.props.response
+        };
+        return _this;
+    }
+
+    _createClass(CreateAccountScreen, [{
+        key: '_createAccount',
+        value: function _createAccount() {
+            var _this2 = this;
+
+            this.props.createAccount({ username: this.state.username,
+                firstName: this.state.firstName,
+                lastName: this.state.lastName,
+                email: this.state.email,
+                password: this.state.password,
+                phone: this.state.phone }).then(function () {
+                if (_this2.props.response.status == 200) {
+                    _this2.setState({ createAccount: true });
+                } else {
+                    _this2.setState({ createAccountFailure: true });
+                }
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            return _react3.default.createElement(
+                _reactNative.View,
+                { style: styles.container, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 55
+                    }
+                },
+                _react3.default.createElement(
+                    _reactNativeElements.FormLabel,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 56
+                        }
+                    },
+                    'First Name'
+                ),
+                _react3.default.createElement(_reactNativeElements.FormInput, {
+                    value: this.state.firstName,
+                    placeholder: 'Please enter your first name',
+                    onChangeText: function onChangeText(newText) {
+                        return _this3.setState({ firstName: newText });
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 57
+                    }
+                }),
+                _react3.default.createElement(
+                    _reactNativeElements.FormLabel,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 62
+                        }
+                    },
+                    'Last Name'
+                ),
+                _react3.default.createElement(_reactNativeElements.FormInput, {
+                    value: this.state.lastName,
+                    placeholder: 'Please enter your last name',
+                    onChangeText: function onChangeText(newText) {
+                        return _this3.setState({ lastName: newText });
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 63
+                    }
+                }),
+                _react3.default.createElement(
+                    _reactNativeElements.FormLabel,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 68
+                        }
+                    },
+                    'Phone # (optional)'
+                ),
+                _react3.default.createElement(_reactNativeElements.FormInput, {
+                    value: this.state.phone,
+                    placeholder: 'Please enter your phone number',
+                    onChangeText: function onChangeText(newText) {
+                        return _this3.setState({ phone: newText });
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 69
+                    }
+                }),
+                _react3.default.createElement(
+                    _reactNativeElements.FormLabel,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 74
+                        }
+                    },
+                    'Email'
+                ),
+                _react3.default.createElement(_reactNativeElements.FormInput, {
+                    value: this.state.email,
+                    placeholder: 'Please enter your email address',
+                    onChangeText: function onChangeText(newText) {
+                        return _this3.setState({ email: newText });
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 75
+                    }
+                }),
+                _react3.default.createElement(
+                    _reactNativeElements.FormLabel,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 80
+                        }
+                    },
+                    'Enter Username'
+                ),
+                _react3.default.createElement(_reactNativeElements.FormInput, {
+                    value: this.state.username,
+                    placeholder: 'Please enter your username',
+                    onChangeText: function onChangeText(newText) {
+                        return _this3.setState({ username: newText });
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 81
+                    }
+                }),
+                _react3.default.createElement(
+                    _reactNativeElements.FormLabel,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 86
+                        }
+                    },
+                    'Enter Password'
+                ),
+                _react3.default.createElement(_reactNativeElements.FormInput, {
+                    value: this.state.password,
+                    secureTextEntry: true,
+                    placeholder: 'Please enter your password',
+                    onChangeText: function onChangeText(newText) {
+                        return _this3.setState({ password: newText });
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 87
+                    }
+                }),
+                _react3.default.createElement(_reactNativeElements.Button, {
+                    raised: true,
+                    title: 'Create Account',
+                    disabled: !this.state.firstName || !this.state.lastName || !this.state.email || !this.state.username || !this.state.password || this.state.createAccount == true,
+                    onPress: this._createAccount.bind(this),
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 93
+                    }
+                }),
+                this.state.createAccount == true && _react3.default.createElement(
+                    _reactNativeElements.FormValidationMessage,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 101
+                        }
+                    },
+                    'Your account has been created!'
+                ),
+                this.state.createAccountFailure == true && _react3.default.createElement(
+                    _reactNativeElements.FormValidationMessage,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 102
+                        }
+                    },
+                    'Username and/or email is unavailable'
+                )
+            );
+        }
+    }]);
+
+    return CreateAccountScreen;
+}(_react3.default.Component));
+
+;
+
+var styles = _reactNative.StyleSheet.create({
+    container: {
+        paddingTop: 30
+
+    }
+});
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(CreateAccountScreen);
