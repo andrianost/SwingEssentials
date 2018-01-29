@@ -1,0 +1,12 @@
+2018-01-27T15:55:09,785: [listener] Watchman 4.7.0 <no build info set> starting up on bksq-g2vr-mac.fios-router.home
+2018-01-27T15:55:09,785: [listener] failed to parse json from /Users/andrianost/projects/SwingEssentials/root-state/state: unable to open /Users/andrianost/projects/SwingEssentials/root-state/state: No such file or directory
+2018-01-27T15:55:09,785: [listener] file limit is 256 kern.maxfilesperproc=524288
+2018-01-27T15:55:09,785: [listener] raised file limit to 524288
+2018-01-27T15:55:09,785: [listener] Using socket from launchd as listening socket
+2018-01-27T15:55:11,693: [client=0x7faff750ebc0:stm=0x7faff750e790] path /Users/andrianost/projects/SwingEssentials is on filesystem type hfs
+2018-01-27T15:55:11,699: [client=0x7faff750ebc0:stm=0x7faff750e790] root /Users/andrianost/projects/SwingEssentials using watcher mechanism fsevents (auto was requested)
+2018-01-27T15:55:12,116: [io /Users/andrianost/projects/SwingEssentials] PERF: {"ru_nivcsw": 34, "meta": {"root": {"case_sensitive": false, "ticks": 2, "path": "/Users/andrianost/projects/SwingEssentials", "recrawl_count": 0, "number": 1, "watcher": "fsevents"}}, "start_time": 1517086511.7028749, "pid": 45882, "description": "full-crawl", "ru_msgrcv": 1, "ru_majflt": 0, "ru_msgsnd": 0, "ru_ixrss": 0, "version": "4.7.0", "system_time": 0.21865000000000001, "elapsed_time": 0.41311900000000001, "ru_idrss": 0, "user_time": 0.179809, "ru_maxrss": 20336640, "ru_inblock": 74, "ru_minflt": 4969, "ru_nswap": 0, "ru_oublock": 0, "ru_nsignals": 0, "ru_nvcsw": 74}
+2018-01-27T15:55:12,116: [io /Users/andrianost/projects/SwingEssentials] crawl complete
+2018-01-28T22:00:23,359: [io /Users/andrianost/projects/SwingEssentials] getattrlist(/Users/andrianost/projects/SwingEssentials/node_modules/.staging/isobject-00d84b41/package.json.661253740) failed: No such file or directory
+2018-01-28T22:00:29,745: [io /Users/andrianost/projects/SwingEssentials] getattrlist(/Users/andrianost/projects/SwingEssentials/node_modules/.staging/babel-types-c72c2568/package.json.2807769174) failed: No such file or directory
+2018-01-28T22:00:31,286: [io /Users/andrianost/projects/SwingEssentials] getattrlist(/Users/andrianost/projects/SwingEssentials/node_modules/.staging/win-release-72d1d45c/package.json.294209715) failed: No such file or directory

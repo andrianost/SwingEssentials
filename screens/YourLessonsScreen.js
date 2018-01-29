@@ -58,7 +58,6 @@ class YourLessonsScreen extends Component {
         titleStyle = {{fontSize: 18}}
         rightTitle={(item.viewed && item.viewed==='0')?'NEW!':null}
         rightTitleStyle = {{fontSize: 18, fontWeight: 'bold', color: 'red'}}
-        // subtitle={item.request_id}
         onPress={ () => {this._requestID({request_id: item.request_id,
                                           request_date: item.request_date,
                                           request_url: item.request_url,

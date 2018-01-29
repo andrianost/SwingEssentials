@@ -93,7 +93,8 @@ const lessonsReducer = (state=[], action) => {
 				request_url: action.data.request_url,
 				request_notes: action.data.request_notes,
 				viewed: action.data.viewed,
-				response_notes: action.data.response_notes
+				response_notes: action.data.response_notes,
+				response_video: action.data.response_video
 			}
 		case UPDATE_VIEWED_STATUS_SUCCESS:
 		console.log('update viewed status success reducer')

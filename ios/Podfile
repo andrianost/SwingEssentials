@@ -1,0 +1,34 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'SwingEssentials' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SwingEssentials
+  pod "youtube-ios-player-helper", "~> 0.1.6"
+
+  target 'SwingEssentials-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SwingEssentialsTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+# target 'SwingEssentials-tvOS' do
+#   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+#   # use_frameworks!
+#
+#   # Pods for SwingEssentials-tvOS
+#
+#   target 'SwingEssentials-tvOSTests' do
+#     inherit! :search_paths
+#     # Pods for testing
+#   end
+#
+# end

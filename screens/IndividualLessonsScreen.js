@@ -4,8 +4,7 @@ import {NavigationActions, StackNavigator} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
-import VideoPlayer from 'react-native-video-player';
-// import YouTube from 'react-native-youtube';
+import YouTube from 'react-native-youtube';
 
 import { Component } from 'react';
 import { StyleSheet, View, Text, Button, FlatList } from 'react-native';
@@ -22,14 +21,13 @@ function mapStateToProps(state){
       request_url: state.lessons.request_url,
       request_notes: state.lessons.request_notes,
       response_notes: state.lessons.response_notes,
+      response_video: state.lessons.response_video
     };
 }
 
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }
-
-// const YOUTUBE_ID = 'https://www.youtube.com/watch?v=ogaxg5J_F_8';
 
 class IndividualLessonsScreen extends Component {
   constructor(props){
@@ -43,18 +41,31 @@ class IndividualLessonsScreen extends Component {
           request_url: this.props.request_url,
           request_notes: this.props.request_notes,
           response_notes: this.props.response_notes,
+          response_video: this.props.response_video
       }
   }
 
   render() {
-    console.log(this.props.request_id)
+    console.log(this.props.response_video)
     return (
       <View>
         <View style={styles.header}>
           <Text style={styles.text}>{this.props.request_date}</Text>
         </View>
         <View>
-          <VideoPlayer/>
+          <YouTube
+            videoId="noU5_4L6H3o"  // The YouTube video ID
+            play={true}             // control playback of video with true/false
+            fullscreen={false}       // control whether the video should play in fullscreen or inline
+            loop={true}             // control whether the video should loop when ended
+
+            onReady={e => this.setState({ isReady: true })}
+            onChangeState={e => this.setState({ status: e.state })}
+            onChangeQuality={e => this.setState({ quality: e.quality })}
+            onError={e => this.setState({ error: e.error })}
+
+            style={{ alignSelf: 'stretch', height: 300 }}
+          />
         </View>
         <View style={styles.header}>
           <Text style={styles.text}>Comments</Text>

@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {addNavigationHelpers, StackNavigator, DrawerNavigator, DrawerItems} from 'react-navigation';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
+import { Button } from 'react-native-elements'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
 import Routes from '../config/navigationRoutes.js';
@@ -77,7 +78,8 @@ export const AppNavigator = DrawerNavigator(
                   navigationOptions:({ navigation }) => ({
                       title: 'Swing Essentials',
                       headerStyle: {backgroundColor: '#d3d3d3'},
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('DrawerOpen')}/>                  })
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                    })
               }
             }),
             navigationOptions:{

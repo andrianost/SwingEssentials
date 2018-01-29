@@ -43,6 +43,7 @@ export const initialStore = {
         request_notes: '',
         viewed: '',
         response_notes: '',
+        response_video: ''
     },
 
     // swingessentials available lesson packages
