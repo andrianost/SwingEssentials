@@ -93,6 +93,8 @@ const styles = StyleSheet.create({
     paddingRight: 150,
   },
   text: {
+    paddingLeft: 18,
+    fontSize: 18,
     fontWeight: 'bold',
     color: 'white',
   },
@@ -100,6 +102,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 20,
     backgroundColor: '#231f61',
+    opacity:.8
   },
 });
 

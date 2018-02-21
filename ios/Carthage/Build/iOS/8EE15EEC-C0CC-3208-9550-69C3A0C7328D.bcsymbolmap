@@ -1,0 +1,568 @@
+BCSymbolMap Version: 2.0
++[PPDataCollector generateClientMetadataID:]
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___44+[PPDataCollector generateClientMetadataID:]_block_invoke
+___44+[PPDataCollector generateClientMetadataID:]_block_invoke_2
+___44+[PPDataCollector generateClientMetadataID:]_block_invoke_3
+___copy_helper_block_
+___destroy_helper_block_
+___copy_helper_block_.16
+___destroy_helper_block_.17
++[PPDataCollector generateClientMetadataID]
++[PPDataCollector clientMetadataID:]
++[PPDataCollector clientMetadataID]
++[PPDataCollector collectPayPalDeviceData]
+_generateClientMetadataID:.clientMetadataIDProvider
+_generateClientMetadataID:.onceToken
+___block_descriptor_tmp
+___block_literal_global
+___block_descriptor_tmp.4
+___block_descriptor_tmp.19
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+/Users/andrianost/projects/SwingEssentials/ios/Carthage/Checkouts/braintree_ios/BraintreePayPal/PayPalDataCollector/PPDataCollector.m
+/Users/andrianost/projects/SwingEssentials/ios/Carthage/Checkouts/braintree_ios
+__destroy_helper_block_
+__copy_helper_block_
+__44+[PPDataCollector generateClientMetadataID:]_block_invoke_3
+__44+[PPDataCollector generateClientMetadataID:]_block_invoke_2
+__44+[PPDataCollector generateClientMetadataID:]_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
+_dispatch_once
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/usr/include/dispatch/once.h
+/Users/andrianost/Library/Caches/org.carthage.CarthageKit/DerivedData/9.2_9C40b/braintree_ios/4.10.0/Build/Intermediates.noindex/ArchiveIntermediates/PayPalDataCollector/IntermediateBuildFilesPath/Braintree.build/Release-iphoneos/PayPalDataCollector.build/DerivedSources/PayPalDataCollector_vers.c
++[PPRiskUtility getIncrementalDebugFlag]
++[PPRiskUtility getDysonDebugFlag]
++[PPRiskUtility logIncrementalConfigInfo:]
++[PPRiskUtility logDysonInfo:]
++[PPRiskUtility getDefaultConfig]
++[PPRiskUtility getConfigDictFromFileName:]
++[PPRiskUtility urlEncodeFromString:]
++[PPRiskUtility dc:]
++[PPRiskUtility getMGWithAppGuid:withTimestamp:withPid:withRemoteKey:]
++[PPRiskUtility pm:]
++[PPRiskUtility ct]
++[PPRiskUtility boolHexString:]
++[PPRiskUtility base64Decode:]
++[PPRiskUtility base64Encode:]
+_incrementalDebugFlagRead
+_incrementalDebugEnabled
+_dysonDebugFlagRead
+_dysonDebugEnabled
+Apple LLVM version 8.1.0 (clang-802.0.42)
+/Users/brluk/Code/paypal/ios-risk-component/PPRiskComponent/PPRiskUtility.m
+/Users/brluk/Code/paypal/ios-risk-component
+-[PPRiskConfiguration initWithDictionary:]
+-[PPRiskConfiguration initWithDefaultConfig]
+-[PPRiskConfiguration getIncrementalDict]
+-[PPRiskConfiguration setConfiguration:]
+-[PPRiskConfiguration initWithCoder:]
+-[PPRiskConfiguration encodeWithCoder:]
+-[PPRiskConfiguration hexToBinaryArray:]
+-[PPRiskConfiguration isCDSEnabled:]
+-[PPRiskConfiguration lastFullUpdateTimestamp]
+-[PPRiskConfiguration setLastFullUpdateTimestamp:]
+-[PPRiskConfiguration lastPINLockTimestamp]
+-[PPRiskConfiguration setLastPINLockTimestamp:]
+-[PPRiskConfiguration confVersion]
+-[PPRiskConfiguration setConfVersion:]
+-[PPRiskConfiguration confRefreshTimeInterval]
+-[PPRiskConfiguration setConfRefreshTimeInterval:]
+-[PPRiskConfiguration forcedFullUpdateTimeInterval]
+-[PPRiskConfiguration setForcedFullUpdateTimeInterval:]
+-[PPRiskConfiguration asyncUpdateTimeInterval]
+-[PPRiskConfiguration setAsyncUpdateTimeInterval:]
+-[PPRiskConfiguration knownAppPaths]
+-[PPRiskConfiguration setKnownAppPaths:]
+-[PPRiskConfiguration locationMinAccuracy]
+-[PPRiskConfiguration setLocationMinAccuracy:]
+-[PPRiskConfiguration locationMaxCacheAge]
+-[PPRiskConfiguration setLocationMaxCacheAge:]
+-[PPRiskConfiguration endpointURL]
+-[PPRiskConfiguration setEndpointURL:]
+-[PPRiskConfiguration endpointIsStage]
+-[PPRiskConfiguration setEndpointIsStage:]
+-[PPRiskConfiguration internalCacheMaxAge]
+-[PPRiskConfiguration setInternalCacheMaxAge:]
+-[PPRiskConfiguration knownDeviceModel]
+-[PPRiskConfiguration setKnownDeviceModel:]
+-[PPRiskConfiguration collectableDataSet]
+-[PPRiskConfiguration setCollectableDataSet:]
+-[PPRiskConfiguration prdcConfigured]
+-[PPRiskConfiguration setPrdcConfigured:]
+-[PPRiskConfiguration mgIdKey]
+-[PPRiskConfiguration setMgIdKey:]
+-[PPRiskConfiguration .cxx_destruct]
+_OBJC_IVAR_$_PPRiskConfiguration._lastFullUpdateTimestamp
+_OBJC_IVAR_$_PPRiskConfiguration._lastPINLockTimestamp
+_OBJC_IVAR_$_PPRiskConfiguration._confVersion
+_OBJC_IVAR_$_PPRiskConfiguration._confRefreshTimeInterval
+_OBJC_IVAR_$_PPRiskConfiguration._forcedFullUpdateTimeInterval
+_OBJC_IVAR_$_PPRiskConfiguration._asyncUpdateTimeInterval
+_OBJC_IVAR_$_PPRiskConfiguration._knownAppPaths
+_OBJC_IVAR_$_PPRiskConfiguration._locationMinAccuracy
+_OBJC_IVAR_$_PPRiskConfiguration._locationMaxCacheAge
+_OBJC_IVAR_$_PPRiskConfiguration._endpointURL
+_OBJC_IVAR_$_PPRiskConfiguration._endpointIsStage
+_OBJC_IVAR_$_PPRiskConfiguration._internalCacheMaxAge
+_OBJC_IVAR_$_PPRiskConfiguration._knownDeviceModel
+_OBJC_IVAR_$_PPRiskConfiguration._collectableDataSet
+_OBJC_IVAR_$_PPRiskConfiguration._prdcConfigured
+_OBJC_IVAR_$_PPRiskConfiguration._mgIdKey
+l_OBJC_PROTOCOL_$_NSCoding
+l_OBJC_LABEL_PROTOCOL_$_NSCoding
+/Users/brluk/Code/paypal/ios-risk-component/PPRiskComponent/PPRiskConfiguration.m
+/Users/brluk/Code/paypal/ios-risk-component/PPRiskComponent/PPRiskConfiguration.h
++[PPRiskComponent uniqueID]
++[PPRiskComponent initWithAppGuid:withAPNSToken:withConfigurationURL:withSourceApp:withSourceAppVersion:withStartAsyncServiceFlag:withPairingId:withAdId:]
++[PPRiskComponent initWithAppGuid:withAPNSToken:withConfigurationURL:withSourceApp:withSourceAppVersion:withStartAsyncServiceFlag:withPairingId:withAdId:withNetworkAdapterBlock:]
++[PPRiskComponent initWithSourceApp:withSourceAppVersion:withAdditionalParams:]
++[PPRiskComponent initWithAppGuid:withSourceApp:withSourceAppVersion:withAdditionalParams:]
+___91+[PPRiskComponent initWithAppGuid:withSourceApp:withSourceAppVersion:withAdditionalParams:]_block_invoke
++[PPRiskComponent sharedComponent]
+-[PPRiskComponent initWithAppGuid:withAPNSToken:withConfigurationURL:withSourceApp:withSourceAppVersion:withStartAsyncServiceFlag:withDisableRemoteConfigFlag:withPairingId:withAdId:withNetworkAdapterBlock:]
+-[PPRiskComponent getLocationManager]
+-[PPRiskComponent dealloc]
+-[PPRiskComponent startReachabilityListening]
+_PPRiskReachabilityCallback
+-[PPRiskComponent stopReachabilityListening]
+-[PPRiskComponent checkLinkerID]
+-[PPRiskComponent fetchConfigurationData]
+___41-[PPRiskComponent fetchConfigurationData]_block_invoke
+___copy_helper_block_.235
+___destroy_helper_block_.236
+-[PPRiskComponent sendImmediateUpdate]
+-[PPRiskComponent startAsyncService]
+-[PPRiskComponent stopAsyncService]
+-[PPRiskComponent asyncUpdate:]
+-[PPRiskComponent locationManager:didUpdateToLocation:fromLocation:]
+-[PPRiskComponent locationIsAcceptable:]
+-[PPRiskComponent getLibraryVersion]
+-[PPRiskComponent sendRiskDataToServer:]
+___40-[PPRiskComponent sendRiskDataToServer:]_block_invoke
+___copy_helper_block_.357
+___destroy_helper_block_.358
+-[PPRiskComponent requestWithUrl:andHeaders:andMethod:andBody:]
+-[PPRiskComponent riskPayload]
+-[PPRiskComponent dysonPayload]
+-[PPRiskComponent riskPayload:]
+-[PPRiskComponent dysonPayload:]
+-[PPRiskComponent setLocation:]
+-[PPRiskComponent getLocation]
+-[PPRiskComponent getPairingId]
+-[PPRiskComponent removePairingId]
+-[PPRiskComponent generatePairingId:]
+-[PPRiskComponent generatePairingId:withAdditionalData:]
+-[PPRiskComponent generatePairingId:withAdditionalData:withAdditionalParams:]
+-[PPRiskComponent checkAndGenPairingId:]
++[PPRiskComponent createPairingId]
+-[PPRiskComponent setAdditionalData:forKey:]
+-[PPRiskComponent sendToBeacon]
+___31-[PPRiskComponent sendToBeacon]_block_invoke
+___copy_helper_block_.537
+___destroy_helper_block_.538
+-[PPRiskComponent linkerID]
+-[PPRiskComponent setLinkerID:]
+-[PPRiskComponent networkAdapterBlock]
+-[PPRiskComponent setNetworkAdapterBlock:]
+-[PPRiskComponent locationManager]
+-[PPRiskComponent setLocationManager:]
+-[PPRiskComponent guid]
+-[PPRiskComponent setGuid:]
+-[PPRiskComponent apnsToken]
+-[PPRiskComponent setApnsToken:]
+-[PPRiskComponent confURL]
+-[PPRiskComponent setConfURL:]
+-[PPRiskComponent asyncTimer]
+-[PPRiskComponent setAsyncTimer:]
+-[PPRiskComponent locationManagerStartTime]
+-[PPRiskComponent setLocationManagerStartTime:]
+-[PPRiskComponent riskComponentSessionID]
+-[PPRiskComponent setRiskComponentSessionID:]
+-[PPRiskComponent cachedSnapshotDict]
+-[PPRiskComponent setCachedSnapshotDict:]
+-[PPRiskComponent cachedSnapshotTimestamp]
+-[PPRiskComponent setCachedSnapshotTimestamp:]
+-[PPRiskComponent inTransitDeviceSnapshotDict]
+-[PPRiskComponent setInTransitDeviceSnapshotDict:]
+-[PPRiskComponent latestDeviceSnapshotDict]
+-[PPRiskComponent setLatestDeviceSnapshotDict:]
+-[PPRiskComponent dataRequest]
+-[PPRiskComponent setDataRequest:]
+-[PPRiskComponent configRequest]
+-[PPRiskComponent setConfigRequest:]
+-[PPRiskComponent beaconRequest]
+-[PPRiskComponent setBeaconRequest:]
+-[PPRiskComponent reachability]
+-[PPRiskComponent setReachability:]
+-[PPRiskComponent connectionType]
+-[PPRiskComponent setConnectionType:]
+-[PPRiskComponent sourceApp]
+-[PPRiskComponent setSourceApp:]
+-[PPRiskComponent srcAppVersion]
+-[PPRiskComponent setSrcAppVersion:]
+-[PPRiskComponent pairingId]
+-[PPRiskComponent setPairingId:]
+-[PPRiskComponent isDisableRemoteConfig]
+-[PPRiskComponent setIsDisableRemoteConfig:]
+-[PPRiskComponent additionalData]
+-[PPRiskComponent setAdditionalData:]
+-[PPRiskComponent configuration]
+-[PPRiskComponent setConfiguration:]
+-[PPRiskComponent bgTaskID]
+-[PPRiskComponent setBgTaskID:]
+-[PPRiskComponent protectedDataCheckCompleted]
+-[PPRiskComponent setProtectedDataCheckCompleted:]
+-[PPRiskComponent isStartAsyncService]
+-[PPRiskComponent setIsStartAsyncService:]
+-[PPRiskComponent .cxx_destruct]
+-[PPRiskAPIRequest init]
+-[PPRiskAPIRequest start]
+-[PPRiskAPIRequest cancel]
+-[PPRiskAPIRequest URLSession:dataTask:didReceiveResponse:completionHandler:]
+-[PPRiskAPIRequest URLSession:dataTask:didReceiveData:]
+-[PPRiskAPIRequest URLSession:task:didCompleteWithError:]
+-[PPRiskAPIRequest url]
+-[PPRiskAPIRequest setUrl:]
+-[PPRiskAPIRequest headers]
+-[PPRiskAPIRequest setHeaders:]
+-[PPRiskAPIRequest method]
+-[PPRiskAPIRequest setMethod:]
+-[PPRiskAPIRequest body]
+-[PPRiskAPIRequest setBody:]
+-[PPRiskAPIRequest httpStatusCode]
+-[PPRiskAPIRequest setHttpStatusCode:]
+-[PPRiskAPIRequest responseData]
+-[PPRiskAPIRequest setResponseData:]
+-[PPRiskAPIRequest response]
+-[PPRiskAPIRequest setResponse:]
+-[PPRiskAPIRequest completionHandler]
+-[PPRiskAPIRequest setCompletionHandler:]
+-[PPRiskAPIRequest sessionTask]
+-[PPRiskAPIRequest setSessionTask:]
+-[PPRiskAPIRequest .cxx_destruct]
+__instance
+_initWithAppGuid:withSourceApp:withSourceAppVersion:withAdditionalParams:.pred
+___block_descriptor_tmp.238
+___block_descriptor_tmp.359
+___block_descriptor_tmp.539
+_OBJC_IVAR_$_PPRiskComponent._linkerID
+_OBJC_IVAR_$_PPRiskComponent._networkAdapterBlock
+_OBJC_IVAR_$_PPRiskComponent._locationManager
+_OBJC_IVAR_$_PPRiskComponent._guid
+_OBJC_IVAR_$_PPRiskComponent._apnsToken
+_OBJC_IVAR_$_PPRiskComponent._confURL
+_OBJC_IVAR_$_PPRiskComponent._asyncTimer
+_OBJC_IVAR_$_PPRiskComponent._locationManagerStartTime
+_OBJC_IVAR_$_PPRiskComponent._riskComponentSessionID
+_OBJC_IVAR_$_PPRiskComponent._cachedSnapshotDict
+_OBJC_IVAR_$_PPRiskComponent._cachedSnapshotTimestamp
+_OBJC_IVAR_$_PPRiskComponent._inTransitDeviceSnapshotDict
+_OBJC_IVAR_$_PPRiskComponent._latestDeviceSnapshotDict
+_OBJC_IVAR_$_PPRiskComponent._dataRequest
+_OBJC_IVAR_$_PPRiskComponent._configRequest
+_OBJC_IVAR_$_PPRiskComponent._beaconRequest
+_OBJC_IVAR_$_PPRiskComponent._reachability
+_OBJC_IVAR_$_PPRiskComponent._connectionType
+_OBJC_IVAR_$_PPRiskComponent._sourceApp
+_OBJC_IVAR_$_PPRiskComponent._srcAppVersion
+_OBJC_IVAR_$_PPRiskComponent._pairingId
+_OBJC_IVAR_$_PPRiskComponent._isDisableRemoteConfig
+_OBJC_IVAR_$_PPRiskComponent._additionalData
+_OBJC_IVAR_$_PPRiskComponent._configuration
+_OBJC_IVAR_$_PPRiskComponent._bgTaskID
+_OBJC_IVAR_$_PPRiskComponent._protectedDataCheckCompleted
+_OBJC_IVAR_$_PPRiskComponent._isStartAsyncService
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_CLLocationManagerDelegate
+l_OBJC_LABEL_PROTOCOL_$_CLLocationManagerDelegate
+_OBJC_IVAR_$_PPRiskAPIRequest._url
+_OBJC_IVAR_$_PPRiskAPIRequest._headers
+_OBJC_IVAR_$_PPRiskAPIRequest._method
+_OBJC_IVAR_$_PPRiskAPIRequest._body
+_OBJC_IVAR_$_PPRiskAPIRequest._httpStatusCode
+_OBJC_IVAR_$_PPRiskAPIRequest._responseData
+_OBJC_IVAR_$_PPRiskAPIRequest._response
+_OBJC_IVAR_$_PPRiskAPIRequest._completionHandler
+_OBJC_IVAR_$_PPRiskAPIRequest._sessionTask
+l_OBJC_PROTOCOL_$_NSURLSessionDelegate
+l_OBJC_LABEL_PROTOCOL_$_NSURLSessionDelegate
+/Users/brluk/Code/paypal/ios-risk-component/PPRiskComponent/PPRiskComponent.m
+/Users/brluk/Code/paypal/ios-risk-component/PPRiskComponent/PPRiskComponentInternal.h
+/Users/brluk/Code/paypal/ios-risk-component/PPRiskComponent/PPRiskComponent.h
+__31-[PPRiskComponent sendToBeacon]_block_invoke
+__40-[PPRiskComponent sendRiskDataToServer:]_block_invoke
+__41-[PPRiskComponent fetchConfigurationData]_block_invoke
+PPRiskReachabilityCallback
+__91+[PPRiskComponent initWithAppGuid:withSourceApp:withSourceAppVersion:withAdditionalParams:]_block_invoke
+/Applications/Xcode8.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/usr/include/dispatch/once.h
+-[PPRCClientMetadataIDProvider initWithAppGuid:sourceAppVersion:networkAdapterBlock:]
+-[PPRCClientMetadataIDProvider initWithAppGuid:sourceAppVersion:networkAdapterBlock:pairingID:]
+-[PPRCClientMetadataIDProvider clientMetadataID:]
+-[PPRCClientMetadataIDProvider riskComponent]
+-[PPRCClientMetadataIDProvider setRiskComponent:]
+-[PPRCClientMetadataIDProvider onceToken]
+-[PPRCClientMetadataIDProvider setOnceToken:]
+-[PPRCClientMetadataIDProvider .cxx_destruct]
+_OBJC_IVAR_$_PPRCClientMetadataIDProvider._riskComponent
+_OBJC_IVAR_$_PPRCClientMetadataIDProvider._onceToken
+/Users/brluk/Code/paypal/ios-risk-component/PPRiskComponent/PPRCClientMetadataIDProvider.m
++[PPRiskDeviceData shared]
+___26+[PPRiskDeviceData shared]_block_invoke
+-[PPRiskDeviceData init]
+-[PPRiskDeviceData dysonBlob]
+-[PPRiskDeviceData setValue:forKey:toDysonBlob:riskDataIndex:]
+-[PPRiskDeviceData setValue:forKey:toDysonBlob:]
++[PPRiskDeviceData deviceMemory]
++[PPRiskDeviceData floatToSize:]
++[PPRiskDeviceData getNetworkInterfaceAddresses]
++[PPRiskDeviceData getDeviceIP]
++[PPRiskDeviceData connectionType]
++[PPRiskDeviceData locationAuthorizationStatus]
++[PPRiskDeviceData totalDiskSpaceInBytes]
++[PPRiskDeviceData vendorIdentifier]
+-[PPRiskDeviceData getSSIDInfo]
+-[PPRiskDeviceData isValidVpn:]
+-[PPRiskDeviceData isSystemVersionGraterThan:]
+-[PPRiskDeviceData getVPNSetting]
+-[PPRiskDeviceData getProxySetting]
+-[PPRiskDeviceData getDeviceModel]
++[PPRiskDeviceData platform]
++[PPRiskDeviceData isSimulator]
++[PPRiskDeviceData isJailBroken]
++[PPRiskDeviceData getAppVersion]
+-[PPRiskDeviceData getKeychainQueryForKey:]
+-[PPRiskDeviceData isSupportCloudKeychain]
+-[PPRiskDeviceData getCloudIdentifier]
+-[PPRiskDeviceData checkAppGuid:]
+-[PPRiskDeviceData applicationDocumentsDirectory]
+-[PPRiskDeviceData getLocalIdentifier]
+-[PPRiskDeviceData currentLocation]
+-[PPRiskDeviceData setCurrentLocation:]
+-[PPRiskDeviceData adId]
+-[PPRiskDeviceData setAdId:]
+-[PPRiskDeviceData .cxx_destruct]
+_shared.once
+_shared._instance
+_OBJC_IVAR_$_PPRiskDeviceData._currentLocation
+_OBJC_IVAR_$_PPRiskDeviceData._adId
+/Users/brluk/Code/paypal/ios-risk-component/PPRiskComponent/PPRiskDeviceData.m
+/Users/brluk/Code/paypal/ios-risk-component/PPRiskComponent/PPRiskDeviceData.h
+__26+[PPRiskDeviceData shared]_block_invoke
+__ZL15__ARCLite__loadv
+__ZL30add_image_hook_autoreleasepoolPK11mach_headerl
+__ZL34__arclite_objc_autoreleasePoolPushv
+__ZL33__arclite_objc_autoreleasePoolPopPv
+__ZL19patch_lazy_pointersPK11mach_headerP7patch_tm
+__ZL42__arclite_NSArray_objectAtIndexedSubscriptP7NSArrayP13objc_selectorj
+__ZL53__arclite_NSMutableArray_setObject_atIndexedSubscriptP14NSMutableArrayP13objc_selectorP11objc_objectj
+__ZL46__arclite_NSDictionary_objectForKeyedSubscriptP12NSDictionaryP13objc_selectorP11objc_object
+__ZL47__arclite_NSOrderedSet_objectAtIndexedSubscriptP12NSOrderedSetP13objc_selectorj
+__ZL58__arclite_NSMutableOrderedSet_setObject_atIndexedSubscriptP19NSMutableOrderedSetP13objc_selectorP11objc_objectj
+__ZL58__arclite_NSMutableDictionary__setObject_forKeyedSubscriptP19NSMutableDictionaryP13objc_selectorP11objc_objectS4_
+__ZL18add_image_hook_ARCPK11mach_headerl
+__ZL36__arclite_object_setInstanceVariableP11objc_objectPKcPv
+__ZL24__arclite_object_setIvarP11objc_objectP9objc_ivarS0_
+__ZL21__arclite_object_copyP11objc_objectm
+__ZL21__arclite_objc_retainP11objc_object
+__ZL26__arclite_objc_retainBlockP11objc_object
+__ZL22__arclite_objc_releaseP11objc_object
+__ZL26__arclite_objc_autoreleaseP11objc_object
+__ZL32__arclite_objc_retainAutoreleaseP11objc_object
+__ZL37__arclite_objc_autoreleaseReturnValueP11objc_object
+__ZL43__arclite_objc_retainAutoreleaseReturnValueP11objc_object
+__ZL44__arclite_objc_retainAutoreleasedReturnValueP11objc_object
+__ZL26__arclite_objc_storeStrongPP11objc_objectS0_
+__ZL22add_image_hook_swiftV1PK11mach_headerl
+__ZL42__arclite_NSUndoManagerProxy_isKindOfClassP11objc_objectP13objc_selectorP10objc_class
+__ZL13replaceMethodP10objc_classP13objc_selectorPFP11objc_objectS4_S2_zEPS6_
+__ZL30__arclite_NSManagedObject_initP11objc_objectP13objc_selector
+__ZL41__arclite_NSManagedObject_allocWithEntityP11objc_objectP13objc_selectorS0_
+__ZL36__arclite_NSManagedObject_allocBatchP11objc_objectP13objc_selectorPS0_S0_j
+__ZL37__arclite_NSKKMS_fastIndexForKnownKeyP11objc_objectP13objc_selectorS0_
+__ZL28__arclite_NSKKMS_indexForKeyP11objc_objectP13objc_selectorS0_
+__ZL29__arclite_NSKKsD_objectForKeyP11objc_objectP13objc_selectorS0_
+__ZL35__arclite_NSKKsD_removeObjectForKeyP11objc_objectP13objc_selectorS0_
+__ZL33__arclite_NSKKsD_setObject_forKeyP11objc_objectP13objc_selectorS0_S0_
+__ZL41__arclite_NSKKsD_addEntriesFromDictionaryP11objc_objectP13objc_selectorP12NSDictionary
+__ZL28__arclite_objc_readClassPairP10objc_classPK15objc_image_info
+__ZL32__arclite_objc_allocateClassPairP10objc_classPKcm
+__ZL32__arclite_object_getIndexedIvarsP11objc_object
+__ZL23__arclite_objc_getClassPKc
+__ZL27__arclite_objc_getMetaClassPKc
+__ZL31__arclite_objc_getRequiredClassPKc
+__ZL26__arclite_objc_lookUpClassPKc
+__ZL26__arclite_objc_getProtocolPKc
+__ZL23__arclite_class_getNameP10objc_class
+__ZL26__arclite_protocol_getNameP8Protocol
+__ZL37__arclite_objc_copyClassNamesForImagePKcPj
+__ZL17transcribeMethodsP10objc_classP15glue_class_ro_t
+__ZL19transcribeProtocolsP10objc_classP15glue_class_ro_t
+__ZL20transcribePropertiesP10objc_classP15glue_class_ro_t
+__ZL14initialize_impP11objc_objectP13objc_selector
+__ZL18allocateMaybeSwiftP18glue_swift_class_tm
+__ZL22copySwiftV1MangledNamePKcb
+__ZL13demangledNamePKcb
+__ZL16scanMangledFieldRPKcS0_S1_Ri
+__ZL30arclite_uninitialized_functionv
+__ZL12cxxConstructP11objc_object
+__ZL20fixStringForCoreDataP11objc_object
+_OBJC_METACLASS_$___ARCLite__
+__ZL24OBJC_CLASS_$___ARCLite__
+__ZL31OBJC_METACLASS_RO_$___ARCLite__
+__non_lazy_classes
+__ZL27OBJC_CLASS_RO_$___ARCLite__
+__ZL11_class_name
+__ZL32OBJC_$_CLASS_METHODS___ARCLite__
+__ZL17_load_method_name
+__ZL17_load_method_type
+__ZL23NSAutoreleasePool_class
+__ZZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+__ZGVZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+l_OBJC_PROTOCOL_$___ARCLiteIndexedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteIndexedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteIndexedSubscripting__
+l_OBJC_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteKeyedSubscripting__
+__ZZL18add_image_hook_ARCPK11mach_headerlE7patches
+__ZGVZL18add_image_hook_ARCPK11mach_headerlE7patches
+__ZL30NSUndoManagerProxy_targetClass
+__ZL29original_NSManagedObject_init
+__ZL40original_NSManagedObject_allocWithEntity
+__ZL35original_NSManagedObject_allocBatch
+__ZL25NSMutableDictionary_class
+__ZL22NSConstantString_class
+__ZL14NSString_class
+__ZL36original_NSKKMS_fastIndexForKnownKey
+__ZL27original_NSKKMS_indexForKey
+__ZL28original_NSKKsD_objectForKey
+__ZL34original_NSKKsD_removeObjectForKey
+__ZL32original_NSKKsD_setObject_forKey
+__ZL40original_NSKKsD_addEntriesFromDictionary
+__ZZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZGVZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZL31original_objc_allocateClassPair
+__ZL31original_object_getIndexedIvars
+__ZL22original_objc_getClass
+__ZL26original_objc_getMetaClass
+__ZL30original_objc_getRequiredClass
+__ZL25original_objc_lookUpClass
+__ZL25original_objc_getProtocol
+__ZL22original_class_getName
+__ZL25original_protocol_getName
+__ZL36original_objc_copyClassNamesForImage
+__ZL12demangleLock
+__ZL9Demangled
+Apple LLVM version 9.0.0 (clang-900.0.39)
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch armv7 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -Wno-trigraphs -fno-exceptions -fno-rtti -fno-sanitize=vptr -mpascal-strings -Os -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -D NDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.Internal.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -miphoneos-version-min=4.3 -g -fno-threadsafe-statics -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -fembed-bitcode=all -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-generated-files.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-own-target-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-all-target-headers.hmap -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-project-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/Symbols/BuiltProducts/include -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources/armv7 -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources -F/Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/Symbols/BuiltProducts -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.Internal.sdk/System/Library/PrivateFrameworks -Wall -Wextra -Wno-gcc-compat -Wno-error=incomplete-umbrella -Wno-error=invalid-ios-deployment-target -Wno-error=incomplete-umbrella -Wno-error=invalid-ios-deployment-target -MMD -MT dependencies -MF /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.d --serialize-diagnostics /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.dia -c /Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-67/source/arclite.mm -o /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.o -mlinker-version=305 -march=armv7a
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-67/source/arclite.mm
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-67
+fixStringForCoreData
+cxxConstruct
+arclite_uninitialized_function
+scanMangledField
+isdigit
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.Internal.sdk/usr/include/ctype.h
+__isctype
+demangledName
+copySwiftV1DemangledName
+copySwiftV1MangledName
+allocateMaybeSwift
+word_align
+isSwift
+initialize_imp
+transcribeProperties
+property_list_nth
+transcribeProtocols
+transcribeMethods
+data
+method_list_nth
+__arclite_objc_copyClassNamesForImage
+__arclite_protocol_getName
+__arclite_class_getName
+__arclite_objc_getProtocol
+__arclite_objc_lookUpClass
+__arclite_objc_getRequiredClass
+__arclite_objc_getMetaClass
+__arclite_objc_getClass
+__arclite_object_getIndexedIvars
+__arclite_objc_allocateClassPair
+metaclass
+__arclite_objc_readClassPair
+transcribeIvars
+ivar_list_nth
+max
+alignment
+ro
+fastFlags
+__arclite_NSKKsD_addEntriesFromDictionary
+__arclite_NSKKsD_setObject_forKey
+__arclite_NSKKsD_removeObjectForKey
+__arclite_NSKKsD_objectForKey
+__arclite_NSKKMS_indexForKey
+__arclite_NSKKMS_fastIndexForKnownKey
+__arclite_NSManagedObject_allocBatch
+__arclite_NSManagedObject_allocWithEntity
+__arclite_NSManagedObject_init
+replaceMethod
+__arclite_NSUndoManagerProxy_isKindOfClass
+add_image_hook_swiftV1
+patch_t<const char **(const char *, unsigned int *)>
+patch_t<const char *(Protocol *)>
+patch_t<const char *(Class)>
+patch_t<Protocol *(const char *)>
+patch_t<Class (const char *)>
+patch_t<void *(id)>
+patch_t<Class (Class, const char *, unsigned long)>
+patch_t<Class (Class, const objc_image_info *)>
+__arclite_objc_storeStrong
+__arclite_objc_release
+__arclite_objc_retain
+__arclite_objc_retainAutoreleasedReturnValue
+__arclite_objc_retainAutoreleaseReturnValue
+__arclite_objc_autoreleaseReturnValue
+__arclite_objc_retainAutorelease
+__arclite_objc_autorelease
+__arclite_objc_retainBlock
+__arclite_object_copy
+fixupCopiedReferences
+_class_getInstanceStart
+alignedInstanceStart
+__arclite_class_usesAutomaticRetainRelease
+classOrSuperClassesUseARR
+__arclite_object_setIvar
+isScannedOffset
+_ivar_getClass
+__arclite_object_setInstanceVariable
+add_image_hook_ARC
+patch_t<void (id *, id)>
+patch_t<id (id)>
+patch_t<void (id)>
+patch_t<id (id, unsigned long)>
+patch_t<void (id, objc_ivar *, id)>
+patch_t<objc_ivar *(id, const char *, void *)>
+__arclite_NSMutableDictionary__setObject_forKeyedSubscript
+__arclite_NSMutableOrderedSet_setObject_atIndexedSubscript
+__arclite_NSOrderedSet_objectAtIndexedSubscript
+__arclite_NSDictionary_objectForKeyedSubscript
+__arclite_NSMutableArray_setObject_atIndexedSubscript
+__arclite_NSArray_objectAtIndexedSubscript
+patch_lazy_pointers
+__arclite_objc_autoreleasePoolPop
+__arclite_objc_autoreleasePoolPush
+add_image_hook_autoreleasepool
+patch_t<void (void *)>
+patch_t<void *()>
+__ARCLite__load
+install_swiftV1
+install_ARC
+install_dict_nil_value
+addOrReplaceMethod
+keyedGetter
+install_subscripting
+addMethod
+indexedGetter
+install_autoreleasepool

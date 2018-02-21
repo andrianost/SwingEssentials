@@ -6,7 +6,11 @@ target 'SwingEssentials' do
   use_frameworks!
 
   # Pods for SwingEssentials
-  pod "youtube-ios-player-helper", "~> 0.1.6"
+  pod 'youtube-ios-player-helper', '~> 0.1.6'
+  pod 'Braintree'
+  pod 'BraintreeDropIn'
+  pod 'Braintree/PayPal'
+  pod 'Braintree/Venmo'
 
   target 'SwingEssentials-tvOSTests' do
     inherit! :search_paths

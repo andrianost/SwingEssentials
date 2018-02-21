@@ -53,7 +53,7 @@ export const AppNavigator = DrawerNavigator(
                 title: 'Password Reset',
                 drawerLabel: () => null,
                 // headerStyle: {backgroundColor: '#d3d3d3'},
-                headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('Login')}/>
+                headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('Login')}/>
             })
           }
         })
@@ -66,7 +66,7 @@ export const AppNavigator = DrawerNavigator(
                 title: 'Create Account',
                 drawerLabel: () => null,
                 // headerStyle: {backgroundColor: '#d3d3d3'},
-                headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('Login')}/>
+                headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('Login')}/>
             })
           }
         })
@@ -76,14 +76,18 @@ export const AppNavigator = DrawerNavigator(
               Home: {
                   screen: HomeScreen,
                   navigationOptions:({ navigation }) => ({
-                      title: 'Swing Essentials',
-                      headerStyle: {backgroundColor: '#d3d3d3'},
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      title: (
+                        <Image source={require('./img/SE-Logo-circle.png')} />
+                      ),
+                      headerStyle: {backgroundColor: '#f0f0f0'},
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                     })
               }
             }),
             navigationOptions:{
-                drawerLabel: 'Home',
+                drawerLabel: (
+                  <Image source={require('./img/SE-Logo-circle.png')} />
+                ),
                 // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#231f61' }}/>
             }
           },
@@ -94,22 +98,26 @@ export const AppNavigator = DrawerNavigator(
               YourLessons: {
                   screen: YourLessonsScreen,
                   navigationOptions:({ navigation }) => ({
-                      title: 'Swing Essentials',
-                      headerStyle: {backgroundColor: '#d3d3d3'},
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      title: (
+                        <Image source={require('./img/SE-Logo-circle.png')} />
+                      ),
+                      headerStyle: {backgroundColor: '#f0f0f0'},
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
               IndividualLessonsScreen: {
                   screen: IndividualLessonsScreen,
                   navigationOptions: ({ navigation }) => ({
-                      title: 'Swing Essentials',
-                      headerStyle: {backgroundColor: '#d3d3d3'},
-                      headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('YourLessons')}/>
+                      title: (
+                        <Image source={require('./img/SE-Logo-circle.png')} />
+                      ),
+                      headerStyle: {backgroundColor: '#f0f0f0'},
+                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('YourLessons')}/>
                   })
               }
           },{
               initialRouteName: 'YourLessons',
-              contentOptions:{activeTintColor: '#231f61'}
+              contentOptions:{activeTintColor: '#231f61', opacity:.8}
           }),
           navigationOptions:{
               drawerLabel: 'Your Lessons',
@@ -121,14 +129,16 @@ export const AppNavigator = DrawerNavigator(
               RedeemLessons: {
                   screen: RedeemLessonsScreen,
                   navigationOptions: ({ navigation }) => ({
-                      title: 'Swing Essentials',
-                      headerStyle: {backgroundColor: '#d3d3d3'},
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      title: (
+                        <Image source={require('./img/SE-Logo-circle.png')} />
+                      ),
+                      headerStyle: {backgroundColor: '#f0f0f0'},
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
           },{
               initialRouteName: 'RedeemLessons',
-              contentOptions:{activeTintColor: '#231f61'}
+              contentOptions:{activeTintColor: '#231f61', opacity:.8}
           }),
           navigationOptions:{
               drawerLabel: 'Redeem Lessons',
@@ -140,17 +150,21 @@ export const AppNavigator = DrawerNavigator(
               OrderLessons: {
                   screen: OrderLessonsScreen,
                   navigationOptions:({ navigation }) => ({
-                      title: 'Swing Essentials',
-                      headerStyle: {backgroundColor: '#d3d3d3'},
-                      headerLeft: <MaterialIcons name="dehaze" size={24} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      title: (
+                        <Image source={require('./img/SE-Logo-circle.png')} />
+                      ),
+                      headerStyle: {backgroundColor: '#f0f0f0'},
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
               OrderDetailsScreen: {
                   screen: OrderDetailsScreen,
                   navigationOptions: ({ navigation }) => ({
-                      title: 'Swing Essentials',
-                      headerStyle: {backgroundColor: '#d3d3d3'},
-                      headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('OrderLessons')}/>
+                      title: (
+                        <Image source={require('./img/SE-Logo-circle.png')} />
+                      ),
+                      headerStyle: {backgroundColor: '#f0f0f0'},
+                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('OrderLessons')}/>
                   })
               }
           }),
@@ -165,9 +179,11 @@ export const AppNavigator = DrawerNavigator(
             HelpScreen: {
               screen: HelpScreen,
               navigationOptions:({ navigation }) => ({
-                  title: 'Swing Essentials',
-                  headerStyle: {backgroundColor: '#d3d3d3'},
-                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                  title: (
+                    <Image source={require('./img/SE-Logo-circle.png')} />
+                  ),
+                  headerStyle: {backgroundColor: '#f0f0f0'},
+                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
             }
           }),
@@ -181,9 +197,11 @@ export const AppNavigator = DrawerNavigator(
             AboutScreen: {
               screen: AboutScreen,
               navigationOptions:({ navigation }) => ({
-                  title: 'Swing Essentials',
-                  headerStyle: {backgroundColor: '#d3d3d3'},
-                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                  title: (
+                    <Image source={require('./img/SE-Logo-circle.png')} />
+                  ),
+                  headerStyle: {backgroundColor: '#f0f0f0'},
+                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
             }
           }),
@@ -197,25 +215,31 @@ export const AppNavigator = DrawerNavigator(
             SettingsScreen: {
               screen: SettingsScreen,
               navigationOptions:({ navigation }) => ({
-                  title: 'Swing Essentials',
-                  headerStyle: {backgroundColor: '#d3d3d3'},
-                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                  title: (
+                    <Image source={require('./img/SE-Logo-circle.png')} />
+                  ),
+                  headerStyle: {backgroundColor: '#f0f0f0'},
+                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
             },
             UserData: {
                 screen: UserData,
                 navigationOptions: ({ navigation }) => ({
-                    title: 'User Data',
-                    headerStyle: {backgroundColor: '#d3d3d3'},
-                    headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('SettingsScreen')}/>
+                    title: (
+                      <Image source={require('./img/SE-Logo-circle.png')} />
+                    ),
+                    headerStyle: {backgroundColor: '#f0f0f0'},
+                    headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('SettingsScreen')}/>
                 })
             },
             CameraData: {
                 screen: CameraData,
                 navigationOptions: ({ navigation }) => ({
-                    title: 'Camera Data',
-                    headerStyle: {backgroundColor: '#d3d3d3'},
-                    headerLeft: <MaterialIcons name="navigate-before" size={24} style={{ color: '#231f61' }} onPress={ () => navigation.navigate('SettingsScreen')}/>
+                    title: (
+                      <Image source={require('./img/SE-Logo-circle.png')} />
+                    ),
+                    headerStyle: {backgroundColor: '#f0f0f0'},
+                    headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('SettingsScreen')}/>
                 })
             },
           }),
@@ -234,9 +258,9 @@ export const AppNavigator = DrawerNavigator(
       // }
   },
   {
-      initialRouteName: 'Login',
-      drawerBackgroundColor: '#f2f2f2',
-      contentOptions:{activeTintColor: '#231f61'},
+      initialRouteName: 'Login', //change back to login
+      drawerBackgroundColor: '#f0f0f0',
+      contentOptions:{activeTintColor: '#231f61', opacity:.8},
       contentComponent: CustomDrawer
   },
 );

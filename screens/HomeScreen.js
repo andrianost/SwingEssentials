@@ -6,8 +6,7 @@ import * as Actions from '../actions/actions.js';
 
 import { Component } from 'react';
 import { StyleSheet, Image, View, Text, Alert } from 'react-native';
-import { Button, FormInput, FormLabel } from 'react-native-elements'
-
+import { Button, FormInput, FormLabel } from 'react-native-elements';
 
 function mapStateToProps(state){
     return {
@@ -32,7 +31,7 @@ class HomeScreen extends Component {
         <Button
           title="Redeem a Lesson"
           buttonStyle={styles.CircleShapeView}
-          onPress={() => this.props.navigation.navigate('RedeemLessons')}
+          onPress={() =>  this.props.navigation.navigate('RedeemLessons')}
         />
       </View>
       <View style={styles.container}>
@@ -56,7 +55,8 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     borderRadius: 150/2,
-    backgroundColor: '#231f61'
+    backgroundColor: '#231f61',
+    opacity:.8 
   },
 });
 

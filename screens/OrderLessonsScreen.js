@@ -44,7 +44,7 @@ class OrderLessonsScreen extends Component {
   _packagesHeader() {
     return (
       <View style={styles.container}>
-        <Text style={{color:"white", fontWeight:"bold"}}>Available Packages</Text>
+        <Text style={styles.text}>Available Packages</Text>
       </View>
     )
   }
@@ -52,9 +52,9 @@ class OrderLessonsScreen extends Component {
   _renderItem({ item, index }) {
     return (
       <ListItem
-        containerStyle = {{height: 80, justifyContent: 'center'}}
-        titleStyle = {{fontSize: 18}}
-        rightTitleStyle = {{fontWeight: 'bold', color: 'black'}}
+        containerStyle = {styles.listItemContainer}
+        titleStyle = {styles.listItemTitle}
+        rightTitleStyle = {styles.listItemRightTitle}
         key={index}
         title={item.name}
         subtitle={item.description}
@@ -83,6 +83,25 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 20,
     backgroundColor: '#231f61',
+    opacity:.8
+  },
+  text: {
+    paddingLeft: 18,
+    fontSize: 18,
+    color:"white",
+    fontWeight:"bold"
+  },
+  listItemContainer: {
+    height: 80,
+    justifyContent: 'center',
+    borderBottomColor: '#c1c1c1',
+  },
+  listItemTitle: {
+    fontSize: 18
+  },
+  listItemRightTitle: {
+    fontWeight: 'bold',
+    color: 'black'
   },
 });
 

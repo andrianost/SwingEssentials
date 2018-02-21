@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -52,7 +53,17 @@
 		D01D608FADD2F3712A3B3F81 /* Pods_SwingEssentialsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F663868EEF077F99209E43F /* Pods_SwingEssentialsTests.framework */; };
 		D4FAF90EAC2B528C7EB98A3B /* Pods_SwingEssentials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 477FCE4E3FC1DBE0C3DDE317 /* Pods_SwingEssentials.framework */; };
 		E2EC3629DE964B8C96E20EBD /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE61F706BA1340D585A3FD7E /* libRCTVideo.a */; };
+		E68950262039DD5800484C34 /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E68950252039DD5800484C34 /* RNTMapManager.m */; };
+		E6A367FB20202CC100D78F73 /* BraintreeDropIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367D520202CC100D78F73 /* BraintreeDropIn.framework */; };
+		E6A367FD20202CD500D78F73 /* BraintreeUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FC20202CD500D78F73 /* BraintreeUIKit.framework */; };
+		E6A3680020202CE500D78F73 /* BraintreeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FE20202CE500D78F73 /* BraintreeCore.framework */; };
+		E6A3680120202CE500D78F73 /* BraintreeCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FF20202CE500D78F73 /* BraintreeCard.framework */; };
+		E6A3680620202D1800D78F73 /* BraintreePayPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680220202D1700D78F73 /* BraintreePayPal.framework */; };
+		E6A3680720202D1800D78F73 /* PayPalDataCollector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680320202D1700D78F73 /* PayPalDataCollector.framework */; };
+		E6A3680820202D1800D78F73 /* PayPalUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680420202D1700D78F73 /* PayPalUtils.framework */; };
+		E6A3680920202D1800D78F73 /* PayPalOneTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680520202D1800D78F73 /* PayPalOneTouch.framework */; };
 		E6ABC30F201ECE2A000C5A7B /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6ABC30D201ECB65000C5A7B /* libRNVectorIcons.a */; };
+		E6D85B22202505F300F5BDBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D85B21202505F300F5BDBA /* ViewController.m */; };
 		F694D0C63A3C4E05BC4C9773 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CBEECDC451F4199905E4F22 /* SimpleLineIcons.ttf */; };
 /* End PBXBuildFile section */
 
@@ -380,6 +391,17 @@
 		D9CD5ABD7CBE4BE7946CCFFB /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "YTPlayerView-iframe-player.html"; path = "../node_modules/react-native-youtube/assets/YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
 		DCC5536C07EA0B6C23AEC9A5 /* Pods-SwingEssentials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwingEssentials.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwingEssentials/Pods-SwingEssentials.debug.xcconfig"; sourceTree = "<group>"; };
 		E4E2812D2F8140849DAABEC1 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		E68950252039DD5800484C34 /* RNTMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTMapManager.m; sourceTree = "<group>"; };
+		E6A367D520202CC100D78F73 /* BraintreeDropIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BraintreeDropIn.framework; path = Carthage/Build/iOS/BraintreeDropIn.framework; sourceTree = "<group>"; };
+		E6A367FC20202CD500D78F73 /* BraintreeUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BraintreeUIKit.framework; path = Carthage/Build/iOS/BraintreeUIKit.framework; sourceTree = "<group>"; };
+		E6A367FE20202CE500D78F73 /* BraintreeCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BraintreeCore.framework; path = Carthage/Build/iOS/BraintreeCore.framework; sourceTree = "<group>"; };
+		E6A367FF20202CE500D78F73 /* BraintreeCard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BraintreeCard.framework; path = Carthage/Build/iOS/BraintreeCard.framework; sourceTree = "<group>"; };
+		E6A3680220202D1700D78F73 /* BraintreePayPal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BraintreePayPal.framework; path = Carthage/Build/iOS/BraintreePayPal.framework; sourceTree = "<group>"; };
+		E6A3680320202D1700D78F73 /* PayPalDataCollector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PayPalDataCollector.framework; path = Carthage/Build/iOS/PayPalDataCollector.framework; sourceTree = "<group>"; };
+		E6A3680420202D1700D78F73 /* PayPalUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PayPalUtils.framework; path = Carthage/Build/iOS/PayPalUtils.framework; sourceTree = "<group>"; };
+		E6A3680520202D1800D78F73 /* PayPalOneTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PayPalOneTouch.framework; path = Carthage/Build/iOS/PayPalOneTouch.framework; sourceTree = "<group>"; };
+		E6D85AFB202505AA00F5BDBA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E6D85B21202505F300F5BDBA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		ED039476295448CEA2BFBE66 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		F4CD2EE611874C968CCCCB13 /* RCTYouTube.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTYouTube.xcodeproj; path = "../node_modules/react-native-youtube/RCTYouTube.xcodeproj"; sourceTree = "<group>"; };
 		F74A33FEEAD5C2B8EC8FBEC2 /* Pods-SwingEssentialsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwingEssentialsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwingEssentialsTests/Pods-SwingEssentialsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -404,7 +426,15 @@
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
+				E6A367FB20202CC100D78F73 /* BraintreeDropIn.framework in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
+				E6A3680020202CE500D78F73 /* BraintreeCore.framework in Frameworks */,
+				E6A3680120202CE500D78F73 /* BraintreeCard.framework in Frameworks */,
+				E6A367FD20202CD500D78F73 /* BraintreeUIKit.framework in Frameworks */,
+				E6A3680620202D1800D78F73 /* BraintreePayPal.framework in Frameworks */,
+				E6A3680720202D1800D78F73 /* PayPalDataCollector.framework in Frameworks */,
+				E6A3680820202D1800D78F73 /* PayPalUtils.framework in Frameworks */,
+				E6A3680920202D1800D78F73 /* PayPalOneTouch.framework in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
@@ -532,6 +562,9 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				E6D85AFB202505AA00F5BDBA /* ViewController.h */,
+				E6D85B21202505F300F5BDBA /* ViewController.m */,
+				E68950252039DD5800484C34 /* RNTMapManager.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -698,6 +731,14 @@
 		E6ABC30E201ECE2A000C5A7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E6A3680220202D1700D78F73 /* BraintreePayPal.framework */,
+				E6A3680320202D1700D78F73 /* PayPalDataCollector.framework */,
+				E6A3680520202D1800D78F73 /* PayPalOneTouch.framework */,
+				E6A3680420202D1700D78F73 /* PayPalUtils.framework */,
+				E6A367FF20202CE500D78F73 /* BraintreeCard.framework */,
+				E6A367FE20202CE500D78F73 /* BraintreeCore.framework */,
+				E6A367FC20202CD500D78F73 /* BraintreeUIKit.framework */,
+				E6A367D520202CC100D78F73 /* BraintreeDropIn.framework */,
 				477FCE4E3FC1DBE0C3DDE317 /* Pods_SwingEssentials.framework */,
 				6629FDC13F56B06EB5BF285B /* Pods_SwingEssentials_tvOSTests.framework */,
 				5F663868EEF077F99209E43F /* Pods_SwingEssentialsTests.framework */,
@@ -757,6 +798,8 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				3BE2831E2574C676847108BB /* [CP] Embed Pods Frameworks */,
 				5CA41A7D27FF6C6AD40B7155 /* [CP] Copy Pods Resources */,
+				E6A3680A20202D7400D78F73 /* ShellScript */,
+				E6A3680B20202FE100D78F73 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1293,10 +1336,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwingEssentials/Pods-SwingEssentials-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework",
+				"${BUILT_PRODUCTS_DIR}/BraintreeDropIn/BraintreeDropIn.framework",
 				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Braintree.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BraintreeDropIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1382,6 +1429,48 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E6A3680A20202D7400D78F73 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/BraintreePayPal.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PayPalDataCollector.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PayPalOneTouch.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PayPalUtils.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BraintreeDropIn.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BraintreeUIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BraintreeCard.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BraintreeCore.framework",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreePayPal.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PayPalDataCollector.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PayPalOneTouch.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PayPalUtils.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeDropIn.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeUIKit.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeCard.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeCore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		E6A3680B20202FE100D78F73 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage outdated --xcode-warnings\n";
+		};
 		FC5E6E2AF5B3EFD7008BFA89 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1415,8 +1504,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6D85B22202505F300F5BDBA /* ViewController.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				E68950262039DD5800484C34 /* RNTMapManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1536,6 +1627,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = F4N65RNFKC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1549,6 +1644,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.SwingEssentials;
 				PRODUCT_NAME = SwingEssentials;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1561,6 +1657,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F4N65RNFKC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1574,6 +1674,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.SwingEssentials;
 				PRODUCT_NAME = SwingEssentials;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1746,7 +1847,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "@executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -1781,7 +1884,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "@executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

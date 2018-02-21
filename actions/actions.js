@@ -39,7 +39,7 @@ export function requestLogin(userCredentials){
         data.append('username', userCredentials.username);
         data.append('password', userCredentials.password);
 
-        return fetch('http://www.josephpboyle.com/api/swingessentials.php/login', {
+        return fetch('https://www.josephpboyle.com/api/swingessentials.php/login', {
             method: 'GET',
             headers: {'Authorization': 'basic ' + btoa(userCredentials.username) + '.' + btoa(userCredentials.password)}
         })
@@ -72,6 +72,7 @@ function loginSuccess(response){
 
 function loginFailure(response){
   console.log('login failure')
+  console.log(response)
     return{
         type: LOGIN_ERROR,
         response: response.status

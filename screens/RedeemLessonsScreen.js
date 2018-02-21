@@ -75,8 +75,11 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 20,
     backgroundColor: '#231f61',
+    opacity:.8
   },
   headerText: {
+    paddingLeft: 18,
+    fontSize: 18,
     fontWeight: 'bold',
     color: 'white',
   },

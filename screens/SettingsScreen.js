@@ -41,6 +41,7 @@ class SettingsScreen extends Component {
             <ListItem
               key={i}
               title={item.title}
+              titleStyle = {styles.listItemTitle}
               onPress={() =>  this.props.navigation.navigate(item.page)}
             />
           ))
@@ -51,23 +52,9 @@ class SettingsScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    paddingTop: 50
-  },
-  header: {
-    width: 400,
-    height: 120,
-    backgroundColor: 'grey',
-    flexDirection: 'row',
-    //justifyContent: 'space-between',
-  },
-  content: {
-    width: 400,
-    height: 120,
-    backgroundColor: 'grey',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+  listItemTitle: {
+    fontSize: 18,
+    borderBottomColor: '#c1c1c1',
   },
 });
 

@@ -1,0 +1,61 @@
+{
+  "commitish" : "4.10.0",
+  "iOS" : [
+    {
+      "name" : "BraintreeApplePay",
+      "hash" : "a87ac6ac8328db25c3d6fbaf616df6767c90c05b98ea366d8ca4e98c2a934dff"
+    },
+    {
+      "name" : "BraintreePayPal",
+      "hash" : "53cced6b09b1444b9ad853d02cda6edfbae3aee4755ffda33073a00abe9305f5"
+    },
+    {
+      "name" : "BraintreeAmericanExpress",
+      "hash" : "3fd143255ac644ee6274dd255a968d79ba3662ce3a615fdfb28d7b7ae69c634a"
+    },
+    {
+      "name" : "BraintreeUnionPay",
+      "hash" : "5dea4d5ef37953bfc2fb4ca63dd3d14205d28d9ea615b1e896bd038f063dab6a"
+    },
+    {
+      "name" : "BraintreeVenmo",
+      "hash" : "a34b398258ff30040686995d8f255bf8cc937d80c651490132634d2b68b4b796"
+    },
+    {
+      "name" : "Braintree3DSecure",
+      "hash" : "fadf9043d3b6727f313acd85ca0cabb5e4269a834cb32f6124281fc2d3093213"
+    },
+    {
+      "name" : "BraintreePaymentFlow",
+      "hash" : "afe709bcf83e8b4d0b7cfd8bf48fdfbab19fad355e538e0857cbb404b725caf2"
+    },
+    {
+      "name" : "BraintreeCard",
+      "hash" : "c6a375ea28d9fe52cd823413378bad751bb8f03f7c35b22aea38069701061d32"
+    },
+    {
+      "name" : "BraintreeDataCollector",
+      "hash" : "5a1bc5580972b232995360610a333ee626727ac7808010b93c7acb0a0779ef95"
+    },
+    {
+      "name" : "PayPalDataCollector",
+      "hash" : "69d81b17243e0d74c8ceccf4b32e1381e7fd45f469cf82806e4bf54a25fd48e7"
+    },
+    {
+      "name" : "PayPalUtils",
+      "hash" : "56642737db18b1ecf0adb264ccc0f2637e48b1f3ca61473475726e71151cc0cf"
+    },
+    {
+      "name" : "PayPalOneTouch",
+      "hash" : "e5c0eeb10f1fa15fbf42007546b21478e5578733c0dc0116c3229f9e2897e8c0"
+    },
+    {
+      "name" : "BraintreeCore",
+      "hash" : "bd8de3adbdf023b8d96f7b9da6acf560ac39c5c2ec57876f5c63d6a25a6c5274"
+    },
+    {
+      "name" : "BraintreeUI",
+      "hash" : "90f7f9617051d8ef177a54783826a4a170c7559cced446a3ad9b2cd499c35a21"
+    }
+  ]
+}

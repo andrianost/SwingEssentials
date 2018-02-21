@@ -8,6 +8,9 @@
  */
 
 #import "AppDelegate.h"
+#import "BraintreeCore.h"
+#import "BraintreeDropIn.h"
+#import "BraintreeUI.h"
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -16,8 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [BTAppSwitch setReturnURLScheme:@"org.reactjs.native.example.SwingEssentials.payments"];
+  
   NSURL *jsCodeLocation;
-
+  
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
@@ -25,13 +30,27 @@
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
-
+  
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
+  
   self.window.rootViewController = rootViewController;
+  // Set reference to class property
+  self.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   return YES;
 }
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+  if ([url.scheme localizedCaseInsensitiveCompare:@"org.reactjs.native.example.SwingEssentials.payments"] == NSOrderedSame) {
+    return [BTAppSwitch handleOpenURL:url options:options];
+  }
+  return NO;
+}
+
 @end
+

@@ -55,9 +55,9 @@ class YourLessonsScreen extends Component {
       <ListItem
         key={index}
         title={item.request_date}
-        titleStyle = {{fontSize: 18}}
+        titleStyle = {styles.listItemTitle}
         rightTitle={(item.viewed && item.viewed==='0')?'NEW!':null}
-        rightTitleStyle = {{fontSize: 18, fontWeight: 'bold', color: 'red'}}
+        rightTitleStyle = {styles.listItemRightTitle}
         onPress={ () => {this._requestID({request_id: item.request_id,
                                           request_date: item.request_date,
                                           request_url: item.request_url,
@@ -71,7 +71,7 @@ class YourLessonsScreen extends Component {
   _pendingHeader() {
     return (
       <View style={styles.container}>
-        <Text style={{color:"white", fontWeight:"bold"}}>In Progress</Text>
+        <Text style={styles.text}>In Progress</Text>
       </View>
     )
   }
@@ -79,7 +79,7 @@ class YourLessonsScreen extends Component {
   _closedHeader() {
     return (
       <View style={styles.container}>
-        <Text style={{color:"white", fontWeight:"bold"}}>Completed</Text>
+        <Text style={styles.text}>Completed</Text>
       </View>
     )
   }
@@ -113,12 +113,29 @@ class YourLessonsScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    // alignItems: 'center',
-    // justifyContent: 'center',
     paddingTop: 20,
     paddingBottom: 20,
     backgroundColor: '#231f61',
-  }
+    opacity:.8
+  },
+  text: {
+    paddingLeft: 19,
+    fontSize: 18,
+    color:"white",
+    fontWeight:"bold"
+  },
+  listItemTitle: {
+    color:"#231f61",
+    opacity:.8,
+    fontSize: 18,
+    fontWeight: 'bold',
+    borderBottomColor: '#c1c1c1',
+  },
+  listItemRightTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'red'
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(YourLessonsScreen);

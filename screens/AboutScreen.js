@@ -22,7 +22,6 @@ class AboutScreen extends Component {
     return (
       <View style={styles.container}>
         <Text>About screen!</Text>
-        <Text>{this.props.username}</Text>
       </View>
     );
   }

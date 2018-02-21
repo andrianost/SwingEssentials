@@ -1,12 +1,54 @@
 PODS:
+  - Braintree (4.10.0):
+    - Braintree/Card (= 4.10.0)
+    - Braintree/Core (= 4.10.0)
+    - Braintree/PayPal (= 4.10.0)
+    - Braintree/UI (= 4.10.0)
+  - Braintree/Card (4.10.0):
+    - Braintree/Core
+  - Braintree/Core (4.10.0)
+  - Braintree/PayPal (4.10.0):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.10.0):
+    - Braintree/Core
+    - Braintree/PayPalUtils
+  - Braintree/PayPalOneTouch (4.10.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+    - Braintree/PayPalUtils
+  - Braintree/PayPalUtils (4.10.0)
+  - Braintree/UI (4.10.0):
+    - Braintree/Card
+    - Braintree/Core
+  - Braintree/UnionPay (4.10.0):
+    - Braintree/Card
+    - Braintree/Core
+  - Braintree/Venmo (4.10.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+  - BraintreeDropIn (5.3.0):
+    - BraintreeDropIn/DropIn (= 5.3.0)
+  - BraintreeDropIn/DropIn (5.3.0):
+    - Braintree/Card (~> 4.0)
+    - Braintree/Core (~> 4.0)
+    - Braintree/UnionPay (~> 4.0)
+    - BraintreeDropIn/UIKit
+  - BraintreeDropIn/UIKit (5.3.0)
   - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
+  - Braintree
+  - Braintree/PayPal
+  - Braintree/Venmo
+  - BraintreeDropIn
   - youtube-ios-player-helper (~> 0.1.6)
 
 SPEC CHECKSUMS:
+  Braintree: 424a8b0bf1d31fe1110035cfde438701e1425c1a
+  BraintreeDropIn: 5882cca8dc3c4a5b8f11faa44fca52323253c857
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: bfdd938d2c053650f20ca149a9f4776fa25390b4
+PODFILE CHECKSUM: c694b06f464745d9dba425eb17afa40d8711637c
 
 COCOAPODS: 1.4.0
