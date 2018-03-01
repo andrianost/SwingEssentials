@@ -21,7 +21,8 @@ import IndividualLessonsScreen from '../screens/IndividualLessonsScreen.js';
 import OrderDetailsScreen from '../screens/OrderDetailsScreen.js';
 import ResetPasswordScreen from '../screens/ResetPasswordScreen.js';
 import CreateAccountScreen from '../screens/CreateAccountScreen.js';
-
+import CameraScreen from '../screens/CameraScreen.js';
+// import CameraScreen from '../screens/CameraScreen2.js';
 
 import CustomDrawer from '../screens/CustomDrawer.js';
 
@@ -77,42 +78,61 @@ export const AppNavigator = DrawerNavigator(
                   screen: HomeScreen,
                   navigationOptions:({ navigation }) => ({
                       title: (
-                        <Image source={require('./img/SE-Logo-circle.png')} />
+                        <Image source={require('./img/SELogo-12.png')} />
                       ),
-                      headerStyle: {backgroundColor: '#f0f0f0'},
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerStyle: {backgroundColor: '#231f61'},
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                     })
               }
             }),
             navigationOptions:{
-                drawerLabel: (
-                  <Image source={require('./img/SE-Logo-circle.png')} />
-                ),
+              drawerLabel: <Text style={{color:"#231f61",
+              opacity:.8,
+              fontSize: 18,
+              paddingLeft:20,
+              paddingTop:10,
+              paddingBottom:10,
+              fontWeight: 'bold',
+              borderBottomColor: '#c1c1c1',}}>Home</Text>
+
                 // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#231f61' }}/>
             }
           },
       // Each page that has several pages that you can step through is rendered as a StackNavigator
       // Stack Navigator gives you a header component for free, we inject an icon there to open the drawer
+      Camera: {
+        screen: StackNavigator({
+          Camera: {
+            screen: CameraScreen,
+            navigationOptions: ({ navigation }) => ({
+                // title: 'Password Reset',
+                drawerLabel: () => null,
+                // headerStyle: {backgroundColor: '#d3d3d3'},
+                headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('RedeemLessons')}/>
+            })
+          }
+        })
+      },
       YourLessons: {
           screen: StackNavigator({
               YourLessons: {
                   screen: YourLessonsScreen,
                   navigationOptions:({ navigation }) => ({
                       title: (
-                        <Image source={require('./img/SE-Logo-circle.png')} />
+                        <Image source={require('./img/SELogo-12.png')} />
                       ),
-                      headerStyle: {backgroundColor: '#f0f0f0'},
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerStyle: {backgroundColor: '#231f61'},
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
               IndividualLessonsScreen: {
                   screen: IndividualLessonsScreen,
                   navigationOptions: ({ navigation }) => ({
                       title: (
-                        <Image source={require('./img/SE-Logo-circle.png')} />
+                        <Image source={require('./img/SELogo-12.png')} />
                       ),
-                      headerStyle: {backgroundColor: '#f0f0f0'},
-                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('YourLessons')}/>
+                      headerStyle: {backgroundColor: '#231f61'},
+                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('YourLessons')}/>
                   })
               }
           },{
@@ -120,7 +140,14 @@ export const AppNavigator = DrawerNavigator(
               contentOptions:{activeTintColor: '#231f61', opacity:.8}
           }),
           navigationOptions:{
-              drawerLabel: 'Your Lessons',
+              drawerLabel: <Text style={{color:"#231f61",
+              opacity:.8,
+              fontSize: 18,
+              paddingLeft:20,
+              paddingTop:10,
+              paddingBottom:10,
+              fontWeight: 'bold',
+              borderBottomColor: '#c1c1c1',}}>Your Lessons</Text>//'Your Lessons',
               // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
           }
       },
@@ -130,10 +157,10 @@ export const AppNavigator = DrawerNavigator(
                   screen: RedeemLessonsScreen,
                   navigationOptions: ({ navigation }) => ({
                       title: (
-                        <Image source={require('./img/SE-Logo-circle.png')} />
+                        <Image source={require('./img/SELogo-12.png')} />
                       ),
-                      headerStyle: {backgroundColor: '#f0f0f0'},
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerStyle: {backgroundColor: '#231f61'},
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
           },{
@@ -141,7 +168,14 @@ export const AppNavigator = DrawerNavigator(
               contentOptions:{activeTintColor: '#231f61', opacity:.8}
           }),
           navigationOptions:{
-              drawerLabel: 'Redeem Lessons',
+              drawerLabel: <Text style={{color:"#231f61",
+              opacity:.8,
+              fontSize: 18,
+              paddingLeft:20,
+              paddingTop:10,
+              paddingBottom:10,
+              fontWeight: 'bold',
+              borderBottomColor: '#c1c1c1',}}>Redeem Lessons</Text>
               // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
           }
       },
@@ -151,25 +185,32 @@ export const AppNavigator = DrawerNavigator(
                   screen: OrderLessonsScreen,
                   navigationOptions:({ navigation }) => ({
                       title: (
-                        <Image source={require('./img/SE-Logo-circle.png')} />
+                        <Image source={require('./img/SELogo-12.png')} />
                       ),
-                      headerStyle: {backgroundColor: '#f0f0f0'},
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerStyle: {backgroundColor: '#231f61'},
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
               OrderDetailsScreen: {
                   screen: OrderDetailsScreen,
                   navigationOptions: ({ navigation }) => ({
                       title: (
-                        <Image source={require('./img/SE-Logo-circle.png')} />
+                        <Image source={require('./img/SELogo-12.png')} />
                       ),
-                      headerStyle: {backgroundColor: '#f0f0f0'},
-                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('OrderLessons')}/>
+                      headerStyle: {backgroundColor: '#231f61'},
+                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('OrderLessons')}/>
                   })
               }
           }),
           navigationOptions:{
-              drawerLabel: 'Order Lessons',
+              drawerLabel: <Text style={{color:"#231f61",
+              opacity:.8,
+              fontSize: 18,
+              paddingLeft:20,
+              paddingTop:10,
+              paddingBottom:10,
+              fontWeight: 'bold',
+              borderBottomColor: '#c1c1c1',}}>Order Lessons</Text>
               // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
           }
       },
@@ -180,15 +221,22 @@ export const AppNavigator = DrawerNavigator(
               screen: HelpScreen,
               navigationOptions:({ navigation }) => ({
                   title: (
-                    <Image source={require('./img/SE-Logo-circle.png')} />
+                    <Image source={require('./img/SELogo-12.png')} />
                   ),
-                  headerStyle: {backgroundColor: '#f0f0f0'},
-                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                  headerStyle: {backgroundColor: '#231f61'},
+                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
             }
           }),
           navigationOptions: {
-              drawerLabel: 'Help',
+              drawerLabel: <Text style={{color:"#231f61",
+              opacity:.8,
+              fontSize: 18,
+              paddingLeft:20,
+              paddingTop:10,
+              paddingBottom:10,
+              fontWeight: 'bold',
+              borderBottomColor: '#c1c1c1',}}>Help</Text>
               // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
           }
       },
@@ -198,15 +246,22 @@ export const AppNavigator = DrawerNavigator(
               screen: AboutScreen,
               navigationOptions:({ navigation }) => ({
                   title: (
-                    <Image source={require('./img/SE-Logo-circle.png')} />
+                    <Image source={require('./img/SELogo-12.png')} />
                   ),
-                  headerStyle: {backgroundColor: '#f0f0f0'},
-                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                  headerStyle: {backgroundColor: '#231f61'},
+                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
             }
           }),
           navigationOptions: {
-              drawerLabel: 'About',
+              drawerLabel: <Text style={{color:"#231f61",
+              opacity:.8,
+              fontSize: 18,
+              paddingLeft:20,
+              paddingTop:10,
+              paddingBottom:10,
+              fontWeight: 'bold',
+              borderBottomColor: '#c1c1c1',}}>About</Text>
               // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
           }
       },
@@ -216,35 +271,42 @@ export const AppNavigator = DrawerNavigator(
               screen: SettingsScreen,
               navigationOptions:({ navigation }) => ({
                   title: (
-                    <Image source={require('./img/SE-Logo-circle.png')} />
+                    <Image source={require('./img/SELogo-12.png')} />
                   ),
-                  headerStyle: {backgroundColor: '#f0f0f0'},
-                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                  headerStyle: {backgroundColor: '#231f61'},
+                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
             },
             UserData: {
                 screen: UserData,
                 navigationOptions: ({ navigation }) => ({
                     title: (
-                      <Image source={require('./img/SE-Logo-circle.png')} />
+                      <Image source={require('./img/SELogo-12.png')} />
                     ),
-                    headerStyle: {backgroundColor: '#f0f0f0'},
-                    headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('SettingsScreen')}/>
+                    headerStyle: {backgroundColor: '#231f61'},
+                    headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('SettingsScreen')}/>
                 })
             },
             CameraData: {
                 screen: CameraData,
                 navigationOptions: ({ navigation }) => ({
                     title: (
-                      <Image source={require('./img/SE-Logo-circle.png')} />
+                      <Image source={require('./img/SELogo-12.png')} />
                     ),
-                    headerStyle: {backgroundColor: '#f0f0f0'},
-                    headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('SettingsScreen')}/>
+                    headerStyle: {backgroundColor: '#231f61'},
+                    headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('SettingsScreen')}/>
                 })
             },
           }),
           navigationOptions: {
-              drawerLabel: 'Settings',
+              drawerLabel: <Text style={{color:"#231f61",
+              opacity:.8,
+              fontSize: 18,
+              paddingLeft:20,
+              paddingTop:10,
+              paddingBottom:10,
+              fontWeight: 'bold',
+              borderBottomColor: '#c1c1c1',}}>Settings</Text>
               // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
           }
       },

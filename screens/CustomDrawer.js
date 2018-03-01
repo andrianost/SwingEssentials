@@ -14,7 +14,8 @@ class CustomDrawer extends React.Component {
     return (
         <View>
             <View style={styles.container}>
-                <Text style={styles.text}>Welcome {this.props.firstName}</Text>
+              <Image source={require('./img/SELogo-13.png')} />
+              <Text style={styles.text}>Welcome, {this.props.firstName}</Text>
             </View>
             <DrawerItems {...this.props} />{/* this.props merges the navigator props with the props we care about above (e.g.username) */}
         </View>
@@ -26,13 +27,14 @@ const styles = StyleSheet.create({
   container: {
     height:120,
     backgroundColor:"#231f61",
-    opacity:.8,
+    // opacity:.8,
     justifyContent:'center',
     alignItems: 'center'
   },
   text: {
     color:"white",
-    fontSize: 24
+    fontSize: 18,
+    paddingTop: 15
   },
 });
 

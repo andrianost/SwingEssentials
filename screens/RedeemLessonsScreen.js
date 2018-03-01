@@ -47,14 +47,14 @@ class RedeemLessonsScreen extends Component {
           <Button
               raised
               title="Face On"
-              // onPress={this._submitOrder.bind(this)}
+              onPress={() => this.props.navigation.navigate('Camera')}//{this._submitOrder.bind(this)}
           />
         </View>
         <View style={styles.button1}>
           <Button
               raised
               title="Down the Line"
-              // onPress={this._submitOrder.bind(this)}
+              onPress={() => this.props.navigation.navigate('Camera')}// onPress={this._submitOrder.bind(this)}
           />
         </View>
         <View style={styles.button1}>

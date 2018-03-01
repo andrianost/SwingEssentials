@@ -18,6 +18,7 @@ function mapStateToProps(state){
       request_url: state.lessons.request_url,
       request_notes: state.lessons.request_notes,
       response_notes: state.lessons.response_notes,
+      response_video: state.lessons.response_video,
     };
 }
 
@@ -38,6 +39,7 @@ class YourLessonsScreen extends Component {
           request_notes: this.props.request_notes,
           response_notes: this.props.response_notes,
           viewed: this.props.viewed,
+          response_video: this.props.response_video,
       }
   }
 
@@ -62,7 +64,8 @@ class YourLessonsScreen extends Component {
                                           request_date: item.request_date,
                                           request_url: item.request_url,
                                           request_notes: item.request_notes,
-                                          response_notes: item.response_notes});
+                                          response_notes: item.response_notes,
+                                          response_video: item.response_video});
                         this._updateViewedStatus({request_id: item.request_id, bearerToken: this.props.token});}}
       />
     )
@@ -92,13 +95,6 @@ class YourLessonsScreen extends Component {
           keyExtractor={item => item.request_id}
           renderItem={this._renderItem.bind(this)}
           ListHeaderComponent={this._pendingHeader}
-          // renderItem={({ item }) => (
-          //   <ListItem
-          //     // title={`${item.request_id} ${item.request_url}`}
-          //     // subtitle={item.request_id}
-          //     // avatar={{ uri: item.picture.thumbnail }}
-          //   />
-          // )}
         />
         <FlatList
           data={this.props.closed}

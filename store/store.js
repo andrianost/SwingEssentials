@@ -27,6 +27,7 @@ export const initialStore = {
 
     // user's available credits
     credits:{
+        details: [],
         count: 0,
         unlimited_count: 0,
         unlimited_date: ''
@@ -43,7 +44,7 @@ export const initialStore = {
         request_notes: '',
         viewed: '',
         response_notes: '',
-        response_video: ''
+        response_video: '',
     },
 
     // swingessentials available lesson packages

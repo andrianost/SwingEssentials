@@ -1,5 +1,6 @@
 import {store} from '../store/store.js';
 import {btoa} from '../utils/base64.js';
+import RNFetchBlob from 'react-native-fetch-blob';
 
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_ERROR = 'LOGIN_ERROR';
@@ -365,6 +366,7 @@ function updateViewedStatusSuccess(response){
 
 function updateViewedStatusFailure(response){
     console.log('update viewed status failure')
+    console.log(response)
     return{
         type: UPDATE_VIEWED_STATUS_FAILURE,
         response: response.status
@@ -452,9 +454,25 @@ function requestCreditsFailure(response){
 //redeems lesson credits
 export function redeemLessons(token){
     return function(dispatch){
-        return fetch('http://www.josephpboyle.com/api/myapi.php/redeem', {
-            method: 'POST',
-            headers: {'Authorization': 'Bearer ' + token.bearerToken}
+      const data = new FormData();
+      data.append('notes', 'test');
+      data.append('fo', {
+        name: 'fo.mov',
+        uri: token.fo,
+        type: 'video/mov'});
+      data.append('dtl', {
+        name: 'dtl.mov',
+        uri: token.dtl,
+        type: 'video/mov'});
+
+      console.log('data')
+      console.log(data)
+
+        return fetch('http://www.josephpboyle.com/api/swingessentials2.php/redeem', {
+          method: 'POST',
+          headers: {'Content-Type': 'multipart/form-data',
+                    'Authorization': 'Bearer ' + token.bearerToken},
+          body: data
         })
         .then((response) => {
             switch(response.status) {

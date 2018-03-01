@@ -46,6 +46,7 @@ class IndividualLessonsScreen extends Component {
   }
 
   render() {
+    console.log("response video")
     console.log(this.props.response_video)
     return (
       <View>
@@ -54,7 +55,7 @@ class IndividualLessonsScreen extends Component {
         </View>
         <View>
           <YouTube
-            videoId="noU5_4L6H3o"  // The YouTube video ID
+            videoId={this.props.response_video}//"noU5_4L6H3o"  // The YouTube video ID
             play={true}             // control playback of video with true/false
             fullscreen={false}       // control whether the video should play in fullscreen or inline
             loop={true}             // control whether the video should loop when ended

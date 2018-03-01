@@ -10,6 +10,9 @@ import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import IndividualLessonsScreen from '../screens/IndividualLessonsScreen';
 import OrderDetailsScreen from '../screens/OrderDetailsScreen';
+import CameraScreen from '../screens/CameraScreen';
+// import CameraScreen from '../screens/CameraScreen2';
+
 
 //configures navigation routes for the drawer nav after successful login
 const AppRoutes = DrawerNavigator({
@@ -21,7 +24,8 @@ const AppRoutes = DrawerNavigator({
   AboutScreen: { screen: AboutScreen },
   SettingsScreen: { screen: SettingsScreen },
   IndividualLessonsScreen: { screen: IndividualLessonsScreen },
-  OrderDetailsScreen: { screen: OrderDetailsScreen }
+  OrderDetailsScreen: { screen: OrderDetailsScreen },
+  CameraScreen: { screen: CameraScreen },
 }, {initialRouteName: 'Home'});
 
 //configures the initial route upon app start and loads all drawer nav routes

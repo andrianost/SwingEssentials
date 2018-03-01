@@ -62,7 +62,9 @@ const creditsReducer = (state=[], action) => {
 	switch(action.type){
 		case REQUEST_CREDITS_SUCCESS:
 			console.log('request credits success reducer')
+			console.log(action.data)
 			return{...state,
+				details: action.data,
 				count: action.data.count,
 				unlimited_count: action.data.unlimited_count,
 				unlimited_date: action.data.unlimited_date,
@@ -87,6 +89,7 @@ const lessonsReducer = (state=[], action) => {
 			return state;
 		case SET_REQUEST_ID_SUCCESS:
 		console.log('set request id reducer')
+		console.log(action.data)
 			return{...state,
 				request_id: action.data.request_id,
 				request_date: action.data.request_date,
