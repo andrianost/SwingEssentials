@@ -45,6 +45,9 @@ export const initialStore = {
         viewed: '',
         response_notes: '',
         response_video: '',
+        fo: '',
+        dtl: '',
+        fo_flag: false,
     },
 
     // swingessentials available lesson packages

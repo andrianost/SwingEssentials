@@ -58,7 +58,7 @@ class YourLessonsScreen extends Component {
         key={index}
         title={item.request_date}
         titleStyle = {styles.listItemTitle}
-        rightTitle={(item.viewed && item.viewed==='0')?'NEW!':null}
+        rightTitle={(item.viewed===0)?'NEW!':null}
         rightTitleStyle = {styles.listItemRightTitle}
         onPress={ () => {this._requestID({request_id: item.request_id,
                                           request_date: item.request_date,

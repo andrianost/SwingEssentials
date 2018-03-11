@@ -92,7 +92,8 @@ class CreateAccountScreen extends React.Component{
                 />
                 <Button
                     raised
-                    title="Create Account"
+                    buttonStyle={styles.button}
+                    title="CREATE ACCOUNT"
                     disabled={!this.state.firstName || !this.state.lastName ||
                               !this.state.email || !this.state.username ||
                               !this.state.password || this.state.createAccount == true}
@@ -108,8 +109,11 @@ class CreateAccountScreen extends React.Component{
 const styles = StyleSheet.create({
   container: {
     paddingTop: 30,
-
   },
+  button: {
+    backgroundColor: "#231f61",
+    opacity: .8
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateAccountScreen);

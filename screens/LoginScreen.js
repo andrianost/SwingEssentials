@@ -77,7 +77,8 @@ class LoginScreen extends React.Component{
                   {this.props.loginFails > 0 && <FormValidationMessage>The username/password you entered was not correct.</FormValidationMessage>}
                   <Button
                       raised
-                      title="Sign In"
+                      buttonStyle={styles.button}
+                      title="SIGN IN"
                       disabled={!this.state.username || !this.state.password}
                       onPress={this._onLogin.bind(this)}
                   />
@@ -106,8 +107,11 @@ class LoginScreen extends React.Component{
 const styles = StyleSheet.create({
   container: {
     paddingTop: 30,
-
   },
+  button: {
+    backgroundColor: "#231f61",
+    opacity: .8
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);

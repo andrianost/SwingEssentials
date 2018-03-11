@@ -11,6 +11,9 @@ import { Button } from 'react-native-elements';
 function mapStateToProps(state){
     return {
       token: state.login.token,
+      fo_flag: state.lessons.fo_flag,
+      fo: state.lessons.fo,
+      dtl: state.lessons.dtl,
     };
 }
 
@@ -23,13 +26,14 @@ class RedeemLessonsScreen extends Component {
       super(props);
       this.state = {
         bearerToken: this.props.token,
+        fo_flag: this.props.fo_flag,
+        fo: this.props.fo,
+        dtl: this.props.dtl,
       }
   }
 
   _redeemLessons(){
-    console.log('token')
-    console.log(this.state.bearerToken)
-    this.props.redeemLessons({bearerToken: this.state.bearerToken})
+    this.props.redeemLessons({bearerToken: this.state.bearerToken, fo: this.state.fo, dtl: this.state.dtl})
     // .then(() => {
     //   if (this.props.response == 200) {
     //     this.setState({orderComplete: true});
@@ -37,30 +41,47 @@ class RedeemLessonsScreen extends Component {
     // })
   }
 
-  render() {
+  _foFlag(){
+    this.setState({fo_flag: true}, function() {
+      this.props.setSwingFlagSuccess({fo_flag: this.state.fo_flag});
+      this.props.navigation.navigate('Camera');
+    })
+  }
+
+  _dtlFlag() {
+    this.setState({fo_flag: false}, function() {
+      this.props.setSwingFlagSuccess({fo_flag: this.state.fo_flag});
+      this.props.navigation.navigate('Camera');
+    })
+  }
+
+render() {
     return (
       <View>
         <View style={styles.header}>
           <Text style={styles.headerText}>Record your swing</Text>
         </View>
-        <View style={styles.button}>
+        <View style={styles.buttonContainer}>
           <Button
               raised
-              title="Face On"
-              onPress={() => this.props.navigation.navigate('Camera')}//{this._submitOrder.bind(this)}
+              title="FACE ON"
+              buttonStyle={styles.button}
+              onPress={this._foFlag.bind(this)}
           />
         </View>
-        <View style={styles.button1}>
+        <View style={styles.secondButtonContainer}>
           <Button
               raised
-              title="Down the Line"
-              onPress={() => this.props.navigation.navigate('Camera')}// onPress={this._submitOrder.bind(this)}
+              title="DOWN THE LINE"
+              buttonStyle={styles.button}
+              onPress={this._dtlFlag.bind(this)}
           />
         </View>
-        <View style={styles.button1}>
+        <View style={styles.secondButtonContainer}>
           <Button
               raised
-              title="Submit Order"
+              title="SUBMIT ORDER"
+              buttonStyle={styles.button}
               // disabled={this.state.orderComplete == true}
               onPress={this._redeemLessons.bind(this)}
           />
@@ -83,12 +104,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
   },
-  button: {
+  buttonContainer: {
     paddingBottom: 20,
     paddingTop: 20,
   },
-  button1: {
+  secondButtonContainer: {
     paddingBottom: 20,
+  },
+  button: {
+    backgroundColor: '#231f61',
+    opacity:.8
   },
 });
 

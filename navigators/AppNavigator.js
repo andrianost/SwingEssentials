@@ -105,10 +105,13 @@ export const AppNavigator = DrawerNavigator(
           Camera: {
             screen: CameraScreen,
             navigationOptions: ({ navigation }) => ({
-                // title: 'Password Reset',
+                title: (
+                  <Image source={require('./img/SELogo-12.png')} />
+                ),
+                headerStyle: {backgroundColor: '#231f61'},
                 drawerLabel: () => null,
                 // headerStyle: {backgroundColor: '#d3d3d3'},
-                headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('RedeemLessons')}/>
+                headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('RedeemLessons')}/>
             })
           }
         })

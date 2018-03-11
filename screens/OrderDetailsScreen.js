@@ -84,10 +84,11 @@ class OrderDetailsScreen extends Component {
             onChangeText={(newText) => this.setState({discount: newText})}
         />
         {this.props.type == 'invalid' && <FormValidationMessage>Invalid discount code</FormValidationMessage>}
-        <View style={styles.button}>
+        <View>
           <Button
               raised
-              title="Apply Code"
+              title="APPLY CODE"
+              buttonStyle={styles.button}
               disabled={!this.state.discount || this.state.coupon == true}
               onPress={this._onDiscount.bind(this)}
           />
@@ -105,10 +106,11 @@ class OrderDetailsScreen extends Component {
         <View style={styles.container}>
           <Text style={styles.containerText}>Total:                                                                ${parseFloat(this.props.price).toFixed(2)}</Text>
         </View>
-        <View style={styles.button}>
+        <View style={styles.buttonContainer}>
           <Button
               raised
-              title="Submit Order"
+              buttonStyle={styles.button}
+              title="SUBMIT ORDER"
               disabled={this.state.orderComplete == true}
               onPress={this._submitOrder.bind(this)}
           />
@@ -148,9 +150,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontStyle: 'italic',
   },
-  button: {
+  buttonContainer: {
     paddingBottom: 20,
-  }
+  },
+  button: {
+    backgroundColor: '#231f61',
+    opacity:.8
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(OrderDetailsScreen);

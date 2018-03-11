@@ -7,12 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
 #import <React/RCTBridgeModule.h>
 #import <React/RCTViewManager.h>
+#import <React/RCTEventDispatcher.h>
+
+#import "BraintreeCore.h"
+#import "BraintreeDropIn.h"
+#import "BraintreeUI.h"
+
 
 @interface ViewController : UIViewController <RCTBridgeModule>  //RCTViewManager
 
 @property (nonatomic, strong) UIWindow *window;
 @property (nonatomic, strong) NSString *clientTokenOrTokenizationKey;
+
 
 @end

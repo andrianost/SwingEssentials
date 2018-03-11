@@ -80,7 +80,7 @@ class HomeScreen extends Component {
         key={index}
         title={item.request_date}
         titleStyle = {styles.listItemTitle}
-        rightTitle={(item.viewed && item.viewed==='0')?'NEW!':null}
+        rightTitle={(item.viewed===0)?'NEW!':null}
         rightTitleStyle = {styles.listItemRightTitle}
         onPress={ () => {this._requestID({request_id: item.request_id,
                                           request_date: item.request_date,
@@ -99,7 +99,7 @@ class HomeScreen extends Component {
         key={index}
         title={item.key}
         titleStyle = {styles.listItemTitle}
-        rightTitle={item.value?item.value:'-'}//{item.value}//
+        rightTitle={item.value?item.value+'':'-'}//{item.value}//
         rightTitleStyle = {styles.listItemCreditRightTitle}
         onPress={ () => this.props.navigation.navigate('RedeemLessons')}
         // onPress={ () => {this._requestID({request_id: item.request_id,
@@ -128,10 +128,10 @@ class HomeScreen extends Component {
           renderItem={this._renderCreditItem.bind(this)}
           ListHeaderComponent={this._availableCreditsHeader}
         />
-        <View style={styles.button}>
+        <View style={styles.buttonContainer}>
           <Button
-            title="Order Lessons"
-            buttonStyle={styles.CircleShapeView}
+            title="ORDER LESSONS"
+            buttonStyle={styles.button}
             onPress={() => this.props.navigation.navigate('OrderLessons')}
           />
         </View>
@@ -146,10 +146,6 @@ class HomeScreen extends Component {
 
 
 const styles = StyleSheet.create({
-  // container: {
-  //   alignItems: 'center',
-  //   paddingTop: 50
-  // },
   container: {
     paddingTop: 20,
     paddingBottom: 20,
@@ -180,14 +176,11 @@ const styles = StyleSheet.create({
     color:"#231f61",
     opacity:.8,
   },
-  CircleShapeView: {
-    // width: 150,
-    // height: 150,
-    // borderRadius: 150/2,
+  button: {
     backgroundColor: '#231f61',
     opacity:.8
   },
-  button: {
+  buttonContainer: {
     paddingBottom: 20,
     paddingTop: 20,
   },

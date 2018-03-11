@@ -5,12 +5,13 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as Actions from '../actions/actions.js';
 import { RNCamera } from 'react-native-camera';
-import RNFetchBlob from 'react-native-fetch-blob';
-
 
 function mapStateToProps(state){
     return {
       token: state.login.token,
+      fo: state.lessons.fo,
+      dtl: state.lessons.dtl,
+      fo_flag: state.lessons.fo_flag,
     };
 }
 
@@ -24,32 +25,34 @@ class CameraScreen extends Component {
       this.state = {
         bearerToken: this.props.token,
         fo: this.props.fo,
-        dtl: this.props.dtl
+        dtl: this.props.dtl,
+        fo_flag: this.props.fo_flag,
       }
   }
 
-  // takePicture = async function() {
-  //   if (this.camera) {
-  //     const options = { quality: 0.5, base64: true };
-  //     const data = await this.camera.takePictureAsync(options)
-  //     console.log(data.uri);
-  //   }
-  // };
-
   _startRecord = async function() {
     if (this.camera) {
-      const options = { maxDuration: 10 };
+      const options = { maxDuration: 3 };
       const data = await this.camera.recordAsync(options)
 
-      this.props.redeemLessons({bearerToken: this.state.bearerToken, fo: data.uri, dtl: data.uri})
+      if (this.props.fo_flag == true){
+        this.setState({fo: data.uri}, function() {
+          this.props.setFoUriSuccess({fo: this.state.fo})
+        })
+
+      }
+      else if (this.props.fo_flag == false){
+        this.setState({dtl: data.uri}, function() {
+          this.props.setDtlUriSuccess({dtl: this.state.dtl})
+        })
+
+      }
     }
   };
 
   _stopRecord() {
     this.camera.stopRecording();
   }
-
-
 
   render() {
     return (
@@ -66,11 +69,10 @@ class CameraScreen extends Component {
         />
         <View style={{flex: 0, flexDirection: 'row', justifyContent: 'center',}}>
         <TouchableOpacity
-            onPress={this._startRecord.bind(this)}
-            // onPressOut={this._stopRecord.bind(this)}
+            onPressIn={this._startRecord.bind(this)}
+            onPressOut={this._stopRecord.bind(this)}
             style = {styles.capture}
         >
-            <Text style={{fontSize: 14}}> Record </Text>
         </TouchableOpacity>
         </View>
       </View>
@@ -92,8 +94,10 @@ const styles = StyleSheet.create({
   },
   capture: {
     flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 6/2,
+    backgroundColor: 'red',
+    width: 60,
+    height: 60,
+    borderRadius: 60/2,
     padding: 15,
     paddingHorizontal: 20,
     alignSelf: 'center',

@@ -15,6 +15,13 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
+@interface AppDelegate ()
+
+@property (nonatomic, strong) BTAPIClient *braintreeClient;
+
+
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -31,15 +38,19 @@
                                                    launchOptions:launchOptions];
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
   
+  
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
-  
+    
   self.window.rootViewController = rootViewController;
+  
   // Set reference to class property
   self.rootViewController = rootViewController;
+
   [self.window makeKeyAndVisible];
+
   return YES;
 }
 

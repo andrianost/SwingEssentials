@@ -10,7 +10,8 @@ import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE,
 				UPDATE_VIEWED_STATUS_FAILURE, UPDATE_PRICE_SUCCESS, SUBMIT_ORDER_SUCCESS,
 				SUBMIT_ORDER_FAILURE, REQUEST_CREDITS_SUCCESS, REQUEST_CREDITS_FAILURE,
 				REDEEM_LESSONS_SUCCESS, REDEEM_LESSONS_FAILURE, RESET_PASSWORD_SUCCESS,
-				RESET_PASSWORD_FAILURE, CREATE_ACCOUNT_SUCCESS, CREATE_ACCOUNT_FAILURE} from '../actions/actions.js';
+				RESET_PASSWORD_FAILURE, CREATE_ACCOUNT_SUCCESS, CREATE_ACCOUNT_FAILURE,
+				SET_SWING_FLAG_SUCCESS, SET_FO_URI_SUCCESS, SET_DTL_URI_SUCCESS} from '../actions/actions.js';
 
 const userReducer = (state=[], action) => {
 	switch(action.type){
@@ -113,6 +114,24 @@ const lessonsReducer = (state=[], action) => {
 		case REDEEM_LESSONS_FAILURE:
 		console.log('redeem lessons failed reducer')
 			return state;
+		case SET_SWING_FLAG_SUCCESS:
+		console.log('set swing flag success reducer')
+		// console.log(action.data.fo_flag)
+			return{...state,
+				fo_flag: action.data.fo_flag,
+			}
+		case SET_FO_URI_SUCCESS:
+		console.log('set fo uri success reducer')
+		// console.log(action.data.fo_flag)
+			return{...state,
+				fo: action.data.fo,
+			}
+		case SET_DTL_URI_SUCCESS:
+		console.log('set fo uri success reducer')
+		// console.log(action.data.fo_flag)
+			return{...state,
+				dtl: action.data.dtl,
+			}
 		default:
 			return state;
 		}

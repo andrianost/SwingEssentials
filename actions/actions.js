@@ -32,6 +32,14 @@ export const RESET_PASSWORD_SUCCESS = 'RESET_PASSWORD_SUCCESS';
 export const RESET_PASSWORD_FAILURE = 'RESET_PASSWORD_FAILURE';
 export const CREATE_ACCOUNT_SUCCESS = 'CREATE_ACCOUNT_SUCCESS';
 export const CREATE_ACCOUNT_FAILURE = 'CREATE_ACCOUNT_FAILURE';
+export const SET_SWING_FLAG_SUCCESS = 'SET_SWING_FLAG_SUCCESS';
+//ADD FAILURE case
+export const SET_FO_URI_SUCCESS = 'SET_FO_URI_SUCCESS';
+//ADD FAILURE case
+export const SET_DTL_URI_SUCCESS = 'SET_DTL_URI_SUCCESS';
+
+export const BASEURL = 'https://www.josephpboyle.com/api/swingessentials2.php/'
+
 
 //login function.  also requests settings, lessons, packages and credits
 export function requestLogin(userCredentials){
@@ -40,7 +48,7 @@ export function requestLogin(userCredentials){
         data.append('username', userCredentials.username);
         data.append('password', userCredentials.password);
 
-        return fetch('https://www.josephpboyle.com/api/swingessentials.php/login', {
+        return fetch(BASEURL + 'login', {
             method: 'GET',
             headers: {'Authorization': 'basic ' + btoa(userCredentials.username) + '.' + btoa(userCredentials.password)}
         })
@@ -83,7 +91,7 @@ function loginFailure(response){
 //requests user settings
 export function requestSettings(token){
     return function(dispatch){
-        return fetch('http://www.josephpboyle.com/api/swingessentials.php/settings', {
+        return fetch(BASEURL + 'settings', {
             method: 'GET',
             headers: {'Authorization': 'bearer ' + token}
         })
@@ -121,7 +129,7 @@ function getSettingsFailure(response){
 //updates user settings
 export function userSettingsUpdate(userSettings){
   return function(dispatch){
-    return fetch('http://www.josephpboyle.com/api/swingessentials.php/settings', {
+    return fetch(BASEURL + 'settings', {
         method: 'PUT',
         headers: {
           'Authorization': 'bearer ' + userSettings.bearerToken,
@@ -170,7 +178,7 @@ function putSettingsFailure(response){
 //requests available user lessons
 export function requestLessons(token){
     return function(dispatch){
-        return fetch('http://www.josephpboyle.com/api/myapi.php/lessons', {
+        return fetch(BASEURL + 'lessons', {
             method: 'GET',
             headers: {'Authorization': 'bearer ' + token}
         })
@@ -191,6 +199,7 @@ export function requestLessons(token){
 
 function getLessonsSuccess(response){
   console.log('get lessons success')
+  // console.log(response)
     return{
         type: GET_LESSONS_SUCCESS,
         data: response
@@ -223,7 +232,7 @@ function setRequestIdSuccess(response){
 //requests available packages for purchase
 export function requestPackages(){
     return function(dispatch){
-        return fetch('http://www.josephpboyle.com/api/myapi.php/packages', {
+        return fetch(BASEURL + 'packages', {
             method: 'GET'
         })
         .then((response) => {
@@ -252,7 +261,7 @@ function getPackagesSuccess(response){
 
 function getPackagesFailure(response){
   console.log('get packages failure')
-  console.log(response)
+  // console.log(response)
   return{
       type: GET_PACKAGES_FAILURE,
       response: response.status
@@ -280,7 +289,7 @@ export function requestDiscount(discountCode){
         const data = new FormData();
         data.append('discount', discountCode.discount);
 
-        return fetch('http://www.josephpboyle.com/api/swingessentials.php/coupon/' + discountCode.discount, {
+        return fetch(BASEURL + 'checkCoupon?code=' + discountCode.discount, {
             method: 'GET',
         })
         .then((response) => {
@@ -314,6 +323,33 @@ function discountFailure(response){
     }
 }
 
+export function setSwingFlagSuccess(response){
+  console.log('set swing flag success')
+  // console.log(response)
+    return{
+        type: SET_SWING_FLAG_SUCCESS,
+        data: response
+    }
+}
+
+export function setFoUriSuccess(response){
+  console.log('set fo uri success')
+  // console.log(response)
+    return{
+        type: SET_FO_URI_SUCCESS,
+        data: response
+    }
+}
+
+export function setDtlUriSuccess(response){
+  console.log('set dtl uri success')
+  // console.log(response)
+    return{
+        type: SET_DTL_URI_SUCCESS,
+        data: response
+    }
+}
+
 //updates price details after coupon is used
 export function updatePrice(response){
     return function(dispatch){
@@ -332,7 +368,7 @@ function updatePriceSuccess(response){
 //updates the viewed status of availalbe lessons
 export function updateViewedStatus(viewedStatus){
   return function(dispatch){
-    return fetch('http://www.josephpboyle.com/api/myapi.php/viewed', {
+    return fetch(BASEURL + 'viewed', {
         method: 'PUT',
         headers: {
           'Authorization': 'bearer ' + viewedStatus.bearerToken,
@@ -373,10 +409,10 @@ function updateViewedStatusFailure(response){
     }
 }
 
-//submits an order
+//submits an order...UPDATE TO HANDLE BRAINTREE TRANSACTIONS
 export function submitOrder(data){
   return function(dispatch){
-    return fetch('http://www.josephpboyle.com/api/myapi.php/purchase/' + data.shortcode, {
+    return fetch(BASEURL + 'executemobilepayment/' + data.shortcode, {
         method: 'POST',
         headers: {
           'Authorization': 'bearer ' + data.bearerToken,
@@ -415,7 +451,7 @@ function submitOrderFailure(response){
 //obtains the available credits for a user
 export function requestCredits(token){
     return function(dispatch){
-        return fetch('http://www.josephpboyle.com/api/myapi.php/credits', {
+        return fetch(BASEURL + 'credits', {
             method: 'GET',
             headers: {'Authorization': 'Bearer ' + token}
         })
@@ -465,10 +501,7 @@ export function redeemLessons(token){
         uri: token.dtl,
         type: 'video/mov'});
 
-      console.log('data')
-      console.log(data)
-
-        return fetch('http://www.josephpboyle.com/api/swingessentials2.php/redeem', {
+        return fetch(BASEURL + 'redeem', {
           method: 'POST',
           headers: {'Content-Type': 'multipart/form-data',
                     'Authorization': 'Bearer ' + token.bearerToken},
@@ -477,8 +510,9 @@ export function redeemLessons(token){
         .then((response) => {
             switch(response.status) {
                 case 200:
-                    response.json()
-                    .then((json) => dispatch(redeemLessonsSuccess(json)));
+                    // response.json()
+                    dispatch(redeemLessonsSuccess());
+                    dispatch(requestCredits(token.bearerToken));
                     break;
                 default:
                     dispatch(redeemLessonsFailure(response));
@@ -510,7 +544,7 @@ function redeemLessonsFailure(response){
 //sends a request to trigger an email to be sent to the user to reset their password
 export function resetPassword(userEmail){
   return function(dispatch){
-    return fetch('http://www.josephpboyle.com/api/myapi.php/reset', {
+    return fetch(BASEURL + 'reset', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -553,7 +587,7 @@ function resetPasswordFailure(response){
 
 export function createAccount(accountData){
   return function(dispatch){
-    return fetch('http://www.josephpboyle.com/api/myapi.php/user', {
+    return fetch(BASEURL + 'user', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

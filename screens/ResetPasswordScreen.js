@@ -43,12 +43,13 @@ class ResetPasswordScreen extends React.Component{
         })
     }
 
-  //   _PayPal(){
-  //   console.log('PayPal log')
-  //   // var PayPal = NativeModules.PayPal;
-  //   NativeModules.PayPal.buyAction()//('sandbox_2pqkx4x6_g7sz9ynwdm65gwxj'); //{Sandbox: this.state.Sandbox}
-  //   }
-  //
+    _PayPal(){
+    console.log('PayPal log')
+    // var PayPal = NativeModules.PayPal;
+    NativeModules.PayPal.buyAction()//('sandbox_2pqkx4x6_g7sz9ynwdm65gwxj'); //{Sandbox: this.state.Sandbox}
+    // NativeModules.ChangeViewBridge.changeToNativeView()
+    }
+
   //   render() {
   //     return <MapView />;
   //   }
@@ -65,9 +66,10 @@ class ResetPasswordScreen extends React.Component{
               />
               <Button
                   raised
-                  title="Password Reset"
+                  title="PASSWORD RESET"
+                  buttonStyle={styles.button}
                   disabled={!this.state.userEmail || this.state.resetPassword == true}
-                  onPress={this._resetPassword.bind(this)}//{this._PayPal.bind(this)}
+                  onPress={this._PayPal.bind(this)}//{this._resetPassword.bind(this)}//
               />
               {this.state.resetPassword == true && <FormValidationMessage>Please check your email to reset your password</FormValidationMessage>}
           </View>
@@ -78,6 +80,10 @@ class ResetPasswordScreen extends React.Component{
 const styles = StyleSheet.create({
   container: {
     paddingTop: 30,
+  },
+  button: {
+    backgroundColor: '#231f61',
+    opacity:.8
   },
 });
 
