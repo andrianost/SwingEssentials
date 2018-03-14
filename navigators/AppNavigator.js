@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {addNavigationHelpers, StackNavigator, DrawerNavigator, DrawerItems} from 'react-navigation';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import { Button } from 'react-native-elements'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
+import * as Actions from '../actions/actions.js';
 import Routes from '../config/navigationRoutes.js';
 import HomeScreen from '../screens/HomeScreen.js';
 import YourLessonsScreen from '../screens/YourLessonsScreen.js';
@@ -22,9 +23,9 @@ import OrderDetailsScreen from '../screens/OrderDetailsScreen.js';
 import ResetPasswordScreen from '../screens/ResetPasswordScreen.js';
 import CreateAccountScreen from '../screens/CreateAccountScreen.js';
 import CameraScreen from '../screens/CameraScreen.js';
-// import CameraScreen from '../screens/CameraScreen2.js';
-
+import LogoutScreen from '../screens/LogoutScreen.js';
 import CustomDrawer from '../screens/CustomDrawer.js';
+
 
 function mapStateToProps(state){
     return {
@@ -53,8 +54,7 @@ export const AppNavigator = DrawerNavigator(
             navigationOptions: ({ navigation }) => ({
                 title: 'Password Reset',
                 drawerLabel: () => null,
-                // headerStyle: {backgroundColor: '#d3d3d3'},
-                headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('Login')}/>
+                headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBeforeGrey} onPress={ () => navigation.navigate('Login')}/>
             })
           }
         })
@@ -66,8 +66,7 @@ export const AppNavigator = DrawerNavigator(
             navigationOptions: ({ navigation }) => ({
                 title: 'Create Account',
                 drawerLabel: () => null,
-                // headerStyle: {backgroundColor: '#d3d3d3'},
-                headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: '#231f61', opacity:.8 }} onPress={ () => navigation.navigate('Login')}/>
+                headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBeforeGrey} onPress={ () => navigation.navigate('Login')}/>
             })
           }
         })
@@ -80,22 +79,25 @@ export const AppNavigator = DrawerNavigator(
                       title: (
                         <Image source={require('./img/SELogo-12.png')} />
                       ),
-                      headerStyle: {backgroundColor: '#231f61'},
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerStyle: styles.header,
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>,
+                      // headerRight: <MaterialIcons name="clear" size={30} style={{paddingRight: 10, color: 'white'}} onPress={ () => this.props.logout())}/>
+                      //<Text style={{color: 'white', paddingRight: 10, fontWeight: 'bold'}}>Logout</Text>
                     })
               }
             }),
             navigationOptions:{
               drawerLabel: <Text style={{color:"#231f61",
-              opacity:.8,
-              fontSize: 18,
-              paddingLeft:20,
-              paddingTop:10,
-              paddingBottom:10,
-              fontWeight: 'bold',
-              borderBottomColor: '#c1c1c1',}}>Home</Text>
-
-                // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#231f61' }}/>
+                            opacity:.8,
+                            fontSize: 18,
+                            paddingLeft:20,
+                            paddingTop:10,
+                            paddingBottom:10,
+                            paddingRight: 239,
+                            backgroundColor: 'white',
+                            fontWeight: 'bold',
+                            borderWidth: .5,
+                            borderColor: '#c1c1c1'}}>Home</Text>,
             }
           },
       // Each page that has several pages that you can step through is rendered as a StackNavigator
@@ -108,10 +110,9 @@ export const AppNavigator = DrawerNavigator(
                 title: (
                   <Image source={require('./img/SELogo-12.png')} />
                 ),
-                headerStyle: {backgroundColor: '#231f61'},
+                headerStyle: styles.header,
                 drawerLabel: () => null,
-                // headerStyle: {backgroundColor: '#d3d3d3'},
-                headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('RedeemLessons')}/>
+                headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('RedeemLessons')}/>
             })
           }
         })
@@ -124,8 +125,8 @@ export const AppNavigator = DrawerNavigator(
                       title: (
                         <Image source={require('./img/SELogo-12.png')} />
                       ),
-                      headerStyle: {backgroundColor: '#231f61'},
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerStyle: styles.header,
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
               IndividualLessonsScreen: {
@@ -134,8 +135,8 @@ export const AppNavigator = DrawerNavigator(
                       title: (
                         <Image source={require('./img/SELogo-12.png')} />
                       ),
-                      headerStyle: {backgroundColor: '#231f61'},
-                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('YourLessons')}/>
+                      headerStyle: styles.header,
+                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('YourLessons')}/>
                   })
               }
           },{
@@ -149,9 +150,11 @@ export const AppNavigator = DrawerNavigator(
               paddingLeft:20,
               paddingTop:10,
               paddingBottom:10,
+              paddingRight: 177,
+              backgroundColor: 'white',
               fontWeight: 'bold',
-              borderBottomColor: '#c1c1c1',}}>Your Lessons</Text>//'Your Lessons',
-              // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
+              borderWidth: .5,
+              borderColor: '#c1c1c1',}}>Your Lessons</Text>
           }
       },
       RedeemLessons: {
@@ -162,8 +165,8 @@ export const AppNavigator = DrawerNavigator(
                       title: (
                         <Image source={require('./img/SELogo-12.png')} />
                       ),
-                      headerStyle: {backgroundColor: '#231f61'},
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerStyle: styles.header,
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
           },{
@@ -177,9 +180,11 @@ export const AppNavigator = DrawerNavigator(
               paddingLeft:20,
               paddingTop:10,
               paddingBottom:10,
+              paddingRight: 147,
+              backgroundColor: 'white',
               fontWeight: 'bold',
-              borderBottomColor: '#c1c1c1',}}>Redeem Lessons</Text>
-              // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
+              borderWidth: .5,
+              borderColor: '#c1c1c1',}}>Redeem Lessons</Text>
           }
       },
       OrderLessons: {
@@ -190,8 +195,8 @@ export const AppNavigator = DrawerNavigator(
                       title: (
                         <Image source={require('./img/SELogo-12.png')} />
                       ),
-                      headerStyle: {backgroundColor: '#231f61'},
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerStyle: styles.header,
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>
                   })
               },
               OrderDetailsScreen: {
@@ -200,8 +205,8 @@ export const AppNavigator = DrawerNavigator(
                       title: (
                         <Image source={require('./img/SELogo-12.png')} />
                       ),
-                      headerStyle: {backgroundColor: '#231f61'},
-                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('OrderLessons')}/>
+                      headerStyle: styles.header,
+                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('OrderLessons')}/>
                   })
               }
           }),
@@ -212,9 +217,11 @@ export const AppNavigator = DrawerNavigator(
               paddingLeft:20,
               paddingTop:10,
               paddingBottom:10,
+              paddingRight: 167,
+              backgroundColor: 'white',
               fontWeight: 'bold',
-              borderBottomColor: '#c1c1c1',}}>Order Lessons</Text>
-              // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
+              borderWidth: .5,
+              borderColor: '#c1c1c1',}}>Order Lessons</Text>
           }
       },
       // Solo screens don't get a header by default. We can add them in the Component definition (as I did here), or use the headerMode prop on the top-level Stack Navigator
@@ -226,8 +233,8 @@ export const AppNavigator = DrawerNavigator(
                   title: (
                     <Image source={require('./img/SELogo-12.png')} />
                   ),
-                  headerStyle: {backgroundColor: '#231f61'},
-                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                  headerStyle: styles.header,
+                  headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
             }
           }),
@@ -238,9 +245,11 @@ export const AppNavigator = DrawerNavigator(
               paddingLeft:20,
               paddingTop:10,
               paddingBottom:10,
+              paddingRight: 250,
+              backgroundColor: 'white',
               fontWeight: 'bold',
-              borderBottomColor: '#c1c1c1',}}>Help</Text>
-              // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
+              borderWidth: .5,
+              borderColor: '#c1c1c1',}}>Help</Text>
           }
       },
       About: {
@@ -251,8 +260,8 @@ export const AppNavigator = DrawerNavigator(
                   title: (
                     <Image source={require('./img/SELogo-12.png')} />
                   ),
-                  headerStyle: {backgroundColor: '#231f61'},
-                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                  headerStyle: styles.header,
+                  headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
             }
           }),
@@ -263,68 +272,79 @@ export const AppNavigator = DrawerNavigator(
               paddingLeft:20,
               paddingTop:10,
               paddingBottom:10,
+              paddingRight: 238,
+              backgroundColor: 'white',
               fontWeight: 'bold',
-              borderBottomColor: '#c1c1c1',}}>About</Text>
-              // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
+              borderWidth: .5,
+              borderColor: '#c1c1c1',}}>About</Text>,
           }
       },
-      Settings: {
-          screen: StackNavigator({
-            SettingsScreen: {
-              screen: SettingsScreen,
-              navigationOptions:({ navigation }) => ({
-                  title: (
-                    <Image source={require('./img/SELogo-12.png')} />
-                  ),
-                  headerStyle: {backgroundColor: '#231f61'},
-                  headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
-              })
-            },
-            UserData: {
-                screen: UserData,
-                navigationOptions: ({ navigation }) => ({
-                    title: (
-                      <Image source={require('./img/SELogo-12.png')} />
-                    ),
-                    headerStyle: {backgroundColor: '#231f61'},
-                    headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('SettingsScreen')}/>
-                })
-            },
-            CameraData: {
-                screen: CameraData,
-                navigationOptions: ({ navigation }) => ({
-                    title: (
-                      <Image source={require('./img/SELogo-12.png')} />
-                    ),
-                    headerStyle: {backgroundColor: '#231f61'},
-                    headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('SettingsScreen')}/>
-                })
-            },
-          }),
+      // Settings: {
+      //     screen: StackNavigator({
+      //       SettingsScreen: {
+      //         screen: SettingsScreen,
+      //         navigationOptions:({ navigation }) => ({
+      //             title: (
+      //               <Image source={require('./img/SELogo-12.png')} />
+      //             ),
+      //             headerStyle: {backgroundColor: '#231f61'},
+      //             headerLeft: <MaterialIcons name="dehaze" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('DrawerOpen')}/>
+      //         })
+      //       },
+      //       UserData: {
+      //           screen: UserData,
+      //           navigationOptions: ({ navigation }) => ({
+      //               title: (
+      //                 <Image source={require('./img/SELogo-12.png')} />
+      //               ),
+      //               headerStyle: {backgroundColor: '#231f61'},
+      //               headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('SettingsScreen')}/>
+      //           })
+      //       },
+      //       CameraData: {
+      //           screen: CameraData,
+      //           navigationOptions: ({ navigation }) => ({
+      //               title: (
+      //                 <Image source={require('./img/SELogo-12.png')} />
+      //               ),
+      //               headerStyle: {backgroundColor: '#231f61'},
+      //               headerLeft: <MaterialIcons name="navigate-before" size={30} style={{ color: 'white' }} onPress={ () => navigation.navigate('SettingsScreen')}/>
+      //           })
+      //       },
+      //     }),
+      //     navigationOptions: {
+      //         drawerLabel: <Text style={{color:"#231f61",
+      //         opacity:.8,
+      //         fontSize: 18,
+      //         paddingLeft:20,
+      //         paddingTop:10,
+      //         paddingBottom:10,
+      //         fontWeight: 'bold',
+      //         borderWidth: .5,
+      //         borderColor: '#c1c1c1',}}>Settings</Text>
+      //         // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
+      //     }
+      // },
+      Logout: {
+          screen: LogoutScreen,
           navigationOptions: {
-              drawerLabel: <Text style={{color:"#231f61",
+              drawerLabel:  <Text style={{color:"#231f61",
               opacity:.8,
               fontSize: 18,
               paddingLeft:20,
               paddingTop:10,
               paddingBottom:10,
+              paddingRight: 231,
+              backgroundColor: 'white',
               fontWeight: 'bold',
-              borderBottomColor: '#c1c1c1',}}>Settings</Text>
-              // drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
+              borderWidth: .5,
+              borderColor: '#c1c1c1',}}>Logout</Text>,
           }
-      },
-      // Logout: {
-      //     screen: Logout,
-      //     path: '/logout',
-      //     navigationOptions: {
-      //         drawerLabel: 'Sign Out',
-      //         drawerIcon: <MaterialIcons name="move-to-inbox" size={24} style={{ color: '#e91e63' }}/>
-      //     }
-      // }
+      }
   },
   {
-      initialRouteName: 'Login', //change back to login
-      drawerBackgroundColor: '#f0f0f0',
+      initialRouteName: 'Login',
+      drawerBackgroundColor: '#dedfe0',//'#f0f0f0',
       contentOptions:{activeTintColor: '#231f61', opacity:.8},
       contentComponent: CustomDrawer
   },
@@ -345,6 +365,25 @@ class AppWithNavigationState extends React.Component {
 
 const mapStateToProps = state => ({
     nav: state.nav
+});
+
+const styles = StyleSheet.create({
+  dehaze: {
+    color: 'white',
+    paddingLeft: 10
+  },
+  navigateBeforeGrey: {
+    color: '#231f61',
+    opacity:.8
+  },
+  navigateBefore: {
+    color: 'white',
+  },
+  header: {
+    backgroundColor: '#231f61',
+    paddingTop: 20,
+    paddingBottom: 30,
+  }
 });
 
 export default connect(mapStateToProps)(AppWithNavigationState);

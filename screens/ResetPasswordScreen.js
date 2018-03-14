@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 import MapView from './MapView.js';
 
-
 import { NativeModules } from 'react-native';
 
 import { StyleSheet, View, TouchableHighlight, Image } from 'react-native';
@@ -45,7 +44,6 @@ class ResetPasswordScreen extends React.Component{
 
     _PayPal(){
     console.log('PayPal log')
-    // var PayPal = NativeModules.PayPal;
     NativeModules.PayPal.buyAction()//('sandbox_2pqkx4x6_g7sz9ynwdm65gwxj'); //{Sandbox: this.state.Sandbox}
     // NativeModules.ChangeViewBridge.changeToNativeView()
     }
@@ -57,6 +55,7 @@ class ResetPasswordScreen extends React.Component{
 
     render(){
       return(
+        <View>
           <View style={styles.container}>
               <FormLabel>Email Address</FormLabel>
               <FormInput
@@ -64,15 +63,17 @@ class ResetPasswordScreen extends React.Component{
                   placeholder="Please enter your email address"
                   onChangeText={(newText) => this.setState({userEmail: newText})}
               />
-              <Button
-                  raised
-                  title="PASSWORD RESET"
-                  buttonStyle={styles.button}
-                  disabled={!this.state.userEmail || this.state.resetPassword == true}
-                  onPress={this._PayPal.bind(this)}//{this._resetPassword.bind(this)}//
-              />
-              {this.state.resetPassword == true && <FormValidationMessage>Please check your email to reset your password</FormValidationMessage>}
           </View>
+          <View style={styles.buttonContainer}>
+            <Button
+                title="PASSWORD RESET"
+                buttonStyle={styles.button}
+                disabled={!this.state.userEmail || this.state.resetPassword == true}
+                onPress={this._resetPassword.bind(this)}//{this._PayPal.bind(this)}//
+            />
+            {this.state.resetPassword == true && <FormValidationMessage>Please check your email to reset your password</FormValidationMessage>}
+          </View>
+        </View>
         )
   }
 };
@@ -85,6 +86,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#231f61',
     opacity:.8
   },
+  buttonContainer: {
+    paddingTop: 20,
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResetPasswordScreen);

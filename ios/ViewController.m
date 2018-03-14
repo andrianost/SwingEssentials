@@ -118,7 +118,7 @@ RCT_EXPORT_METHOD(buyAction)
   
   //  need to send Joe the token, amount, package short code, coupon code and the payment method nonce
   request.HTTPBody = [[NSString stringWithFormat:@"amount=%ld&payment_method_nonce=%@", (long)price,paymentMethodNonce] dataUsingEncoding:NSUTF8StringEncoding];
-  request.HTTPMethod = @"POST";
+  request.HTTPMethod = @"PUT";
   
   [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
     

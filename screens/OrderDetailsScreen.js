@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux';
 import {NavigationActions} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
+import { NativeModules } from 'react-native';
 
 import { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
@@ -72,9 +73,15 @@ class OrderDetailsScreen extends Component {
     })
   }
 
+  _PayPal(){
+  console.log('PayPal log')
+  NativeModules.PayPal.buyAction()//('sandbox_2pqkx4x6_g7sz9ynwdm65gwxj'); //{Sandbox: this.state.Sandbox}
+  // NativeModules.ChangeViewBridge.changeToNativeView()
+  }
+
   render() {
     return (
-      <View>
+      <View style={styles.topContainer}>
         <View style={styles.header}>
           <Text style={styles.headerText}>Discount Code</Text>
         </View>
@@ -84,9 +91,8 @@ class OrderDetailsScreen extends Component {
             onChangeText={(newText) => this.setState({discount: newText})}
         />
         {this.props.type == 'invalid' && <FormValidationMessage>Invalid discount code</FormValidationMessage>}
-        <View>
+        <View style={styles.buttonContainer}>
           <Button
-              raised
               title="APPLY CODE"
               buttonStyle={styles.button}
               disabled={!this.state.discount || this.state.coupon == true}
@@ -97,14 +103,14 @@ class OrderDetailsScreen extends Component {
           <Text style={styles.headerText}>Order Details:  {this.props.name}</Text>
         </View>
         <View style={styles.container}>
-          <Text style={styles.containerText}>Sub-total:                                                        ${parseFloat(this.state.price).toFixed(2)}</Text>
+          <Text style={styles.containerText}>Sub-total: ${parseFloat(this.state.price).toFixed(2)}</Text>
         </View>
         {this.state.coupon == true && <View style={styles.container}><Text style={styles.savingsText}>Savings: -${parseFloat(this.state.savings).toFixed(2)}</Text></View>}
         <View style={styles.container}>
-          <Text style={styles.containerText}>Tax:                                                                     $0.00</Text>
+          <Text style={styles.containerText}>Tax: $0.00</Text>
         </View>
         <View style={styles.container}>
-          <Text style={styles.containerText}>Total:                                                                ${parseFloat(this.props.price).toFixed(2)}</Text>
+          <Text style={styles.containerText}>Total: ${parseFloat(this.props.price).toFixed(2)}</Text>
         </View>
         <View style={styles.buttonContainer}>
           <Button
@@ -112,7 +118,7 @@ class OrderDetailsScreen extends Component {
               buttonStyle={styles.button}
               title="SUBMIT ORDER"
               disabled={this.state.orderComplete == true}
-              onPress={this._submitOrder.bind(this)}
+              onPress={this._PayPal.bind(this)}//{this._submitOrder.bind(this)}
           />
           {this.state.orderComplete == true && <FormValidationMessage>Your order has been completed!</FormValidationMessage>}
         </View>
@@ -122,6 +128,11 @@ class OrderDetailsScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  topContainer: {
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10
+  },
   container: {
     alignItems: 'flex-start',
     paddingTop: 20,
@@ -130,15 +141,20 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     borderWidth: 0.5,
     borderColor: '#d6d7da',
+    flex: 1,
+    justifyContent: 'center',
   },
   header: {
     paddingTop: 20,
     paddingBottom: 20,
     backgroundColor: '#231f61',
-    opacity:.8
+    opacity:.8,
+    // height: 40,
+    justifyContent: 'center'
   },
   containerText: {
     fontWeight: 'bold',
+    color: '#231f61',
   },
   headerText: {
     paddingLeft: 18,
@@ -151,7 +167,8 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   buttonContainer: {
-    paddingBottom: 20,
+    paddingTop: 10,
+    paddingBottom: 10,
   },
   button: {
     backgroundColor: '#231f61',

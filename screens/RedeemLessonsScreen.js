@@ -57,7 +57,7 @@ class RedeemLessonsScreen extends Component {
 
 render() {
     return (
-      <View>
+      <View style={styles.topContainer}>
         <View style={styles.header}>
           <Text style={styles.headerText}>Record your swing</Text>
         </View>
@@ -92,6 +92,11 @@ render() {
 }
 
 const styles = StyleSheet.create({
+  topContainer: {
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10
+  },
   header: {
     paddingTop: 20,
     paddingBottom: 20,

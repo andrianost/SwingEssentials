@@ -18,7 +18,7 @@ function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }
 
-class HelpScreen extends Component {
+class LogoutScreen extends Component {
   constructor(props){
       super(props);
       this.state = {
@@ -26,10 +26,11 @@ class HelpScreen extends Component {
       }
   }
 
-  // componentWillMount(){
-  //   console.log('component will mount')
-  //   this.props.logout({bearerToken: this.state.bearerToken});
-  // }
+  componentWillMount(){
+    console.log('component will mount')
+    this.props.navigation.navigate('Login')
+    this.props.logout({bearerToken: this.state.bearerToken});
+  }
 
   // componentDidMount(){
   //   console.log('component did mount')
@@ -39,7 +40,7 @@ class HelpScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Help screen!</Text>
+        <Text>You have successfully logged out!</Text>
       </View>
     );
   }
@@ -52,4 +53,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(HelpScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(LogoutScreen);

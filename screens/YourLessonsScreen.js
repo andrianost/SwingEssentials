@@ -89,7 +89,7 @@ class YourLessonsScreen extends Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.topContainer}>
         <FlatList
           data={this.props.pending}
           keyExtractor={item => item.request_id}
@@ -108,6 +108,11 @@ class YourLessonsScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  topContainer: {
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10
+  },
   container: {
     paddingTop: 20,
     paddingBottom: 20,

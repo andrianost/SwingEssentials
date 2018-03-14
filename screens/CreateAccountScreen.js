@@ -52,6 +52,7 @@ class CreateAccountScreen extends React.Component{
 
     render(){
         return(
+          <View>
             <View style={styles.container}>
                 <FormLabel>First Name</FormLabel>
                 <FormInput
@@ -90,18 +91,20 @@ class CreateAccountScreen extends React.Component{
                     placeholder="Please enter your password"
                     onChangeText={(newText) => this.setState({password: newText})}
                 />
-                <Button
-                    raised
-                    buttonStyle={styles.button}
-                    title="CREATE ACCOUNT"
-                    disabled={!this.state.firstName || !this.state.lastName ||
-                              !this.state.email || !this.state.username ||
-                              !this.state.password || this.state.createAccount == true}
-                    onPress={this._createAccount.bind(this)}
-                />
-                {this.state.createAccount == true && <FormValidationMessage>Your account has been created!</FormValidationMessage>}
-                {this.state.createAccountFailure == true && <FormValidationMessage>Username and/or email is unavailable</FormValidationMessage>}
             </View>
+            <View style={styles.buttonContainer}>
+              <Button
+                  buttonStyle={styles.button}
+                  title="CREATE ACCOUNT"
+                  disabled={!this.state.firstName || !this.state.lastName ||
+                            !this.state.email || !this.state.username ||
+                            !this.state.password || this.state.createAccount == true}
+                  onPress={this._createAccount.bind(this)}
+              />
+              {this.state.createAccount == true && <FormValidationMessage>Your account has been created!</FormValidationMessage>}
+              {this.state.createAccountFailure == true && <FormValidationMessage>Username and/or email is unavailable</FormValidationMessage>}
+            </View>
+          </View>
           )
     }
 };
@@ -113,7 +116,11 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "#231f61",
     opacity: .8
+  },
+  buttonContainer: {
+    paddingTop: 20,
   }
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateAccountScreen);

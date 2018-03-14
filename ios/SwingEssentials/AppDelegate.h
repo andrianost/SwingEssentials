@@ -13,8 +13,6 @@
 
 @property (nonatomic, strong) UIWindow *window;
 @property (nonatomic, strong) UIViewController *rootViewController;
-//@property (nonatomic, strong) UIViewController *navigationController;
-
 
 @end
 

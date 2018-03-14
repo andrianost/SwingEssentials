@@ -32,7 +32,7 @@ class CameraScreen extends Component {
 
   _startRecord = async function() {
     if (this.camera) {
-      const options = { maxDuration: 3 };
+      const options = { maxFileSize: 9961472, quality: RNCamera.Constants.VideoQuality['480p'] }; //maxDuration: 10,
       const data = await this.camera.recordAsync(options)
 
       if (this.props.fo_flag == true){
@@ -45,7 +45,6 @@ class CameraScreen extends Component {
         this.setState({dtl: data.uri}, function() {
           this.props.setDtlUriSuccess({dtl: this.state.dtl})
         })
-
       }
     }
   };
@@ -63,7 +62,7 @@ class CameraScreen extends Component {
             }}
             style = {styles.preview}
             type={RNCamera.Constants.Type.back}
-            flashMode={RNCamera.Constants.FlashMode.on}
+            // flashMode={RNCamera.Constants.FlashMode.on}
             permissionDialogTitle={'Permission to use camera'}
             permissionDialogMessage={'We need your permission to use your camera phone'}
         />

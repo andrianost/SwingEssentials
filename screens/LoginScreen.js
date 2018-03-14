@@ -58,9 +58,9 @@ class LoginScreen extends React.Component{
 
     render(){
         return(
-            <View>
+            <View style={styles.topContainer}>
+              <Image source={require('./img/SE-Logo-circle.png')} />
               <View style={styles.container}>
-                  <Image source={require('./img/SE-Logo-circle.png')} />
                   <FormLabel>Username</FormLabel>
                   <FormInput
                       value={this.state.username}
@@ -75,13 +75,15 @@ class LoginScreen extends React.Component{
                       onChangeText={(newText) => this.setState({password: newText})}
                   />
                   {this.props.loginFails > 0 && <FormValidationMessage>The username/password you entered was not correct.</FormValidationMessage>}
-                  <Button
-                      raised
-                      buttonStyle={styles.button}
-                      title="SIGN IN"
-                      disabled={!this.state.username || !this.state.password}
-                      onPress={this._onLogin.bind(this)}
-                  />
+
+              </View>
+              <View>
+                <Button
+                    buttonStyle={styles.button}
+                    title="SIGN IN"
+                    disabled={!this.state.username || !this.state.password}
+                    onPress={this._onLogin.bind(this)}
+                />
               </View>
               <View>
                 <Button
@@ -105,8 +107,14 @@ class LoginScreen extends React.Component{
 };
 
 const styles = StyleSheet.create({
+  topContainer: {
+    paddingTop: 75,
+    paddingLeft: 10,
+    paddingRight: 10,
+  },
   container: {
-    paddingTop: 30,
+    paddingTop: 20,
+    paddingBottom: 10,
   },
   button: {
     backgroundColor: "#231f61",

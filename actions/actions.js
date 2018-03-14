@@ -1,6 +1,5 @@
 import {store} from '../store/store.js';
 import {btoa} from '../utils/base64.js';
-import RNFetchBlob from 'react-native-fetch-blob';
 
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_ERROR = 'LOGIN_ERROR';
@@ -37,6 +36,10 @@ export const SET_SWING_FLAG_SUCCESS = 'SET_SWING_FLAG_SUCCESS';
 export const SET_FO_URI_SUCCESS = 'SET_FO_URI_SUCCESS';
 //ADD FAILURE case
 export const SET_DTL_URI_SUCCESS = 'SET_DTL_URI_SUCCESS';
+//ADD FAILURE case
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+export const LOGOUT_FAILURE = 'LOGOUT_FAILURE';
+
 
 export const BASEURL = 'https://www.josephpboyle.com/api/swingessentials2.php/'
 
@@ -325,7 +328,7 @@ function discountFailure(response){
 
 export function setSwingFlagSuccess(response){
   console.log('set swing flag success')
-  // console.log(response)
+  console.log(response)
     return{
         type: SET_SWING_FLAG_SUCCESS,
         data: response
@@ -334,7 +337,7 @@ export function setSwingFlagSuccess(response){
 
 export function setFoUriSuccess(response){
   console.log('set fo uri success')
-  // console.log(response)
+  console.log(response)
     return{
         type: SET_FO_URI_SUCCESS,
         data: response
@@ -343,7 +346,7 @@ export function setFoUriSuccess(response){
 
 export function setDtlUriSuccess(response){
   console.log('set dtl uri success')
-  // console.log(response)
+  console.log(response)
     return{
         type: SET_DTL_URI_SUCCESS,
         data: response
@@ -501,6 +504,9 @@ export function redeemLessons(token){
         uri: token.dtl,
         type: 'video/mov'});
 
+        console.log('data')
+        console.log(data)
+
         return fetch(BASEURL + 'redeem', {
           method: 'POST',
           headers: {'Content-Type': 'multipart/form-data',
@@ -510,7 +516,6 @@ export function redeemLessons(token){
         .then((response) => {
             switch(response.status) {
                 case 200:
-                    // response.json()
                     dispatch(redeemLessonsSuccess());
                     dispatch(requestCredits(token.bearerToken));
                     break;
@@ -525,7 +530,7 @@ export function redeemLessons(token){
 
 function redeemLessonsSuccess(response){
   console.log('redeem lessons success')
-  // console.log(response)
+  console.log(response)
     return{
         type: REDEEM_LESSONS_SUCCESS,
         data: response
@@ -629,6 +634,44 @@ function createAccountFailure(response){
     console.log(response)
     return{
         type: CREATE_ACCOUNT_FAILURE,
+        response: response.status
+    }
+}
+
+export function logout(token){
+    console.log('logout function')
+    return function(dispatch){
+        return fetch(BASEURL + 'logout', {
+            method: 'GET',
+            headers: {'Authorization': 'Bearer ' + token.bearerToken}
+        })
+        .then((response) => {
+            switch(response.status) {
+                case 200:
+                    dispatch(logoutSuccess(response));
+                    break;
+                default:
+                    dispatch(logoutFailure(response));
+                    break;
+            }
+        })
+        .catch((error) => console.error(error));
+    }
+}
+
+function logoutSuccess(response){
+  console.log('logout success')
+  console.log(response)
+    return{
+        type: LOGOUT_SUCCESS,
+        data: response
+    }
+}
+
+function logoutFailure(response){
+  console.log('logout failure')
+    return{
+        type: LOGOUT_FAILURE,
         response: response.status
     }
 }

@@ -115,7 +115,7 @@ class HomeScreen extends Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.topContainer}>
         <FlatList
           data={this.props.closed.slice(0,2)}
           keyExtractor={item => item.request_id}
@@ -130,6 +130,7 @@ class HomeScreen extends Component {
         />
         <View style={styles.buttonContainer}>
           <Button
+            raised
             title="ORDER LESSONS"
             buttonStyle={styles.button}
             onPress={() => this.props.navigation.navigate('OrderLessons')}
@@ -146,11 +147,16 @@ class HomeScreen extends Component {
 
 
 const styles = StyleSheet.create({
+  topContainer: {
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10
+  },
   container: {
     paddingTop: 20,
     paddingBottom: 20,
     backgroundColor: '#231f61',
-    opacity:.8
+    opacity:.8,
   },
   text: {
     paddingLeft: 19,

@@ -49,7 +49,7 @@ class IndividualLessonsScreen extends Component {
     console.log("response video")
     console.log(this.props.response_video)
     return (
-      <View>
+      <View style={styles.topContainer}>
         <View style={styles.header}>
           <Text style={styles.text}>{this.props.request_date}</Text>
         </View>
@@ -68,11 +68,13 @@ class IndividualLessonsScreen extends Component {
             style={{ alignSelf: 'stretch', height: 300 }}
           />
         </View>
-        <View style={styles.header}>
-          <Text style={styles.text}>Comments</Text>
-        </View>
-        <View style={styles.container}>
-          <Text>{this.props.response_notes}</Text>
+        <View style={styles.commentsContainer}>
+          <View style={styles.header}>
+            <Text style={styles.text}>Comments</Text>
+          </View>
+          <View style={styles.container}>
+            <Text style={styles.responseText}>{this.props.response_notes}</Text>
+          </View>
         </View>
       </View>
     );
@@ -80,10 +82,16 @@ class IndividualLessonsScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  topContainer: {
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10
+  },
   container: {
-    alignItems: 'center',
-    paddingTop: 25,
+    paddingTop: 10,
     paddingBottom: 10,
+    paddingLeft: 10,
+    paddingRight: 10
   },
   border: {
     borderColor: 'black',
@@ -104,6 +112,13 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     backgroundColor: '#231f61',
     opacity:.8
+  },
+  responseText: {
+    color: '#231f61',
+    fontSize: 20,
+  },
+  commentsContainer: {
+    paddingTop: 10,
   },
 });
 

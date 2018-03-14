@@ -58,6 +58,7 @@ class OrderLessonsScreen extends Component {
         key={index}
         title={item.name}
         subtitle={item.description}
+        subtitleStyle={styles.subtitle}
         rightTitle={item.price}
         onPress={ () => this._orderLessons({name: item.name, description: item.description, price: item.price, shortcode: item.shortcode})}
       />
@@ -66,7 +67,7 @@ class OrderLessonsScreen extends Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.topContainer}>
         <FlatList
           data={this.props.packages.packages}
           keyExtractor={item => item.count}
@@ -79,6 +80,11 @@ class OrderLessonsScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  topContainer: {
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10
+  },
   container: {
     paddingTop: 20,
     paddingBottom: 20,
@@ -97,11 +103,17 @@ const styles = StyleSheet.create({
     borderBottomColor: '#c1c1c1',
   },
   listItemTitle: {
-    fontSize: 18
+    fontSize: 16,
+    color: '#231f61',
+    // opacity:.8
   },
   listItemRightTitle: {
     fontWeight: 'bold',
-    color: 'black'
+    color: '#231f61'
+  },
+  subtitle: {
+    color: '#231f61',
+    opacity:.8
   },
 });
 
