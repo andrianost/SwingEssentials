@@ -51,9 +51,12 @@ class OrderDetailsScreen extends Component {
       .then(() => {
         if (this.props.type == 'percent') {
             this.setState({savings: ((parseFloat(this.props.value).toFixed(2)/100) * (parseFloat(this.props.price).toFixed(2)))});
-            this.props.updatePrice({price: (parseFloat(this.props.price).toFixed(2) - ((parseFloat(this.props.value).toFixed(2)/100) * (parseFloat(this.props.price).toFixed(2))))});
+            this.setState({price: ((parseFloat(this.props.price).toFixed(2) - ((parseFloat(this.props.value).toFixed(2)/100) * (parseFloat(this.props.price).toFixed(2)))))});
+            this.setState({price: this.state.price.toFixed(2).toString()})
+            this.props.updatePrice({price: this.props.price});
             this.setState({coupon: true});
-            // console.log(typeof this.props.price)
+            console.log(typeof this.state.price)
+            console.log(this.state.price)
         } else if (this.props.type == 'amount') {
             this.setState({savings: parseFloat(this.props.value).toFixed(2)});
             this.props.updatePrice({price: (parseFloat(this.props.price).toFixed(2) - parseFloat(this.props.value).toFixed(2))});
@@ -75,7 +78,8 @@ class OrderDetailsScreen extends Component {
 
   _PayPal(){
   console.log('PayPal log')
-  NativeModules.PayPal.buyAction()//('sandbox_2pqkx4x6_g7sz9ynwdm65gwxj'); //{Sandbox: this.state.Sandbox}
+  NativeModules.PayPal.buyAction(this.state.bearerToken, this.state.price, this.state.name, this.state.description,
+                                this.state.shortcode, this.state.discount)//('sandbox_2pqkx4x6_g7sz9ynwdm65gwxj'); //{Sandbox: this.state.Sandbox}
   // NativeModules.ChangeViewBridge.changeToNativeView()
   }
 
@@ -110,7 +114,7 @@ class OrderDetailsScreen extends Component {
           <Text style={styles.containerText}>Tax: $0.00</Text>
         </View>
         <View style={styles.container}>
-          <Text style={styles.containerText}>Total: ${parseFloat(this.props.price).toFixed(2)}</Text>
+          <Text style={styles.containerText}>Total: ${parseFloat(this.state.price).toFixed(2)}</Text>
         </View>
         <View style={styles.buttonContainer}>
           <Button

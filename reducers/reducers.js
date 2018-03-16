@@ -33,6 +33,14 @@ const userReducer = (state=[], action) => {
 		case CREATE_ACCOUNT_FAILURE:
 			console.log('create account failure reducer')
 			return state;
+		case LOGOUT_SUCCESS:
+		console.log('logout success reducer')
+		return{...state,
+			username: '',
+			firstName: '',
+			lastName: '',
+			email: ''
+		}
 		default:
 			return state;
 	}
@@ -211,7 +219,9 @@ const loginReducer = (state=[], action) => {
 			return state;
 		case LOGOUT_SUCCESS:
 		console.log('logout success reducer')
-			return state;
+		return{...state,
+			token: null
+		}
 		case LOGOUT_FAILURE:
 		console.log('logout failure reducer')
 			return state;

@@ -28,8 +28,8 @@ class LogoutScreen extends Component {
 
   componentWillMount(){
     console.log('component will mount')
-    this.props.navigation.navigate('Login')
     this.props.logout({bearerToken: this.state.bearerToken});
+    this.props.navigation.navigate('Login')
   }
 
   // componentDidMount(){

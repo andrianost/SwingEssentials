@@ -1,5 +1,5 @@
 //
-//  PayPal.h
+//  ViewController.h
 //  SwingEssentials
 //
 //  Created by Andrianos, Theodore on 2/2/18.
@@ -16,9 +16,10 @@
 #import "BraintreeCore.h"
 #import "BraintreeDropIn.h"
 #import "BraintreeUI.h"
+#import "BTDropInViewController.h"
 
 
-@interface ViewController : UIViewController <RCTBridgeModule>  //RCTViewManager
+@interface ViewController : UIViewController <RCTBridgeModule, BTDropInViewControllerDelegate>  //RCTViewManager
 
 @property (nonatomic, strong) UIWindow *window;
 @property (nonatomic, strong) NSString *clientTokenOrTokenizationKey;
