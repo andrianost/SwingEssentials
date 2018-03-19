@@ -24,6 +24,7 @@ import ResetPasswordScreen from '../screens/ResetPasswordScreen.js';
 import CreateAccountScreen from '../screens/CreateAccountScreen.js';
 import CameraScreen from '../screens/CameraScreen.js';
 import LogoutScreen from '../screens/LogoutScreen.js';
+import PendingLessonsScreen from '../screens/PendingLessonsScreen.js';
 import CustomDrawer from '../screens/CustomDrawer.js';
 
 
@@ -88,12 +89,13 @@ export const AppNavigator = DrawerNavigator(
             }),
             navigationOptions:{
               drawerLabel: <Text style={{color:"#231f61",
+                            flexDirection: 'row',
+                            flex: 1,
                             opacity:.8,
                             fontSize: 18,
                             paddingLeft:20,
                             paddingTop:10,
                             paddingBottom:10,
-                            paddingRight: 239,
                             backgroundColor: 'white',
                             fontWeight: 'bold',
                             borderWidth: .5,
@@ -146,11 +148,12 @@ export const AppNavigator = DrawerNavigator(
           navigationOptions:{
               drawerLabel: <Text style={{color:"#231f61",
               opacity:.8,
+              flexDirection: 'row',
+              flex: 1,
               fontSize: 18,
               paddingLeft:20,
               paddingTop:10,
               paddingBottom:10,
-              paddingRight: 177,
               backgroundColor: 'white',
               fontWeight: 'bold',
               borderWidth: .5,
@@ -176,16 +179,35 @@ export const AppNavigator = DrawerNavigator(
           navigationOptions:{
               drawerLabel: <Text style={{color:"#231f61",
               opacity:.8,
+              flexDirection: 'row',
+              flex: 1,
               fontSize: 18,
               paddingLeft:20,
               paddingTop:10,
               paddingBottom:10,
-              paddingRight: 147,
               backgroundColor: 'white',
               fontWeight: 'bold',
               borderWidth: .5,
               borderColor: '#c1c1c1',}}>Redeem Lessons</Text>
           }
+      },
+      PendingLessons: {
+        screen: StackNavigator({
+          PendingLessons: {
+            screen: PendingLessonsScreen,
+            navigationOptions: ({ navigation }) => ({
+                title: (
+                  <Image source={require('./img/SELogo-12.png')} />
+                ),
+                headerStyle: styles.header,
+                drawerLabel: () => null,
+                headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('Home')}/>
+            })
+          }
+        },{
+            initialRouteName: 'PendingLessons',
+            contentOptions:{activeTintColor: '#231f61', opacity:.8}
+        })
       },
       OrderLessons: {
           screen: StackNavigator({
@@ -213,11 +235,12 @@ export const AppNavigator = DrawerNavigator(
           navigationOptions:{
               drawerLabel: <Text style={{color:"#231f61",
               opacity:.8,
+              flexDirection: 'row',
+              flex: 1,
               fontSize: 18,
               paddingLeft:20,
               paddingTop:10,
               paddingBottom:10,
-              paddingRight: 167,
               backgroundColor: 'white',
               fontWeight: 'bold',
               borderWidth: .5,
@@ -241,11 +264,12 @@ export const AppNavigator = DrawerNavigator(
           navigationOptions: {
               drawerLabel: <Text style={{color:"#231f61",
               opacity:.8,
+              flexDirection: 'row',
+              flex: 1,
               fontSize: 18,
               paddingLeft:20,
               paddingTop:10,
               paddingBottom:10,
-              paddingRight: 250,
               backgroundColor: 'white',
               fontWeight: 'bold',
               borderWidth: .5,
@@ -268,11 +292,12 @@ export const AppNavigator = DrawerNavigator(
           navigationOptions: {
               drawerLabel: <Text style={{color:"#231f61",
               opacity:.8,
+              flexDirection: 'row',
+              flex: 1,
               fontSize: 18,
               paddingLeft:20,
               paddingTop:10,
               paddingBottom:10,
-              paddingRight: 238,
               backgroundColor: 'white',
               fontWeight: 'bold',
               borderWidth: .5,
@@ -330,11 +355,12 @@ export const AppNavigator = DrawerNavigator(
           navigationOptions: {
               drawerLabel:  <Text style={{color:"#231f61",
               opacity:.8,
+              flexDirection: 'row',
+              flex: 1,
               fontSize: 18,
               paddingLeft:20,
               paddingTop:10,
               paddingBottom:10,
-              paddingRight: 231,
               backgroundColor: 'white',
               fontWeight: 'bold',
               borderWidth: .5,

@@ -99,17 +99,18 @@ class HomeScreen extends Component {
         key={index}
         title={item.key}
         titleStyle = {styles.listItemTitle}
-        rightTitle={item.value?item.value+'':'-'}//{item.value}//
+        rightTitle={item.value?item.value+'':'-'}
         rightTitleStyle = {styles.listItemCreditRightTitle}
         onPress={ () => this.props.navigation.navigate('RedeemLessons')}
-        // onPress={ () => {this._requestID({request_id: item.request_id,
-        //                                   request_date: item.request_date,
-        //                                   request_url: item.request_url,
-        //                                   request_notes: item.request_notes,
-        //                                   response_notes: item.response_notes,
-        //                                   response_video: item.response_video});
-        //                 this._updateViewedStatus({request_id: item.request_id, bearerToken: this.props.token});}}
       />
+    )
+  }
+
+  _emptyComponent() {
+    return (
+      <View style={styles.emptyContainer}>
+        <Text style={styles.emptyContainerTitle}>You have no active lessons</Text>
+      </View>
     )
   }
 
@@ -121,12 +122,16 @@ class HomeScreen extends Component {
           keyExtractor={item => item.request_id}
           renderItem={this._renderItem.bind(this)}
           ListHeaderComponent={this._recentLessonsHeader}
+          ListEmptyComponent={this._emptyComponent}
+          scrollEnabled={false}
         />
         <FlatList
           data = {[{key:'Individual Lessons', value: this.props.credit_count}, {key:'Unlimited Lessons', value: this.props.credit_unlimited_count}]}
           keyExtractor={item => item.key}
           renderItem={this._renderCreditItem.bind(this)}
           ListHeaderComponent={this._availableCreditsHeader}
+          ListEmptyComponent={this._emptyComponent}
+          scrollEnabled={false}
         />
         <View style={styles.buttonContainer}>
           <Button
@@ -137,9 +142,6 @@ class HomeScreen extends Component {
           />
         </View>
       </View>
-      // <View style={styles.container}>
-      //
-      // </View>
     );
   }
 }
@@ -189,6 +191,19 @@ const styles = StyleSheet.create({
   buttonContainer: {
     paddingBottom: 20,
     paddingTop: 20,
+  },
+  emptyContainer: {
+    paddingTop: 20,
+    paddingBottom: 20,
+    opacity:.8
+  },
+  emptyContainerTitle: {
+    color:"#231f61",
+    opacity:.8,
+    fontSize: 18,
+    fontWeight: 'bold',
+    borderBottomColor: '#c1c1c1',
+    paddingLeft: 15,
   },
 });
 

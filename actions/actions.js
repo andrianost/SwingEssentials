@@ -518,6 +518,7 @@ export function redeemLessons(token){
                 case 200:
                     dispatch(redeemLessonsSuccess());
                     dispatch(requestCredits(token.bearerToken));
+                    dispatch(requestLessons(token.bearerToken));
                     break;
                 default:
                     dispatch(redeemLessonsFailure(response));

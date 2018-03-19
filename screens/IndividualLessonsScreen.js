@@ -45,6 +45,12 @@ class IndividualLessonsScreen extends Component {
       }
   }
 
+  componentWillMount(){
+    if (this.props.response_video == null){
+      this.props.navigation.navigate('PendingLessons')
+      }
+  }
+
   render() {
     console.log("response video")
     console.log(this.props.response_video)

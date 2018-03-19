@@ -1,18 +1,17 @@
 import {DrawerNavigator} from 'react-navigation';
 
-import YourLessonsScreen from '../screens/YourLessonsScreen';
-import RedeemLessonsScreen from '../screens/RedeemLessonsScreen';
-import OrderLessonsScreen from '../screens/OrderLessonsScreen';
-import AboutScreen from '../screens/AboutScreen';
-import HelpScreen from '../screens/HelpScreen';
-import SettingsScreen from '../screens/SettingsScreen';
-import HomeScreen from '../screens/HomeScreen';
-import LoginScreen from '../screens/LoginScreen';
-import IndividualLessonsScreen from '../screens/IndividualLessonsScreen';
-import OrderDetailsScreen from '../screens/OrderDetailsScreen';
-import CameraScreen from '../screens/CameraScreen';
-// import CameraScreen from '../screens/CameraScreen2';
-
+import YourLessonsScreen from '../screens/YourLessonsScreen.js';
+import RedeemLessonsScreen from '../screens/RedeemLessonsScreen.js';
+import OrderLessonsScreen from '../screens/OrderLessonsScreen.js';
+import AboutScreen from '../screens/AboutScreen.js';
+import HelpScreen from '../screens/HelpScreen.js';
+import SettingsScreen from '../screens/SettingsScreen.js';
+import HomeScreen from '../screens/HomeScreen.js';
+import LoginScreen from '../screens/LoginScreen.js';
+import IndividualLessonsScreen from '../screens/IndividualLessonsScreen.js';
+import OrderDetailsScreen from '../screens/OrderDetailsScreen.js';
+import CameraScreen from '../screens/CameraScreen.js';
+import PendingLessonsScreen from '../screens/PendingLessonsScreen.js';
 
 //configures navigation routes for the drawer nav after successful login
 const AppRoutes = DrawerNavigator({
@@ -26,6 +25,7 @@ const AppRoutes = DrawerNavigator({
   IndividualLessonsScreen: { screen: IndividualLessonsScreen },
   OrderDetailsScreen: { screen: OrderDetailsScreen },
   CameraScreen: { screen: CameraScreen },
+  PendingLessons: { screen: PendingLessonsScreen },
 }, {initialRouteName: 'Home'});
 
 //configures the initial route upon app start and loads all drawer nav routes

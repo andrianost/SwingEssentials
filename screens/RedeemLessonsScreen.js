@@ -3,9 +3,10 @@ import {bindActionCreators} from 'redux';
 import {NavigationActions} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
+import AppIndicator from './ActivityIndicator.js';
 
 import { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Modal } from 'react-native';
 import { Button } from 'react-native-elements';
 
 function mapStateToProps(state){
@@ -14,6 +15,8 @@ function mapStateToProps(state){
       fo_flag: state.lessons.fo_flag,
       fo: state.lessons.fo,
       dtl: state.lessons.dtl,
+      pending: state.lessons.pending,
+      modalVisible: false,
     };
 }
 
@@ -29,16 +32,24 @@ class RedeemLessonsScreen extends Component {
         fo_flag: this.props.fo_flag,
         fo: this.props.fo,
         dtl: this.props.dtl,
+        pending: this.props.pending,
       }
   }
 
+  componentWillMount(){
+    this.props.requestLessons(this.state.bearerToken);
+    if (this.props.pending.length > 0){
+      this.props.navigation.navigate('PendingLessons')
+      }
+  }
+
+  componentDidMount(){
+    this.props.requestLessons(this.state.bearerToken);
+  }
+
   _redeemLessons(){
-    this.props.redeemLessons({bearerToken: this.state.bearerToken, fo: this.state.fo, dtl: this.state.dtl})
-    // .then(() => {
-    //   if (this.props.response == 200) {
-    //     this.setState({orderComplete: true});
-    //   }
-    // })
+    // this.props.redeemLessons({bearerToken: this.state.bearerToken, fo: this.state.fo, dtl: this.state.dtl})
+    // this.props.requestLessons(this.state.bearerToken);
   }
 
   _foFlag(){
@@ -82,9 +93,12 @@ render() {
               raised
               title="SUBMIT ORDER"
               buttonStyle={styles.button}
-              // disabled={this.state.orderComplete == true}
+              // disabled={!this.state.fo || !this.state.dtl}
               onPress={this._redeemLessons.bind(this)}
           />
+          <Modal transparent={true} visible={false}>
+            <AppIndicator/>
+          </Modal>
         </View>
       </View>
     );

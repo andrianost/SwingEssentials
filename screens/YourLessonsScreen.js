@@ -87,21 +87,38 @@ class YourLessonsScreen extends Component {
     )
   }
 
+  _emptyComponent() {
+    return (
+      <View style={styles.emptyContainer}>
+        <Text style={styles.emptyContainerTitle}>You have no active lessons</Text>
+      </View>
+    )
+  }
+
   render() {
     return (
       <View style={styles.topContainer}>
-        <FlatList
-          data={this.props.pending}
-          keyExtractor={item => item.request_id}
-          renderItem={this._renderItem.bind(this)}
-          ListHeaderComponent={this._pendingHeader}
-        />
-        <FlatList
-          data={this.props.closed}
-          keyExtractor={item => item.request_id}
-          renderItem={this._renderItem.bind(this)}
-          ListHeaderComponent={this._closedHeader}
-        />
+        <View style={styles.inProgressContainer}>
+          <FlatList
+            data={this.props.pending}
+            scrollEnabled={false}
+            keyExtractor={item => item.request_id}
+            renderItem={this._renderItem.bind(this)}
+            ListHeaderComponent={this._pendingHeader}
+            ListEmptyComponent={this._emptyComponent}
+          />
+        </View>
+        <View>
+          <FlatList
+            data={this.props.closed}
+            scrollEnabled={false}
+            // stickyHeaderIndices={[0]}
+            keyExtractor={item => item.request_id}
+            renderItem={this._renderItem.bind(this)}
+            ListHeaderComponent={this._closedHeader}
+            ListEmptyComponent={this._emptyComponent}
+          />
+        </View>
       </View>
     );
   }
@@ -119,6 +136,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#231f61',
     opacity:.8
   },
+  emptyContainer: {
+    paddingTop: 20,
+    paddingBottom: 20,
+    opacity:.8
+  },
   text: {
     paddingLeft: 19,
     fontSize: 18,
@@ -132,11 +154,22 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     borderBottomColor: '#c1c1c1',
   },
+  emptyContainerTitle: {
+    color:"#231f61",
+    opacity:.8,
+    fontSize: 18,
+    fontWeight: 'bold',
+    borderBottomColor: '#c1c1c1',
+    paddingLeft: 15,
+  },
   listItemRightTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     color: 'red'
   },
+  inProgressContainer: {
+    paddingBottom: 10,
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(YourLessonsScreen);
