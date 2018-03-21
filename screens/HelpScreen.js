@@ -3,7 +3,7 @@ import {bindActionCreators} from 'redux';
 import {NavigationActions} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
-import AppIndicator from './ActivityIndicator.js';
+// import AppIndicator from './ActivityIndicator.js';
 
 
 import { Component } from 'react';
@@ -42,7 +42,6 @@ class HelpScreen extends Component {
     return (
       <View style={styles.container}>
         <Text>Help screen!</Text>
-        <AppIndicator/>
       </View>
     );
   }

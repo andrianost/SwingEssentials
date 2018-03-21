@@ -12,7 +12,7 @@ import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE,
 				REDEEM_LESSONS_SUCCESS, REDEEM_LESSONS_FAILURE, RESET_PASSWORD_SUCCESS,
 				RESET_PASSWORD_FAILURE, CREATE_ACCOUNT_SUCCESS, CREATE_ACCOUNT_FAILURE,
 				SET_SWING_FLAG_SUCCESS, SET_FO_URI_SUCCESS, SET_DTL_URI_SUCCESS, LOGOUT_SUCCESS,
-				LOGOUT_FAILURE} from '../actions/actions.js';
+				LOGOUT_FAILURE, SET_MODAL_VISIBLE, ORDER_SUBMITTED_SUCCESS} from '../actions/actions.js';
 
 const userReducer = (state=[], action) => {
 	switch(action.type){
@@ -140,6 +140,18 @@ const lessonsReducer = (state=[], action) => {
 		// console.log(action.data.fo_flag)
 			return{...state,
 				dtl: action.data.dtl,
+			}
+		case SET_MODAL_VISIBLE:
+		console.log('set modal visible reducer')
+		console.log(action.data)
+			return{...state,
+				modalVisible: action.data,
+			}
+		case ORDER_SUBMITTED_SUCCESS:
+		console.log('order submitted success reducer')
+		console.log(action.data)
+			return{...state,
+				orderSubmitted: action.data,
 			}
 		default:
 			return state;

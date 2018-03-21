@@ -11,6 +11,7 @@
 #import "BraintreeCore.h"
 #import "BraintreeDropIn.h"
 #import "BraintreeUI.h"
+#import "SplashScreen.h"
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -51,6 +52,7 @@
 
   [self.window makeKeyAndVisible];
 
+  [SplashScreen show];
   return YES;
 }
 

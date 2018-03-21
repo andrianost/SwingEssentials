@@ -87,6 +87,7 @@
 		E6D85B22202505F300F5BDBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D85B21202505F300F5BDBA /* ViewController.m */; };
 		F0058D15ADCDF3EB66C22A08 /* Pods_SwingEssentials_tvOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6629FDC13F56B06EB5BF285B /* Pods_SwingEssentials_tvOSTests.framework */; };
 		F694D0C63A3C4E05BC4C9773 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CBEECDC451F4199905E4F22 /* SimpleLineIcons.ttf */; };
+		FE1E866757CF407D84553790 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA6259F3B2E4F88839B27BA /* libSplashScreen.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -307,6 +308,13 @@
 			remoteGlobalIDString = 3DBE0D0D1F3B181C0099AA32;
 			remoteInfo = "fishhook-tvOS";
 		};
+		E64892FB2062F3D500AA573C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45DDCC36B93944F9AF3DA09C /* SplashScreen.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D7682761D8E76B80014119E;
+			remoteInfo = SplashScreen;
+		};
 		E64BDC292042571E002227C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5507FC676A2C487FA84AC971 /* RNCamera.xcodeproj */;
@@ -405,7 +413,9 @@
 		2D02E47B1E0B4A5D006451C7 /* SwingEssentials-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwingEssentials-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* SwingEssentials-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwingEssentials-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33977C5D1BC8427EB5B9A574 /* libRNFetchBlob.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFetchBlob.a; sourceTree = "<group>"; };
+		45DDCC36B93944F9AF3DA09C /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
 		477FCE4E3FC1DBE0C3DDE317 /* Pods_SwingEssentials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwingEssentials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CA6259F3B2E4F88839B27BA /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSplashScreen.a; sourceTree = "<group>"; };
 		5507FC676A2C487FA84AC971 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
 		5664A019283B4CE68B6FE7C7 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
@@ -518,6 +528,7 @@
 				D4FAF90EAC2B528C7EB98A3B /* Pods_SwingEssentials.framework in Frameworks */,
 				E6CDE84F3B4844CAACD72D24 /* libRNCamera.a in Frameworks */,
 				486186AA049641168460E04D /* libRNFetchBlob.a in Frameworks */,
+				FE1E866757CF407D84553790 /* libSplashScreen.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +730,7 @@
 				F4CD2EE611874C968CCCCB13 /* RCTYouTube.xcodeproj */,
 				5507FC676A2C487FA84AC971 /* RNCamera.xcodeproj */,
 				B76EBE81F2DB4649AB964292 /* RNFetchBlob.xcodeproj */,
+				45DDCC36B93944F9AF3DA09C /* SplashScreen.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -782,6 +794,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E64892F82062F3D400AA573C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E64892FC2062F3D500AA573C /* libSplashScreen.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E64BDC262042571E002227C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -798,6 +818,7 @@
 				FA37016DFD694D4CBAA25CA2 /* libRCTYouTube.a */,
 				FCB99C1818774590B5FD15E4 /* libRNCamera.a */,
 				33977C5D1BC8427EB5B9A574 /* libRNFetchBlob.a */,
+				4CA6259F3B2E4F88839B27BA /* libSplashScreen.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -1247,6 +1268,10 @@
 					ProductGroup = E6ABC309201ECB64000C5A7B /* Products */;
 					ProjectRef = 70C071AB677E45D79ED60B01 /* RNVectorIcons.xcodeproj */;
 				},
+				{
+					ProductGroup = E64892F82062F3D400AA573C /* Products */;
+					ProjectRef = 45DDCC36B93944F9AF3DA09C /* SplashScreen.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -1460,6 +1485,13 @@
 			fileType = archive.ar;
 			path = "libfishhook-tvOS.a";
 			remoteRef = E6071803201EC6AA00FB4DFB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E64892FC2062F3D500AA573C /* libSplashScreen.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSplashScreen.a;
+			remoteRef = E64892FB2062F3D500AA573C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		E64BDC2A2042571E002227C0 /* libRNCamera.a */ = {
@@ -1897,12 +1929,14 @@
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 				INFOPLIST_FILE = SwingEssentialsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1931,12 +1965,14 @@
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 				INFOPLIST_FILE = SwingEssentialsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1978,6 +2014,7 @@
 					"$(SRCROOT)/../node_modules/react-native-youtube",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 				INFOPLIST_FILE = SwingEssentials/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2019,6 +2056,7 @@
 					"$(SRCROOT)/../node_modules/react-native-youtube",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 				INFOPLIST_FILE = SwingEssentials/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2054,11 +2092,13 @@
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 				INFOPLIST_FILE = "SwingEssentials-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -2096,11 +2136,13 @@
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 				INFOPLIST_FILE = "SwingEssentials-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -2140,6 +2182,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.SwingEssentials-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2165,6 +2208,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

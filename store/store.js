@@ -48,6 +48,8 @@ export const initialStore = {
         fo: '',
         dtl: '',
         fo_flag: false,
+        modalVisible: false,
+        orderSubmitted: false,
     },
 
     // swingessentials available lesson packages

@@ -15,6 +15,7 @@
 #import "BTCardClient.h"
 #import "BTCardNonce.h"
 #import "BTCardRequest.h"
+#import "BTThreeDSecureInfo.h"
 #import "BraintreeCore.h"
 #import "BTAPIClient.h"
 #import "BTAppSwitch.h"
@@ -78,10 +79,6 @@
 #import "BTCardCapabilities.h"
 #import "BTCardClient+UnionPay.h"
 #import "BTConfiguration+UnionPay.h"
-#import "BraintreeVenmo.h"
-#import "BTConfiguration+Venmo.h"
-#import "BTVenmoAccountNonce.h"
-#import "BTVenmoDriver.h"
 
 FOUNDATION_EXPORT double BraintreeVersionNumber;
 FOUNDATION_EXPORT const unsigned char BraintreeVersionString[];

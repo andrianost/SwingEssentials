@@ -39,7 +39,10 @@ export const SET_DTL_URI_SUCCESS = 'SET_DTL_URI_SUCCESS';
 //ADD FAILURE case
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
 export const LOGOUT_FAILURE = 'LOGOUT_FAILURE';
-
+export const SET_MODAL_VISIBLE = 'SET_MODAL_VISIBLE';
+//ADD FAILURE CASE
+export const ORDER_SUBMITTED_SUCCESS = 'ORDER_SUBMITTED_SUCCESS';
+//ADD FAILURE CASE
 
 export const BASEURL = 'https://www.josephpboyle.com/api/swingessentials2.php/'
 
@@ -516,11 +519,14 @@ export function redeemLessons(token){
         .then((response) => {
             switch(response.status) {
                 case 200:
+                    dispatch(setModalVisible(false));
+                    dispatch(orderSubmittedSuccess(true));
                     dispatch(redeemLessonsSuccess());
                     dispatch(requestCredits(token.bearerToken));
                     dispatch(requestLessons(token.bearerToken));
                     break;
                 default:
+                    dispatch(setModalVisible(false));
                     dispatch(redeemLessonsFailure(response));
                     break;
             }
@@ -544,6 +550,25 @@ function redeemLessonsFailure(response){
     return{
         type: REDEEM_LESSONS_FAILURE,
         response: response.status
+    }
+}
+
+
+export function setModalVisible(response){
+  console.log('set modal visible response')
+  console.log(response)
+    return{
+        type: SET_MODAL_VISIBLE,
+        data: response
+    }
+}
+
+export function orderSubmittedSuccess(response){
+  console.log('order submitted success response')
+  console.log(response)
+    return{
+        type: ORDER_SUBMITTED_SUCCESS,
+        data: response
     }
 }
 
