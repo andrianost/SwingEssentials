@@ -45,6 +45,7 @@ export const AppNavigator = DrawerNavigator(
       Login: {
           screen: LoginScreen,
             navigationOptions: true ? {
+                drawerLockMode: 'locked-closed',
                 drawerLabel: () => null //prevents this element from showing in the drawer if we are logged in
             } : {}
           },

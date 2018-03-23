@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
 import { Component } from 'react';
-import { StyleSheet, View, Text, Button, FlatList } from 'react-native';
+import { StyleSheet, View, Text, Button, FlatList, ScrollView } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
 function mapStateToProps(state){
@@ -79,14 +79,6 @@ class YourLessonsScreen extends Component {
     )
   }
 
-  _closedHeader() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.text}>Completed</Text>
-      </View>
-    )
-  }
-
   _emptyComponent() {
     return (
       <View style={styles.emptyContainer}>
@@ -109,15 +101,18 @@ class YourLessonsScreen extends Component {
           />
         </View>
         <View>
-          <FlatList
-            data={this.props.closed}
-            scrollEnabled={false}
-            // stickyHeaderIndices={[0]}
-            keyExtractor={item => item.request_id}
-            renderItem={this._renderItem.bind(this)}
-            ListHeaderComponent={this._closedHeader}
-            ListEmptyComponent={this._emptyComponent}
-          />
+          <View style={styles.container}>
+            <Text style={styles.text}>Completed</Text>
+          </View>
+          <ScrollView>
+            <FlatList
+              data={this.props.closed}
+              scrollEnabled={false}
+              keyExtractor={item => item.request_id}
+              renderItem={this._renderItem.bind(this)}
+              ListEmptyComponent={this._emptyComponent}
+            />
+          </ScrollView>
         </View>
       </View>
     );

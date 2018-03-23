@@ -43,6 +43,7 @@ class OrderDetailsScreen extends Component {
         coupon: false,
         savings: '',
         orderComplete: false,
+        invalidDiscount: false,
       }
   }
 
@@ -55,14 +56,16 @@ class OrderDetailsScreen extends Component {
             this.setState({price: this.state.price.toFixed(2).toString()})
             this.props.updatePrice({price: this.props.price});
             this.setState({coupon: true});
-            console.log(typeof this.state.price)
-            console.log(this.state.price)
+            this.setState({invalidDiscount: false})
+            this.props.discountSuccess({type: '', value: ''})
         } else if (this.props.type == 'amount') {
             this.setState({savings: parseFloat(this.props.value).toFixed(2)});
             this.props.updatePrice({price: (parseFloat(this.props.price).toFixed(2) - parseFloat(this.props.value).toFixed(2))});
             this.setState({coupon: true});
+            this.setState({invalidDiscount: false})
+            this.props.discountSuccess({type: '', value: ''})
         } else {
-            this.props.discountSuccess({type: 'invalid'}); // create proper action and reducer..noob
+            this.setState({invalidDiscount: true})
         }
       })
   }
@@ -79,8 +82,7 @@ class OrderDetailsScreen extends Component {
   _PayPal(){
   console.log('PayPal log')
   NativeModules.PayPal.buyAction(this.state.bearerToken, this.state.price, this.state.name, this.state.description,
-                                this.state.shortcode, this.state.discount)//('sandbox_2pqkx4x6_g7sz9ynwdm65gwxj'); //{Sandbox: this.state.Sandbox}
-  // NativeModules.ChangeViewBridge.changeToNativeView()
+                                this.state.shortcode, this.state.discount)
   }
 
   render() {
@@ -94,7 +96,7 @@ class OrderDetailsScreen extends Component {
             placeholder="Please enter your discount code"
             onChangeText={(newText) => this.setState({discount: newText})}
         />
-        {this.props.type == 'invalid' && <FormValidationMessage>Invalid discount code</FormValidationMessage>}
+        {this.state.invalidDiscount == true && <FormValidationMessage>Invalid discount code</FormValidationMessage>}
         <View style={styles.buttonContainer}>
           <Button
               title="APPLY CODE"
@@ -107,7 +109,7 @@ class OrderDetailsScreen extends Component {
           <Text style={styles.headerText}>Order Details:  {this.props.name}</Text>
         </View>
         <View style={styles.container}>
-          <Text style={styles.containerText}>Sub-total: ${parseFloat(this.state.price).toFixed(2)}</Text>
+          <Text style={styles.containerText}>Sub-total: ${parseFloat(this.props.price).toFixed(2)}</Text>
         </View>
         {this.state.coupon == true && <View style={styles.container}><Text style={styles.savingsText}>Savings: -${parseFloat(this.state.savings).toFixed(2)}</Text></View>}
         <View style={styles.container}>

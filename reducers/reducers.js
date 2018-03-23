@@ -32,7 +32,10 @@ const userReducer = (state=[], action) => {
 			}
 		case CREATE_ACCOUNT_FAILURE:
 			console.log('create account failure reducer')
-			return state;
+			console.log(action.response)
+			return{...state,
+				response: action.response
+			}
 		case LOGOUT_SUCCESS:
 		console.log('logout success reducer')
 		return{...state,
@@ -72,7 +75,7 @@ const creditsReducer = (state=[], action) => {
 	switch(action.type){
 		case REQUEST_CREDITS_SUCCESS:
 			console.log('request credits success reducer')
-			console.log(action.data)
+			// console.log(action.data)
 			return{...state,
 				details: action.data,
 				count: action.data.count,
@@ -99,7 +102,7 @@ const lessonsReducer = (state=[], action) => {
 			return state;
 		case SET_REQUEST_ID_SUCCESS:
 		console.log('set request id reducer')
-		console.log(action.data)
+		// console.log(action.data)
 			return{...state,
 				request_id: action.data.request_id,
 				request_date: action.data.request_date,
@@ -143,13 +146,13 @@ const lessonsReducer = (state=[], action) => {
 			}
 		case SET_MODAL_VISIBLE:
 		console.log('set modal visible reducer')
-		console.log(action.data)
+		// console.log(action.data)
 			return{...state,
 				modalVisible: action.data,
 			}
 		case ORDER_SUBMITTED_SUCCESS:
 		console.log('order submitted success reducer')
-		console.log(action.data)
+		// console.log(action.data)
 			return{...state,
 				orderSubmitted: action.data,
 			}

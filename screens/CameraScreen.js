@@ -62,7 +62,7 @@ class CameraScreen extends Component {
             }}
             style = {styles.preview}
             type={RNCamera.Constants.Type.back}
-            // flashMode={RNCamera.Constants.FlashMode.on}
+            // mode={RNCamera.Constants.CaptureMode.video}
             permissionDialogTitle={'Permission to use camera'}
             permissionDialogMessage={'We need your permission to use your camera phone'}
         />

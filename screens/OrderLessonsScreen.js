@@ -73,6 +73,7 @@ class OrderLessonsScreen extends Component {
           keyExtractor={item => item.count}
           renderItem={this._renderItem.bind(this)}
           ListHeaderComponent={this._packagesHeader}
+          scrollEnabled={false}
         />
       </View>
     );
@@ -113,7 +114,8 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     color: '#231f61',
-    opacity:.8
+    opacity:.8,
+    fontSize: 13,
   },
 });
 
