@@ -7,7 +7,7 @@ import * as Actions from '../actions/actions.js';
 import YouTube from 'react-native-youtube';
 
 import { Component } from 'react';
-import { StyleSheet, View, Text, Button, FlatList } from 'react-native';
+import { StyleSheet, View, Text, Button, FlatList, ScrollView } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
 
@@ -71,7 +71,7 @@ class IndividualLessonsScreen extends Component {
             onChangeQuality={e => this.setState({ quality: e.quality })}
             onError={e => this.setState({ error: e.error })}
 
-            style={{ alignSelf: 'stretch', height: 300 }}
+            style={{ alignSelf: 'stretch', height: 275 }}
           />
         </View>
         <View style={styles.commentsContainer}>
@@ -79,7 +79,9 @@ class IndividualLessonsScreen extends Component {
             <Text style={styles.text}>Comments</Text>
           </View>
           <View style={styles.container}>
-            <Text style={styles.responseText}>{this.props.response_notes}</Text>
+            <ScrollView>
+              <Text style={styles.responseText}>{this.props.response_notes}</Text>
+            </ScrollView>
           </View>
         </View>
       </View>
@@ -121,7 +123,7 @@ const styles = StyleSheet.create({
   },
   responseText: {
     color: '#231f61',
-    fontSize: 20,
+    fontSize: 16,
   },
   commentsContainer: {
     paddingTop: 10,

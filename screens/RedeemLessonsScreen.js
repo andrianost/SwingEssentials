@@ -111,12 +111,16 @@ render() {
           <Modal transparent={true} visible={this.props.modalVisible}>
             <AppIndicator/>
           </Modal>
-          <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}
-          >
+          <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
             <View style={styles.successModal}>
-              <TouchableOpacity style={styles.modalButton} onPress={() => this.props.navigation.navigate('Home')}>
+              <View style={styles.modalButton}>
                 <Text style={styles.modalText}>Your videos have been submitted successfully!</Text>
-              </TouchableOpacity>
+                <View style={styles.modalBorder}>
+                </View>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}>
+                  <Text style={styles.modalButtonText}>OK</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </Modal>
         </View>
@@ -163,13 +167,23 @@ const styles = StyleSheet.create({
   },
   modalButton: {
    alignItems: 'center',
-   backgroundColor: '#231f61',
-   // opacity:.8,
-   padding: 20
+   backgroundColor: 'white',
+   padding: 20,
  },
  modalText: {
-   paddingLeft: 18,
-   color: 'white',
+   paddingBottom: 15,
+   color: '#231f61',
+   alignItems: 'center'
+ },
+ modalButtonText: {
+   paddingTop: 15,
+   color: '#231f61',
+   alignItems: 'center'
+ },
+ modalBorder: {
+   borderBottomColor: '#231f61',
+   borderWidth: .5,
+   width: 300,
  },
 });
 

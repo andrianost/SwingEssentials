@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
 import { Component } from 'react';
-import { StyleSheet, Image, View, Text, Alert, FlatList } from 'react-native';
+import { StyleSheet, Image, View, Text, Alert, FlatList, Modal, TouchableOpacity } from 'react-native';
 import { Button, FormInput, FormLabel, List, ListItem } from 'react-native-elements';
 
 function mapStateToProps(state){
@@ -46,6 +46,7 @@ class HomeScreen extends Component {
         credit_count: this.props.credit_count,
         credit_unlimited_count: this.props.credit_unlimited_count,
         credit_details: this.props.credit_details,
+        successModalVisible: false,
       }
   }
 
@@ -101,9 +102,17 @@ class HomeScreen extends Component {
         titleStyle = {styles.listItemTitle}
         rightTitle={item.value?item.value+'':'-'}
         rightTitleStyle = {styles.listItemCreditRightTitle}
-        onPress={ () => this.props.navigation.navigate('RedeemLessons')}
+        onPress={ () => this._checkLessonType(item.key)}//this.props.navigation.navigate('RedeemLessons')}
       />
     )
+  }
+
+  _checkLessonType(data) {
+    if (data == 'Unlimited Lessons'){
+      this.setState({successModalVisible: true})
+    } else {
+      this.props.navigation.navigate('RedeemLessons')
+    }
   }
 
   _emptyComponent() {
@@ -133,6 +142,21 @@ class HomeScreen extends Component {
           ListEmptyComponent={this._emptyComponent}
           scrollEnabled={false}
         />
+        <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
+          <View style={styles.successModal}>
+            <View style={styles.modalButton}>
+              <Text style={styles.modalText}>Activating your unlimited lessons deal will give you access to unlimited lessons for 30 days. Would you like to proceed?</Text>
+              <TouchableOpacity onPress={() => this.setState({successModalVisible: false})}>
+                <Text style={styles.modalTopButtonText}>Yes</Text>
+              </TouchableOpacity>
+              <View style={styles.modalBorder}>
+              </View>
+              <TouchableOpacity onPress={() => this.setState({successModalVisible: false})}>
+                <Text style={styles.modalBottomButtonText}>No</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
         <View style={styles.buttonContainer}>
           <Button
             raised
@@ -145,6 +169,7 @@ class HomeScreen extends Component {
     );
   }
 }
+
 
 
 
@@ -205,6 +230,39 @@ const styles = StyleSheet.create({
     borderBottomColor: '#c1c1c1',
     paddingLeft: 15,
   },
+  successModal: {
+    flex: 1,
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    backgroundColor: '#00000040',
+  },
+  modalButton: {
+   alignItems: 'center',
+   backgroundColor: 'white',
+   padding: 20,
+ },
+ modalText: {
+   paddingLeft: 18,
+   paddingBottom: 15,
+   color: '#231f61',
+   alignItems: 'center'
+ },
+ modalBottomButtonText: {
+   paddingTop: 15,
+   color: '#231f61',
+   alignItems: 'center'
+ },
+ modalTopButtonText: {
+   paddingBottom: 15,
+   color: '#231f61',
+   alignItems: 'center'
+ },
+ modalBorder: {
+   borderBottomColor: '#231f61',
+   borderWidth: .5,
+   width: 300,
+ },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
