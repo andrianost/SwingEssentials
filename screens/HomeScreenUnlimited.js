@@ -30,7 +30,7 @@ function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }
 
-class HomeScreen extends Component {
+class HomeScreenUnlimited extends Component {
   constructor(props){
       super(props);
       this.state = {
@@ -53,13 +53,9 @@ class HomeScreen extends Component {
       }
   }
 
-  async componentWillMount(){
-    await this.props.requestCredits(this.state.bearerToken);
-    await this.setState({curTime : new Date()/1000})
-    console.log(this.state.curTime)
-    if (this.props.credit_unlimited_expires > this.state.curTime){
-      this.props.navigation.navigate('HomeUnlimited')
-      }
+  componentWillMount() {
+    // setInterval( () => {this.setState({curTime : new Date().toLocaleString()})},1000)
+    this.setState({curTime : new Date().toLocaleString()})
   }
 
   _recentLessonsHeader() {
@@ -73,7 +69,7 @@ class HomeScreen extends Component {
   _availableCreditsHeader() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Available Credits</Text>
+        <Text style={styles.text}>Unlimited Lessons</Text>
       </View>
     )
   }
@@ -114,17 +110,23 @@ class HomeScreen extends Component {
         titleStyle = {styles.listItemTitle}
         rightTitle={item.value?item.value+'':'-'}
         rightTitleStyle = {styles.listItemCreditRightTitle}
-        onPress={ () => this._checkLessonType(item.key)}//this.props.navigation.navigate('RedeemLessons')}
+        disabled={true}
+        onPress={ () => this.props.navigation.navigate('RedeemLessons')}
       />
     )
   }
 
-  _checkLessonType(data) {
-    if (data == 'Unlimited Lessons'){
-      this.setState({successModalVisible: true})
-    } else {
-      this.props.navigation.navigate('RedeemLessons')
-    }
+  _renderUnlimitedCredit({ item, index }) {
+    return (
+      <ListItem
+        key={index}
+        title={item.key}
+        titleStyle = {styles.listItemTitle}
+        rightTitle={'# days remaining'}
+        // rightTitleStyle = {styles.listItemCreditRightTitle}
+        onPress={ () => this.props.navigation.navigate('RedeemLessons')}
+      />
+    )
   }
 
   _emptyComponent() {
@@ -136,6 +138,8 @@ class HomeScreen extends Component {
   }
 
   render() {
+    console.log('cur time')
+    console.log(this.state.curTime)
     return (
       <View style={styles.topContainer}>
         <FlatList
@@ -154,11 +158,17 @@ class HomeScreen extends Component {
           ListEmptyComponent={this._emptyComponent}
           scrollEnabled={false}
         />
+        <FlatList
+          data = { [{key: 'Submit a Swing', value: ''}] }
+          keyExtractor={item => item.key}
+          renderItem={this._renderUnlimitedCredit.bind(this)}
+          scrollEnabled={false}
+        />
         <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
           <View style={styles.successModal}>
             <View style={styles.modalButton}>
               <Text style={styles.modalText}>Activating your unlimited lessons deal will give you access to unlimited lessons for 30 days. Would you like to proceed?</Text>
-              <TouchableOpacity onPress={() => this.props.activateUnlimited(this.state.bearerToken)}>
+              <TouchableOpacity onPress={() => this.setState({successModalVisible: false})}>
                 <Text style={styles.modalTopButtonText}>Yes</Text>
               </TouchableOpacity>
               <View style={styles.modalBorder}>
@@ -277,4 +287,4 @@ const styles = StyleSheet.create({
  },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeScreenUnlimited);

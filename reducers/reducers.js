@@ -12,7 +12,8 @@ import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE,
 				REDEEM_LESSONS_SUCCESS, REDEEM_LESSONS_FAILURE, RESET_PASSWORD_SUCCESS,
 				RESET_PASSWORD_FAILURE, CREATE_ACCOUNT_SUCCESS, CREATE_ACCOUNT_FAILURE,
 				SET_SWING_FLAG_SUCCESS, SET_FO_URI_SUCCESS, SET_DTL_URI_SUCCESS, LOGOUT_SUCCESS,
-				LOGOUT_FAILURE, SET_MODAL_VISIBLE, ORDER_SUBMITTED_SUCCESS} from '../actions/actions.js';
+				LOGOUT_FAILURE, SET_MODAL_VISIBLE, ORDER_SUBMITTED_SUCCESS, ACTIVATE_UNLIMITED_SUCCESS,
+				ACTIVATE_UNLIMITED_FAILURE} from '../actions/actions.js';
 
 const userReducer = (state=[], action) => {
 	switch(action.type){
@@ -75,15 +76,21 @@ const creditsReducer = (state=[], action) => {
 	switch(action.type){
 		case REQUEST_CREDITS_SUCCESS:
 			console.log('request credits success reducer')
-			// console.log(action.data)
+			console.log(action.data)
 			return{...state,
 				details: action.data,
 				count: action.data.count,
 				unlimited_count: action.data.unlimited_count,
-				unlimited_date: action.data.unlimited_date,
+				unlimited_expires: action.data.unlimited_expires,
 			}
 		case REQUEST_CREDITS_FAILURE:
 			console.log('request credits failure reducer')
+			return state;
+		case ACTIVATE_UNLIMITED_SUCCESS:
+			console.log('activate unlimited success reducer')
+			return state;
+		case ACTIVATE_UNLIMITED_FAILURE:
+			console.log('activate unlimited failure reducer')
 			return state;
 	default:
 		return state;

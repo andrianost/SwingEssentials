@@ -43,6 +43,8 @@ export const SET_MODAL_VISIBLE = 'SET_MODAL_VISIBLE';
 //ADD FAILURE CASE
 export const ORDER_SUBMITTED_SUCCESS = 'ORDER_SUBMITTED_SUCCESS';
 //ADD FAILURE CASE
+export const ACTIVATE_UNLIMITED_SUCCESS = 'ACTIVATE_UNLIMITED_SUCCESS';
+export const ACTIVATE_UNLIMITED_FAILURE = 'ACTIVATE_UNLIMITED_FAILURE';
 
 export const BASEURL = 'https://www.josephpboyle.com/api/swingessentials2.php/'
 
@@ -63,10 +65,10 @@ export function requestLogin(userCredentials){
                 case 200:
                     response.json()
                     .then((json) => dispatch(loginSuccess({...json,token: response.headers.get('Token')})))
+                    .then(() => dispatch(requestCredits(response.headers.get('Token'))))
                     .then(() => dispatch(requestSettings(response.headers.get('Token'))))
                     .then(() => dispatch(requestLessons(response.headers.get('Token'))))
-                    .then(() => dispatch(requestPackages()))
-                    .then(() => dispatch(requestCredits(response.headers.get('Token'))));
+                    .then(() => dispatch(requestPackages()));
                     break;
                 default:
                     dispatch(loginFailure(response));
@@ -87,7 +89,7 @@ function loginSuccess(response){
 
 function loginFailure(response){
   console.log('login failure')
-  console.log(response)
+  // console.log(response)
     return{
         type: LOGIN_ERROR,
         response: response.status
@@ -477,8 +479,8 @@ export function requestCredits(token){
 }
 
 function requestCreditsSuccess(response){
-  console.log('request credits success success')
-  console.log(response)
+  // console.log('request credits success success')
+  // console.log(response)
     return{
         type: REQUEST_CREDITS_SUCCESS,
         data: response
@@ -698,6 +700,46 @@ function logoutFailure(response){
   console.log('logout failure')
     return{
         type: LOGOUT_FAILURE,
+        response: response.status
+    }
+}
+
+export function activateUnlimited(token){
+  return function(dispatch){
+    return fetch(BASEURL + 'unlimited', {
+        method: 'PUT',
+        headers: {
+          'Authorization': 'bearer ' + token,
+        }
+    })
+    .then((response) => {
+        switch(response.status) {
+            case 200:
+                dispatch(activateUnlimitedSuccess(response));
+                break;
+            default:
+                dispatch(activateUnlimitedFailure(response))
+                break;
+        }
+    })
+    .catch((error) => console.error(error));
+  }
+}
+
+function activateUnlimitedSuccess(response){
+    console.log('activate unlimited success')
+    console.log(response)
+    return{
+        type: ACTIVATE_UNLIMITED_SUCCESS,
+        data: response
+    }
+}
+
+function activateUnlimitedFailure(response){
+    console.log('activate unlimited failure')
+    console.log(response)
+    return{
+        type: ACTIVATE_UNLIMITED_FAILURE,
         response: response.status
     }
 }

@@ -9,6 +9,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import * as Actions from '../actions/actions.js';
 import Routes from '../config/navigationRoutes.js';
 import HomeScreen from '../screens/HomeScreen.js';
+import HomeScreenUnlimited from '../screens/HomeScreenUnlimited.js';
 import YourLessonsScreen from '../screens/YourLessonsScreen.js';
 import RedeemLessonsScreen from '../screens/RedeemLessonsScreen.js';
 import OrderLessonsScreen from '../screens/OrderLessonsScreen.js';
@@ -83,8 +84,6 @@ export const AppNavigator = DrawerNavigator(
                       ),
                       headerStyle: styles.header,
                       headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>,
-                      // headerRight: <MaterialIcons name="clear" size={30} style={{paddingRight: 10, color: 'white'}} onPress={ () => this.props.logout())}/>
-                      //<Text style={{color: 'white', paddingRight: 10, fontWeight: 'bold'}}>Logout</Text>
                     })
               }
             }),
@@ -102,6 +101,21 @@ export const AppNavigator = DrawerNavigator(
                             borderWidth: .5,
                             borderColor: '#c1c1c1'}}>Home</Text>,
             }
+          },
+      HomeUnlimited: {
+          screen: StackNavigator({
+              HomeUnlimited: {
+                  screen: HomeScreenUnlimited,
+                  navigationOptions:({ navigation }) => ({
+                      title: (
+                        <Image source={require('./img/SELogo-12.png')} />
+                      ),
+                      drawerLabel: () => null,
+                      headerStyle: styles.header,
+                      headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>,
+                    })
+              }
+            })
           },
       // Each page that has several pages that you can step through is rendered as a StackNavigator
       // Stack Navigator gives you a header component for free, we inject an icon there to open the drawer

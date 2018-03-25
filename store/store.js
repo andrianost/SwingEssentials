@@ -30,7 +30,7 @@ export const initialStore = {
         details: [],
         count: 0,
         unlimited_count: 0,
-        unlimited_date: ''
+        unlimited_expires: 0
     },
 
     // user's lesson history
