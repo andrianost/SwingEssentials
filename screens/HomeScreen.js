@@ -50,13 +50,20 @@ class HomeScreen extends Component {
         credit_unlimited_expires: this.props.unlimited_expires,
         successModalVisible: false,
         curTime: null,
+        limitedFlag: false,
+        unlimitedFlag: false,
       }
   }
 
   async componentWillMount(){
     await this.props.requestCredits(this.state.bearerToken);
-    await this.setState({curTime : new Date()/1000})
-    console.log(this.state.curTime)
+    await this.setState({curTime: Date.now()/1000})
+    if (this.props.credit_unlimited_count == 0){
+      this.setState({unlimitedFlag: true})
+    }
+    if (this.props.credit_count == 0){
+      this.setState({limitedFlag: true})
+    }
     if (this.props.credit_unlimited_expires > this.state.curTime){
       this.props.navigation.navigate('HomeUnlimited')
       }
@@ -114,7 +121,22 @@ class HomeScreen extends Component {
         titleStyle = {styles.listItemTitle}
         rightTitle={item.value?item.value+'':'-'}
         rightTitleStyle = {styles.listItemCreditRightTitle}
-        onPress={ () => this._checkLessonType(item.key)}//this.props.navigation.navigate('RedeemLessons')}
+        disabled={this.state.limitedFlag}
+        onPress={ () => this._checkLessonType(item.key)}
+      />
+    )
+  }
+
+  _renderUnlimitedCreditItem({ item, index }) {
+    return (
+      <ListItem
+        key={index}
+        title={item.key}
+        titleStyle = {styles.listItemTitle}
+        rightTitle={item.value?item.value+'':'-'}
+        rightTitleStyle = {styles.listItemCreditRightTitle}
+        disabled={this.state.unlimitedFlag}
+        onPress={ () => this._checkLessonType(item.key)}
       />
     )
   }
@@ -135,6 +157,13 @@ class HomeScreen extends Component {
     )
   }
 
+  async _activateUnlimited() {
+    console.log('unlimited')
+    await this.props.activateUnlimited(this.state.bearerToken);
+    await this.setState({successModalVisible: false});
+    await this.props.navigation.navigate('HomeUnlimited');
+  }
+
   render() {
     return (
       <View style={styles.topContainer}>
@@ -147,18 +176,24 @@ class HomeScreen extends Component {
           scrollEnabled={false}
         />
         <FlatList
-          data = {[{key:'Individual Lessons', value: this.props.credit_count}, {key:'Unlimited Lessons', value: this.props.credit_unlimited_count}]}
+          data = {[{key:'Individual Lessons', value: this.props.credit_count}]}
           keyExtractor={item => item.key}
           renderItem={this._renderCreditItem.bind(this)}
           ListHeaderComponent={this._availableCreditsHeader}
           ListEmptyComponent={this._emptyComponent}
           scrollEnabled={false}
         />
+        <FlatList
+          data = {[{key:'Unlimited Lessons', value: this.props.credit_unlimited_count}]}
+          keyExtractor={item => item.key}
+          renderItem={this._renderUnlimitedCreditItem.bind(this)}
+          scrollEnabled={false}
+        />
         <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
           <View style={styles.successModal}>
             <View style={styles.modalButton}>
               <Text style={styles.modalText}>Activating your unlimited lessons deal will give you access to unlimited lessons for 30 days. Would you like to proceed?</Text>
-              <TouchableOpacity onPress={() => this.props.activateUnlimited(this.state.bearerToken)}>
+              <TouchableOpacity onPress={this._activateUnlimited.bind(this)}>
                 <Text style={styles.modalTopButtonText}>Yes</Text>
               </TouchableOpacity>
               <View style={styles.modalBorder}>
@@ -181,9 +216,6 @@ class HomeScreen extends Component {
     );
   }
 }
-
-
-
 
 const styles = StyleSheet.create({
   topContainer: {

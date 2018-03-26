@@ -49,13 +49,14 @@ class HomeScreenUnlimited extends Component {
         credit_details: this.props.credit_details,
         credit_unlimited_expires: this.props.unlimited_expires,
         successModalVisible: false,
-        curTime: null,
+        timeRemaining: '',
       }
   }
 
-  componentWillMount() {
-    // setInterval( () => {this.setState({curTime : new Date().toLocaleString()})},1000)
-    this.setState({curTime : new Date().toLocaleString()})
+  async componentWillMount() {
+    await this.setState({timeRemaining: Math.ceil(((this.props.credit_unlimited_expires - Date.now()/1000)/86400))});
+    console.log('time remaining')
+    console.log(this.state.timeRemaining)
   }
 
   _recentLessonsHeader() {
@@ -122,7 +123,7 @@ class HomeScreenUnlimited extends Component {
         key={index}
         title={item.key}
         titleStyle = {styles.listItemTitle}
-        rightTitle={'# days remaining'}
+        rightTitle={this.state.timeRemaining + ' days remaining'}
         // rightTitleStyle = {styles.listItemCreditRightTitle}
         onPress={ () => this.props.navigation.navigate('RedeemLessons')}
       />
@@ -138,8 +139,6 @@ class HomeScreenUnlimited extends Component {
   }
 
   render() {
-    console.log('cur time')
-    console.log(this.state.curTime)
     return (
       <View style={styles.topContainer}>
         <FlatList
@@ -191,9 +190,6 @@ class HomeScreenUnlimited extends Component {
     );
   }
 }
-
-
-
 
 const styles = StyleSheet.create({
   topContainer: {
