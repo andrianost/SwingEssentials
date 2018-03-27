@@ -1,6 +1,6 @@
 'use strict';
 import React, { Component } from 'react';
-import { AppRegistry, Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { AppRegistry, Dimensions, StyleSheet, Text, TouchableOpacity, View, Modal } from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as Actions from '../actions/actions.js';
@@ -27,6 +27,7 @@ class CameraScreen extends Component {
         fo: this.props.fo,
         dtl: this.props.dtl,
         fo_flag: this.props.fo_flag,
+        successModalVisible: false,
       }
   }
 
@@ -38,12 +39,15 @@ class CameraScreen extends Component {
       if (this.props.fo_flag == true){
         this.setState({fo: data.uri}, function() {
           this.props.setFoUriSuccess({fo: this.state.fo})
+          this.setState({successModalVisible: true})
+
         })
 
       }
       else if (this.props.fo_flag == false){
         this.setState({dtl: data.uri}, function() {
           this.props.setDtlUriSuccess({dtl: this.state.dtl})
+          this.setState({successModalVisible: true})
         })
       }
     }
@@ -72,6 +76,18 @@ class CameraScreen extends Component {
             style = {styles.capture}
         >
         </TouchableOpacity>
+        <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
+          <View style={styles.successModal}>
+            <View style={styles.modalButton}>
+              <Text style={styles.modalText}>Your video has been successfully recorded.</Text>
+              <View style={styles.modalBorder}>
+              </View>
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('RedeemLessons')}>
+                <Text style={styles.modalButtonText}>OK</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
         </View>
       </View>
     );
@@ -100,7 +116,34 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     alignSelf: 'center',
     margin: 20
-  }
+  },
+  successModal: {
+    flex: 1,
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    backgroundColor: '#00000040',
+  },
+  modalButton: {
+   alignItems: 'center',
+   backgroundColor: 'white',
+   padding: 20,
+ },
+ modalText: {
+   paddingBottom: 15,
+   color: '#231f61',
+   alignItems: 'center'
+ },
+ modalButtonText: {
+   paddingTop: 15,
+   color: '#231f61',
+   alignItems: 'center'
+ },
+ modalBorder: {
+   borderBottomColor: '#231f61',
+   borderWidth: .5,
+   width: 300,
+ },
 });
 
 AppRegistry.registerComponent('CameraScreen', () => CameraScreen);

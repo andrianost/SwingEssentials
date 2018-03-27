@@ -26,12 +26,12 @@
                   moduleName = "SwingEssentials"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andrianost/projects/SwingEssentials/node_modules/react-native/React/CxxModule/RCTNativeModule.mm"
-                  timestampString = "543726206.0588059"
+                  timestampString = "543871541.7248729"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "109"
                   endingLineNumber = "109"
-                  offsetFromSymbolStart = "1625">
+                  offsetFromSymbolStart = "1260">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,12 +41,12 @@
                   moduleName = "SwingEssentials"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andrianost/projects/SwingEssentials/node_modules/react-native/React/CxxModule/RCTNativeModule.mm"
-                  timestampString = "543726206.0631551"
+                  timestampString = "543871541.7268111"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "109"
                   endingLineNumber = "109"
-                  offsetFromSymbolStart = "1644">
+                  offsetFromSymbolStart = "1284">
                </Location>
             </Locations>
          </BreakpointContent>
