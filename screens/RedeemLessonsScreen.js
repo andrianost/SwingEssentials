@@ -6,7 +6,7 @@ import * as Actions from '../actions/actions.js';
 import AppIndicator from './ActivityIndicator.js';
 
 import { Component } from 'react';
-import { StyleSheet, View, Text, Modal, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, Modal, TouchableOpacity, Image } from 'react-native';
 import { Button } from 'react-native-elements';
 
 function mapStateToProps(state){
@@ -83,24 +83,42 @@ render() {
         <View style={styles.header}>
           <Text style={styles.headerText}>Record your swing</Text>
         </View>
-        <View style={styles.buttonContainer}>
-          <Button
-              raised
-              title="FACE ON"
-              buttonStyle={styles.button}
-              onPress={this._foFlag.bind(this)}
-          />
+        <View style={styles.topParentContainer}>
+          <View style={styles.parentContainer}>
+            <TouchableOpacity onPress={this._foFlag.bind(this)}>
+              <View style={styles.buttonContainer}>
+                <View style={styles.iconContainer}>
+                  <Image source={require('./img/SELogo-15.png')} />
+                </View>
+                  <Button
+                      raised
+                      title="FACE ON"
+                      buttonStyle={styles.button}
+                      // onPress={this._foFlag.bind(this)}
+                  />
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
-        <View style={styles.secondButtonContainer}>
-          <Button
-              raised
-              title="DOWN THE LINE"
-              buttonStyle={styles.button}
-              disabled={!this.state.fo}
-              onPress={this._dtlFlag.bind(this)}
-          />
+        <View style={styles.topParentContainer}>
+          <View style={styles.parentContainer}>
+            <TouchableOpacity disabled={!this.state.fo} onPress={this._dtlFlag.bind(this)}>
+              <View style={styles.secondButtonContainer}>
+                <View style={styles.bottomIconContainer}>
+                  <Image source={require('./img/SELogo-16.png')} />
+                </View>
+                  <Button
+                      raised
+                      title="DOWN THE LINE"
+                      buttonStyle={styles.button}
+                      disabled={!this.state.fo}
+                      // onPress={this._dtlFlag.bind(this)}
+                  />
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
-        <View style={styles.secondButtonContainer}>
+        <View style={styles.thirdButtonContainer}>
           <Button
               raised
               title="SUBMIT ORDER"
@@ -154,6 +172,9 @@ const styles = StyleSheet.create({
   secondButtonContainer: {
     paddingBottom: 20,
   },
+  thirdButtonContainer: {
+    paddingTop: 20,
+  },
   button: {
     backgroundColor: '#231f61',
     opacity:.8
@@ -184,6 +205,25 @@ const styles = StyleSheet.create({
    borderBottomColor: '#231f61',
    borderWidth: .5,
    width: 300,
+ },
+ iconContainer: {
+   alignItems: 'center',
+   justifyContent: 'space-around',
+   paddingBottom: 10,
+ },
+ bottomIconContainer: {
+   alignItems: 'center',
+   justifyContent: 'space-around',
+   paddingBottom: 10,
+   paddingTop: 15
+ },
+ parentContainer: {
+   borderWidth: 1,
+   borderColor: '#231f61',
+   justifyContent: 'space-around',
+ },
+ topParentContainer: {
+   paddingTop: 10,
  },
 });
 
