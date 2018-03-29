@@ -4,10 +4,11 @@ import {NavigationActions} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 import AppIndicator from './ActivityIndicator.js';
+import {atob} from '../utils/base64.js'
 
 import { Component } from 'react';
 import { StyleSheet, View, Text, Modal, TouchableOpacity, Image } from 'react-native';
-import { Button } from 'react-native-elements';
+import { Button, FormValidationMessage } from 'react-native-elements';
 
 function mapStateToProps(state){
     return {
@@ -37,6 +38,7 @@ class RedeemLessonsScreen extends Component {
         modalVisible: this.props.modalVisible,
         orderSubmitted: this.props.orderSubmitted,
         successModalVisible: false,
+        role: 'pending',
       }
   }
 
@@ -44,6 +46,8 @@ class RedeemLessonsScreen extends Component {
     if(nextProps.orderSubmitted == true){
         this.setState({successModalVisible: true})
     }
+    const role = JSON.parse(atob(this.props.token.split('.')[1])).role;
+    this.setState({role: role});
   }
 
   componentWillMount(){
@@ -51,6 +55,8 @@ class RedeemLessonsScreen extends Component {
     if (this.props.pending.length > 0){
       this.props.navigation.navigate('PendingLessons')
       }
+    const role = JSON.parse(atob(this.props.token.split('.')[1])).role;
+    this.setState({role: role});
   }
 
   componentDidMount(){
@@ -83,9 +89,10 @@ render() {
         <View style={styles.header}>
           <Text style={styles.headerText}>Record your swing</Text>
         </View>
+        {this.state.role == 'pending' && <FormValidationMessage>You must validate your email address before you can submit lessons.</FormValidationMessage>}
         <View style={styles.topParentContainer}>
           <View style={styles.parentContainer}>
-            <TouchableOpacity onPress={this._foFlag.bind(this)}>
+            <TouchableOpacity disabled={this.state.role == 'pending'} onPress={this._foFlag.bind(this)}>
               <View style={styles.buttonContainer}>
                 <View style={styles.iconContainer}>
                   <Image source={require('./img/SELogo-15.png')} />
@@ -94,7 +101,8 @@ render() {
                       raised
                       title="FACE ON"
                       buttonStyle={styles.button}
-                      // onPress={this._foFlag.bind(this)}
+                      disabled={this.state.role == 'pending'}
+                      onPress={this._foFlag.bind(this)}
                   />
               </View>
             </TouchableOpacity>
@@ -112,7 +120,7 @@ render() {
                       title="DOWN THE LINE"
                       buttonStyle={styles.button}
                       disabled={!this.state.fo}
-                      // onPress={this._dtlFlag.bind(this)}
+                      onPress={this._dtlFlag.bind(this)}
                   />
               </View>
             </TouchableOpacity>

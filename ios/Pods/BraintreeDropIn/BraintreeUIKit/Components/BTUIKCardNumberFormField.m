@@ -149,14 +149,14 @@
         if ([self isShowingValidateButton]) {
             [self setAccessoryViewHidden:NO animated:NO];
         } else {
-            if (_number.length == 0) {
+            if (self->_number.length == 0) {
                 [self setAccessoryViewHidden:YES animated:YES];
             } else {
                 [self showCardHintAccessory];
             }
         }
-        if (_number.length > 7 && ([self isValidLength] || self.state != BTUIKCardNumberFormFieldStateValidate)) {
-            NSString *lastFour = [_number substringFromIndex: [_number length] - 4];
+        if (self->_number.length > 7 && ([self isValidLength] || self.state != BTUIKCardNumberFormFieldStateValidate)) {
+            NSString *lastFour = [self->_number substringFromIndex: [self->_number length] - 4];
             self.textField.text = [NSString stringWithFormat:@"•••• %@", lastFour];
         }
         [self updateConstraints];

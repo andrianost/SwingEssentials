@@ -64,11 +64,11 @@ export function requestLogin(userCredentials){
             switch(response.status) {
                 case 200:
                     response.json()
-                    .then((json) => dispatch(loginSuccess({...json,token: response.headers.get('Token')})))
-                    .then(() => dispatch(requestCredits(response.headers.get('Token'))))
-                    .then(() => dispatch(requestSettings(response.headers.get('Token'))))
-                    .then(() => dispatch(requestLessons(response.headers.get('Token'))))
-                    .then(() => dispatch(requestPackages()));
+                    .then((json) => dispatch(loginSuccess({...json,token: response.headers.get('Token')})));
+                    dispatch(requestCredits(response.headers.get('Token')));
+                    // dispatch(requestSettings(response.headers.get('Token')))
+                    dispatch(requestLessons(response.headers.get('Token')));
+                    dispatch(requestPackages());
                     break;
                 default:
                     dispatch(loginFailure(response));
@@ -716,6 +716,7 @@ export function activateUnlimited(token){
         switch(response.status) {
             case 200:
                 dispatch(activateUnlimitedSuccess(response));
+                dispatch(requestCredits(token));
                 break;
             default:
                 dispatch(activateUnlimitedFailure(response))

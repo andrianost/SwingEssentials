@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
 
-import { StyleSheet, View, TouchableHighlight, Image } from 'react-native';
+import { StyleSheet, View, TouchableHighlight, Image, Modal, Text, TouchableOpacity } from 'react-native';
 import {FormInput, FormLabel, FormValidationMessage, Button} from 'react-native-elements';
 
 function mapStateToProps(state){
@@ -30,24 +30,31 @@ class CreateAccountScreen extends React.Component{
             phone: '',
             createAccount: false,
             createAccountFailure: false,
-            response: this.props.response
+            response: this.props.response,
+            successModalVisible: false
         }
     }
 
     _createAccount(){
-        this.props.createAccount({username: this.state.username,
-                                  firstName: this.state.firstName,
-                                  lastName: this.state.lastName,
-                                  email: this.state.email,
-                                  password: this.state.password,
-                                  phone: this.state.phone})
-        .then(() => {
-          if (this.props.response.status == 200) {
-            this.setState({createAccount: true});
-          } else {
-            this.setState({createAccountFailure: true});
-          }
-        })
+        if (!this.state.username.match(/^[A-Z0-9-_.$#@!+]+$/i)) {
+          this.setState({createAccountFailure: true});
+        } else {
+          this.props.createAccount({username: this.state.username,
+                                    firstName: this.state.firstName,
+                                    lastName: this.state.lastName,
+                                    email: this.state.email,
+                                    password: this.state.password,
+                                    phone: this.state.phone})
+          .then(() => {
+            if (this.props.response.status == 200) {
+              this.setState({createAccount: true});
+              this.setState({createAccountFailure: false});
+              this.setState({successModalVisible: true})
+            } else {
+              this.setState({createAccountFailure: true});
+            }
+          })
+        }
     }
 
     render(){
@@ -101,9 +108,20 @@ class CreateAccountScreen extends React.Component{
                             !this.state.password || this.state.createAccount == true}
                   onPress={this._createAccount.bind(this)}
               />
-              {this.state.createAccount == true && <FormValidationMessage>Your account has been created!</FormValidationMessage>}
-              {this.state.createAccountFailure == true && <FormValidationMessage>Username and/or email is unavailable</FormValidationMessage>}
+              {this.state.createAccountFailure == true && <FormValidationMessage>Username and/or email is unavailable or invalid. Username may only contain Letters, Numbers, and Special Characters(-_.$@!+).  Spaces are not allowed.</FormValidationMessage>}
             </View>
+            <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
+              <View style={styles.successModal}>
+                <View style={styles.modalButton}>
+                  <Text style={styles.modalText}>Your account has been successfully created! Please check your email to validate your account.</Text>
+                  <View style={styles.modalBorder}>
+                  </View>
+                  <TouchableOpacity onPress={() => this.props.navigation.navigate('Login')}>
+                    <Text style={styles.modalButtonText}>OK</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </Modal>
           </View>
           )
     }
@@ -111,7 +129,9 @@ class CreateAccountScreen extends React.Component{
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 30,
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10
   },
   button: {
     backgroundColor: "#231f61",
@@ -119,8 +139,35 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     paddingTop: 20,
-  }
-
+  },
+  successModal: {
+    flex: 1,
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    backgroundColor: '#00000040',
+  },
+  modalButton: {
+   alignItems: 'center',
+   backgroundColor: 'white',
+   padding: 20,
+  },
+  modalText: {
+   paddingLeft: 18,
+   paddingBottom: 15,
+   color: '#231f61',
+   alignItems: 'center'
+  },
+  modalButtonText: {
+   paddingTop: 15,
+   color: '#231f61',
+   alignItems: 'center'
+  },
+  modalBorder: {
+   borderBottomColor: '#231f61',
+   borderWidth: .5,
+   width: 300,
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateAccountScreen);

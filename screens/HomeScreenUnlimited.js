@@ -55,8 +55,8 @@ class HomeScreenUnlimited extends Component {
 
   async componentWillMount() {
     await this.setState({timeRemaining: Math.ceil(((this.props.credit_unlimited_expires - Date.now()/1000)/86400))});
-    console.log('time remaining')
-    console.log(this.state.timeRemaining)
+    // console.log('time remaining')
+    // console.log(this.state.timeRemaining)
   }
 
   _recentLessonsHeader() {
@@ -117,14 +117,24 @@ class HomeScreenUnlimited extends Component {
     )
   }
 
+  _timeRemaining(){
+    if (!this.props.credit_unlimited_expires){
+      return '--';
+    }
+    var time = Math.ceil((this.props.credit_unlimited_expires - Date.now()/1000)/86400);
+    if (time > 0){
+      return time + ' days left';
+    }
+  }
+
   _renderUnlimitedCredit({ item, index }) {
     return (
       <ListItem
         key={index}
         title={item.key}
         titleStyle = {styles.listItemTitle}
-        rightTitle={this.state.timeRemaining + ' days remaining'}
-        // rightTitleStyle = {styles.listItemCreditRightTitle}
+        rightTitle={this._timeRemaining()}
+        // rightTitle={this.state.timeRemaining + ' days remaining'}
         onPress={ () => this.props.navigation.navigate('RedeemLessons')}
       />
     )

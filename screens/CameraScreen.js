@@ -5,6 +5,8 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as Actions from '../actions/actions.js';
 import { RNCamera } from 'react-native-camera';
+import { Icon } from 'react-native-elements';
+
 
 function mapStateToProps(state){
     return {
@@ -28,10 +30,12 @@ class CameraScreen extends Component {
         dtl: this.props.dtl,
         fo_flag: this.props.fo_flag,
         successModalVisible: false,
+        recording: false,
       }
   }
 
   _startRecord = async function() {
+    this.setState({recording: true});
     if (this.camera) {
       const options = { maxFileSize: 9961472, quality: RNCamera.Constants.VideoQuality['480p'] }; //maxDuration: 10,
       const data = await this.camera.recordAsync(options)
@@ -40,7 +44,6 @@ class CameraScreen extends Component {
         this.setState({fo: data.uri}, function() {
           this.props.setFoUriSuccess({fo: this.state.fo})
           this.setState({successModalVisible: true})
-
         })
 
       }
@@ -55,6 +58,7 @@ class CameraScreen extends Component {
 
   _stopRecord() {
     this.camera.stopRecording();
+    this.setState({recording: false});
   }
 
   render() {
@@ -71,10 +75,17 @@ class CameraScreen extends Component {
         />
         <View style={{flex: 0, flexDirection: 'row', justifyContent: 'center',}}>
         <TouchableOpacity
-            onPressIn={this._startRecord.bind(this)}
-            onPressOut={this._stopRecord.bind(this)}
-            style = {styles.capture}
+            onPress={ () => {
+              if (this.state.recording) {
+                this._stopRecord();
+              } else {
+              this._startRecord();
+            }
+          }
+        }
         >
+        {!this.state.recording && <Icon name="fiber-manual-record" color="red" size={100}/>}
+        {this.state.recording && <Icon name="stop" color="red" size={100}/>}
         </TouchableOpacity>
         <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
           <View style={styles.successModal}>
@@ -125,7 +136,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#00000040',
   },
   modalButton: {
-   alignItems: 'center',
+   alignItems: 'stretch',
    backgroundColor: 'white',
    padding: 20,
  },
@@ -137,7 +148,8 @@ const styles = StyleSheet.create({
  modalButtonText: {
    paddingTop: 15,
    color: '#231f61',
-   alignItems: 'center'
+   alignItems: 'center',
+   textAlign: 'center'
  },
  modalBorder: {
    borderBottomColor: '#231f61',

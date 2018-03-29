@@ -23,6 +23,7 @@ function mapStateToProps(state){
       credit_unlimited_count: state.credits.unlimited_count,
       credit_details: state.credits.details,
       credit_unlimited_expires: state.credits.unlimited_expires,
+      details: state.credits.details,
     };
 }
 
@@ -49,22 +50,32 @@ class HomeScreen extends Component {
         credit_details: this.props.credit_details,
         credit_unlimited_expires: this.props.unlimited_expires,
         successModalVisible: false,
-        curTime: null,
+        // curTime: null,
         limitedFlag: false,
         unlimitedFlag: false,
       }
   }
 
-  async componentWillMount(){
-    await this.props.requestCredits(this.state.bearerToken);
-    await this.setState({curTime: Date.now()/1000})
-    if (this.props.credit_unlimited_count == 0){
-      this.setState({unlimitedFlag: true})
-    }
-    if (this.props.credit_count == 0){
-      this.setState({limitedFlag: true})
-    }
-    if (this.props.credit_unlimited_expires > this.state.curTime){
+  componentWillReceiveProps(nextprops){
+    // console.log('before request credits')
+    // this.props.requestCredits(this.state.bearerToken);
+    // console.log('after request credits')
+    // await this.setState({curTime: Date.now()/1000})
+    this.setState({unlimitedFlag: this.props.credit_unlimited_count == 0})
+    this.setState({limitedFlag: this.props.credit_count == 0})
+    if (nextprops.credit_unlimited_expires > Date.now()/1000){
+      this.props.navigation.navigate('HomeUnlimited')
+      }
+  }
+
+  componentWillMount(){
+    // console.log('before request credits')
+    // this.props.requestCredits(this.state.bearerToken);
+    // console.log('after request credits')
+    // await this.setState({curTime: Date.now()/1000})
+    this.setState({unlimitedFlag: this.props.credit_unlimited_count == 0})
+    this.setState({limitedFlag: this.props.credit_count == 0})
+    if (this.props.credit_unlimited_expires > Date.now()/1000){
       this.props.navigation.navigate('HomeUnlimited')
       }
   }
@@ -165,6 +176,9 @@ class HomeScreen extends Component {
   }
 
   render() {
+    if (this.props.details.length == 0){
+      return null;
+    }
     return (
       <View style={styles.topContainer}>
         <FlatList
@@ -287,7 +301,6 @@ const styles = StyleSheet.create({
    padding: 20,
  },
  modalText: {
-   paddingLeft: 18,
    paddingBottom: 15,
    color: '#231f61',
    alignItems: 'center'
