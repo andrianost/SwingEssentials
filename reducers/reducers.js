@@ -13,7 +13,8 @@ import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE,
 				RESET_PASSWORD_FAILURE, CREATE_ACCOUNT_SUCCESS, CREATE_ACCOUNT_FAILURE,
 				SET_SWING_FLAG_SUCCESS, SET_FO_URI_SUCCESS, SET_DTL_URI_SUCCESS, LOGOUT_SUCCESS,
 				LOGOUT_FAILURE, SET_MODAL_VISIBLE, ORDER_SUBMITTED_SUCCESS, ACTIVATE_UNLIMITED_SUCCESS,
-				ACTIVATE_UNLIMITED_FAILURE} from '../actions/actions.js';
+				ACTIVATE_UNLIMITED_FAILURE, PACKAGE_LOGOUT_SUCCESS, LESSON_LOGOUT_SUCCESS,
+				CREDIT_LOGOUT_SUCCESS, SETTING_LOGOUT_SUCCESS, USER_LOGOUT_SUCCESS} from '../actions/actions.js';
 
 const userReducer = (state=[], action) => {
 	switch(action.type){
@@ -38,13 +39,23 @@ const userReducer = (state=[], action) => {
 				response: action.response
 			}
 		case LOGOUT_SUCCESS:
-		console.log('logout success reducer')
-		return{...state,
-			username: '',
-			firstName: '',
-			lastName: '',
-			email: ''
-		}
+			console.log('logout success reducer')
+			return{...state,
+				username: '',
+				firstName: '',
+				lastName: '',
+				email: ''
+			}
+		case USER_LOGOUT_SUCCESS:
+		 console.log('user logout success reducer')
+		 // console.log(action)
+		 return{...state,
+			 username: '',
+			 firstName: '',
+			 lastName: '',
+			 email: '',
+			 response: '',
+			 }
 		default:
 			return state;
 	}
@@ -68,6 +79,18 @@ const settingsReducer = (state=[], action) => {
 			return state;
 		case PUT_SETTINGS_FAILURE:
 			return state;
+		case SETTING_LOGOUT_SUCCESS:
+		 console.log('setting logout success reducer')
+		 // console.log(action)
+		 return{...state,
+			 avatar: '',
+			 handedness: '',
+			 camera:{
+					 delay: 0,
+					 duration: 0,
+					 overlay: false
+			 }
+		 }
 		default:
 			return state;
 	}
@@ -92,6 +115,15 @@ const creditsReducer = (state=[], action) => {
 		case ACTIVATE_UNLIMITED_FAILURE:
 			console.log('activate unlimited failure reducer')
 			return state;
+		case CREDIT_LOGOUT_SUCCESS:
+		 console.log('credit logout success reducer')
+		 // console.log(action)
+		 return{...state,
+			 details: [],
+			 count: 0,
+			 unlimited_count: 0,
+			 unlimited_expires: 0,
+		 }
 	default:
 		return state;
 	}
@@ -108,8 +140,8 @@ const lessonsReducer = (state=[], action) => {
 		case GET_LESSONS_FAILURE:
 			return state;
 		case SET_REQUEST_ID_SUCCESS:
-		console.log('set request id reducer')
-		// console.log(action.data)
+			console.log('set request id reducer')
+			// console.log(action.data)
 			return{...state,
 				request_id: action.data.request_id,
 				request_date: action.data.request_date,
@@ -120,49 +152,69 @@ const lessonsReducer = (state=[], action) => {
 				response_video: action.data.response_video
 			}
 		case UPDATE_VIEWED_STATUS_SUCCESS:
-		console.log('update viewed status success reducer')
+			console.log('update viewed status success reducer')
 			return{...state,
 				viewed: action.data.viewed
 			}
 		case UPDATE_VIEWED_STATUS_FAILURE:
-		console.log('update viewed status failed reducer')
+			console.log('update viewed status failed reducer')
 			return state;
 		case REDEEM_LESSONS_SUCCESS:
-		console.log('redeem lessons success reducer')
+			console.log('redeem lessons success reducer')
 			return state;
 		case REDEEM_LESSONS_FAILURE:
-		console.log('redeem lessons failed reducer')
+			console.log('redeem lessons failed reducer')
 			return state;
 		case SET_SWING_FLAG_SUCCESS:
-		console.log('set swing flag success reducer')
-		// console.log(action.data.fo_flag)
+			console.log('set swing flag success reducer')
+			// console.log(action.data.fo_flag)
 			return{...state,
 				fo_flag: action.data.fo_flag,
 			}
 		case SET_FO_URI_SUCCESS:
-		console.log('set fo uri success reducer')
-		// console.log(action.data.fo_flag)
+			console.log('set fo uri success reducer')
+			// console.log(action.data.fo_flag)
 			return{...state,
 				fo: action.data.fo,
 			}
 		case SET_DTL_URI_SUCCESS:
-		console.log('set dtl uri success reducer')
-		// console.log(action.data.fo_flag)
+			console.log('set dtl uri success reducer')
+			// console.log(action.data.fo_flag)
 			return{...state,
 				dtl: action.data.dtl,
 			}
 		case SET_MODAL_VISIBLE:
-		console.log('set modal visible reducer')
-		// console.log(action.data)
+			console.log('set modal visible reducer')
+			// console.log(action.data)
 			return{...state,
 				modalVisible: action.data,
 			}
 		case ORDER_SUBMITTED_SUCCESS:
-		console.log('order submitted success reducer')
-		// console.log(action.data)
+			console.log('order submitted success reducer')
+			// console.log(action.data)
 			return{...state,
 				orderSubmitted: action.data,
 			}
+		case LESSON_LOGOUT_SUCCESS:
+		 console.log('lesson logout success reducer')
+		 // console.log(action)
+		 return{...state,
+			 orderSubmitted: false,
+			 modalVisible: false,
+			 dtl: '',
+			 fo: '',
+			 fo_flag: false,
+			 viewed: '',
+			 request_id: '',
+			 request_date: '',
+			 request_url: '',
+			 request_notes: '',
+			 response_notes: '',
+			 response_video: '',
+			 loading: false,
+			 pending: [],
+			 closed: [],
+		 }
 		default:
 			return state;
 		}
@@ -170,15 +222,15 @@ const lessonsReducer = (state=[], action) => {
 const packagesReducer = (state=[], action) => {
 	switch(action.type){
 		case GET_PACKAGES_SUCCESS:
-		console.log('get packages success reducer')
+			console.log('get packages success reducer')
 			return{...state,
 				packages: action.data,
 			}
 		case GET_PACKAGES_FAILURE:
 			return state;
 		case ORDER_LESSONS_SUCCESS:
-		console.log('order lessons success reducer')
-		// console.log(action)
+			console.log('order lessons success reducer')
+			// console.log(action)
 			return{...state,
 				name: action.data.name,
 				description: action.data.description,
@@ -186,33 +238,46 @@ const packagesReducer = (state=[], action) => {
 				shortcode: action.data.shortcode
 			}
 		case UPDATE_PRICE_SUCCESS:
-		console.log('update price success reducer')
-		// console.log(action.data.price)
-		// console.log(typeof action.data.price)
+			console.log('update price success reducer')
+			// console.log(action.data.price)
+			// console.log(typeof action.data.price)
 			return{...state,
 				price: action.data.price
 			}
 		case DISCOUNT_SUCCESS:
-		console.log('discount success reducer')
-		// console.log(action)
+			console.log('discount success reducer')
+			// console.log(action)
 			return{...state,
 				type: action.data.type,
 				value: action.data.value,
 			}
 		case DISCOUNT_FAILURE:
-		console.log('discount failure reducer')
-		// console.log(action)
+			console.log('discount failure reducer')
+			// console.log(action)
 			return state;
 		case SUBMIT_ORDER_SUCCESS:
-		console.log('submit order success reducer')
-		// console.log(action.data)
+			console.log('submit order success reducer')
+			// console.log(action.data)
 			return{...state,
 				response: action.data
 			}
 		case SUBMIT_ORDER_FAILURE:
-		console.log('submit order failure reducer')
-		// console.log(action)
+			console.log('submit order failure reducer')
+			// console.log(action)
 			return state;
+		case PACKAGE_LOGOUT_SUCCESS:
+		 console.log('package logout success reducer')
+		 // console.log(action)
+		 return{...state,
+			 response: null,
+			 type: '',
+			 value: '',
+			 price: 0,
+			 name: '',
+			 description: '',
+			 shortcode: '',
+			 packages: [],
+		 }
 		default:
 			return state;
 		}
@@ -230,22 +295,22 @@ const loginReducer = (state=[], action) => {
 				failCount: state.failCount + 1
 			}
 		case RESET_PASSWORD_SUCCESS:
-		console.log('reset password success reducer')
-		// console.log(action)
+			console.log('reset password success reducer')
 			return{...state,
 				response: action.data
 			}
 		case RESET_PASSWORD_FAILURE:
-		console.log('reset password failure reducer')
-		// console.log(action)
+			console.log('reset password failure reducer')
 			return state;
 		case LOGOUT_SUCCESS:
-		console.log('logout success reducer')
-		return{...state,
-			token: null
+			console.log('logout success reducer')
+			return{...state,
+				token: null,
+				response: '',
+				failCount: 0,
 		}
 		case LOGOUT_FAILURE:
-		console.log('logout failure reducer')
+			console.log('logout failure reducer')
 			return state;
 		default:
 			return state;

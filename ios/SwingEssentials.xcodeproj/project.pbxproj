@@ -41,20 +41,21 @@
 		2F2E417C263D40F084F1AC2B /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9A86698737C43A583A99629 /* FontAwesome.ttf */; };
 		486186AA049641168460E04D /* libRNFetchBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33977C5D1BC8427EB5B9A574 /* libRNFetchBlob.a */; };
 		57742563C8AA1FD7F7529FB5 /* Pods_SwingEssentialsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F663868EEF077F99209E43F /* Pods_SwingEssentialsTests.framework */; };
+		595332C720715D9F00EA7815 /* BraintreeCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FE20202CE500D78F73 /* BraintreeCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		595332C820715DC700EA7815 /* BraintreePayPal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680220202D1700D78F73 /* BraintreePayPal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		595332C920715DC700EA7815 /* PayPalDataCollector.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680320202D1700D78F73 /* PayPalDataCollector.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		595332CA20715DC700EA7815 /* PayPalOneTouch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680520202D1800D78F73 /* PayPalOneTouch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		595332CB20715DC700EA7815 /* PayPalUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680420202D1700D78F73 /* PayPalUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		595332CC20715DC700EA7815 /* BraintreeCard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FF20202CE500D78F73 /* BraintreeCard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		595332CD20715DC700EA7815 /* BraintreeUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FC20202CD500D78F73 /* BraintreeUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		595332CE20715DC700EA7815 /* BraintreeDropIn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367D520202CC100D78F73 /* BraintreeDropIn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		595332D12071637000EA7815 /* PayPalUtils.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = 595332D02071637000EA7815 /* PayPalUtils.framework.dSYM */; };
 		59E1D414206C0BBB00E302B8 /* BraintreeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FE20202CE500D78F73 /* BraintreeCore.framework */; };
-		59E1D415206C0BBB00E302B8 /* BraintreeCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FE20202CE500D78F73 /* BraintreeCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		59E1D417206C0BFA00E302B8 /* BraintreeCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FF20202CE500D78F73 /* BraintreeCard.framework */; };
-		59E1D418206C0BFA00E302B8 /* BraintreeCard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FF20202CE500D78F73 /* BraintreeCard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		59E1D419206C0C4200E302B8 /* BraintreeUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FC20202CD500D78F73 /* BraintreeUIKit.framework */; };
-		59E1D41A206C0C4200E302B8 /* BraintreeUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FC20202CD500D78F73 /* BraintreeUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		59E1D41B206C0C5C00E302B8 /* BraintreePayPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680220202D1700D78F73 /* BraintreePayPal.framework */; };
-		59E1D41C206C0C5C00E302B8 /* BraintreePayPal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680220202D1700D78F73 /* BraintreePayPal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		59E1D41D206C0C7100E302B8 /* PayPalDataCollector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680320202D1700D78F73 /* PayPalDataCollector.framework */; };
-		59E1D41E206C0C7100E302B8 /* PayPalDataCollector.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680320202D1700D78F73 /* PayPalDataCollector.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		59E1D41F206C0C8300E302B8 /* PayPalUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680420202D1700D78F73 /* PayPalUtils.framework */; };
-		59E1D420206C0C8300E302B8 /* PayPalUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680420202D1700D78F73 /* PayPalUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		59E1D421206C0C9500E302B8 /* PayPalOneTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680520202D1800D78F73 /* PayPalOneTouch.framework */; };
-		59E1D422206C0C9500E302B8 /* PayPalOneTouch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680520202D1800D78F73 /* PayPalOneTouch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5CFC2A8F27C14F64BA1E3BC6 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDD5C19ECA8943FF9ADB1174 /* EvilIcons.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		62F22556FF4F4AC98ACDECCC /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD2FB228618341A7852CD22D /* Foundation.ttf */; };
@@ -408,13 +409,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				59E1D41C206C0C5C00E302B8 /* BraintreePayPal.framework in Embed Frameworks */,
-				59E1D422206C0C9500E302B8 /* PayPalOneTouch.framework in Embed Frameworks */,
-				59E1D41E206C0C7100E302B8 /* PayPalDataCollector.framework in Embed Frameworks */,
-				59E1D415206C0BBB00E302B8 /* BraintreeCore.framework in Embed Frameworks */,
-				59E1D41A206C0C4200E302B8 /* BraintreeUIKit.framework in Embed Frameworks */,
-				59E1D418206C0BFA00E302B8 /* BraintreeCard.framework in Embed Frameworks */,
-				59E1D420206C0C8300E302B8 /* PayPalUtils.framework in Embed Frameworks */,
+				595332C820715DC700EA7815 /* BraintreePayPal.framework in Embed Frameworks */,
+				595332C920715DC700EA7815 /* PayPalDataCollector.framework in Embed Frameworks */,
+				595332CA20715DC700EA7815 /* PayPalOneTouch.framework in Embed Frameworks */,
+				595332CB20715DC700EA7815 /* PayPalUtils.framework in Embed Frameworks */,
+				595332CC20715DC700EA7815 /* BraintreeCard.framework in Embed Frameworks */,
+				595332CD20715DC700EA7815 /* BraintreeUIKit.framework in Embed Frameworks */,
+				595332CE20715DC700EA7815 /* BraintreeDropIn.framework in Embed Frameworks */,
+				595332C720715D9F00EA7815 /* BraintreeCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +454,7 @@
 		4CA6259F3B2E4F88839B27BA /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSplashScreen.a; sourceTree = "<group>"; };
 		5507FC676A2C487FA84AC971 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
 		5664A019283B4CE68B6FE7C7 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		595332D02071637000EA7815 /* PayPalUtils.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = PayPalUtils.framework.dSYM; path = Carthage/Build/iOS/PayPalUtils.framework.dSYM; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		5F663868EEF077F99209E43F /* Pods_SwingEssentialsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwingEssentialsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6629FDC13F56B06EB5BF285B /* Pods_SwingEssentials_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwingEssentials_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -527,6 +530,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				595332D12071637000EA7815 /* PayPalUtils.framework.dSYM in Frameworks */,
 				E6BAB4AD20431B3600A9AA9F /* AddressBook.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
@@ -569,7 +573,6 @@
 				E6CDE84F3B4844CAACD72D24 /* libRNCamera.a in Frameworks */,
 				486186AA049641168460E04D /* libRNFetchBlob.a in Frameworks */,
 				FE1E866757CF407D84553790 /* libSplashScreen.a in Frameworks */,
-				59E1D41F206C0C8300E302B8 /* PayPalUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,6 +878,7 @@
 		E6ABC30E201ECE2A000C5A7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				595332D02071637000EA7815 /* PayPalUtils.framework.dSYM */,
 				E6BAB4AC20431B3600A9AA9F /* AddressBook.framework */,
 				E6BAB47020431AFB00A9AA9F /* dbffca986f6337f8-GoogleSymbolUtilities-1.1.1 */,
 				E6BAB47920431AFC00A9AA9F /* GoogleInterchangeUtilities-1.2.2 */,
@@ -1151,9 +1155,8 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				3BE2831E2574C676847108BB /* [CP] Embed Pods Frameworks */,
 				5CA41A7D27FF6C6AD40B7155 /* [CP] Copy Pods Resources */,
-				E6A3680A20202D7400D78F73 /* ShellScript */,
-				E6A3680B20202FE100D78F73 /* ShellScript */,
 				59E1D416206C0BBB00E302B8 /* Embed Frameworks */,
+				595332CF20715DFE00EA7815 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1787,6 +1790,35 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		595332CF20715DFE00EA7815 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/BraintreePayPal.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PayPalDataCollector.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PayPalUtils.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BraintreeCard.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BraintreeUIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BraintreeDropIn.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BraintreeCore.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PayPalOneTouch.framework",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreePayPal.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PayPalDataCollector.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PayPalUtils.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeCard.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeUIKit.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeDropIn.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeCore.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PayPalOneTouch.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		5CA41A7D27FF6C6AD40B7155 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1849,48 +1881,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		E6A3680A20202D7400D78F73 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/BraintreePayPal.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PayPalDataCollector.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PayPalOneTouch.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PayPalUtils.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/BraintreeDropIn.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/BraintreeUIKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/BraintreeCard.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/BraintreeCore.framework",
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreePayPal.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PayPalDataCollector.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PayPalOneTouch.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PayPalUtils.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeDropIn.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeUIKit.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeCard.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeCore.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		E6A3680B20202FE100D78F73 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage outdated --xcode-warnings\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

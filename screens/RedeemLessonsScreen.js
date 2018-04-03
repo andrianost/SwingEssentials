@@ -9,6 +9,8 @@ import {atob} from '../utils/base64.js'
 import { Component } from 'react';
 import { StyleSheet, View, Text, Modal, TouchableOpacity, Image } from 'react-native';
 import { Button, FormValidationMessage } from 'react-native-elements';
+import Video from 'react-native-video';
+
 
 function mapStateToProps(state){
     return {
@@ -19,6 +21,7 @@ function mapStateToProps(state){
       pending: state.lessons.pending,
       modalVisible: state.lessons.modalVisible,
       orderSubmitted: state.lessons.orderSubmitted,
+      // faceOnIcon: state.lessons.faceOnIcon
     };
 }
 
@@ -39,6 +42,7 @@ class RedeemLessonsScreen extends Component {
         orderSubmitted: this.props.orderSubmitted,
         successModalVisible: false,
         role: 'pending',
+        // faceOnIcon: this.props.faceOnIcon,
       }
   }
 
@@ -95,7 +99,14 @@ render() {
             <TouchableOpacity disabled={this.state.role == 'pending'} onPress={this._foFlag.bind(this)}>
               <View style={styles.buttonContainer}>
                 <View style={styles.iconContainer}>
-                  <Image source={require('./img/SELogo-15.png')} />
+                  {this.state.fo == '' && <Image source={require('./img/SELogo-15.png')} />}
+                  {!this.state.fo == '' && <Video source={{uri: this.state.fo}}
+                                                  shouldPlay
+                                                  repeat={true}
+                                                  muted={true}
+                                                  resizeMode="cover"
+                                                  style={{ width: 320, height: 125 }}
+                  />}
                 </View>
                   <Button
                       raised
@@ -113,7 +124,14 @@ render() {
             <TouchableOpacity disabled={!this.state.fo} onPress={this._dtlFlag.bind(this)}>
               <View style={styles.secondButtonContainer}>
                 <View style={styles.bottomIconContainer}>
-                  <Image source={require('./img/SELogo-16.png')} />
+                  {this.state.dtl == '' && <Image source={require('./img/SELogo-16.png')} />}
+                  {!this.state.dtl == '' && <Video source={{uri: this.state.dtl}}
+                                                  shouldPlay
+                                                  repeat={true}
+                                                  muted={true}
+                                                  resizeMode="cover"
+                                                  style={{ width: 320, height: 125 }}
+                  />}
                 </View>
                   <Button
                       raised
@@ -195,7 +213,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#00000040',
   },
   modalButton: {
-   alignItems: 'center',
+   alignItems: 'stretch',
    backgroundColor: 'white',
    padding: 20,
  },

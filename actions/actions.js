@@ -38,6 +38,11 @@ export const SET_FO_URI_SUCCESS = 'SET_FO_URI_SUCCESS';
 export const SET_DTL_URI_SUCCESS = 'SET_DTL_URI_SUCCESS';
 //ADD FAILURE case
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+export const PACKAGE_LOGOUT_SUCCESS = 'PACKAGE_LOGOUT_SUCCESS';
+export const LESSON_LOGOUT_SUCCESS = 'LESSON_LOGOUT_SUCCESS';
+export const CREDIT_LOGOUT_SUCCESS = 'CREDIT_LOGOUT_SUCCESS';
+export const SETTING_LOGOUT_SUCCESS = 'SETTING_LOGOUT_SUCCESS';
+export const USER_LOGOUT_SUCCESS = 'USER_LOGOUT_SUCCESS';
 export const LOGOUT_FAILURE = 'LOGOUT_FAILURE';
 export const SET_MODAL_VISIBLE = 'SET_MODAL_VISIBLE';
 //ADD FAILURE CASE
@@ -45,6 +50,7 @@ export const ORDER_SUBMITTED_SUCCESS = 'ORDER_SUBMITTED_SUCCESS';
 //ADD FAILURE CASE
 export const ACTIVATE_UNLIMITED_SUCCESS = 'ACTIVATE_UNLIMITED_SUCCESS';
 export const ACTIVATE_UNLIMITED_FAILURE = 'ACTIVATE_UNLIMITED_FAILURE';
+
 
 export const BASEURL = 'https://www.josephpboyle.com/api/swingessentials2.php/'
 
@@ -677,6 +683,11 @@ export function logout(token){
             switch(response.status) {
                 case 200:
                     dispatch(logoutSuccess(response));
+                    dispatch(packageLogoutSuccess(response));
+                    dispatch(lessonLogoutSuccess(response));
+                    dispatch(creditLogoutSuccess(response));
+                    dispatch(settingLogoutSuccess(response));
+                    dispatch(userLogoutSuccess(response));
                     break;
                 default:
                     dispatch(logoutFailure(response));
@@ -692,6 +703,51 @@ function logoutSuccess(response){
   console.log(response)
     return{
         type: LOGOUT_SUCCESS,
+        data: response
+    }
+}
+
+function packageLogoutSuccess(response){
+  console.log('package logout success')
+  console.log(response)
+    return{
+        type: PACKAGE_LOGOUT_SUCCESS,
+        data: response
+    }
+}
+
+function lessonLogoutSuccess(response){
+  console.log('lesson logout success')
+  console.log(response)
+    return{
+        type: LESSON_LOGOUT_SUCCESS,
+        data: response
+    }
+}
+
+function creditLogoutSuccess(response){
+  console.log('credit logout success')
+  console.log(response)
+    return{
+        type: CREDIT_LOGOUT_SUCCESS,
+        data: response
+    }
+}
+
+function settingLogoutSuccess(response){
+  console.log('setting logout success')
+  console.log(response)
+    return{
+        type: SETTING_LOGOUT_SUCCESS,
+        data: response
+    }
+}
+
+function userLogoutSuccess(response){
+  console.log('user logout success')
+  console.log(response)
+    return{
+        type: USER_LOGOUT_SUCCESS,
         data: response
     }
 }

@@ -37,13 +37,14 @@ class CameraScreen extends Component {
   _startRecord = async function() {
     this.setState({recording: true});
     if (this.camera) {
-      const options = { maxFileSize: 9961472, quality: RNCamera.Constants.VideoQuality['480p'] }; //maxDuration: 10,
+      const options = { maxFileSize: 9961472, quality: RNCamera.Constants.VideoQuality['480p'] };
       const data = await this.camera.recordAsync(options)
 
       if (this.props.fo_flag == true){
         this.setState({fo: data.uri}, function() {
           this.props.setFoUriSuccess({fo: this.state.fo})
           this.setState({successModalVisible: true})
+          console.log(this.state.fo)
         })
 
       }

@@ -3,9 +3,9 @@ import {bindActionCreators} from 'redux';
 import {NavigationActions} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
+import AppIndicator from './ActivityIndicator.js';
 
-
-import { StyleSheet, View, TouchableHighlight, Image } from 'react-native';
+import { StyleSheet, View, TouchableHighlight, Image, Modal } from 'react-native';
 import {FormInput, FormLabel, FormValidationMessage, Button} from 'react-native-elements';
 
 // This is where we specify which values in the store we want to listen for changes on
@@ -30,7 +30,9 @@ class LoginScreen extends React.Component{
         super(props);
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            modalVisible: false,
+
         }
     }
 
@@ -45,6 +47,7 @@ class LoginScreen extends React.Component{
     }
 
     _onLogin(){
+        this.setState({modalVisible: true})
         this.props.requestLogin({username: this.state.username, password: this.state.password});
     }
 
@@ -75,7 +78,6 @@ class LoginScreen extends React.Component{
                       onChangeText={(newText) => this.setState({password: newText})}
                   />
                   {this.props.loginFails > 0 && <FormValidationMessage>The username/password you entered was not correct.</FormValidationMessage>}
-
               </View>
               <View>
                 <Button
@@ -84,6 +86,9 @@ class LoginScreen extends React.Component{
                     disabled={!this.state.username || !this.state.password}
                     onPress={this._onLogin.bind(this)}
                 />
+                <Modal transparent={true} visible={this.state.modalVisible}>
+                  <AppIndicator/>
+                </Modal>
               </View>
               <View>
                 <Button

@@ -99,6 +99,42 @@ class BraintreeDropIn_TokenizationKey_CardForm_UITests: XCTestCase {
     }
 }
 
+class BraintreeDropIn_CardForm_RequestOptions_UITests: XCTestCase {
+
+    var app: XCUIApplication!
+
+    override func setUp() {
+        super.setUp()
+        continueAfterFailure = false
+        app = XCUIApplication()
+        app.launchArguments.append("-EnvironmentSandbox")
+        app.launchArguments.append("-TokenizationKey")
+        app.launchArguments.append("-ThreeDSecureDefault")
+        app.launchArguments.append("-Integration:BraintreeDemoDropInViewController")
+        app.launchArguments.append("-MaskSecurityCode")
+        app.launch()
+        sleep(1)
+        self.waitForElementToBeHittable(app.buttons["Add Payment Method"])
+        app.buttons["Add Payment Method"].tap()
+    }
+
+    func testDropIn_maskSecurityCodeOption_enablesSecureTextEntry() {
+        self.waitForElementToBeHittable(app.staticTexts["Credit or Debit Card"])
+        app.staticTexts["Credit or Debit Card"].tap()
+
+        let elementsQuery = app.scrollViews.otherElements
+        let cardNumberTextField = elementsQuery.textFields["Card Number"]
+
+        self.waitForElementToBeHittable(cardNumberTextField)
+        cardNumberTextField.typeText("4111111111111111")
+
+        let securityCodeField = elementsQuery.secureTextFields["CVV"]
+        self.waitForElementToBeHittable(securityCodeField)
+
+        XCTAssertFalse(elementsQuery.textFields["CVV"].exists)
+    }
+}
+
 class BraintreeDropIn_ClientToken_CardForm_UITests: XCTestCase {
     
     var app: XCUIApplication!
@@ -280,7 +316,27 @@ class BraintreeDropIn_PayPal_UITests: XCTestCase {
         
         self.waitForElementToAppear(app.staticTexts["bt_buyer_us@paypal.com"])
         
-        XCTAssertTrue(app.staticTexts["bt_buyer_us@paypal.com"].exists);
+        XCTAssertTrue(app.staticTexts["bt_buyer_us@paypal.com"].exists)
+    }
+
+    func testDropIn_paypal_cancelPopupShowsSelectPaymentMethodView() {
+        if #available(iOS 11.0, *) {
+            return
+        }
+
+        self.waitForElementToBeHittable(app.staticTexts["PayPal"])
+        app.staticTexts["PayPal"].tap()
+        sleep(3)
+
+        let webviewElementsQuery = app.webViews.element.otherElements
+
+        self.waitForElementToBeHittable(webviewElementsQuery.links["Cancel Sandbox Purchase"])
+
+        webviewElementsQuery.links["Cancel Sandbox Purchase"].forceTapElement()
+
+        self.waitForElementToAppear(app.staticTexts["Select Payment Method"])
+
+        XCTAssertTrue(app.staticTexts["Select Payment Method"].exists)
     }
 }
 
@@ -402,9 +458,7 @@ class BraintreeDropIn_ThreeDSecure_UITests: XCTestCase {
         
         self.waitForElementToAppear(app.staticTexts["Added Protection"])
         
-        self.waitForElementToAppear(app.navigationBars["Authentication"])
-        
-        app.navigationBars["Authentication"].buttons["Cancel"].forceTapElement()
+        app.buttons["Done"].forceTapElement()
         self.waitForElementToBeHittable(app.staticTexts["Credit or Debit Card"])
         self.waitForElementToAppear(app.staticTexts["Select Payment Method"])
         

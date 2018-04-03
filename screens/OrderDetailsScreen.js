@@ -124,7 +124,7 @@ class OrderDetailsScreen extends Component {
               buttonStyle={styles.button}
               title="SUBMIT ORDER"
               disabled={this.state.orderComplete == true}
-              onPress={this._PayPal.bind(this)}//{this._submitOrder.bind(this)}
+              onPress={this._PayPal.bind(this)}
           />
           {this.state.orderComplete == true && <FormValidationMessage>Your order has been completed!</FormValidationMessage>}
         </View>
