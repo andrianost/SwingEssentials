@@ -43,7 +43,9 @@ class YourLessonsScreen extends Component {
       }
   }
 
-  _requestID(data){
+  async _requestID(data){
+    await this.setState({from: ''})
+    await this.props.setFrom({from: this.state.from})
     this.props.setRequestId(data)
     this.props.navigation.navigate('IndividualLessonsScreen')
   }

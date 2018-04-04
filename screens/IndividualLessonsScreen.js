@@ -21,7 +21,7 @@ function mapStateToProps(state){
       request_url: state.lessons.request_url,
       request_notes: state.lessons.request_notes,
       response_notes: state.lessons.response_notes,
-      response_video: state.lessons.response_video
+      response_video: state.lessons.response_video,
     };
 }
 
@@ -49,7 +49,7 @@ class IndividualLessonsScreen extends Component {
     if (this.props.response_video == null){
       this.props.navigation.navigate('PendingLessons')
       }
-  }
+    }
 
   render() {
     console.log("response video")

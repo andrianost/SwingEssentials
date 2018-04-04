@@ -42,6 +42,7 @@ class LoginScreen extends React.Component{
         }
         else{
             this.setState({password: ''});
+            this.setState({modalVisible: false})
             // TODO: if failure > 3 locked out
         }
     }

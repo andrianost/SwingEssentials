@@ -50,7 +50,7 @@ export const ORDER_SUBMITTED_SUCCESS = 'ORDER_SUBMITTED_SUCCESS';
 //ADD FAILURE CASE
 export const ACTIVATE_UNLIMITED_SUCCESS = 'ACTIVATE_UNLIMITED_SUCCESS';
 export const ACTIVATE_UNLIMITED_FAILURE = 'ACTIVATE_UNLIMITED_FAILURE';
-
+export const SET_FROM = 'SET_FROM';
 
 export const BASEURL = 'https://www.josephpboyle.com/api/swingessentials2.php/'
 
@@ -798,5 +798,14 @@ function activateUnlimitedFailure(response){
     return{
         type: ACTIVATE_UNLIMITED_FAILURE,
         response: response.status
+    }
+}
+
+export function setFrom(response){
+    console.log('set from action')
+    console.log(response)
+    return{
+        type: SET_FROM,
+        data: response
     }
 }

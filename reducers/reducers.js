@@ -14,7 +14,7 @@ import {LOGIN_SUCCESS, LOGIN_ERROR, GET_SETTINGS_SUCCESS, GET_SETTINGS_FAILURE,
 				SET_SWING_FLAG_SUCCESS, SET_FO_URI_SUCCESS, SET_DTL_URI_SUCCESS, LOGOUT_SUCCESS,
 				LOGOUT_FAILURE, SET_MODAL_VISIBLE, ORDER_SUBMITTED_SUCCESS, ACTIVATE_UNLIMITED_SUCCESS,
 				ACTIVATE_UNLIMITED_FAILURE, PACKAGE_LOGOUT_SUCCESS, LESSON_LOGOUT_SUCCESS,
-				CREDIT_LOGOUT_SUCCESS, SETTING_LOGOUT_SUCCESS, USER_LOGOUT_SUCCESS} from '../actions/actions.js';
+				CREDIT_LOGOUT_SUCCESS, SETTING_LOGOUT_SUCCESS, USER_LOGOUT_SUCCESS, SET_FROM} from '../actions/actions.js';
 
 const userReducer = (state=[], action) => {
 	switch(action.type){
@@ -214,6 +214,12 @@ const lessonsReducer = (state=[], action) => {
 			 loading: false,
 			 pending: [],
 			 closed: [],
+		 }
+	 case SET_FROM:
+		 console.log('set from reducer')
+		 console.log(action.data.from)
+		 return{...state,
+			 from: action.data.from,
 		 }
 		default:
 			return state;

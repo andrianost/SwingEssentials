@@ -7,7 +7,7 @@ import AppIndicator from './ActivityIndicator.js';
 import {atob} from '../utils/base64.js'
 
 import { Component } from 'react';
-import { StyleSheet, View, Text, Modal, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, View, Text, Modal, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { Button, FormValidationMessage } from 'react-native-elements';
 import Video from 'react-native-video';
 
@@ -90,6 +90,8 @@ class RedeemLessonsScreen extends Component {
 render() {
     return (
       <View style={styles.topContainer}>
+        <ScrollView>
+
         <View style={styles.header}>
           <Text style={styles.headerText}>Record your swing</Text>
         </View>
@@ -105,7 +107,7 @@ render() {
                                                   repeat={true}
                                                   muted={true}
                                                   resizeMode="cover"
-                                                  style={{ width: 320, height: 125 }}
+                                                  style={{ width: 250, height: 250 }}
                   />}
                 </View>
                   <Button
@@ -130,7 +132,7 @@ render() {
                                                   repeat={true}
                                                   muted={true}
                                                   resizeMode="cover"
-                                                  style={{ width: 320, height: 125 }}
+                                                  style={{ width: 250, height: 250 }}
                   />}
                 </View>
                   <Button
@@ -168,6 +170,7 @@ render() {
             </View>
           </Modal>
         </View>
+        </ScrollView>
       </View>
     );
   }

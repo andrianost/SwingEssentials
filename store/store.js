@@ -50,6 +50,7 @@ export const initialStore = {
         fo_flag: false,
         modalVisible: false,
         orderSubmitted: false,
+        from: ''
     },
 
     // swingessentials available lesson packages

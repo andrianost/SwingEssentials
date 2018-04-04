@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 import {addNavigationHelpers, StackNavigator, DrawerNavigator, DrawerItems} from 'react-navigation';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { Button } from 'react-native-elements'
@@ -28,13 +29,6 @@ import LogoutScreen from '../screens/LogoutScreen.js';
 import PendingLessonsScreen from '../screens/PendingLessonsScreen.js';
 import CustomDrawer from '../screens/CustomDrawer.js';
 
-
-function mapStateToProps(state){
-    return {
-        username: state.userData.username,
-        firstName: state.userData.firstName
-    };
-}
 
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
@@ -148,14 +142,20 @@ export const AppNavigator = DrawerNavigator(
               },
               IndividualLessonsScreen: {
                   screen: IndividualLessonsScreen,
-                  navigationOptions: ({ navigation }) => ({
+                  navigationOptions: ({ navigation, screenProps }) => ({
                       title: (
                         <Image source={require('./img/SELogo-12.png')} />
                       ),
                       headerStyle: styles.header,
-                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('YourLessons')}/>
+                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore}
+                                    onPress={ () => {
+                                                    if (screenProps.from == 'Home'){
+                                                      navigation.navigate('Home')
+                                                    } else  {
+                                                      navigation.navigate('YourLessons')
+                                                    }}} />
                   })
-              }
+                }
           },{
               initialRouteName: 'YourLessons',
               contentOptions:{activeTintColor: '#231f61', opacity:.8}
@@ -393,8 +393,11 @@ export const AppNavigator = DrawerNavigator(
 
 class AppWithNavigationState extends React.Component {
     render(){
+        console.log('app with nav state')
+        console.log(this.props)
         return(
             <AppNavigator
+                screenProps={{from: this.props.from}}
                 navigation={addNavigationHelpers({
                     dispatch: this.props.dispatch,
                     state: this.props.nav
@@ -405,7 +408,8 @@ class AppWithNavigationState extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    nav: state.nav
+    nav: state.nav,
+    from: state.lessons.from
 });
 
 const styles = StyleSheet.create({

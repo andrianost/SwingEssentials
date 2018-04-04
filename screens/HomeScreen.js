@@ -24,6 +24,7 @@ function mapStateToProps(state){
       credit_details: state.credits.details,
       credit_unlimited_expires: state.credits.unlimited_expires,
       details: state.credits.details,
+      from: state.lessons.from
     };
 }
 
@@ -53,6 +54,7 @@ class HomeScreen extends Component {
         // curTime: null,
         limitedFlag: false,
         unlimitedFlag: false,
+        from: this.props.from
       }
   }
 
@@ -70,7 +72,7 @@ class HomeScreen extends Component {
 
   componentWillMount(){
     // console.log('before request credits')
-    // this.props.requestCredits(this.state.bearerToken);
+    this.props.requestCredits(this.state.bearerToken);
     // console.log('after request credits')
     // await this.setState({curTime: Date.now()/1000})
     this.setState({unlimitedFlag: this.props.credit_unlimited_count == 0})
@@ -96,7 +98,9 @@ class HomeScreen extends Component {
     )
   }
 
-  _requestID(data){
+  async _requestID(data){
+    await this.setState({from: 'Home'})
+    await this.props.setFrom({from: this.state.from})
     this.props.setRequestId(data)
     this.props.navigation.navigate('IndividualLessonsScreen')
   }
@@ -308,12 +312,14 @@ const styles = StyleSheet.create({
  modalBottomButtonText: {
    paddingTop: 15,
    color: '#231f61',
-   alignItems: 'center'
+   alignItems: 'center',
+   textAlign: 'center'
  },
  modalTopButtonText: {
    paddingBottom: 15,
    color: '#231f61',
-   alignItems: 'center'
+   alignItems: 'center',
+   textAlign: 'center'
  },
  modalBorder: {
    borderBottomColor: '#231f61',
