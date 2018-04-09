@@ -55,8 +55,6 @@ class HomeScreenUnlimited extends Component {
 
   async componentWillMount() {
     await this.setState({timeRemaining: Math.ceil(((this.props.credit_unlimited_expires - Date.now()/1000)/86400))});
-    // console.log('time remaining')
-    // console.log(this.state.timeRemaining)
   }
 
   _recentLessonsHeader() {
@@ -78,7 +76,7 @@ class HomeScreenUnlimited extends Component {
   async _requestID(data){
     await this.setState({from: 'Home'})
     await this.props.setFrom({from: this.state.from})
-    this.props.setRequestId(data)
+    await this.props.setRequestId(data)
     this.props.navigation.navigate('IndividualLessonsScreen')
   }
 

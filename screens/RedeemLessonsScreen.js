@@ -228,7 +228,8 @@ const styles = StyleSheet.create({
  modalButtonText: {
    paddingTop: 15,
    color: '#231f61',
-   alignItems: 'center'
+   alignItems: 'center',
+   textAlign: 'center'
  },
  modalBorder: {
    borderBottomColor: '#231f61',

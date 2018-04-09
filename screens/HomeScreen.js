@@ -101,7 +101,7 @@ class HomeScreen extends Component {
   async _requestID(data){
     await this.setState({from: 'Home'})
     await this.props.setFrom({from: this.state.from})
-    this.props.setRequestId(data)
+    await this.props.setRequestId(data)
     this.props.navigation.navigate('IndividualLessonsScreen')
   }
 

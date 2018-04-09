@@ -128,7 +128,7 @@ export const AppNavigator = DrawerNavigator(
           }
         })
       },
-      YourLessons: {
+      Lessons: {
           screen: StackNavigator({
               YourLessons: {
                   screen: YourLessonsScreen,

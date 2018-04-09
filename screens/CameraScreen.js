@@ -31,6 +31,7 @@ class CameraScreen extends Component {
         fo_flag: this.props.fo_flag,
         successModalVisible: false,
         recording: false,
+        timeout: 0,
       }
   }
 
@@ -62,6 +63,19 @@ class CameraScreen extends Component {
     this.setState({recording: false});
   }
 
+  _timeout() {
+    console.log('timeout')
+    if (this.state.timeout == 0){
+      this.setState({timeout: 3})
+    }
+    else if (this.state.timeout == 3){
+      this.setState({timeout: 10})
+    }
+    else {
+      this.setState({timeout: 0})
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -74,20 +88,27 @@ class CameraScreen extends Component {
             permissionDialogTitle={'Permission to use camera'}
             permissionDialogMessage={'We need your permission to use your camera phone'}
         />
-        <View style={{flex: 0, flexDirection: 'row', justifyContent: 'center',}}>
-        <TouchableOpacity
-            onPress={ () => {
-              if (this.state.recording) {
-                this._stopRecord();
-              } else {
-              this._startRecord();
+        <View style={{flex: 0, flexDirection: 'row', justifyContent: 'flex-end',}}>
+          <TouchableOpacity
+              onPress={ () => {
+                if (this.state.recording) {
+                  this._stopRecord();
+                } else {
+                setTimeout(() => this._startRecord(), (this.state.timeout * 1000));
+              }
             }
           }
-        }
-        >
-        {!this.state.recording && <Icon name="fiber-manual-record" color="red" size={100}/>}
-        {this.state.recording && <Icon name="stop" color="red" size={100}/>}
-        </TouchableOpacity>
+          >
+          {!this.state.recording && <Icon name="fiber-manual-record" color="red" size={100}/>}
+          {this.state.recording && <Icon name="stop" color="red" size={100}/>}
+          </TouchableOpacity>
+          <TouchableOpacity
+              onPress={this._timeout.bind(this)}
+          >
+            {this.state.timeout == 0 && <Icon name="exposure-zero" color="white" size={100}/>}
+            {this.state.timeout == 3 && <Icon name="timer-3" color="white" size={100}/>}
+            {this.state.timeout == 10 && <Icon name="timer-10" color="white" size={100}/>}
+          </TouchableOpacity>
         <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
           <View style={styles.successModal}>
             <View style={styles.modalButton}>
@@ -100,8 +121,8 @@ class CameraScreen extends Component {
             </View>
           </View>
         </Modal>
-        </View>
       </View>
+    </View>
     );
   }
   }
