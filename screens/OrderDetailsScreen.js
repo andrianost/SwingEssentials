@@ -81,6 +81,7 @@ class OrderDetailsScreen extends Component {
 
   _PayPal(){
   console.log('PayPal log')
+  this.props.navigation.navigate('Home')
   NativeModules.PayPal.buyAction(this.state.bearerToken, this.state.price, this.state.name, this.state.description,
                                 this.state.shortcode, this.state.discount)
   }

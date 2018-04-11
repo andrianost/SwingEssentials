@@ -7,6 +7,7 @@ import AppIndicator from './ActivityIndicator.js';
 
 import { StyleSheet, View, TouchableHighlight, Image, Modal } from 'react-native';
 import {FormInput, FormLabel, FormValidationMessage, Button} from 'react-native-elements';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 // This is where we specify which values in the store we want to listen for changes on
 // these values will get mapped into props so a re-render will trigger whenever they change
@@ -62,6 +63,7 @@ class LoginScreen extends React.Component{
 
     render(){
         return(
+          <KeyboardAwareScrollView>
             <View style={styles.topContainer}>
               <Image source={require('./img/SE-Logo-circle.png')} />
               <View style={styles.container}>
@@ -108,6 +110,7 @@ class LoginScreen extends React.Component{
                 />
               </View>
             </View>
+            </KeyboardAwareScrollView>
           )
     }
 };

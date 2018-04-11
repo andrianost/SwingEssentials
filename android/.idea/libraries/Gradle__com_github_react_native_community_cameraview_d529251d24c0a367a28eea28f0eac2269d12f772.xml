@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.react-native-community:cameraview-d529251d24c0a367a28eea28f0eac2269d12f772">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../node_modules/react-native-camera/android/build/intermediates/exploded-aar/com.github.react-native-community/cameraview/d529251d24c0a367a28eea28f0eac2269d12f772/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../node_modules/react-native-camera/android/build/intermediates/exploded-aar/com.github.react-native-community/cameraview/d529251d24c0a367a28eea28f0eac2269d12f772/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

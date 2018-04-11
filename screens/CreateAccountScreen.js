@@ -4,9 +4,9 @@ import {NavigationActions} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
-
-import { StyleSheet, View, TouchableHighlight, Image, Modal, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, TouchableHighlight, Image, Modal, Text, TouchableOpacity, ScrollView } from 'react-native';
 import {FormInput, FormLabel, FormValidationMessage, Button} from 'react-native-elements';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 function mapStateToProps(state){
     return {
@@ -59,6 +59,7 @@ class CreateAccountScreen extends React.Component{
 
     render(){
         return(
+          <KeyboardAwareScrollView>
           <View>
             <View style={styles.container}>
                 <FormLabel>First Name</FormLabel>
@@ -123,6 +124,7 @@ class CreateAccountScreen extends React.Component{
               </View>
             </Modal>
           </View>
+          </KeyboardAwareScrollView>
           )
     }
 };

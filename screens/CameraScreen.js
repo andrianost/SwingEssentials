@@ -88,7 +88,7 @@ class CameraScreen extends Component {
             permissionDialogTitle={'Permission to use camera'}
             permissionDialogMessage={'We need your permission to use your camera phone'}
         />
-        <View style={{flex: 0, flexDirection: 'row', justifyContent: 'flex-end',}}>
+        <View style={{flex: 0, flexDirection: 'row', justifyContent: 'space-between'}}>
           <TouchableOpacity
               onPress={ () => {
                 if (this.state.recording) {
@@ -99,16 +99,18 @@ class CameraScreen extends Component {
             }
           }
           >
-          {!this.state.recording && <Icon name="fiber-manual-record" color="red" size={100}/>}
-          {this.state.recording && <Icon name="stop" color="red" size={100}/>}
+            {!this.state.recording && <Icon name="fiber-manual-record" color="red" size={70} borderRadius={50} borderWidth={5} borderColor="white"/>}
+            {this.state.recording && <Icon name="stop" color="red" size={70} borderRadius={50} borderWidth={5} borderColor="white"/>}
           </TouchableOpacity>
           <TouchableOpacity
               onPress={this._timeout.bind(this)}
           >
-            {this.state.timeout == 0 && <Icon name="exposure-zero" color="white" size={100}/>}
-            {this.state.timeout == 3 && <Icon name="timer-3" color="white" size={100}/>}
-            {this.state.timeout == 10 && <Icon name="timer-10" color="white" size={100}/>}
+            {this.state.timeout == 0 && <Icon name="exposure-zero" color="white" size={75}/>}
+            {this.state.timeout == 3 && <Icon name="timer-3" color="white" size={75}/>}
+            {this.state.timeout == 10 && <Icon name="timer-10" color="white" size={75}/>}
+            <Text style={{color: 'white'}}>Camera Delay</Text>
           </TouchableOpacity>
+          </View>
         <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
           <View style={styles.successModal}>
             <View style={styles.modalButton}>
@@ -122,7 +124,6 @@ class CameraScreen extends Component {
           </View>
         </Modal>
       </View>
-    </View>
     );
   }
   }
