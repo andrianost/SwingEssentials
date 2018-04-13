@@ -21,7 +21,6 @@ function mapStateToProps(state){
       pending: state.lessons.pending,
       modalVisible: state.lessons.modalVisible,
       orderSubmitted: state.lessons.orderSubmitted,
-      // faceOnIcon: state.lessons.faceOnIcon
     };
 }
 
@@ -42,7 +41,7 @@ class RedeemLessonsScreen extends Component {
         orderSubmitted: this.props.orderSubmitted,
         successModalVisible: false,
         role: 'pending',
-        // faceOnIcon: this.props.faceOnIcon,
+        progress: 0,
       }
   }
 
@@ -69,7 +68,7 @@ class RedeemLessonsScreen extends Component {
 
   _redeemLessons(){
     this.props.setModalVisible(true)
-    this.props.redeemLessons({bearerToken: this.state.bearerToken, fo: this.state.fo, dtl: this.state.dtl})
+    this.props.redeemLessons({bearerToken: this.state.bearerToken, fo: this.state.fo, dtl: this.state.dtl}, this._updateProgress.bind(this))
     this.props.requestLessons(this.state.bearerToken);
   }
 
@@ -87,11 +86,14 @@ class RedeemLessonsScreen extends Component {
     })
   }
 
+  _updateProgress(event){
+      this.setState({progress: ((event.loaded/event.total).toFixed(2))*100});
+  }
+
 render() {
     return (
       <View style={styles.topContainer}>
         <ScrollView>
-
         <View style={styles.header}>
           <Text style={styles.headerText}>Record your swing</Text>
         </View>
@@ -154,9 +156,19 @@ render() {
               disabled={!this.state.fo || !this.state.dtl}
               onPress={this._redeemLessons.bind(this)}
           />
-          <Modal transparent={true} visible={this.props.modalVisible}>
-            <AppIndicator/>
-          </Modal>
+            <Modal transparent={true} visible={this.props.modalVisible}>
+            <View style={{flex: 1, alignItems: 'center', flexDirection: 'column', justifyContent: 'space-around'}}>
+              <View style={styles.indicatorModal}>
+                <View style={styles.indicator}>
+                  <AppIndicator/>
+                </View>
+                <View style={styles.indicator}>
+                  {this.state.progress < 100 && <Text style={styles.indicatorText}>Uploading Video Files... {this.state.progress}%</Text>}
+                  {this.state.progress >= 100 && <Text style={styles.indicatorText}>Creating lesson...</Text>}
+                </View>
+              </View>
+              </View>
+            </Modal>
           <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
             <View style={styles.successModal}>
               <View style={styles.modalButton}>
@@ -255,6 +267,27 @@ const styles = StyleSheet.create({
  topParentContainer: {
    paddingTop: 10,
  },
+ indicator: {
+  alignItems: 'stretch',
+  backgroundColor: 'white',
+  alignItems: 'center',
+  justifyContent: 'space-around',
+  padding: 15,
+},
+indicatorText: {
+  // padding: 10,
+  color: '#231f61',
+  alignItems: 'center',
+  textAlign: 'center',
+  justifyContent: 'center'
+},
+indicatorModal: {
+  flex: 0,
+  alignItems: 'center',
+  flexDirection: 'row',
+  // justifyContent: 'space-around',
+  backgroundColor: '#00000040',
+},
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(RedeemLessonsScreen);

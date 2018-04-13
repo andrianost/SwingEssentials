@@ -501,8 +501,22 @@ function requestCreditsFailure(response){
     }
 }
 
+export function futch(url, opts={}, onProgress) {
+    return new Promise( (res, rej)=>{
+        var xhr = new XMLHttpRequest();
+        xhr.open(opts.method || 'get', url);
+        for (var k in opts.headers||{})
+            xhr.setRequestHeader(k, opts.headers[k]);
+        xhr.onload = e => res(xhr);
+        xhr.onerror = rej;
+        if (xhr.upload && onProgress)
+            xhr.upload.onprogress = onProgress;
+        xhr.send(opts.body);
+    });
+}
+
 //redeems lesson credits
-export function redeemLessons(token){
+export function redeemLessons(token, updateProgress){
     return function(dispatch){
       const data = new FormData();
       data.append('notes', 'test');
@@ -518,12 +532,12 @@ export function redeemLessons(token){
         console.log('data')
         console.log(data)
 
-        return fetch(BASEURL + 'redeem', {
+        return futch(BASEURL + 'redeem', {
           method: 'POST',
           headers: {'Content-Type': 'multipart/form-data',
                     'Authorization': 'Bearer ' + token.bearerToken},
           body: data
-        })
+        }, updateProgress)
         .then((response) => {
             switch(response.status) {
                 case 200:

@@ -89,6 +89,9 @@ class CameraScreen extends Component {
             permissionDialogMessage={'We need your permission to use your camera phone'}
         />
         <View style={{flex: 0, flexDirection: 'row', justifyContent: 'space-between'}}>
+        <View style={{flex: 1}}>
+        </View>
+        <View style={{flex: 0, flexDirection: 'row', justifyContent: 'space-between'}}>
           <TouchableOpacity
               onPress={ () => {
                 if (this.state.recording) {
@@ -102,6 +105,8 @@ class CameraScreen extends Component {
             {!this.state.recording && <Icon name="fiber-manual-record" color="red" size={70} borderRadius={50} borderWidth={5} borderColor="white"/>}
             {this.state.recording && <Icon name="stop" color="red" size={70} borderRadius={50} borderWidth={5} borderColor="white"/>}
           </TouchableOpacity>
+          </View>
+          <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
           <TouchableOpacity
               onPress={this._timeout.bind(this)}
           >
@@ -110,6 +115,7 @@ class CameraScreen extends Component {
             {this.state.timeout == 10 && <Icon name="timer-10" color="white" size={75}/>}
             <Text style={{color: 'white'}}>Camera Delay</Text>
           </TouchableOpacity>
+          </View>
           </View>
         <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
           <View style={styles.successModal}>
