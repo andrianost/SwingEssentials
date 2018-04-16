@@ -137,7 +137,7 @@ export const AppNavigator = DrawerNavigator(
                         <Image source={require('./img/SELogo-12.png')} />
                       ),
                       headerStyle: styles.header,
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('Home')}/>
                   })
               },
               IndividualLessonsScreen: {
@@ -184,7 +184,7 @@ export const AppNavigator = DrawerNavigator(
                         <Image source={require('./img/SELogo-12.png')} />
                       ),
                       headerStyle: styles.header,
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('Home')}/>
                   })
               },
           },{
@@ -233,7 +233,7 @@ export const AppNavigator = DrawerNavigator(
                         <Image source={require('./img/SELogo-12.png')} />
                       ),
                       headerStyle: styles.header,
-                      headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>
+                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('Home')}/>
                   })
               },
               OrderDetailsScreen: {

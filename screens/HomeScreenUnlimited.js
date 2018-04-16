@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
 
 import { Component } from 'react';
-import { StyleSheet, Image, View, Text, Alert, FlatList, Modal, TouchableOpacity } from 'react-native';
+import { StyleSheet, Image, View, Text, Alert, FlatList, Modal, TouchableOpacity, ScrollView } from 'react-native';
 import { Button, FormInput, FormLabel, List, ListItem } from 'react-native-elements';
 
 function mapStateToProps(state){
@@ -23,6 +23,7 @@ function mapStateToProps(state){
       credit_unlimited_count: state.credits.unlimited_count,
       credit_details: state.credits.details,
       credit_unlimited_expires: state.credits.unlimited_expires,
+      from: state.lessons.from
     };
 }
 
@@ -50,6 +51,7 @@ class HomeScreenUnlimited extends Component {
         credit_unlimited_expires: this.props.unlimited_expires,
         successModalVisible: false,
         timeRemaining: '',
+        from: this.props.from
       }
   }
 
@@ -57,10 +59,10 @@ class HomeScreenUnlimited extends Component {
     await this.setState({timeRemaining: Math.ceil(((this.props.credit_unlimited_expires - Date.now()/1000)/86400))});
   }
 
-  _recentLessonsHeader() {
+  _completedLessonsHeader() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Recent Lessons</Text>
+        <Text style={styles.text}>Completed Lessons</Text>
       </View>
     )
   }
@@ -92,6 +94,26 @@ class HomeScreenUnlimited extends Component {
         titleStyle = {styles.listItemTitle}
         rightTitle={(item.viewed===0)?'NEW!':null}
         rightTitleStyle = {styles.listItemRightTitle}
+        onPress={ () => {this._requestID({request_id: item.request_id,
+                                          request_date: item.request_date,
+                                          request_url: item.request_url,
+                                          request_notes: item.request_notes,
+                                          response_notes: item.response_notes,
+                                          response_video: item.response_video});
+                        this._updateViewedStatus({request_id: item.request_id, bearerToken: this.props.token});}}
+      />
+    )
+  }
+
+  _renderPendingItem({ item, index }) {
+    return (
+      <ListItem
+        key={index}
+        title={item.request_date}
+        titleStyle = {styles.listItemTitle}
+        rightTitle={(item.viewed===0)?'NEW!':null}
+        rightTitleStyle = {styles.listItemRightTitle}
+        disabled={true}
         onPress={ () => {this._requestID({request_id: item.request_id,
                                           request_date: item.request_date,
                                           request_url: item.request_url,
@@ -140,6 +162,14 @@ class HomeScreenUnlimited extends Component {
     )
   }
 
+  _pendingHeader() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.text}>In Progress</Text>
+      </View>
+    )
+  }
+
   _emptyComponent() {
     return (
       <View style={styles.emptyContainer}>
@@ -148,31 +178,75 @@ class HomeScreenUnlimited extends Component {
     )
   }
 
+  _orderLessons({ item, index }) {
+    return (
+      <ListItem
+        key={index}
+        title={item.key}
+        titleStyle = {styles.listItemTitle}
+        onPress={ () => this.props.navigation.navigate('OrderLessons')}
+      />    )
+  }
+
+  _seeMore({ item, index }) {
+    if (this.props.closed.length > 2)
+    {
+      return (
+        <ListItem
+          key={index}
+          title={item.key}
+          titleStyle = {styles.listItemTitle}
+          onPress={ () => this.props.navigation.navigate('YourLessons')}
+        />
+      )
+    }
+  }
+
   render() {
     return (
       <View style={styles.topContainer}>
-        <FlatList
-          data={this.props.closed.slice(0,2)}
-          keyExtractor={item => item.request_id}
-          renderItem={this._renderItem.bind(this)}
-          ListHeaderComponent={this._recentLessonsHeader}
-          ListEmptyComponent={this._emptyComponent}
-          scrollEnabled={false}
-        />
-        <FlatList
-          data = {[{key:'Individual Lessons', value: this.props.credit_count}, {key:'Unlimited Lessons', value: this.props.credit_unlimited_count}]}
-          keyExtractor={item => item.key}
-          renderItem={this._renderCreditItem.bind(this)}
-          ListHeaderComponent={this._availableCreditsHeader}
-          ListEmptyComponent={this._emptyComponent}
-          scrollEnabled={false}
-        />
-        <FlatList
-          data = { [{key: 'Submit a Swing', value: ''}] }
-          keyExtractor={item => item.key}
-          renderItem={this._renderUnlimitedCredit.bind(this)}
-          scrollEnabled={false}
-        />
+      <FlatList
+        data = {[{key:'Individual Lessons', value: this.props.credit_count}, {key:'Unlimited Lessons', value: this.props.credit_unlimited_count}]}
+        keyExtractor={item => item.key}
+        renderItem={this._renderCreditItem.bind(this)}
+        ListHeaderComponent={this._availableCreditsHeader}
+        ListEmptyComponent={this._emptyComponent}
+        scrollEnabled={false}
+      />
+      <FlatList
+        data = { [{key: 'Submit a Swing', value: ''}] }
+        keyExtractor={item => item.key}
+        renderItem={this._renderUnlimitedCredit.bind(this)}
+        scrollEnabled={false}
+      />
+      <FlatList
+        data = { [{key: 'Order Lessons', value: ''}] }
+        keyExtractor={item => item.key}
+        renderItem={this._orderLessons.bind(this)}
+        scrollEnabled={false}
+      />
+      <FlatList
+        data={this.props.pending}
+        keyExtractor={item => item.request_id}
+        renderItem={this._renderPendingItem.bind(this)}
+        ListHeaderComponent={this._pendingHeader}
+        ListEmptyComponent={this._emptyComponent}
+        scrollEnabled={false}
+      />
+      <FlatList
+        data={this.props.closed.slice(0,2)}
+        keyExtractor={item => item.request_id}
+        renderItem={this._renderItem.bind(this)}
+        ListHeaderComponent={this._completedLessonsHeader}
+        ListEmptyComponent={this._emptyComponent}
+        scrollEnabled={false}
+      />
+      <FlatList
+        data = { [{key: 'See More', value: ''}] }
+        keyExtractor={item => item.key}
+        renderItem={this._seeMore.bind(this)}
+        scrollEnabled={false}
+      />
         <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
           <View style={styles.successModal}>
             <View style={styles.modalButton}>
@@ -188,14 +262,6 @@ class HomeScreenUnlimited extends Component {
             </View>
           </View>
         </Modal>
-        <View style={styles.buttonContainer}>
-          <Button
-            raised
-            title="ORDER LESSONS"
-            buttonStyle={styles.button}
-            onPress={() => this.props.navigation.navigate('OrderLessons')}
-          />
-        </View>
       </View>
     );
   }

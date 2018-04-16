@@ -68,7 +68,6 @@
 		B578EC884DAE4B578538CADE /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5664A019283B4CE68B6FE7C7 /* Octicons.ttf */; };
 		D4FAF90EAC2B528C7EB98A3B /* Pods_SwingEssentials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 477FCE4E3FC1DBE0C3DDE317 /* Pods_SwingEssentials.framework */; };
 		E2EC3629DE964B8C96E20EBD /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE61F706BA1340D585A3FD7E /* libRCTVideo.a */; };
-		E68950262039DD5800484C34 /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E68950252039DD5800484C34 /* RNTMapManager.m */; };
 		E6A367FB20202CC100D78F73 /* BraintreeDropIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367D520202CC100D78F73 /* BraintreeDropIn.framework */; };
 		E6A367FD20202CD500D78F73 /* BraintreeUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FC20202CD500D78F73 /* BraintreeUIKit.framework */; };
 		E6A3680020202CE500D78F73 /* BraintreeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A367FE20202CE500D78F73 /* BraintreeCore.framework */; };
@@ -478,7 +477,6 @@
 		D9CD5ABD7CBE4BE7946CCFFB /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "YTPlayerView-iframe-player.html"; path = "../node_modules/react-native-youtube/assets/YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
 		DCC5536C07EA0B6C23AEC9A5 /* Pods-SwingEssentials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwingEssentials.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwingEssentials/Pods-SwingEssentials.debug.xcconfig"; sourceTree = "<group>"; };
 		E4E2812D2F8140849DAABEC1 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
-		E68950252039DD5800484C34 /* RNTMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTMapManager.m; sourceTree = "<group>"; };
 		E6A367D520202CC100D78F73 /* BraintreeDropIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BraintreeDropIn.framework; path = Carthage/Build/iOS/BraintreeDropIn.framework; sourceTree = "<group>"; };
 		E6A367FC20202CD500D78F73 /* BraintreeUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BraintreeUIKit.framework; path = Carthage/Build/iOS/BraintreeUIKit.framework; sourceTree = "<group>"; };
 		E6A367FE20202CE500D78F73 /* BraintreeCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BraintreeCore.framework; path = Carthage/Build/iOS/BraintreeCore.framework; sourceTree = "<group>"; };
@@ -689,7 +687,6 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				E6D85AFB202505AA00F5BDBA /* ViewController.h */,
 				E6D85B21202505F300F5BDBA /* ViewController.m */,
-				E68950252039DD5800484C34 /* RNTMapManager.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -1900,7 +1897,6 @@
 				E6D85B22202505F300F5BDBA /* ViewController.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				E68950262039DD5800484C34 /* RNTMapManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

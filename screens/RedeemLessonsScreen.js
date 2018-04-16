@@ -87,7 +87,7 @@ class RedeemLessonsScreen extends Component {
   }
 
   _updateProgress(event){
-      this.setState({progress: ((event.loaded/event.total).toFixed(2))*100});
+      this.setState({progress: ((event.loaded/event.total)*100).toFixed(2)});
   }
 
 render() {

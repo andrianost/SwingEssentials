@@ -92,16 +92,6 @@ class YourLessonsScreen extends Component {
   render() {
     return (
       <View style={styles.topContainer}>
-        <View style={styles.inProgressContainer}>
-          <FlatList
-            data={this.props.pending}
-            scrollEnabled={false}
-            keyExtractor={item => item.request_id}
-            renderItem={this._renderItem.bind(this)}
-            ListHeaderComponent={this._pendingHeader}
-            ListEmptyComponent={this._emptyComponent}
-          />
-        </View>
         <View>
           <View style={styles.container}>
             <Text style={styles.text}>Completed</Text>
