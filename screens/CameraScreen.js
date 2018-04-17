@@ -1,6 +1,6 @@
 'use strict';
 import React, { Component } from 'react';
-import { AppRegistry, Dimensions, StyleSheet, Text, TouchableOpacity, View, Modal } from 'react-native';
+import { AppRegistry, Dimensions, StyleSheet, Text, TouchableOpacity, View, Modal, Image } from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as Actions from '../actions/actions.js';
@@ -32,6 +32,7 @@ class CameraScreen extends Component {
         successModalVisible: false,
         recording: false,
         timeout: 0,
+        cameraRotation: RNCamera.Constants.Type.back
       }
   }
 
@@ -76,20 +77,39 @@ class CameraScreen extends Component {
     }
   }
 
+  _cameraRotation() {
+    if (this.state.cameraRotation == RNCamera.Constants.Type.back){
+      this.setState({cameraRotation: RNCamera.Constants.Type.front})
+    }
+    else if (this.state.cameraRotation == RNCamera.Constants.Type.front){
+      this.setState({cameraRotation: RNCamera.Constants.Type.back})
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
+      <Text style={styles.banner}>Video will record for 20 seconds after the delay</Text>
         <RNCamera
             ref={ref => {
               this.camera = ref;
             }}
             style = {styles.preview}
-            type={RNCamera.Constants.Type.back}
+            type={this.state.cameraRotation}
             permissionDialogTitle={'Permission to use camera'}
             permissionDialogMessage={'We need your permission to use your camera phone'}
         />
-        <View style={{flex: 0, flexDirection: 'row', justifyContent: 'space-between'}}>
-        <View style={{flex: 1}}>
+        <View style={{flex: 0, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+        <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}}>
+        <TouchableOpacity
+            onPress={this._timeout.bind(this)}
+            disabled={this.state.recording}
+        >
+          {this.state.timeout == 0 && <Icon name="exposure-zero" color="white" size={75}/>}
+          {this.state.timeout == 3 && <Icon name="timer-3" color="white" size={75}/>}
+          {this.state.timeout == 10 && <Icon name="timer-10" color="white" size={75}/>}
+          <Text style={{color: 'white'}}>Camera Delay</Text>
+        </TouchableOpacity>
         </View>
         <View style={{flex: 0, flexDirection: 'row', justifyContent: 'space-between'}}>
           <TouchableOpacity
@@ -106,14 +126,13 @@ class CameraScreen extends Component {
             {this.state.recording && <Icon name="stop" color="red" size={70} borderRadius={50} borderWidth={5} borderColor="white"/>}
           </TouchableOpacity>
           </View>
-          <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
+          <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end', paddingTop: 10}}>
           <TouchableOpacity
-              onPress={this._timeout.bind(this)}
+              onPress={this._cameraRotation.bind(this)}
+              disabled={this.state.recording}
           >
-            {this.state.timeout == 0 && <Icon name="exposure-zero" color="white" size={75}/>}
-            {this.state.timeout == 3 && <Icon name="timer-3" color="white" size={75}/>}
-            {this.state.timeout == 10 && <Icon name="timer-10" color="white" size={75}/>}
-            <Text style={{color: 'white'}}>Camera Delay</Text>
+            <Icon name="switch-camera" color="white" size={55}/>
+            <Text style={{color: 'white', paddingTop: 10}}>Camera Rotation</Text>
           </TouchableOpacity>
           </View>
           </View>
@@ -185,6 +204,11 @@ const styles = StyleSheet.create({
    borderWidth: .5,
    width: 300,
  },
+ banner: {
+   color: 'white',
+   textAlign: 'center',
+   backgroundColor: 'black',
+ }
 });
 
 AppRegistry.registerComponent('CameraScreen', () => CameraScreen);
