@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="3.1.1"
-    timestamp="1523332209294"
+    timestamp="1524019430771"
     token="1466677240636716990"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -25,19 +25,31 @@
 
     <build
         build-mode="FULL"
-        timestamp="1523332005667"
+        timestamp="1524019311422"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+        <artifact
+            location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
             location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
@@ -46,27 +58,15 @@
             location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
-        <artifact
-            location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1523332209294"
+        timestamp="1524019430771"
         verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

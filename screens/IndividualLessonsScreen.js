@@ -51,6 +51,18 @@ class IndividualLessonsScreen extends Component {
       }
     }
 
+  _formatText(text){
+    if(!text){
+      return null;
+    }
+
+    let arr = text.split('|:::|');
+
+    return arr.map((val, index) =>
+      <Text style={styles.responseText} key={index}>{val}</Text>
+    );
+  }
+
   render() {
     console.log("response video")
     console.log(this.props.response_video)
@@ -69,8 +81,8 @@ class IndividualLessonsScreen extends Component {
             onChangeState={e => this.setState({ status: e.state })}
             onChangeQuality={e => this.setState({ quality: e.quality })}
             onError={e => this.setState({ error: e.error })}
-
             style={{ alignSelf: 'stretch', height: 275 }}
+            apiKey={'AIzaSyBLUJUqz7E3Z5XNcXbMYO9gVmXd0zYAR4U'}
           />
         </View>
         <View style={styles.commentsContainer}>
@@ -79,7 +91,7 @@ class IndividualLessonsScreen extends Component {
           </View>
           <View style={styles.container}>
             <ScrollView>
-              <Text style={styles.responseText}>{this.props.response_notes}</Text>
+              {this._formatText(this.props.response_notes)}
             </ScrollView>
           </View>
         </View>
@@ -123,6 +135,7 @@ const styles = StyleSheet.create({
   responseText: {
     color: '#231f61',
     fontSize: 16,
+    width: '100%'
   },
   commentsContainer: {
     paddingTop: 10,
