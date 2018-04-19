@@ -89,7 +89,7 @@ class LoginScreen extends React.Component{
                     disabled={!this.state.username || !this.state.password}
                     onPress={this._onLogin.bind(this)}
                 />
-                <Modal transparent={true} visible={this.state.modalVisible}>
+                <Modal transparent={true} visible={this.state.modalVisible} onRequestClose={() => null}>
                   <AppIndicator/>
                 </Modal>
               </View>

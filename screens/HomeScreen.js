@@ -279,7 +279,7 @@ class HomeScreen extends Component {
           renderItem={this._seeMore.bind(this)}
           scrollEnabled={false}
         />
-        <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
+        <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible} onRequestClose={() => null}>
           <View style={styles.successModal}>
             <View style={styles.modalButton}>
               <Text style={styles.modalText}>Activating your unlimited lessons deal will give you access to unlimited lessons for 30 days. Would you like to proceed?</Text>

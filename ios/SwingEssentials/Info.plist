@@ -50,11 +50,11 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Your camera will be used to record the video of your swing.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Your microphone will be used to record the audio of your swing.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Entypo.ttf</string>

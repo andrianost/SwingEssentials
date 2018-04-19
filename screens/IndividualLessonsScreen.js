@@ -83,6 +83,7 @@ class IndividualLessonsScreen extends Component {
             onError={e => this.setState({ error: e.error })}
             style={{ alignSelf: 'stretch', height: 275 }}
             apiKey={'AIzaSyBLUJUqz7E3Z5XNcXbMYO9gVmXd0zYAR4U'}
+            controls={2}
           />
         </View>
         <View style={styles.commentsContainer}>
