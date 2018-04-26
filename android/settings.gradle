@@ -1,4 +1,6 @@
 rootProject.name = 'SwingEssentials'
+include ':react-native-iap'
+project(':react-native-iap').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-iap/android')
 include ':react-native-youtube'
 project(':react-native-youtube').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-youtube/android')
 include ':react-native-video'

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {addNavigationHelpers, StackNavigator, DrawerNavigator, DrawerItems} from 'react-navigation';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Platform } from 'react-native';
 import { Button } from 'react-native-elements'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
@@ -56,26 +56,24 @@ export const AppNavigator = DrawerNavigator(
           }
         })
       },
-      CreateAccount: {
-        screen: StackNavigator({
-          CreateAccount: {
-            screen: CreateAccountScreen,
-            navigationOptions: ({ navigation }) => ({
-                title: 'Create Account',
-                drawerLabel: () => null,
-                headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBeforeGrey} onPress={ () => navigation.navigate('Login')}/>
-            })
-          }
-        })
-      },
+      // CreateAccount: {
+      //   screen: StackNavigator({
+      //     CreateAccount: {
+      //       screen: CreateAccountScreen,
+      //       navigationOptions: ({ navigation }) => ({
+      //           title: 'Create Account',
+      //           drawerLabel: () => null,
+      //           headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBeforeGrey} onPress={ () => navigation.navigate('Login')}/>
+      //       })
+      //     }
+      //   })
+      // },
       Home: {
           screen: StackNavigator({
               Home: {
                   screen: HomeScreen,
                   navigationOptions:({ navigation }) => ({
-                      title: (
-                        <Image source={require('./img/SELogo-12.png')} />
-                      ),
+                      title: ( <HeaderImage /> ),
                       headerStyle: styles.header,
                       headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>,
                     })
@@ -101,9 +99,7 @@ export const AppNavigator = DrawerNavigator(
               HomeUnlimited: {
                   screen: HomeScreenUnlimited,
                   navigationOptions:({ navigation }) => ({
-                      title: (
-                        <Image source={require('./img/SELogo-12.png')} />
-                      ),
+                      title: ( <HeaderImage /> ),
                       drawerLabel: () => null,
                       headerStyle: styles.header,
                       headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>,
@@ -118,9 +114,7 @@ export const AppNavigator = DrawerNavigator(
           Camera: {
             screen: CameraScreen,
             navigationOptions: ({ navigation }) => ({
-                title: (
-                  <Image source={require('./img/SELogo-12.png')} />
-                ),
+                title: ( <HeaderImage /> ),
                 headerStyle: styles.header,
                 drawerLabel: () => null,
                 headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('RedeemLessons')}/>
@@ -133,9 +127,7 @@ export const AppNavigator = DrawerNavigator(
               YourLessons: {
                   screen: YourLessonsScreen,
                   navigationOptions:({ navigation }) => ({
-                      title: (
-                        <Image source={require('./img/SELogo-12.png')} />
-                      ),
+                     title: ( <HeaderImage /> ),
                       headerStyle: styles.header,
                       headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('Home')}/>
                   })
@@ -143,9 +135,7 @@ export const AppNavigator = DrawerNavigator(
               IndividualLessonsScreen: {
                   screen: IndividualLessonsScreen,
                   navigationOptions: ({ navigation, screenProps }) => ({
-                      title: (
-                        <Image source={require('./img/SELogo-12.png')} />
-                      ),
+                      title: ( <HeaderImage /> ),
                       headerStyle: styles.header,
                       headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore}
                                     onPress={ () => {
@@ -180,9 +170,7 @@ export const AppNavigator = DrawerNavigator(
               RedeemLessons: {
                   screen: RedeemLessonsScreen,
                   navigationOptions: ({ navigation }) => ({
-                      title: (
-                        <Image source={require('./img/SELogo-12.png')} />
-                      ),
+                      title: ( <HeaderImage /> ),
                       headerStyle: styles.header,
                       headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('Home')}/>
                   })
@@ -211,9 +199,7 @@ export const AppNavigator = DrawerNavigator(
           PendingLessons: {
             screen: PendingLessonsScreen,
             navigationOptions: ({ navigation }) => ({
-                title: (
-                  <Image source={require('./img/SELogo-12.png')} />
-                ),
+                title: ( <HeaderImage /> ),
                 headerStyle: styles.header,
                 drawerLabel: () => null,
                 headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('Home')}/>
@@ -229,23 +215,19 @@ export const AppNavigator = DrawerNavigator(
               OrderLessons: {
                   screen: OrderLessonsScreen,
                   navigationOptions:({ navigation }) => ({
-                      title: (
-                        <Image source={require('./img/SELogo-12.png')} />
-                      ),
+                      title: ( <HeaderImage /> ),
                       headerStyle: styles.header,
                       headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('Home')}/>
                   })
               },
-              OrderDetailsScreen: {
-                  screen: OrderDetailsScreen,
-                  navigationOptions: ({ navigation }) => ({
-                      title: (
-                        <Image source={require('./img/SELogo-12.png')} />
-                      ),
-                      headerStyle: styles.header,
-                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('OrderLessons')}/>
-                  })
-              }
+              // OrderDetailsScreen: {
+              //     screen: OrderDetailsScreen,
+              //     navigationOptions: ({ navigation }) => ({
+              //         title: ( <HeaderImage /> ),
+              //         headerStyle: styles.header,
+              //         headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.navigate('OrderLessons')}/>
+              //     })
+              // }
           }),
           navigationOptions:{
               drawerLabel: <Text style={{color:"#231f61",
@@ -268,9 +250,7 @@ export const AppNavigator = DrawerNavigator(
             HelpScreen: {
               screen: HelpScreen,
               navigationOptions:({ navigation }) => ({
-                  title: (
-                    <Image source={require('./img/SELogo-12.png')} />
-                  ),
+                  title: ( <HeaderImage /> ),
                   headerStyle: styles.header,
                   headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
@@ -296,9 +276,7 @@ export const AppNavigator = DrawerNavigator(
             AboutScreen: {
               screen: AboutScreen,
               navigationOptions:({ navigation }) => ({
-                  title: (
-                    <Image source={require('./img/SELogo-12.png')} />
-                  ),
+                  title: ( <HeaderImage /> ),
                   headerStyle: styles.header,
                   headerLeft: <MaterialIcons name="dehaze" size={30} style={styles.dehaze} onPress={ () => navigation.navigate('DrawerOpen')}/>
               })
@@ -393,8 +371,8 @@ export const AppNavigator = DrawerNavigator(
 
 class AppWithNavigationState extends React.Component {
     render(){
-        console.log('app with nav state')
-        console.log(this.props)
+        // console.log('app with nav state')
+        // console.log(this.props)
         return(
             <AppNavigator
                 screenProps={{from: this.props.from}}
@@ -412,6 +390,11 @@ const mapStateToProps = state => ({
     from: state.lessons.from
 });
 
+const HeaderImage = Platform.select({
+  ios: () => <Image source={require('./img/SELogo-12.png')}/>,
+  android: () => <Image source={require('./img/SELogo-12-android.png')}/>
+});
+
 const styles = StyleSheet.create({
   dehaze: {
     color: 'white',
@@ -426,8 +409,9 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#231f61',
-    paddingTop: 20,
-    paddingBottom: 30,
+    // justifyContent: 'flex-end',
+    // paddingTop: 20,
+    // paddingBottom: 30,
   }
 });
 

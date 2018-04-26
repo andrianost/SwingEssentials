@@ -111,7 +111,7 @@ class CreateAccountScreen extends React.Component{
               />
               {this.state.createAccountFailure == true && <FormValidationMessage>Username and/or email is unavailable or invalid. Username may only contain Letters, Numbers, and Special Characters(-_.$@!+).  Spaces are not allowed.</FormValidationMessage>}
             </View>
-            <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
+            <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible} onRequestClose={() => null}>
               <View style={styles.successModal}>
                 <View style={styles.modalButton}>
                   <Text style={styles.modalText}>Your account has been successfully created! Please check your email to validate your account.</Text>

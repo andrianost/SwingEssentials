@@ -228,6 +228,10 @@
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/89a2b9f929764d314a0393422fbc670e/res/layout-v16/notification_template_custom_big.xml"
     },
     {
+        "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_selogo.png.flat",
+        "source": "/Users/tito/Projects/SwingEssentials/android/app/src/main/res/mipmap-hdpi/selogo.png"
+    },
+    {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/89a2b9f929764d314a0393422fbc670e/res/drawable-v21/notification_action_background.xml"
     },
@@ -258,6 +262,10 @@
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable_abc_item_background_holo_light.xml.flat",
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_selogo.png.flat",
+        "source": "/Users/tito/Projects/SwingEssentials/android/app/src/main/res/mipmap-xxhdpi/selogo.png"
     },
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -466,6 +474,10 @@
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_indicator_material.xml.flat",
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_icon.png.flat",
+        "source": "/Users/tito/Projects/SwingEssentials/android/app/src/main/res/mipmap-mdpi/icon.png"
     },
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -806,6 +818,10 @@
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_selogo.png.flat",
+        "source": "/Users/tito/Projects/SwingEssentials/android/app/src/main/res/mipmap-mdpi/selogo.png"
     },
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
@@ -1188,6 +1204,10 @@
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_icon.png.flat",
+        "source": "/Users/tito/Projects/SwingEssentials/android/app/src/main/res/mipmap-xxhdpi/icon.png"
+    },
+    {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/layout_notification_media_cancel_action.xml.flat",
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/layout/notification_media_cancel_action.xml"
     },
@@ -1224,6 +1244,10 @@
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/5c6ea6383ab841a601f4f06d22f59fd6/res/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
+        "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable_background_splash.xml.flat",
+        "source": "/Users/tito/Projects/SwingEssentials/android/app/src/main/res/drawable/background_splash.xml"
+    },
+    {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/layout_abc_select_dialog_material.xml.flat",
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/layout/abc_select_dialog_material.xml"
     },
@@ -1250,6 +1274,10 @@
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_icon.png.flat",
+        "source": "/Users/tito/Projects/SwingEssentials/android/app/src/main/res/mipmap-xhdpi/icon.png"
     },
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/layout_redbox_item_title.xml.flat",
@@ -1282,6 +1310,10 @@
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable_abc_item_background_holo_dark.xml.flat",
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_selogo.png.flat",
+        "source": "/Users/tito/Projects/SwingEssentials/android/app/src/main/res/mipmap-xhdpi/selogo.png"
     },
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
@@ -1464,6 +1496,10 @@
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
+        "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_icon.png.flat",
+        "source": "/Users/tito/Projects/SwingEssentials/android/app/src/main/res/mipmap-hdpi/icon.png"
+    },
+    {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_holo_dark.xml.flat",
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/drawable/abc_list_selector_holo_dark.xml"
     },
@@ -1474,6 +1510,10 @@
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/color_common_google_signin_btn_text_dark.xml.flat",
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/5c6ea6383ab841a601f4f06d22f59fd6/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/layout_launch_screen.xml.flat",
+        "source": "/Users/tito/Projects/SwingEssentials/android/app/src/main/res/layout/launch_screen.xml"
     },
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_dark.xml.flat",
@@ -1648,12 +1688,12 @@
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/color-v23_abc_color_highlight_material.xml.flat",
-        "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/color-v23/abc_color_highlight_material.xml"
-    },
-    {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_button_bar_material.xml.flat",
         "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/color-v23_abc_color_highlight_material.xml.flat",
+        "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/color-v23/abc_color_highlight_material.xml"
     },
     {
         "merged": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",

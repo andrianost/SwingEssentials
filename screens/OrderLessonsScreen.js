@@ -3,9 +3,10 @@ import {bindActionCreators} from 'redux';
 import {NavigationActions} from 'react-navigation';
 import {connect} from 'react-redux';
 import * as Actions from '../actions/actions.js';
+import * as RNIap from 'react-native-iap';
 
 import { Component } from 'react';
-import { StyleSheet, View, Text, FlatList } from 'react-native';
+import { StyleSheet, View, Text, FlatList, Platform } from 'react-native';
 import { Button, List, ListItem } from 'react-native-elements'
 
 function mapStateToProps(state){
@@ -15,12 +16,22 @@ function mapStateToProps(state){
         description: state.packages.description,
         price: state.packages.price,
         shortcode: state.packages.shortcode,
+        token: state.login.token,
     };
 }
 
 function mapDispatchToProps(dispatch){
     return bindActionCreators(Actions, dispatch);
 }
+
+const itemSkus = Platform.select({
+  ios: [
+    'com.swingessentials.par', 'com.swingessentials.eagle', 'com.swingessentials.albatross1'
+  ],
+  android: [
+    'com.swingessentials.par', 'com.swingessentials.eagle', 'com.swingessentials.albatross1'
+  ]
+});
 
 class OrderLessonsScreen extends Component {
   constructor(props){
@@ -31,14 +42,57 @@ class OrderLessonsScreen extends Component {
           description: this.props.description,
           price: this.props.price,
           shortcode: this.props.shortcode,
+          receipt: ''
       }
   }
 
-  _orderLessons(data){
-    console.log('data')
-    console.log(data)
-    this.props.orderLessons(data)
-    this.props.navigation.navigate('OrderDetailsScreen')
+  componentWillMount() {
+    let skus = [];
+    for (let i = 0; i < this.props.packages.packages.length; i++){
+      skus.push(this.props.packages.packages[i].ios_sku);
+    }
+    this.skus = skus;
+  }
+
+  componentDidMount() {
+      console.log('this skus', this.skus);
+      try {
+        RNIap.prepare()
+        .then(() => {
+          RNIap.getProducts(this.skus)
+          .then((products) => {
+            console.log('products', products);
+          })
+        })
+        .catch((error) => console.log(error));
+        }
+        catch(err) {
+          alert(err.message);
+      }
+    }
+      // const products = await RNIap.getProducts([
+      //   'com.swingessentials.par', 'com.swingessentials.eagle', 'com.swingessentials.albatross1'
+      // ]);
+      // this.setState({ productList: products });
+      // console.log(itemSkus);
+      // console.log('Products', products);
+    // } catch(err) {
+    //   console.warn(err); // standardized err.code and err.message available
+    // }
+
+  // _orderLessons(data){
+  //   console.log('data')
+  //   console.log(data)
+  //   this.props.orderLessons(data)
+  //   this.props.navigation.navigate('OrderDetailsScreen')
+  // }
+
+  _purchase(item){
+    // console.log('sku', sku)
+    RNIap.buyProduct(item.ios_sku)
+    .then((purchase) => {alert('success'); this.props.submitOrder({package: item.shortcode, receipt: purchase.transactionReceipt, token: this.props.token})})
+    .catch((error) => console.log(error));
+    // console.log('purchase', purchase)
   }
 
   _packagesHeader() {
@@ -59,8 +113,8 @@ class OrderLessonsScreen extends Component {
         title={item.name}
         subtitle={item.description}
         subtitleStyle={styles.subtitle}
-        rightTitle={item.price}
-        onPress={ () => this._orderLessons({name: item.name, description: item.description, price: item.price, shortcode: item.shortcode})}
+        rightTitle={item.ios_price}
+        onPress={ () => this._purchase(item) }//this._orderLessons({name: item.name, description: item.description, price: item.price, shortcode: item.shortcode})}
       />
     )
   }

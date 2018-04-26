@@ -156,7 +156,7 @@ render() {
               disabled={!this.state.fo || !this.state.dtl}
               onPress={this._redeemLessons.bind(this)}
           />
-            <Modal transparent={true} visible={this.props.modalVisible}>
+            <Modal transparent={true} visible={this.props.modalVisible} onRequestClose={() => null}>
             <View style={{flex: 1, alignItems: 'center', flexDirection: 'column', justifyContent: 'space-around'}}>
               <View style={styles.indicatorModal}>
                 <View style={styles.indicator}>
@@ -169,7 +169,7 @@ render() {
               </View>
               </View>
             </Modal>
-          <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
+          <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible} onRequestClose={() => null}>
             <View style={styles.successModal}>
               <View style={styles.modalButton}>
                 <Text style={styles.modalText}>Your videos have been submitted successfully!</Text>

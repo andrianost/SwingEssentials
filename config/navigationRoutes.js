@@ -23,9 +23,9 @@ const AppRoutes = DrawerNavigator({
   OrderLessonsScreen: { screen: OrderLessonsScreen },
   HelpScreen: { screen: HelpScreen },
   AboutScreen: { screen: AboutScreen },
-  SettingsScreen: { screen: SettingsScreen },
+  // SettingsScreen: { screen: SettingsScreen },
   IndividualLessonsScreen: { screen: IndividualLessonsScreen },
-  OrderDetailsScreen: { screen: OrderDetailsScreen },
+  // OrderDetailsScreen: { screen: OrderDetailsScreen },
   CameraScreen: { screen: CameraScreen },
   PendingLessons: { screen: PendingLessonsScreen },
 }, {initialRouteName: 'Home'});

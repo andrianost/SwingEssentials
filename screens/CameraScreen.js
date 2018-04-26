@@ -136,7 +136,7 @@ class CameraScreen extends Component {
           </TouchableOpacity>
           </View>
           </View>
-        <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible}>
+        <Modal animationType="slide" transparent={true} visible={this.state.successModalVisible} onRequestClose={() => null}>
           <View style={styles.successModal}>
             <View style={styles.modalButton}>
               <Text style={styles.modalText}>Your video has been successfully recorded.</Text>

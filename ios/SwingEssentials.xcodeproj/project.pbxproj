@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -12,6 +13,7 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* SwingEssentialsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SwingEssentialsTests.m */; };
+		025B6E03D75E474F97789CCA /* libRNIap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29C04B7069A445F7974B6880 /* libRNIap.a */; };
 		0617BC0663AF4752910BEBC9 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4E2812D2F8140849DAABEC1 /* Feather.ttf */; };
 		09179C7F06ED47C9B7B2F2CD /* libRCTYouTube.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA37016DFD694D4CBAA25CA2 /* libRCTYouTube.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
@@ -55,6 +57,7 @@
 		59E1D41B206C0C5C00E302B8 /* BraintreePayPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680220202D1700D78F73 /* BraintreePayPal.framework */; };
 		59E1D41D206C0C7100E302B8 /* PayPalDataCollector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680320202D1700D78F73 /* PayPalDataCollector.framework */; };
 		59E1D421206C0C9500E302B8 /* PayPalOneTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A3680520202D1800D78F73 /* PayPalOneTouch.framework */; };
+		59E5D31B209155A800D981B6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E5D31A209155A800D981B6 /* StoreKit.framework */; };
 		5CFC2A8F27C14F64BA1E3BC6 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDD5C19ECA8943FF9ADB1174 /* EvilIcons.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		62F22556FF4F4AC98ACDECCC /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD2FB228618341A7852CD22D /* Foundation.ttf */; };
@@ -265,6 +268,13 @@
 			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
 			remoteInfo = "jschelpers-tvOS";
 		};
+		59D76379208E41B9006E8476 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DE23085728B476382E1057C /* RNIap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNIap;
+		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -443,7 +453,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SwingEssentials/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SwingEssentials/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1DE23085728B476382E1057C /* RNIap.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNIap.xcodeproj; path = "../node_modules/react-native-iap/ios/RNIap.xcodeproj"; sourceTree = "<group>"; };
 		24A00395C2A146268A233305 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		29C04B7069A445F7974B6880 /* libRNIap.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNIap.a; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* SwingEssentials-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwingEssentials-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* SwingEssentials-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwingEssentials-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33977C5D1BC8427EB5B9A574 /* libRNFetchBlob.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFetchBlob.a; sourceTree = "<group>"; };
@@ -453,6 +465,7 @@
 		5507FC676A2C487FA84AC971 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
 		5664A019283B4CE68B6FE7C7 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		595332D02071637000EA7815 /* PayPalUtils.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = PayPalUtils.framework.dSYM; path = Carthage/Build/iOS/PayPalUtils.framework.dSYM; sourceTree = "<group>"; };
+		59E5D31A209155A800D981B6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		5F663868EEF077F99209E43F /* Pods_SwingEssentialsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwingEssentialsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6629FDC13F56B06EB5BF285B /* Pods_SwingEssentials_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwingEssentials_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -554,6 +567,7 @@
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				E6BAB4A220431AFC00A9AA9F /* GoogleMobileVision.framework in Frameworks */,
 				E6BAB4AB20431AFC00A9AA9F /* GoogleMVDataOutput.framework in Frameworks */,
+				59E5D31B209155A800D981B6 /* StoreKit.framework in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				E6BAB49A20431AFC00A9AA9F /* GoogleSymbolUtilities.framework in Frameworks */,
 				59E1D414206C0BBB00E302B8 /* BraintreeCore.framework in Frameworks */,
@@ -570,6 +584,7 @@
 				E6CDE84F3B4844CAACD72D24 /* libRNCamera.a in Frameworks */,
 				486186AA049641168460E04D /* libRNFetchBlob.a in Frameworks */,
 				FE1E866757CF407D84553790 /* libSplashScreen.a in Frameworks */,
+				025B6E03D75E474F97789CCA /* libRNIap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +747,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		59D76376208E41B9006E8476 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59D7637A208E41B9006E8476 /* libRNIap.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -771,6 +794,7 @@
 				5507FC676A2C487FA84AC971 /* RNCamera.xcodeproj */,
 				B76EBE81F2DB4649AB964292 /* RNFetchBlob.xcodeproj */,
 				45DDCC36B93944F9AF3DA09C /* SplashScreen.xcodeproj */,
+				1DE23085728B476382E1057C /* RNIap.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -859,6 +883,7 @@
 				FCB99C1818774590B5FD15E4 /* libRNCamera.a */,
 				33977C5D1BC8427EB5B9A574 /* libRNFetchBlob.a */,
 				4CA6259F3B2E4F88839B27BA /* libSplashScreen.a */,
+				29C04B7069A445F7974B6880 /* libRNIap.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -874,6 +899,7 @@
 		E6ABC30E201ECE2A000C5A7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59E5D31A209155A800D981B6 /* StoreKit.framework */,
 				595332D02071637000EA7815 /* PayPalUtils.framework.dSYM */,
 				E6BAB4AC20431B3600A9AA9F /* AddressBook.framework */,
 				E6BAB47020431AFB00A9AA9F /* dbffca986f6337f8-GoogleSymbolUtilities-1.1.1 */,
@@ -1219,6 +1245,11 @@
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = F4N65RNFKC;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1308,6 +1339,10 @@
 				{
 					ProductGroup = E6E2221620465778006957B6 /* Products */;
 					ProjectRef = B76EBE81F2DB4649AB964292 /* RNFetchBlob.xcodeproj */;
+				},
+				{
+					ProductGroup = 59D76376208E41B9006E8476 /* Products */;
+					ProjectRef = 1DE23085728B476382E1057C /* RNIap.xcodeproj */;
 				},
 				{
 					ProductGroup = E6ABC309201ECB64000C5A7B /* Products */;
@@ -1474,6 +1509,13 @@
 			fileType = archive.ar;
 			path = libjschelpers.a;
 			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59D7637A208E41B9006E8476 /* libRNIap.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNIap.a;
+			remoteRef = 59D76379208E41B9006E8476 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
@@ -1961,12 +2003,14 @@
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-iap/ios",
 				);
 				INFOPLIST_FILE = SwingEssentialsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1997,12 +2041,14 @@
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-iap/ios",
 				);
 				INFOPLIST_FILE = SwingEssentialsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -2049,6 +2095,7 @@
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-iap/ios",
 				);
 				INFOPLIST_FILE = SwingEssentials/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2096,6 +2143,7 @@
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-iap/ios",
 				);
 				INFOPLIST_FILE = SwingEssentials/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2133,11 +2181,13 @@
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-iap/ios",
 				);
 				INFOPLIST_FILE = "SwingEssentials-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -2177,11 +2227,13 @@
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-iap/ios",
 				);
 				INFOPLIST_FILE = "SwingEssentials-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -2223,6 +2275,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.SwingEssentials-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2248,6 +2301,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

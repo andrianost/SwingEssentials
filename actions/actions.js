@@ -426,10 +426,11 @@ function updateViewedStatusFailure(response){
 //submits an order...UPDATE TO HANDLE BRAINTREE TRANSACTIONS
 export function submitOrder(data){
   return function(dispatch){
-    return fetch(BASEURL + 'executemobilepayment/' + data.shortcode, {
-        method: 'POST',
+    return fetch(BASEURL + 'executeiospayment/', {
+        method: 'PUT',
+        body: JSON.stringify({package: data.package, receipt: data.receipt}),
         headers: {
-          'Authorization': 'bearer ' + data.bearerToken,
+          'Authorization': 'bearer ' + data.token,
         }
     })
     .then((response) => {
@@ -456,6 +457,7 @@ function submitOrderSuccess(response){
 
 function submitOrderFailure(response){
     console.log('submit order failure')
+    console.log(response)
     return{
         type: SUBMIT_ORDER_FAILURE,
         response: response.status
