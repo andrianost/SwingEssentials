@@ -42,14 +42,16 @@ class OrderLessonsScreen extends Component {
           description: this.props.description,
           price: this.props.price,
           shortcode: this.props.shortcode,
-          receipt: ''
+          receipt: '',
+          products: []
       }
   }
 
   componentWillMount() {
+    console.log('packages', this.props.packages.packages)
     let skus = [];
     for (let i = 0; i < this.props.packages.packages.length; i++){
-      skus.push(this.props.packages.packages[i].ios_sku);
+      skus.push(this.props.packages.packages[i].app_sku);
     }
     this.skus = skus;
   }
@@ -62,6 +64,10 @@ class OrderLessonsScreen extends Component {
           RNIap.getProducts(this.skus)
           .then((products) => {
             console.log('products', products);
+            this.setState({products: products.sort((a,b) => {
+              return parseInt(a.price, 10) - parseInt(b.price,10);
+              }
+            )});
           })
         })
         .catch((error) => console.log(error));
@@ -70,29 +76,16 @@ class OrderLessonsScreen extends Component {
           alert(err.message);
       }
     }
-      // const products = await RNIap.getProducts([
-      //   'com.swingessentials.par', 'com.swingessentials.eagle', 'com.swingessentials.albatross1'
-      // ]);
-      // this.setState({ productList: products });
-      // console.log(itemSkus);
-      // console.log('Products', products);
-    // } catch(err) {
-    //   console.warn(err); // standardized err.code and err.message available
-    // }
 
-  // _orderLessons(data){
-  //   console.log('data')
-  //   console.log(data)
-  //   this.props.orderLessons(data)
-  //   this.props.navigation.navigate('OrderDetailsScreen')
-  // }
+  componentWillUnMount(){
+    void endConnection ();
+  }
 
   _purchase(item){
-    // console.log('sku', sku)
-    RNIap.buyProduct(item.ios_sku)
+    console.log('item', item)
+    RNIap.buyProduct(item.app_sku)
     .then((purchase) => {alert('success'); this.props.submitOrder({package: item.shortcode, receipt: purchase.transactionReceipt, token: this.props.token})})
     .catch((error) => console.log(error));
-    // console.log('purchase', purchase)
   }
 
   _packagesHeader() {
@@ -103,29 +96,45 @@ class OrderLessonsScreen extends Component {
     )
   }
 
-  _renderItem({ item, index }) {
-    return (
-      <ListItem
-        containerStyle = {styles.listItemContainer}
-        titleStyle = {styles.listItemTitle}
-        rightTitleStyle = {styles.listItemRightTitle}
-        key={index}
-        title={item.name}
-        subtitle={item.description}
-        subtitleStyle={styles.subtitle}
-        rightTitle={item.ios_price}
-        onPress={ () => this._purchase(item) }//this._orderLessons({name: item.name, description: item.description, price: item.price, shortcode: item.shortcode})}
-      />
-    )
-  }
+  // _renderItem({ item, index }) {
+  //   console.log('render item')
+  //   console.log(this.state)
+  //   return (
+  //     <ListItem
+  //       containerStyle = {styles.listItemContainer}
+  //       titleStyle = {styles.listItemTitle}
+  //       rightTitleStyle = {styles.listItemRightTitle}
+  //       key={index}
+  //       title={item.name}
+  //       subtitle={item.description}
+  //       subtitleStyle={styles.subtitle}
+  //       rightTitle={this.state.products.length > 0 ? this.state.products[index].price : '--'}
+  //       onPress={ () => this._purchase(item) }
+  //     />
+  //   )
+  // }
 
   render() {
+    console.log('this.state', this.state)
     return (
       <View style={styles.topContainer}>
         <FlatList
           data={this.props.packages.packages}
+          extraData={this.state.products}
           keyExtractor={item => item.count}
-          renderItem={this._renderItem.bind(this)}
+          renderItem={({item, index}) =>
+                      <ListItem
+                          containerStyle = {styles.listItemContainer}
+                          titleStyle = {styles.listItemTitle}
+                          rightTitleStyle = {styles.listItemRightTitle}
+                          key={index}
+                          title={item.name}
+                          subtitle={item.description}
+                          subtitleStyle={styles.subtitle}
+                          rightTitle={this.state.products.length > 0 ? this.state.products[index].price : '--'}
+                          onPress={ () => this._purchase(item) }
+                      />
+                    }
           ListHeaderComponent={this._packagesHeader}
           scrollEnabled={false}
         />

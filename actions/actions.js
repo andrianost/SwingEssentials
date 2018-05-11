@@ -266,7 +266,7 @@ export function requestPackages(){
 
 function getPackagesSuccess(response){
   console.log('get packages success')
-  // console.log(response)
+  console.log(response)
     return{
         type: GET_PACKAGES_SUCCESS,
         data: response
