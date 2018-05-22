@@ -82,9 +82,11 @@ class OrderLessonsScreen extends Component {
   }
 
   _purchase(item){
-    console.log('item', item)
     RNIap.buyProduct(item.app_sku)
-    .then((purchase) => {alert('success'); this.props.submitOrder({package: item.shortcode, receipt: purchase.transactionReceipt, token: this.props.token})})
+    .then((purchase) => {this.props.submitOrder({package: item.shortcode, receipt: purchase.transactionReceipt, token: this.props.token, platform: Platform.OS});
+                         RNIap.consumePurchase(purchase.transactionReceipt);
+                         this.props.navigation.navigate('Home');
+                        })
     .catch((error) => console.log(error));
   }
 
@@ -115,7 +117,7 @@ class OrderLessonsScreen extends Component {
   // }
 
   render() {
-    console.log('this.state', this.state)
+    // console.log('this.state', this.state)
     return (
       <View style={styles.topContainer}>
         <FlatList
@@ -167,7 +169,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#c1c1c1',
   },
   listItemTitle: {
-    fontSize: 16,
+    fontSize: 13,
     color: '#231f61',
     // opacity:.8
   },
@@ -178,7 +180,7 @@ const styles = StyleSheet.create({
   subtitle: {
     color: '#231f61',
     opacity:.8,
-    fontSize: 13,
+    fontSize: 11,
   },
 });
 

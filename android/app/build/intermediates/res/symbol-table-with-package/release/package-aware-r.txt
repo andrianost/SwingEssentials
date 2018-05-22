@@ -793,8 +793,10 @@ int layout surface_view 0x7f090033
 int layout texture_view 0x7f090034
 int layout youtube_layout 0x7f090035
 int mipmap ic_launcher 0x7f0a0000
-int mipmap icon 0x7f0a0001
-int mipmap selogo 0x7f0a0002
+int mipmap ic_launcher_high_res 0x7f0a0001
+int mipmap icon 0x7f0a0002
+int mipmap selogo 0x7f0a0003
+int mipmap selogo_feature 0x7f0a0004
 int string abc_action_bar_home_description 0x7f0b0000
 int string abc_action_bar_home_description_format 0x7f0b0001
 int string abc_action_bar_home_subtitle_description_format 0x7f0b0002

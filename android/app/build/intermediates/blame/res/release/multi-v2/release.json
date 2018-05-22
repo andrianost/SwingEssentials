@@ -697,16 +697,16 @@
             ]
         },
         {
-            "outputFile": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/release/values-te-rIN_values-te-rIN.arsc.flat",
+            "outputFile": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/release/values-ne-rNP_values-ne-rNP.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/values-te-rIN/values-te-rIN.xml",
+                    "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/values-ne-rNP/values-ne-rNP.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,169,277,400,509,620,710,815,940,1022,1104,1189,1302,1410,1510,1621,1723,1840,1967,2068",
-                        "endColumns": "113,107,122,108,110,89,104,124,81,81,84,112,107,99,110,101,116,126,100,100",
-                        "endOffsets": "164,272,395,504,615,705,810,935,1017,1099,1184,1297,1405,1505,1616,1718,1835,1962,2063,2164"
+                        "startOffsets": "55,160,268,391,495,603,694,801,928,1022,1112,1200,1310,1426,1529,1644,1746,1861,1992,2104",
+                        "endColumns": "104,107,122,103,107,90,106,126,93,89,87,109,115,102,114,101,114,130,111,100",
+                        "endOffsets": "155,263,386,490,598,689,796,923,1017,1107,1195,1305,1421,1524,1639,1741,1856,1987,2099,2200"
                     }
                 }
             ]
@@ -768,16 +768,16 @@
             ]
         },
         {
-            "outputFile": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/release/values-ne-rNP_values-ne-rNP.arsc.flat",
+            "outputFile": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/release/values-te-rIN_values-te-rIN.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/values-ne-rNP/values-ne-rNP.xml",
+                    "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/values-te-rIN/values-te-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,160,268,391,495,603,694,801,928,1022,1112,1200,1310,1426,1529,1644,1746,1861,1992,2104",
-                        "endColumns": "104,107,122,103,107,90,106,126,93,89,87,109,115,102,114,101,114,130,111,100",
-                        "endOffsets": "155,263,386,490,598,689,796,923,1017,1107,1195,1305,1421,1524,1639,1741,1856,1987,2099,2200"
+                        "startOffsets": "55,169,277,400,509,620,710,815,940,1022,1104,1189,1302,1410,1510,1621,1723,1840,1967,2068",
+                        "endColumns": "113,107,122,108,110,89,104,124,81,81,84,112,107,99,110,101,116,126,100,100",
+                        "endOffsets": "164,272,395,504,615,705,810,935,1017,1099,1184,1297,1405,1505,1616,1718,1835,1962,2063,2164"
                     }
                 }
             ]
@@ -1067,21 +1067,6 @@
             ]
         },
         {
-            "outputFile": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/release/values-h320dp-v13_values-h320dp-v13.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/values-h320dp-v13/values-h320dp-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "57",
-                        "endOffsets": "108"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/release/values-ru_values-ru.arsc.flat",
             "map": [
                 {
@@ -1133,6 +1118,21 @@
                         "startOffsets": "105,220,328,451,553,665,751,856,976,1055,1133,1213,1319,1427,1525,1634,1740,1848,1984,4701",
                         "endColumns": "114,107,122,101,111,85,104,119,78,77,79,105,107,97,108,105,107,135,99,100",
                         "endOffsets": "215,323,446,548,660,746,851,971,1050,1128,1208,1314,1422,1520,1629,1735,1843,1979,2079,4797"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/res/merged/release/values-h320dp-v13_values-h320dp-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/tito/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e5476b6bf301a5b37427a421caee4ce5/res/values-h320dp-v13/values-h320dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
                     }
                 }
             ]

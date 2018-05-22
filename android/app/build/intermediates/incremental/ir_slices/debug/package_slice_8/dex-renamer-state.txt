@@ -1,4 +1,4 @@
-#Sat May 05 11:36:15 EDT 2018
-base.0=/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/transforms/dexMerger/debug/69
+#Mon May 21 20:47:41 EDT 2018
+base.0=/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/transforms/dexMerger/debug/99
 path.0=classes.dex
 renamed.0=classes.dex

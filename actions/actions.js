@@ -426,7 +426,7 @@ function updateViewedStatusFailure(response){
 //submits an order...UPDATE TO HANDLE BRAINTREE TRANSACTIONS
 export function submitOrder(data){
   return function(dispatch){
-    return fetch(BASEURL + 'executeiospayment/', {
+    return fetch(BASEURL + (data.platform === 'ios' ? 'executeiospayment' : 'executeandroidpayment'), {
         method: 'PUT',
         body: JSON.stringify({package: data.package, receipt: data.receipt}),
         headers: {
@@ -521,7 +521,7 @@ export function futch(url, opts={}, onProgress) {
 export function redeemLessons(token, updateProgress){
     return function(dispatch){
       const data = new FormData();
-      data.append('notes', 'test');
+      data.append('notes', '');
       data.append('fo', {
         name: 'fo.mov',
         uri: token.fo,

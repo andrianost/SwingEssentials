@@ -69,7 +69,7 @@ class HelpScreen extends React.Component{
             labelStyle={StyleSheet.flatten([styles.formLabel])}>
             What do I need in order to use Swing Essentials?
           </FormLabel>
-          <Text style={styles.paragraph}>All you need to get started with Swing Essentials is an iPhone or Android smartphone with a camera capable of recording video. If you don't have a smartphone, you can also upload your swing videos on our website if you've recorded them on another device. You will also need to have a PayPal account in order to purchase more lessons.</Text>
+          <Text style={styles.paragraph}>All you need to get started with Swing Essentials is an iPhone or Android smartphone with a camera capable of recording video. If you don't have a smartphone, you can also upload your swing videos on our website if you've recorded them on another device.</Text>
           <FormLabel
             containerStyle={StyleSheet.flatten([styles.formLabelContainer, {marginTop: spacing.normal, marginBottom: spacing.small}])}
             labelStyle={StyleSheet.flatten([styles.formLabel])}>

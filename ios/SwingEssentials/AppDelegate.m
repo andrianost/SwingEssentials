@@ -27,7 +27,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  [BTAppSwitch setReturnURLScheme:@"org.reactjs.native.example.SwingEssentials.payments"];
+  [BTAppSwitch setReturnURLScheme:@"com.swingessentials.app"];
   
   NSURL *jsCodeLocation;
   
@@ -59,7 +59,7 @@
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
             options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-  if ([url.scheme localizedCaseInsensitiveCompare:@"org.reactjs.native.example.SwingEssentials.payments"] == NSOrderedSame) {
+  if ([url.scheme localizedCaseInsensitiveCompare:@"com.swingessentials.app"] == NSOrderedSame) {
     return [BTAppSwitch handleOpenURL:url options:options];
   }
   return NO;

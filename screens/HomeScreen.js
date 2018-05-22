@@ -236,6 +236,7 @@ class HomeScreen extends Component {
       return null;
     }
     return (
+      <ScrollView>
       <View style={styles.topContainer}>
         <FlatList
           data = {[{key:'Individual Lessons', value: this.props.credit_count}]}
@@ -295,6 +296,7 @@ class HomeScreen extends Component {
           </View>
         </Modal>
       </View>
+      </ScrollView>
     );
   }
 }
@@ -320,7 +322,7 @@ const styles = StyleSheet.create({
   listItemTitle: {
     color:"#231f61",
     opacity:.8,
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: 'bold',
     borderBottomColor: '#c1c1c1',
   },
@@ -330,7 +332,7 @@ const styles = StyleSheet.create({
     color: 'red'
   },
   listItemCreditRightTitle: {
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: 'bold',
     color:"#231f61",
     opacity:.8,
