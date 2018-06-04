@@ -52,7 +52,7 @@ export const ACTIVATE_UNLIMITED_SUCCESS = 'ACTIVATE_UNLIMITED_SUCCESS';
 export const ACTIVATE_UNLIMITED_FAILURE = 'ACTIVATE_UNLIMITED_FAILURE';
 export const SET_FROM = 'SET_FROM';
 
-export const BASEURL = 'https://www.josephpboyle.com/api/swingessentials2.php/'
+export const BASEURL = 'https://www.swingessentials.com/apis/swingessentials.php/'
 
 
 //login function.  also requests settings, lessons, packages and credits
@@ -69,6 +69,8 @@ export function requestLogin(userCredentials){
         .then((response) => {
             switch(response.status) {
                 case 200:
+                    console.log('response status', response.status)
+                    console.log('response', response)
                     response.json()
                     .then((json) => dispatch(loginSuccess({...json,token: response.headers.get('Token')})));
                     dispatch(requestCredits(response.headers.get('Token')));

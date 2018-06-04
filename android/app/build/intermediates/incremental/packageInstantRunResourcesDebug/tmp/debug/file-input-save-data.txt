@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Apr 25 21:49:51 EDT 2018
+#Tue May 22 20:48:37 EDT 2018
 4.path=fonts/Ionicons.ttf
 8.set=ASSET
 6.path=fonts/FontAwesome.ttf

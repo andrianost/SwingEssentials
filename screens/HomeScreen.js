@@ -322,7 +322,7 @@ const styles = StyleSheet.create({
   listItemTitle: {
     color:"#231f61",
     opacity:.8,
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: 'bold',
     borderBottomColor: '#c1c1c1',
   },

@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#c1c1c1',
   },
   listItemTitle: {
-    fontSize: 13,
+    fontSize: 16,
     color: '#231f61',
     // opacity:.8
   },
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
   subtitle: {
     color: '#231f61',
     opacity:.8,
-    fontSize: 11,
+    fontSize: 14,
   },
 });
 

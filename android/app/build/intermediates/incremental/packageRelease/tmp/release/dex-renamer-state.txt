@@ -1,4 +1,4 @@
-#Mon May 14 23:21:42 EDT 2018
+#Sun Jun 03 20:01:39 EDT 2018
 base.0=/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/transforms/dexMerger/release/0
 path.0=classes.dex
 renamed.0=classes.dex
