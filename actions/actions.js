@@ -52,7 +52,9 @@ export const ACTIVATE_UNLIMITED_SUCCESS = 'ACTIVATE_UNLIMITED_SUCCESS';
 export const ACTIVATE_UNLIMITED_FAILURE = 'ACTIVATE_UNLIMITED_FAILURE';
 export const SET_FROM = 'SET_FROM';
 
-export const BASEURL = 'https://www.swingessentials.com/apis/swingessentials.php/'
+export const BASEURL = 'https://www.josephpboyle.com/api/swingessentials2.php/'
+
+//prod 'https://www.swingessentials.com/apis/swingessentials.php/'
 
 
 //login function.  also requests settings, lessons, packages and credits
@@ -438,7 +440,8 @@ export function submitOrder(data){
     .then((response) => {
         switch(response.status) {
             case 200:
-                dispatch(submitOrderSuccess(response))
+                dispatch(submitOrderSuccess(response));
+                dispatch(requestCredits(data.token));
                 break;
             default:
                 dispatch(submitOrderFailure(response))
@@ -793,7 +796,7 @@ export function activateUnlimited(token){
                 dispatch(requestCredits(token));
                 break;
             default:
-                dispatch(activateUnlimitedFailure(response))
+                dispatch(activateUnlimitedFailure(response));
                 break;
         }
     })

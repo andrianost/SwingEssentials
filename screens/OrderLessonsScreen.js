@@ -64,13 +64,14 @@ class OrderLessonsScreen extends Component {
           RNIap.getProducts(this.skus)
           .then((products) => {
             console.log('products', products);
+            console.log('products length', products.length);
             this.setState({products: products.sort((a,b) => {
               return parseInt(a.price, 10) - parseInt(b.price,10);
               }
             )});
           })
         })
-        .catch((error) => console.log(error));
+        .catch((error) => console.log('error', error));
         }
         catch(err) {
           alert(err.message);
@@ -117,7 +118,7 @@ class OrderLessonsScreen extends Component {
   // }
 
   render() {
-    // console.log('this.state', this.state)
+    console.log('this.state.products', this.state.products)
     return (
       <View style={styles.topContainer}>
         <FlatList

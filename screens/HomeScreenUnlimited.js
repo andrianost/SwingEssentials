@@ -57,6 +57,7 @@ class HomeScreenUnlimited extends Component {
 
   async componentWillMount() {
     await this.setState({timeRemaining: Math.ceil(((this.props.credit_unlimited_expires - Date.now()/1000)/86400))});
+    this.props.requestCredits(this.props.bearerToken);
   }
 
   _completedLessonsHeader() {
@@ -204,6 +205,7 @@ class HomeScreenUnlimited extends Component {
 
   render() {
     return (
+      <ScrollView>
       <View style={styles.topContainer}>
       <FlatList
         data = {[{key:'Individual Lessons', value: this.props.credit_count}, {key:'Unlimited Lessons', value: this.props.credit_unlimited_count}]}
@@ -263,6 +265,7 @@ class HomeScreenUnlimited extends Component {
           </View>
         </Modal>
       </View>
+      </ScrollView>
     );
   }
 }

@@ -59,10 +59,6 @@ class HomeScreen extends Component {
   }
 
   componentWillReceiveProps(nextprops){
-    // console.log('before request credits')
-    // this.props.requestCredits(this.state.bearerToken);
-    // console.log('after request credits')
-    // await this.setState({curTime: Date.now()/1000})
     this.setState({unlimitedFlag: this.props.credit_unlimited_count == 0})
     this.setState({limitedFlag: this.props.credit_count == 0})
     if (nextprops.credit_unlimited_expires > Date.now()/1000){
@@ -71,10 +67,7 @@ class HomeScreen extends Component {
   }
 
   componentWillMount(){
-    // console.log('before request credits')
-    this.props.requestCredits(this.state.bearerToken);
-    // console.log('after request credits')
-    // await this.setState({curTime: Date.now()/1000})
+    this.props.requestCredits(this.props.bearerToken);
     this.setState({unlimitedFlag: this.props.credit_unlimited_count == 0})
     this.setState({limitedFlag: this.props.credit_count == 0})
     if (this.props.credit_unlimited_expires > Date.now()/1000){

@@ -2978,33 +2978,33 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActionBar_background com.swingessentials:background}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_backgroundSplit com.swingessentials:backgroundSplit}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_backgroundStacked com.swingessentials:backgroundStacked}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetEnd com.swingessentials:contentInsetEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetLeft com.swingessentials:contentInsetLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetRight com.swingessentials:contentInsetRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetStart com.swingessentials:contentInsetStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_customNavigationLayout com.swingessentials:customNavigationLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_displayOptions com.swingessentials:displayOptions}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_divider com.swingessentials:divider}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_elevation com.swingessentials:elevation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_height com.swingessentials:height}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_hideOnContentScroll com.swingessentials:hideOnContentScroll}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.swingessentials:homeAsUpIndicator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_homeLayout com.swingessentials:homeLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_icon com.swingessentials:icon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.swingessentials:indeterminateProgressStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_itemPadding com.swingessentials:itemPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_logo com.swingessentials:logo}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_navigationMode com.swingessentials:navigationMode}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_popupTheme com.swingessentials:popupTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_progressBarPadding com.swingessentials:progressBarPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_progressBarStyle com.swingessentials:progressBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_subtitle com.swingessentials:subtitle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_subtitleTextStyle com.swingessentials:subtitleTextStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_title com.swingessentials:title}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_titleTextStyle com.swingessentials:titleTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_background com.swingessentials.app:background}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_backgroundSplit com.swingessentials.app:backgroundSplit}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_backgroundStacked com.swingessentials.app:backgroundStacked}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetEnd com.swingessentials.app:contentInsetEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetLeft com.swingessentials.app:contentInsetLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetRight com.swingessentials.app:contentInsetRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetStart com.swingessentials.app:contentInsetStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_customNavigationLayout com.swingessentials.app:customNavigationLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_displayOptions com.swingessentials.app:displayOptions}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_divider com.swingessentials.app:divider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_elevation com.swingessentials.app:elevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_height com.swingessentials.app:height}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_hideOnContentScroll com.swingessentials.app:hideOnContentScroll}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.swingessentials.app:homeAsUpIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_homeLayout com.swingessentials.app:homeLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_icon com.swingessentials.app:icon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.swingessentials.app:indeterminateProgressStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_itemPadding com.swingessentials.app:itemPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_logo com.swingessentials.app:logo}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_navigationMode com.swingessentials.app:navigationMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_popupTheme com.swingessentials.app:popupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_progressBarPadding com.swingessentials.app:progressBarPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_progressBarStyle com.swingessentials.app:progressBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_subtitle com.swingessentials.app:subtitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_subtitleTextStyle com.swingessentials.app:subtitleTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_title com.swingessentials.app:title}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_titleTextStyle com.swingessentials.app:titleTextStyle}</code></td><td></td></tr>
      * </table>
      * @see #ActionBar_background
      * @see #ActionBar_backgroundSplit
@@ -3044,7 +3044,7 @@ public final class R {
         0x7f0200d6, 0x7f0200e8, 0x7f0200f0
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#background}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#background}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3052,11 +3052,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:background
+     * @attr name com.swingessentials.app:background
      */
     public static final int ActionBar_background=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#backgroundSplit}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#backgroundSplit}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3067,11 +3067,11 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:backgroundSplit
+     * @attr name com.swingessentials.app:backgroundSplit
      */
     public static final int ActionBar_backgroundSplit=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#backgroundStacked}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#backgroundStacked}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3082,11 +3082,11 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:backgroundStacked
+     * @attr name com.swingessentials.app:backgroundStacked
      */
     public static final int ActionBar_backgroundStacked=2;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#contentInsetEnd}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#contentInsetEnd}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3095,11 +3095,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:contentInsetEnd
+     * @attr name com.swingessentials.app:contentInsetEnd
      */
     public static final int ActionBar_contentInsetEnd=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#contentInsetLeft}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#contentInsetLeft}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3108,11 +3108,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:contentInsetLeft
+     * @attr name com.swingessentials.app:contentInsetLeft
      */
     public static final int ActionBar_contentInsetLeft=4;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#contentInsetRight}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#contentInsetRight}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3121,11 +3121,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:contentInsetRight
+     * @attr name com.swingessentials.app:contentInsetRight
      */
     public static final int ActionBar_contentInsetRight=5;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#contentInsetStart}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#contentInsetStart}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3134,11 +3134,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:contentInsetStart
+     * @attr name com.swingessentials.app:contentInsetStart
      */
     public static final int ActionBar_contentInsetStart=6;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#customNavigationLayout}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#customNavigationLayout}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3146,11 +3146,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:customNavigationLayout
+     * @attr name com.swingessentials.app:customNavigationLayout
      */
     public static final int ActionBar_customNavigationLayout=7;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#displayOptions}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#displayOptions}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -3168,11 +3168,11 @@ public final class R {
      * <tr><td>useLogo</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:displayOptions
+     * @attr name com.swingessentials.app:displayOptions
      */
     public static final int ActionBar_displayOptions=8;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#divider}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#divider}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3180,11 +3180,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:divider
+     * @attr name com.swingessentials.app:divider
      */
     public static final int ActionBar_divider=9;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#elevation}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#elevation}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3193,11 +3193,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:elevation
+     * @attr name com.swingessentials.app:elevation
      */
     public static final int ActionBar_elevation=10;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#height}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#height}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3206,21 +3206,21 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:height
+     * @attr name com.swingessentials.app:height
      */
     public static final int ActionBar_height=11;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#hideOnContentScroll}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#hideOnContentScroll}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:hideOnContentScroll
+     * @attr name com.swingessentials.app:hideOnContentScroll
      */
     public static final int ActionBar_hideOnContentScroll=12;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#homeAsUpIndicator}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#homeAsUpIndicator}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3228,11 +3228,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:homeAsUpIndicator
+     * @attr name com.swingessentials.app:homeAsUpIndicator
      */
     public static final int ActionBar_homeAsUpIndicator=13;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#homeLayout}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#homeLayout}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3240,11 +3240,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:homeLayout
+     * @attr name com.swingessentials.app:homeLayout
      */
     public static final int ActionBar_homeLayout=14;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#icon}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#icon}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3252,11 +3252,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:icon
+     * @attr name com.swingessentials.app:icon
      */
     public static final int ActionBar_icon=15;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#indeterminateProgressStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#indeterminateProgressStyle}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3264,11 +3264,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:indeterminateProgressStyle
+     * @attr name com.swingessentials.app:indeterminateProgressStyle
      */
     public static final int ActionBar_indeterminateProgressStyle=16;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#itemPadding}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#itemPadding}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3277,11 +3277,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:itemPadding
+     * @attr name com.swingessentials.app:itemPadding
      */
     public static final int ActionBar_itemPadding=17;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#logo}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#logo}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3289,11 +3289,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:logo
+     * @attr name com.swingessentials.app:logo
      */
     public static final int ActionBar_logo=18;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#navigationMode}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#navigationMode}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -3307,11 +3307,11 @@ public final class R {
      * <tr><td>tabMode</td><td>2</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:navigationMode
+     * @attr name com.swingessentials.app:navigationMode
      */
     public static final int ActionBar_navigationMode=19;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#popupTheme}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#popupTheme}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3319,11 +3319,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:popupTheme
+     * @attr name com.swingessentials.app:popupTheme
      */
     public static final int ActionBar_popupTheme=20;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#progressBarPadding}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#progressBarPadding}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3332,11 +3332,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:progressBarPadding
+     * @attr name com.swingessentials.app:progressBarPadding
      */
     public static final int ActionBar_progressBarPadding=21;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#progressBarStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#progressBarStyle}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3344,21 +3344,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:progressBarStyle
+     * @attr name com.swingessentials.app:progressBarStyle
      */
     public static final int ActionBar_progressBarStyle=22;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#subtitle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#subtitle}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:subtitle
+     * @attr name com.swingessentials.app:subtitle
      */
     public static final int ActionBar_subtitle=23;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#subtitleTextStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#subtitleTextStyle}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3366,21 +3366,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:subtitleTextStyle
+     * @attr name com.swingessentials.app:subtitleTextStyle
      */
     public static final int ActionBar_subtitleTextStyle=24;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#title}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#title}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:title
+     * @attr name com.swingessentials.app:title
      */
     public static final int ActionBar_title=25;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#titleTextStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#titleTextStyle}
      * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3388,7 +3388,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:titleTextStyle
+     * @attr name com.swingessentials.app:titleTextStyle
      */
     public static final int ActionBar_titleTextStyle=26;
     /**
@@ -3470,12 +3470,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActionMode_background com.swingessentials:background}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionMode_backgroundSplit com.swingessentials:backgroundSplit}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionMode_closeItemLayout com.swingessentials:closeItemLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionMode_height com.swingessentials:height}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionMode_subtitleTextStyle com.swingessentials:subtitleTextStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionMode_titleTextStyle com.swingessentials:titleTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_background com.swingessentials.app:background}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_backgroundSplit com.swingessentials.app:backgroundSplit}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_closeItemLayout com.swingessentials.app:closeItemLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_height com.swingessentials.app:height}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_subtitleTextStyle com.swingessentials.app:subtitleTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_titleTextStyle com.swingessentials.app:titleTextStyle}</code></td><td></td></tr>
      * </table>
      * @see #ActionMode_background
      * @see #ActionMode_backgroundSplit
@@ -3489,7 +3489,7 @@ public final class R {
         0x7f0200d6, 0x7f0200f0
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#background}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#background}
      * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3497,11 +3497,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:background
+     * @attr name com.swingessentials.app:background
      */
     public static final int ActionMode_background=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#backgroundSplit}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#backgroundSplit}
      * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3512,11 +3512,11 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:backgroundSplit
+     * @attr name com.swingessentials.app:backgroundSplit
      */
     public static final int ActionMode_backgroundSplit=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#closeItemLayout}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#closeItemLayout}
      * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3524,11 +3524,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:closeItemLayout
+     * @attr name com.swingessentials.app:closeItemLayout
      */
     public static final int ActionMode_closeItemLayout=2;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#height}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#height}
      * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3537,11 +3537,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:height
+     * @attr name com.swingessentials.app:height
      */
     public static final int ActionMode_height=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#subtitleTextStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#subtitleTextStyle}
      * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3549,11 +3549,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:subtitleTextStyle
+     * @attr name com.swingessentials.app:subtitleTextStyle
      */
     public static final int ActionMode_subtitleTextStyle=4;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#titleTextStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#titleTextStyle}
      * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3561,7 +3561,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:titleTextStyle
+     * @attr name com.swingessentials.app:titleTextStyle
      */
     public static final int ActionMode_titleTextStyle=5;
     /**
@@ -3571,8 +3571,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.swingessentials:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.swingessentials:initialActivityCount}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.swingessentials.app:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.swingessentials.app:initialActivityCount}</code></td><td></td></tr>
      * </table>
      * @see #ActivityChooserView_expandActivityOverflowButtonDrawable
      * @see #ActivityChooserView_initialActivityCount
@@ -3581,7 +3581,7 @@ public final class R {
         0x7f02006a, 0x7f020085
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#expandActivityOverflowButtonDrawable}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#expandActivityOverflowButtonDrawable}
      * attribute's value can be found in the {@link #ActivityChooserView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3589,17 +3589,17 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:expandActivityOverflowButtonDrawable
+     * @attr name com.swingessentials.app:expandActivityOverflowButtonDrawable
      */
     public static final int ActivityChooserView_expandActivityOverflowButtonDrawable=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#initialActivityCount}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#initialActivityCount}
      * attribute's value can be found in the {@link #ActivityChooserView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:initialActivityCount
+     * @attr name com.swingessentials.app:initialActivityCount
      */
     public static final int ActivityChooserView_initialActivityCount=1;
     /**
@@ -3610,11 +3610,11 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.swingessentials:buttonPanelSideLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AlertDialog_listItemLayout com.swingessentials:listItemLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AlertDialog_listLayout com.swingessentials:listLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.swingessentials:multiChoiceItemLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.swingessentials:singleChoiceItemLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.swingessentials.app:buttonPanelSideLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_listItemLayout com.swingessentials.app:listItemLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_listLayout com.swingessentials.app:listLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.swingessentials.app:multiChoiceItemLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.swingessentials.app:singleChoiceItemLayout}</code></td><td></td></tr>
      * </table>
      * @see #AlertDialog_android_layout
      * @see #AlertDialog_buttonPanelSideLayout
@@ -3640,7 +3640,7 @@ public final class R {
      */
     public static final int AlertDialog_android_layout=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#buttonPanelSideLayout}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#buttonPanelSideLayout}
      * attribute's value can be found in the {@link #AlertDialog} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3648,11 +3648,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:buttonPanelSideLayout
+     * @attr name com.swingessentials.app:buttonPanelSideLayout
      */
     public static final int AlertDialog_buttonPanelSideLayout=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#listItemLayout}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#listItemLayout}
      * attribute's value can be found in the {@link #AlertDialog} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3660,11 +3660,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:listItemLayout
+     * @attr name com.swingessentials.app:listItemLayout
      */
     public static final int AlertDialog_listItemLayout=2;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#listLayout}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#listLayout}
      * attribute's value can be found in the {@link #AlertDialog} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3672,11 +3672,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:listLayout
+     * @attr name com.swingessentials.app:listLayout
      */
     public static final int AlertDialog_listLayout=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#multiChoiceItemLayout}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#multiChoiceItemLayout}
      * attribute's value can be found in the {@link #AlertDialog} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3684,11 +3684,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:multiChoiceItemLayout
+     * @attr name com.swingessentials.app:multiChoiceItemLayout
      */
     public static final int AlertDialog_multiChoiceItemLayout=4;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#singleChoiceItemLayout}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#singleChoiceItemLayout}
      * attribute's value can be found in the {@link #AlertDialog} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3696,7 +3696,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:singleChoiceItemLayout
+     * @attr name com.swingessentials.app:singleChoiceItemLayout
      */
     public static final int AlertDialog_singleChoiceItemLayout=5;
     /**
@@ -3707,7 +3707,7 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatImageView_android_src android:src}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_srcCompat com.swingessentials:srcCompat}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_srcCompat com.swingessentials.app:srcCompat}</code></td><td></td></tr>
      * </table>
      * @see #AppCompatImageView_android_src
      * @see #AppCompatImageView_srcCompat
@@ -3731,7 +3731,7 @@ public final class R {
      */
     public static final int AppCompatImageView_android_src=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#srcCompat}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#srcCompat}
      * attribute's value can be found in the {@link #AppCompatImageView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3739,7 +3739,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:srcCompat
+     * @attr name com.swingessentials.app:srcCompat
      */
     public static final int AppCompatImageView_srcCompat=1;
     /**
@@ -3750,7 +3750,7 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_textAllCaps com.swingessentials:textAllCaps}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_textAllCaps com.swingessentials.app:textAllCaps}</code></td><td></td></tr>
      * </table>
      * @see #AppCompatTextView_android_textAppearance
      * @see #AppCompatTextView_textAllCaps
@@ -3771,7 +3771,7 @@ public final class R {
      */
     public static final int AppCompatTextView_android_textAppearance=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#textAllCaps}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#textAllCaps}
      * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3781,7 +3781,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:textAllCaps
+     * @attr name com.swingessentials.app:textAllCaps
      */
     public static final int AppCompatTextView_textAllCaps=1;
     /**
@@ -3793,116 +3793,116 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatTheme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.swingessentials:actionBarDivider}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.swingessentials:actionBarItemBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.swingessentials:actionBarPopupTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarSize com.swingessentials:actionBarSize}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.swingessentials:actionBarSplitStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.swingessentials:actionBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTabBarStyle com.swingessentials:actionBarTabBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.swingessentials:actionBarTabStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTabTextStyle com.swingessentials:actionBarTabTextStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.swingessentials:actionBarTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.swingessentials:actionBarWidgetTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.swingessentials:actionButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.swingessentials:actionDropDownStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.swingessentials:actionMenuTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.swingessentials:actionMenuTextColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.swingessentials:actionModeBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseButtonStyle com.swingessentials:actionModeCloseButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.swingessentials:actionModeCloseDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.swingessentials:actionModeCopyDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.swingessentials:actionModeCutDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.swingessentials:actionModeFindDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.swingessentials:actionModePasteDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.swingessentials:actionModePopupWindowStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.swingessentials:actionModeSelectAllDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.swingessentials:actionModeShareDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.swingessentials:actionModeSplitBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeStyle com.swingessentials:actionModeStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.swingessentials:actionModeWebSearchDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionOverflowButtonStyle com.swingessentials:actionOverflowButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionOverflowMenuStyle com.swingessentials:actionOverflowMenuStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.swingessentials:activityChooserViewStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_alertDialogButtonGroupStyle com.swingessentials:alertDialogButtonGroupStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_alertDialogCenterButtons com.swingessentials:alertDialogCenterButtons}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_alertDialogStyle com.swingessentials:alertDialogStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.swingessentials:alertDialogTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.swingessentials:autoCompleteTextViewStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.swingessentials:borderlessButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.swingessentials:buttonBarButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.swingessentials:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.swingessentials:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.swingessentials:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.swingessentials:buttonBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonStyle com.swingessentials:buttonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.swingessentials:buttonStyleSmall}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.swingessentials:checkboxStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.swingessentials:checkedTextViewStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorAccent com.swingessentials:colorAccent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.swingessentials:colorButtonNormal}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.swingessentials:colorControlActivated}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.swingessentials:colorControlHighlight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.swingessentials:colorControlNormal}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorPrimary com.swingessentials:colorPrimary}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.swingessentials:colorPrimaryDark}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.swingessentials:colorSwitchThumbNormal}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_controlBackground com.swingessentials:controlBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.swingessentials:dialogPreferredPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogTheme com.swingessentials:dialogTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.swingessentials:dividerHorizontal}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dividerVertical com.swingessentials:dividerVertical}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.swingessentials:dropDownListViewStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.swingessentials:dropdownListPreferredItemHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextBackground com.swingessentials:editTextBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextColor com.swingessentials:editTextColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextStyle com.swingessentials:editTextStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.swingessentials:homeAsUpIndicator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.swingessentials:imageButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.swingessentials:listChoiceBackgroundIndicator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.swingessentials:listDividerAlertDialog}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPopupWindowStyle com.swingessentials:listPopupWindowStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.swingessentials:listPreferredItemHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.swingessentials:listPreferredItemHeightLarge}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.swingessentials:listPreferredItemHeightSmall}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.swingessentials:listPreferredItemPaddingLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.swingessentials:listPreferredItemPaddingRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelBackground com.swingessentials:panelBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.swingessentials:panelMenuListTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.swingessentials:panelMenuListWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.swingessentials:popupMenuStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.swingessentials:popupWindowStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.swingessentials:radioButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.swingessentials:ratingBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.swingessentials:ratingBarStyleIndicator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.swingessentials:ratingBarStyleSmall}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.swingessentials:searchViewStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.swingessentials:seekBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.swingessentials:selectableItemBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.swingessentials:selectableItemBackgroundBorderless}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.swingessentials:spinnerDropDownItemStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.swingessentials:spinnerStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_switchStyle com.swingessentials:switchStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.swingessentials:textAppearanceLargePopupMenu}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.swingessentials:textAppearanceListItem}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.swingessentials:textAppearanceListItemSmall}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.swingessentials:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.swingessentials:textAppearanceSearchResultTitle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.swingessentials:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.swingessentials:textColorAlertDialogListItem}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.swingessentials:textColorSearchUrl}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.swingessentials:toolbarNavigationButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.swingessentials:toolbarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionBar com.swingessentials:windowActionBar}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.swingessentials:windowActionBarOverlay}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.swingessentials:windowActionModeOverlay}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.swingessentials:windowFixedHeightMajor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.swingessentials:windowFixedHeightMinor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.swingessentials:windowFixedWidthMajor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.swingessentials:windowFixedWidthMinor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.swingessentials:windowMinWidthMajor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.swingessentials:windowMinWidthMinor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.swingessentials:windowNoTitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.swingessentials.app:actionBarDivider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.swingessentials.app:actionBarItemBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.swingessentials.app:actionBarPopupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarSize com.swingessentials.app:actionBarSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.swingessentials.app:actionBarSplitStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.swingessentials.app:actionBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTabBarStyle com.swingessentials.app:actionBarTabBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.swingessentials.app:actionBarTabStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTabTextStyle com.swingessentials.app:actionBarTabTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.swingessentials.app:actionBarTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.swingessentials.app:actionBarWidgetTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.swingessentials.app:actionButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.swingessentials.app:actionDropDownStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.swingessentials.app:actionMenuTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.swingessentials.app:actionMenuTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.swingessentials.app:actionModeBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseButtonStyle com.swingessentials.app:actionModeCloseButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.swingessentials.app:actionModeCloseDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.swingessentials.app:actionModeCopyDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.swingessentials.app:actionModeCutDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.swingessentials.app:actionModeFindDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.swingessentials.app:actionModePasteDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.swingessentials.app:actionModePopupWindowStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.swingessentials.app:actionModeSelectAllDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.swingessentials.app:actionModeShareDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.swingessentials.app:actionModeSplitBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeStyle com.swingessentials.app:actionModeStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.swingessentials.app:actionModeWebSearchDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionOverflowButtonStyle com.swingessentials.app:actionOverflowButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionOverflowMenuStyle com.swingessentials.app:actionOverflowMenuStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.swingessentials.app:activityChooserViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_alertDialogButtonGroupStyle com.swingessentials.app:alertDialogButtonGroupStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_alertDialogCenterButtons com.swingessentials.app:alertDialogCenterButtons}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_alertDialogStyle com.swingessentials.app:alertDialogStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.swingessentials.app:alertDialogTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.swingessentials.app:autoCompleteTextViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.swingessentials.app:borderlessButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.swingessentials.app:buttonBarButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.swingessentials.app:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.swingessentials.app:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.swingessentials.app:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.swingessentials.app:buttonBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonStyle com.swingessentials.app:buttonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.swingessentials.app:buttonStyleSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.swingessentials.app:checkboxStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.swingessentials.app:checkedTextViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorAccent com.swingessentials.app:colorAccent}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.swingessentials.app:colorButtonNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.swingessentials.app:colorControlActivated}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.swingessentials.app:colorControlHighlight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.swingessentials.app:colorControlNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorPrimary com.swingessentials.app:colorPrimary}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.swingessentials.app:colorPrimaryDark}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.swingessentials.app:colorSwitchThumbNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_controlBackground com.swingessentials.app:controlBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.swingessentials.app:dialogPreferredPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogTheme com.swingessentials.app:dialogTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.swingessentials.app:dividerHorizontal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dividerVertical com.swingessentials.app:dividerVertical}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.swingessentials.app:dropDownListViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.swingessentials.app:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextBackground com.swingessentials.app:editTextBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextColor com.swingessentials.app:editTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextStyle com.swingessentials.app:editTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.swingessentials.app:homeAsUpIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.swingessentials.app:imageButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.swingessentials.app:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.swingessentials.app:listDividerAlertDialog}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPopupWindowStyle com.swingessentials.app:listPopupWindowStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.swingessentials.app:listPreferredItemHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.swingessentials.app:listPreferredItemHeightLarge}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.swingessentials.app:listPreferredItemHeightSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.swingessentials.app:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.swingessentials.app:listPreferredItemPaddingRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelBackground com.swingessentials.app:panelBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.swingessentials.app:panelMenuListTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.swingessentials.app:panelMenuListWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.swingessentials.app:popupMenuStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.swingessentials.app:popupWindowStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.swingessentials.app:radioButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.swingessentials.app:ratingBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.swingessentials.app:ratingBarStyleIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.swingessentials.app:ratingBarStyleSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.swingessentials.app:searchViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.swingessentials.app:seekBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.swingessentials.app:selectableItemBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.swingessentials.app:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.swingessentials.app:spinnerDropDownItemStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.swingessentials.app:spinnerStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_switchStyle com.swingessentials.app:switchStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.swingessentials.app:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.swingessentials.app:textAppearanceListItem}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.swingessentials.app:textAppearanceListItemSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.swingessentials.app:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.swingessentials.app:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.swingessentials.app:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.swingessentials.app:textColorAlertDialogListItem}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.swingessentials.app:textColorSearchUrl}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.swingessentials.app:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.swingessentials.app:toolbarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionBar com.swingessentials.app:windowActionBar}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.swingessentials.app:windowActionBarOverlay}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.swingessentials.app:windowActionModeOverlay}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.swingessentials.app:windowFixedHeightMajor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.swingessentials.app:windowFixedHeightMinor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.swingessentials.app:windowFixedWidthMajor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.swingessentials.app:windowFixedWidthMinor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.swingessentials.app:windowMinWidthMajor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.swingessentials.app:windowMinWidthMinor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.swingessentials.app:windowNoTitle}</code></td><td></td></tr>
      * </table>
      * @see #AppCompatTheme_android_windowIsFloating
      * @see #AppCompatTheme_android_windowAnimationStyle
@@ -4070,7 +4070,7 @@ public final class R {
      */
     public static final int AppCompatTheme_android_windowAnimationStyle=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionBarDivider}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionBarDivider}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4078,11 +4078,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionBarDivider
+     * @attr name com.swingessentials.app:actionBarDivider
      */
     public static final int AppCompatTheme_actionBarDivider=2;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionBarItemBackground}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionBarItemBackground}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4090,11 +4090,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionBarItemBackground
+     * @attr name com.swingessentials.app:actionBarItemBackground
      */
     public static final int AppCompatTheme_actionBarItemBackground=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionBarPopupTheme}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionBarPopupTheme}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4102,11 +4102,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionBarPopupTheme
+     * @attr name com.swingessentials.app:actionBarPopupTheme
      */
     public static final int AppCompatTheme_actionBarPopupTheme=4;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionBarSize}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionBarSize}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -4123,11 +4123,11 @@ public final class R {
      * <tr><td>wrap_content</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:actionBarSize
+     * @attr name com.swingessentials.app:actionBarSize
      */
     public static final int AppCompatTheme_actionBarSize=5;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionBarSplitStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionBarSplitStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4135,11 +4135,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionBarSplitStyle
+     * @attr name com.swingessentials.app:actionBarSplitStyle
      */
     public static final int AppCompatTheme_actionBarSplitStyle=6;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionBarStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionBarStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4147,11 +4147,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionBarStyle
+     * @attr name com.swingessentials.app:actionBarStyle
      */
     public static final int AppCompatTheme_actionBarStyle=7;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionBarTabBarStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionBarTabBarStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4159,11 +4159,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionBarTabBarStyle
+     * @attr name com.swingessentials.app:actionBarTabBarStyle
      */
     public static final int AppCompatTheme_actionBarTabBarStyle=8;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionBarTabStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionBarTabStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4171,11 +4171,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionBarTabStyle
+     * @attr name com.swingessentials.app:actionBarTabStyle
      */
     public static final int AppCompatTheme_actionBarTabStyle=9;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionBarTabTextStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionBarTabTextStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4183,11 +4183,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionBarTabTextStyle
+     * @attr name com.swingessentials.app:actionBarTabTextStyle
      */
     public static final int AppCompatTheme_actionBarTabTextStyle=10;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionBarTheme}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionBarTheme}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4195,11 +4195,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionBarTheme
+     * @attr name com.swingessentials.app:actionBarTheme
      */
     public static final int AppCompatTheme_actionBarTheme=11;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionBarWidgetTheme}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionBarWidgetTheme}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4207,11 +4207,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionBarWidgetTheme
+     * @attr name com.swingessentials.app:actionBarWidgetTheme
      */
     public static final int AppCompatTheme_actionBarWidgetTheme=12;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionButtonStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4219,11 +4219,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionButtonStyle
+     * @attr name com.swingessentials.app:actionButtonStyle
      */
     public static final int AppCompatTheme_actionButtonStyle=13;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionDropDownStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionDropDownStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4231,11 +4231,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionDropDownStyle
+     * @attr name com.swingessentials.app:actionDropDownStyle
      */
     public static final int AppCompatTheme_actionDropDownStyle=14;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionMenuTextAppearance}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionMenuTextAppearance}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4243,11 +4243,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionMenuTextAppearance
+     * @attr name com.swingessentials.app:actionMenuTextAppearance
      */
     public static final int AppCompatTheme_actionMenuTextAppearance=15;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionMenuTextColor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionMenuTextColor}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4258,11 +4258,11 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:actionMenuTextColor
+     * @attr name com.swingessentials.app:actionMenuTextColor
      */
     public static final int AppCompatTheme_actionMenuTextColor=16;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModeBackground}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModeBackground}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4270,11 +4270,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModeBackground
+     * @attr name com.swingessentials.app:actionModeBackground
      */
     public static final int AppCompatTheme_actionModeBackground=17;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModeCloseButtonStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModeCloseButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4282,11 +4282,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModeCloseButtonStyle
+     * @attr name com.swingessentials.app:actionModeCloseButtonStyle
      */
     public static final int AppCompatTheme_actionModeCloseButtonStyle=18;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModeCloseDrawable}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModeCloseDrawable}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4294,11 +4294,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModeCloseDrawable
+     * @attr name com.swingessentials.app:actionModeCloseDrawable
      */
     public static final int AppCompatTheme_actionModeCloseDrawable=19;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModeCopyDrawable}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModeCopyDrawable}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4306,11 +4306,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModeCopyDrawable
+     * @attr name com.swingessentials.app:actionModeCopyDrawable
      */
     public static final int AppCompatTheme_actionModeCopyDrawable=20;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModeCutDrawable}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModeCutDrawable}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4318,11 +4318,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModeCutDrawable
+     * @attr name com.swingessentials.app:actionModeCutDrawable
      */
     public static final int AppCompatTheme_actionModeCutDrawable=21;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModeFindDrawable}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModeFindDrawable}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4330,11 +4330,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModeFindDrawable
+     * @attr name com.swingessentials.app:actionModeFindDrawable
      */
     public static final int AppCompatTheme_actionModeFindDrawable=22;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModePasteDrawable}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModePasteDrawable}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4342,11 +4342,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModePasteDrawable
+     * @attr name com.swingessentials.app:actionModePasteDrawable
      */
     public static final int AppCompatTheme_actionModePasteDrawable=23;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModePopupWindowStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModePopupWindowStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4354,11 +4354,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModePopupWindowStyle
+     * @attr name com.swingessentials.app:actionModePopupWindowStyle
      */
     public static final int AppCompatTheme_actionModePopupWindowStyle=24;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModeSelectAllDrawable}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModeSelectAllDrawable}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4366,11 +4366,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModeSelectAllDrawable
+     * @attr name com.swingessentials.app:actionModeSelectAllDrawable
      */
     public static final int AppCompatTheme_actionModeSelectAllDrawable=25;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModeShareDrawable}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModeShareDrawable}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4378,11 +4378,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModeShareDrawable
+     * @attr name com.swingessentials.app:actionModeShareDrawable
      */
     public static final int AppCompatTheme_actionModeShareDrawable=26;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModeSplitBackground}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModeSplitBackground}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4390,11 +4390,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModeSplitBackground
+     * @attr name com.swingessentials.app:actionModeSplitBackground
      */
     public static final int AppCompatTheme_actionModeSplitBackground=27;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModeStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModeStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4402,11 +4402,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModeStyle
+     * @attr name com.swingessentials.app:actionModeStyle
      */
     public static final int AppCompatTheme_actionModeStyle=28;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionModeWebSearchDrawable}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionModeWebSearchDrawable}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4414,11 +4414,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionModeWebSearchDrawable
+     * @attr name com.swingessentials.app:actionModeWebSearchDrawable
      */
     public static final int AppCompatTheme_actionModeWebSearchDrawable=29;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionOverflowButtonStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionOverflowButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4426,11 +4426,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionOverflowButtonStyle
+     * @attr name com.swingessentials.app:actionOverflowButtonStyle
      */
     public static final int AppCompatTheme_actionOverflowButtonStyle=30;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionOverflowMenuStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionOverflowMenuStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4438,11 +4438,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionOverflowMenuStyle
+     * @attr name com.swingessentials.app:actionOverflowMenuStyle
      */
     public static final int AppCompatTheme_actionOverflowMenuStyle=31;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#activityChooserViewStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#activityChooserViewStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4450,11 +4450,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:activityChooserViewStyle
+     * @attr name com.swingessentials.app:activityChooserViewStyle
      */
     public static final int AppCompatTheme_activityChooserViewStyle=32;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#alertDialogButtonGroupStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#alertDialogButtonGroupStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4462,21 +4462,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:alertDialogButtonGroupStyle
+     * @attr name com.swingessentials.app:alertDialogButtonGroupStyle
      */
     public static final int AppCompatTheme_alertDialogButtonGroupStyle=33;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#alertDialogCenterButtons}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#alertDialogCenterButtons}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:alertDialogCenterButtons
+     * @attr name com.swingessentials.app:alertDialogCenterButtons
      */
     public static final int AppCompatTheme_alertDialogCenterButtons=34;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#alertDialogStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#alertDialogStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4484,11 +4484,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:alertDialogStyle
+     * @attr name com.swingessentials.app:alertDialogStyle
      */
     public static final int AppCompatTheme_alertDialogStyle=35;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#alertDialogTheme}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#alertDialogTheme}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4496,11 +4496,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:alertDialogTheme
+     * @attr name com.swingessentials.app:alertDialogTheme
      */
     public static final int AppCompatTheme_alertDialogTheme=36;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#autoCompleteTextViewStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#autoCompleteTextViewStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4508,11 +4508,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:autoCompleteTextViewStyle
+     * @attr name com.swingessentials.app:autoCompleteTextViewStyle
      */
     public static final int AppCompatTheme_autoCompleteTextViewStyle=37;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#borderlessButtonStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#borderlessButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4520,11 +4520,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:borderlessButtonStyle
+     * @attr name com.swingessentials.app:borderlessButtonStyle
      */
     public static final int AppCompatTheme_borderlessButtonStyle=38;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#buttonBarButtonStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#buttonBarButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4532,11 +4532,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:buttonBarButtonStyle
+     * @attr name com.swingessentials.app:buttonBarButtonStyle
      */
     public static final int AppCompatTheme_buttonBarButtonStyle=39;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#buttonBarNegativeButtonStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#buttonBarNegativeButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4544,11 +4544,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:buttonBarNegativeButtonStyle
+     * @attr name com.swingessentials.app:buttonBarNegativeButtonStyle
      */
     public static final int AppCompatTheme_buttonBarNegativeButtonStyle=40;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#buttonBarNeutralButtonStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#buttonBarNeutralButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4556,11 +4556,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:buttonBarNeutralButtonStyle
+     * @attr name com.swingessentials.app:buttonBarNeutralButtonStyle
      */
     public static final int AppCompatTheme_buttonBarNeutralButtonStyle=41;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#buttonBarPositiveButtonStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#buttonBarPositiveButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4568,11 +4568,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:buttonBarPositiveButtonStyle
+     * @attr name com.swingessentials.app:buttonBarPositiveButtonStyle
      */
     public static final int AppCompatTheme_buttonBarPositiveButtonStyle=42;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#buttonBarStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#buttonBarStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4580,11 +4580,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:buttonBarStyle
+     * @attr name com.swingessentials.app:buttonBarStyle
      */
     public static final int AppCompatTheme_buttonBarStyle=43;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#buttonStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#buttonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4592,11 +4592,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:buttonStyle
+     * @attr name com.swingessentials.app:buttonStyle
      */
     public static final int AppCompatTheme_buttonStyle=44;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#buttonStyleSmall}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#buttonStyleSmall}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4604,11 +4604,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:buttonStyleSmall
+     * @attr name com.swingessentials.app:buttonStyleSmall
      */
     public static final int AppCompatTheme_buttonStyleSmall=45;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#checkboxStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#checkboxStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4616,11 +4616,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:checkboxStyle
+     * @attr name com.swingessentials.app:checkboxStyle
      */
     public static final int AppCompatTheme_checkboxStyle=46;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#checkedTextViewStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#checkedTextViewStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4628,99 +4628,99 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:checkedTextViewStyle
+     * @attr name com.swingessentials.app:checkedTextViewStyle
      */
     public static final int AppCompatTheme_checkedTextViewStyle=47;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#colorAccent}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#colorAccent}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:colorAccent
+     * @attr name com.swingessentials.app:colorAccent
      */
     public static final int AppCompatTheme_colorAccent=48;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#colorButtonNormal}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#colorButtonNormal}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:colorButtonNormal
+     * @attr name com.swingessentials.app:colorButtonNormal
      */
     public static final int AppCompatTheme_colorButtonNormal=49;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#colorControlActivated}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#colorControlActivated}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:colorControlActivated
+     * @attr name com.swingessentials.app:colorControlActivated
      */
     public static final int AppCompatTheme_colorControlActivated=50;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#colorControlHighlight}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#colorControlHighlight}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:colorControlHighlight
+     * @attr name com.swingessentials.app:colorControlHighlight
      */
     public static final int AppCompatTheme_colorControlHighlight=51;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#colorControlNormal}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#colorControlNormal}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:colorControlNormal
+     * @attr name com.swingessentials.app:colorControlNormal
      */
     public static final int AppCompatTheme_colorControlNormal=52;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#colorPrimary}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#colorPrimary}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:colorPrimary
+     * @attr name com.swingessentials.app:colorPrimary
      */
     public static final int AppCompatTheme_colorPrimary=53;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#colorPrimaryDark}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#colorPrimaryDark}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:colorPrimaryDark
+     * @attr name com.swingessentials.app:colorPrimaryDark
      */
     public static final int AppCompatTheme_colorPrimaryDark=54;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#colorSwitchThumbNormal}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#colorSwitchThumbNormal}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:colorSwitchThumbNormal
+     * @attr name com.swingessentials.app:colorSwitchThumbNormal
      */
     public static final int AppCompatTheme_colorSwitchThumbNormal=55;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#controlBackground}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#controlBackground}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4728,11 +4728,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:controlBackground
+     * @attr name com.swingessentials.app:controlBackground
      */
     public static final int AppCompatTheme_controlBackground=56;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#dialogPreferredPadding}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#dialogPreferredPadding}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -4741,11 +4741,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:dialogPreferredPadding
+     * @attr name com.swingessentials.app:dialogPreferredPadding
      */
     public static final int AppCompatTheme_dialogPreferredPadding=57;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#dialogTheme}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#dialogTheme}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4753,11 +4753,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:dialogTheme
+     * @attr name com.swingessentials.app:dialogTheme
      */
     public static final int AppCompatTheme_dialogTheme=58;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#dividerHorizontal}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#dividerHorizontal}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4765,11 +4765,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:dividerHorizontal
+     * @attr name com.swingessentials.app:dividerHorizontal
      */
     public static final int AppCompatTheme_dividerHorizontal=59;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#dividerVertical}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#dividerVertical}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4777,11 +4777,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:dividerVertical
+     * @attr name com.swingessentials.app:dividerVertical
      */
     public static final int AppCompatTheme_dividerVertical=60;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#dropDownListViewStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#dropDownListViewStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4789,11 +4789,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:dropDownListViewStyle
+     * @attr name com.swingessentials.app:dropDownListViewStyle
      */
     public static final int AppCompatTheme_dropDownListViewStyle=61;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#dropdownListPreferredItemHeight}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#dropdownListPreferredItemHeight}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -4802,11 +4802,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:dropdownListPreferredItemHeight
+     * @attr name com.swingessentials.app:dropdownListPreferredItemHeight
      */
     public static final int AppCompatTheme_dropdownListPreferredItemHeight=62;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#editTextBackground}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#editTextBackground}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4814,11 +4814,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:editTextBackground
+     * @attr name com.swingessentials.app:editTextBackground
      */
     public static final int AppCompatTheme_editTextBackground=63;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#editTextColor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#editTextColor}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4829,11 +4829,11 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:editTextColor
+     * @attr name com.swingessentials.app:editTextColor
      */
     public static final int AppCompatTheme_editTextColor=64;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#editTextStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#editTextStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4841,11 +4841,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:editTextStyle
+     * @attr name com.swingessentials.app:editTextStyle
      */
     public static final int AppCompatTheme_editTextStyle=65;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#homeAsUpIndicator}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#homeAsUpIndicator}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4853,11 +4853,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:homeAsUpIndicator
+     * @attr name com.swingessentials.app:homeAsUpIndicator
      */
     public static final int AppCompatTheme_homeAsUpIndicator=66;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#imageButtonStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#imageButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4865,11 +4865,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:imageButtonStyle
+     * @attr name com.swingessentials.app:imageButtonStyle
      */
     public static final int AppCompatTheme_imageButtonStyle=67;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#listChoiceBackgroundIndicator}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#listChoiceBackgroundIndicator}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4877,11 +4877,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:listChoiceBackgroundIndicator
+     * @attr name com.swingessentials.app:listChoiceBackgroundIndicator
      */
     public static final int AppCompatTheme_listChoiceBackgroundIndicator=68;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#listDividerAlertDialog}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#listDividerAlertDialog}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4889,11 +4889,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:listDividerAlertDialog
+     * @attr name com.swingessentials.app:listDividerAlertDialog
      */
     public static final int AppCompatTheme_listDividerAlertDialog=69;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#listPopupWindowStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#listPopupWindowStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4901,11 +4901,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:listPopupWindowStyle
+     * @attr name com.swingessentials.app:listPopupWindowStyle
      */
     public static final int AppCompatTheme_listPopupWindowStyle=70;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#listPreferredItemHeight}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#listPreferredItemHeight}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -4914,11 +4914,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:listPreferredItemHeight
+     * @attr name com.swingessentials.app:listPreferredItemHeight
      */
     public static final int AppCompatTheme_listPreferredItemHeight=71;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#listPreferredItemHeightLarge}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#listPreferredItemHeightLarge}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -4927,11 +4927,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:listPreferredItemHeightLarge
+     * @attr name com.swingessentials.app:listPreferredItemHeightLarge
      */
     public static final int AppCompatTheme_listPreferredItemHeightLarge=72;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#listPreferredItemHeightSmall}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#listPreferredItemHeightSmall}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -4940,11 +4940,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:listPreferredItemHeightSmall
+     * @attr name com.swingessentials.app:listPreferredItemHeightSmall
      */
     public static final int AppCompatTheme_listPreferredItemHeightSmall=73;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#listPreferredItemPaddingLeft}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#listPreferredItemPaddingLeft}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -4953,11 +4953,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:listPreferredItemPaddingLeft
+     * @attr name com.swingessentials.app:listPreferredItemPaddingLeft
      */
     public static final int AppCompatTheme_listPreferredItemPaddingLeft=74;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#listPreferredItemPaddingRight}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#listPreferredItemPaddingRight}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -4966,11 +4966,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:listPreferredItemPaddingRight
+     * @attr name com.swingessentials.app:listPreferredItemPaddingRight
      */
     public static final int AppCompatTheme_listPreferredItemPaddingRight=75;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#panelBackground}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#panelBackground}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4978,11 +4978,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:panelBackground
+     * @attr name com.swingessentials.app:panelBackground
      */
     public static final int AppCompatTheme_panelBackground=76;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#panelMenuListTheme}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#panelMenuListTheme}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4990,11 +4990,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:panelMenuListTheme
+     * @attr name com.swingessentials.app:panelMenuListTheme
      */
     public static final int AppCompatTheme_panelMenuListTheme=77;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#panelMenuListWidth}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#panelMenuListWidth}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5003,11 +5003,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:panelMenuListWidth
+     * @attr name com.swingessentials.app:panelMenuListWidth
      */
     public static final int AppCompatTheme_panelMenuListWidth=78;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#popupMenuStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#popupMenuStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5015,11 +5015,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:popupMenuStyle
+     * @attr name com.swingessentials.app:popupMenuStyle
      */
     public static final int AppCompatTheme_popupMenuStyle=79;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#popupWindowStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#popupWindowStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5027,11 +5027,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:popupWindowStyle
+     * @attr name com.swingessentials.app:popupWindowStyle
      */
     public static final int AppCompatTheme_popupWindowStyle=80;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#radioButtonStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#radioButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5039,11 +5039,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:radioButtonStyle
+     * @attr name com.swingessentials.app:radioButtonStyle
      */
     public static final int AppCompatTheme_radioButtonStyle=81;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#ratingBarStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#ratingBarStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5051,11 +5051,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:ratingBarStyle
+     * @attr name com.swingessentials.app:ratingBarStyle
      */
     public static final int AppCompatTheme_ratingBarStyle=82;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#ratingBarStyleIndicator}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#ratingBarStyleIndicator}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5063,11 +5063,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:ratingBarStyleIndicator
+     * @attr name com.swingessentials.app:ratingBarStyleIndicator
      */
     public static final int AppCompatTheme_ratingBarStyleIndicator=83;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#ratingBarStyleSmall}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#ratingBarStyleSmall}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5075,11 +5075,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:ratingBarStyleSmall
+     * @attr name com.swingessentials.app:ratingBarStyleSmall
      */
     public static final int AppCompatTheme_ratingBarStyleSmall=84;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#searchViewStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#searchViewStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5087,11 +5087,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:searchViewStyle
+     * @attr name com.swingessentials.app:searchViewStyle
      */
     public static final int AppCompatTheme_searchViewStyle=85;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#seekBarStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#seekBarStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5099,11 +5099,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:seekBarStyle
+     * @attr name com.swingessentials.app:seekBarStyle
      */
     public static final int AppCompatTheme_seekBarStyle=86;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#selectableItemBackground}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#selectableItemBackground}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5111,11 +5111,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:selectableItemBackground
+     * @attr name com.swingessentials.app:selectableItemBackground
      */
     public static final int AppCompatTheme_selectableItemBackground=87;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#selectableItemBackgroundBorderless}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#selectableItemBackgroundBorderless}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5123,11 +5123,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:selectableItemBackgroundBorderless
+     * @attr name com.swingessentials.app:selectableItemBackgroundBorderless
      */
     public static final int AppCompatTheme_selectableItemBackgroundBorderless=88;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#spinnerDropDownItemStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#spinnerDropDownItemStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5135,11 +5135,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:spinnerDropDownItemStyle
+     * @attr name com.swingessentials.app:spinnerDropDownItemStyle
      */
     public static final int AppCompatTheme_spinnerDropDownItemStyle=89;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#spinnerStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#spinnerStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5147,11 +5147,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:spinnerStyle
+     * @attr name com.swingessentials.app:spinnerStyle
      */
     public static final int AppCompatTheme_spinnerStyle=90;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#switchStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#switchStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5159,11 +5159,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:switchStyle
+     * @attr name com.swingessentials.app:switchStyle
      */
     public static final int AppCompatTheme_switchStyle=91;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#textAppearanceLargePopupMenu}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#textAppearanceLargePopupMenu}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5171,11 +5171,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:textAppearanceLargePopupMenu
+     * @attr name com.swingessentials.app:textAppearanceLargePopupMenu
      */
     public static final int AppCompatTheme_textAppearanceLargePopupMenu=92;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#textAppearanceListItem}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#textAppearanceListItem}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5183,11 +5183,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:textAppearanceListItem
+     * @attr name com.swingessentials.app:textAppearanceListItem
      */
     public static final int AppCompatTheme_textAppearanceListItem=93;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#textAppearanceListItemSmall}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#textAppearanceListItemSmall}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5195,11 +5195,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:textAppearanceListItemSmall
+     * @attr name com.swingessentials.app:textAppearanceListItemSmall
      */
     public static final int AppCompatTheme_textAppearanceListItemSmall=94;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#textAppearanceSearchResultSubtitle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#textAppearanceSearchResultSubtitle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5207,11 +5207,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:textAppearanceSearchResultSubtitle
+     * @attr name com.swingessentials.app:textAppearanceSearchResultSubtitle
      */
     public static final int AppCompatTheme_textAppearanceSearchResultSubtitle=95;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#textAppearanceSearchResultTitle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#textAppearanceSearchResultTitle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5219,11 +5219,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:textAppearanceSearchResultTitle
+     * @attr name com.swingessentials.app:textAppearanceSearchResultTitle
      */
     public static final int AppCompatTheme_textAppearanceSearchResultTitle=96;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#textAppearanceSmallPopupMenu}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#textAppearanceSmallPopupMenu}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5231,11 +5231,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:textAppearanceSmallPopupMenu
+     * @attr name com.swingessentials.app:textAppearanceSmallPopupMenu
      */
     public static final int AppCompatTheme_textAppearanceSmallPopupMenu=97;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#textColorAlertDialogListItem}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#textColorAlertDialogListItem}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5246,11 +5246,11 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:textColorAlertDialogListItem
+     * @attr name com.swingessentials.app:textColorAlertDialogListItem
      */
     public static final int AppCompatTheme_textColorAlertDialogListItem=98;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#textColorSearchUrl}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#textColorSearchUrl}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5261,11 +5261,11 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:textColorSearchUrl
+     * @attr name com.swingessentials.app:textColorSearchUrl
      */
     public static final int AppCompatTheme_textColorSearchUrl=99;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#toolbarNavigationButtonStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#toolbarNavigationButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5273,11 +5273,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:toolbarNavigationButtonStyle
+     * @attr name com.swingessentials.app:toolbarNavigationButtonStyle
      */
     public static final int AppCompatTheme_toolbarNavigationButtonStyle=100;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#toolbarStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#toolbarStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5285,41 +5285,41 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:toolbarStyle
+     * @attr name com.swingessentials.app:toolbarStyle
      */
     public static final int AppCompatTheme_toolbarStyle=101;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#windowActionBar}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#windowActionBar}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:windowActionBar
+     * @attr name com.swingessentials.app:windowActionBar
      */
     public static final int AppCompatTheme_windowActionBar=102;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#windowActionBarOverlay}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#windowActionBarOverlay}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:windowActionBarOverlay
+     * @attr name com.swingessentials.app:windowActionBarOverlay
      */
     public static final int AppCompatTheme_windowActionBarOverlay=103;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#windowActionModeOverlay}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#windowActionModeOverlay}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:windowActionModeOverlay
+     * @attr name com.swingessentials.app:windowActionModeOverlay
      */
     public static final int AppCompatTheme_windowActionModeOverlay=104;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#windowFixedHeightMajor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#windowFixedHeightMajor}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5332,11 +5332,11 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name com.swingessentials:windowFixedHeightMajor
+     * @attr name com.swingessentials.app:windowFixedHeightMajor
      */
     public static final int AppCompatTheme_windowFixedHeightMajor=105;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#windowFixedHeightMinor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#windowFixedHeightMinor}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5349,11 +5349,11 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name com.swingessentials:windowFixedHeightMinor
+     * @attr name com.swingessentials.app:windowFixedHeightMinor
      */
     public static final int AppCompatTheme_windowFixedHeightMinor=106;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#windowFixedWidthMajor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#windowFixedWidthMajor}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5366,11 +5366,11 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name com.swingessentials:windowFixedWidthMajor
+     * @attr name com.swingessentials.app:windowFixedWidthMajor
      */
     public static final int AppCompatTheme_windowFixedWidthMajor=107;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#windowFixedWidthMinor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#windowFixedWidthMinor}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5383,11 +5383,11 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name com.swingessentials:windowFixedWidthMinor
+     * @attr name com.swingessentials.app:windowFixedWidthMinor
      */
     public static final int AppCompatTheme_windowFixedWidthMinor=108;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#windowMinWidthMajor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#windowMinWidthMajor}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5400,11 +5400,11 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name com.swingessentials:windowMinWidthMajor
+     * @attr name com.swingessentials.app:windowMinWidthMajor
      */
     public static final int AppCompatTheme_windowMinWidthMajor=109;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#windowMinWidthMinor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#windowMinWidthMinor}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5417,17 +5417,17 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name com.swingessentials:windowMinWidthMinor
+     * @attr name com.swingessentials.app:windowMinWidthMinor
      */
     public static final int AppCompatTheme_windowMinWidthMinor=110;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#windowNoTitle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#windowNoTitle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:windowNoTitle
+     * @attr name com.swingessentials.app:windowNoTitle
      */
     public static final int AppCompatTheme_windowNoTitle=111;
     /**
@@ -5437,7 +5437,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ButtonBarLayout_allowStacking com.swingessentials:allowStacking}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ButtonBarLayout_allowStacking com.swingessentials.app:allowStacking}</code></td><td></td></tr>
      * </table>
      * @see #ButtonBarLayout_allowStacking
      */
@@ -5445,13 +5445,13 @@ public final class R {
         0x7f020029
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#allowStacking}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#allowStacking}
      * attribute's value can be found in the {@link #ButtonBarLayout} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:allowStacking
+     * @attr name com.swingessentials.app:allowStacking
      */
     public static final int ButtonBarLayout_allowStacking=0;
     /**
@@ -5462,10 +5462,10 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CameraView_android_adjustViewBounds android:adjustViewBounds}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CameraView_aspectRatio com.swingessentials:aspectRatio}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CameraView_autoFocus com.swingessentials:autoFocus}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CameraView_facing com.swingessentials:facing}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CameraView_flash com.swingessentials:flash}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CameraView_aspectRatio com.swingessentials.app:aspectRatio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CameraView_autoFocus com.swingessentials.app:autoFocus}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CameraView_facing com.swingessentials.app:facing}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CameraView_flash com.swingessentials.app:flash}</code></td><td></td></tr>
      * </table>
      * @see #CameraView_android_adjustViewBounds
      * @see #CameraView_aspectRatio
@@ -5488,27 +5488,27 @@ public final class R {
      */
     public static final int CameraView_android_adjustViewBounds=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#aspectRatio}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#aspectRatio}
      * attribute's value can be found in the {@link #CameraView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:aspectRatio
+     * @attr name com.swingessentials.app:aspectRatio
      */
     public static final int CameraView_aspectRatio=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#autoFocus}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#autoFocus}
      * attribute's value can be found in the {@link #CameraView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:autoFocus
+     * @attr name com.swingessentials.app:autoFocus
      */
     public static final int CameraView_autoFocus=2;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#facing}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#facing}
      * attribute's value can be found in the {@link #CameraView} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -5521,11 +5521,11 @@ public final class R {
      * <tr><td>front</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:facing
+     * @attr name com.swingessentials.app:facing
      */
     public static final int CameraView_facing=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#flash}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#flash}
      * attribute's value can be found in the {@link #CameraView} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -5541,7 +5541,7 @@ public final class R {
      * <tr><td>torch</td><td>2</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:flash
+     * @attr name com.swingessentials.app:flash
      */
     public static final int CameraView_flash=4;
     /**
@@ -5552,8 +5552,8 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CompoundButton_android_button android:button}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CompoundButton_buttonTint com.swingessentials:buttonTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CompoundButton_buttonTintMode com.swingessentials:buttonTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CompoundButton_buttonTint com.swingessentials.app:buttonTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CompoundButton_buttonTintMode com.swingessentials.app:buttonTintMode}</code></td><td></td></tr>
      * </table>
      * @see #CompoundButton_android_button
      * @see #CompoundButton_buttonTint
@@ -5575,18 +5575,18 @@ public final class R {
      */
     public static final int CompoundButton_android_button=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#buttonTint}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#buttonTint}
      * attribute's value can be found in the {@link #CompoundButton} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:buttonTint
+     * @attr name com.swingessentials.app:buttonTint
      */
     public static final int CompoundButton_buttonTint=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#buttonTintMode}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#buttonTintMode}
      * attribute's value can be found in the {@link #CompoundButton} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -5602,7 +5602,7 @@ public final class R {
      * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:buttonTintMode
+     * @attr name com.swingessentials.app:buttonTintMode
      */
     public static final int CompoundButton_buttonTintMode=2;
     /**
@@ -5612,14 +5612,14 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.swingessentials:arrowHeadLength}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.swingessentials:arrowShaftLength}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_barLength com.swingessentials:barLength}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_color com.swingessentials:color}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.swingessentials:drawableSize}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.swingessentials:gapBetweenBars}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_spinBars com.swingessentials:spinBars}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_thickness com.swingessentials:thickness}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.swingessentials.app:arrowHeadLength}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.swingessentials.app:arrowShaftLength}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_barLength com.swingessentials.app:barLength}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_color com.swingessentials.app:color}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.swingessentials.app:drawableSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.swingessentials.app:gapBetweenBars}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_spinBars com.swingessentials.app:spinBars}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_thickness com.swingessentials.app:thickness}</code></td><td></td></tr>
      * </table>
      * @see #DrawerArrowToggle_arrowHeadLength
      * @see #DrawerArrowToggle_arrowShaftLength
@@ -5635,7 +5635,7 @@ public final class R {
         0x7f020062, 0x7f020079, 0x7f0200cc, 0x7f0200e6
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#arrowHeadLength}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#arrowHeadLength}
      * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5644,11 +5644,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:arrowHeadLength
+     * @attr name com.swingessentials.app:arrowHeadLength
      */
     public static final int DrawerArrowToggle_arrowHeadLength=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#arrowShaftLength}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#arrowShaftLength}
      * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5657,11 +5657,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:arrowShaftLength
+     * @attr name com.swingessentials.app:arrowShaftLength
      */
     public static final int DrawerArrowToggle_arrowShaftLength=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#barLength}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#barLength}
      * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5670,22 +5670,22 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:barLength
+     * @attr name com.swingessentials.app:barLength
      */
     public static final int DrawerArrowToggle_barLength=2;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#color}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#color}
      * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:color
+     * @attr name com.swingessentials.app:color
      */
     public static final int DrawerArrowToggle_color=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#drawableSize}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#drawableSize}
      * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5694,11 +5694,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:drawableSize
+     * @attr name com.swingessentials.app:drawableSize
      */
     public static final int DrawerArrowToggle_drawableSize=4;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#gapBetweenBars}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#gapBetweenBars}
      * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5707,21 +5707,21 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:gapBetweenBars
+     * @attr name com.swingessentials.app:gapBetweenBars
      */
     public static final int DrawerArrowToggle_gapBetweenBars=5;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#spinBars}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#spinBars}
      * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:spinBars
+     * @attr name com.swingessentials.app:spinBars
      */
     public static final int DrawerArrowToggle_spinBars=6;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#thickness}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#thickness}
      * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5730,7 +5730,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:thickness
+     * @attr name com.swingessentials.app:thickness
      */
     public static final int DrawerArrowToggle_thickness=7;
     /**
@@ -5740,12 +5740,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.swingessentials:fontProviderAuthority}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.swingessentials:fontProviderCerts}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.swingessentials:fontProviderFetchStrategy}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.swingessentials:fontProviderFetchTimeout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.swingessentials:fontProviderPackage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.swingessentials:fontProviderQuery}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.swingessentials.app:fontProviderAuthority}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.swingessentials.app:fontProviderCerts}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.swingessentials.app:fontProviderFetchStrategy}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.swingessentials.app:fontProviderFetchTimeout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.swingessentials.app:fontProviderPackage}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.swingessentials.app:fontProviderQuery}</code></td><td></td></tr>
      * </table>
      * @see #FontFamily_fontProviderAuthority
      * @see #FontFamily_fontProviderCerts
@@ -5759,17 +5759,17 @@ public final class R {
         0x7f020075, 0x7f020076
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#fontProviderAuthority}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#fontProviderAuthority}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:fontProviderAuthority
+     * @attr name com.swingessentials.app:fontProviderAuthority
      */
     public static final int FontFamily_fontProviderAuthority=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#fontProviderCerts}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#fontProviderCerts}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5777,11 +5777,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:fontProviderCerts
+     * @attr name com.swingessentials.app:fontProviderCerts
      */
     public static final int FontFamily_fontProviderCerts=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#fontProviderFetchStrategy}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#fontProviderFetchStrategy}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -5794,11 +5794,11 @@ public final class R {
      * <tr><td>blocking</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:fontProviderFetchStrategy
+     * @attr name com.swingessentials.app:fontProviderFetchStrategy
      */
     public static final int FontFamily_fontProviderFetchStrategy=2;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#fontProviderFetchTimeout}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#fontProviderFetchTimeout}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
@@ -5811,27 +5811,27 @@ public final class R {
      * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:fontProviderFetchTimeout
+     * @attr name com.swingessentials.app:fontProviderFetchTimeout
      */
     public static final int FontFamily_fontProviderFetchTimeout=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#fontProviderPackage}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#fontProviderPackage}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:fontProviderPackage
+     * @attr name com.swingessentials.app:fontProviderPackage
      */
     public static final int FontFamily_fontProviderPackage=4;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#fontProviderQuery}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#fontProviderQuery}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:fontProviderQuery
+     * @attr name com.swingessentials.app:fontProviderQuery
      */
     public static final int FontFamily_fontProviderQuery=5;
     /**
@@ -5841,9 +5841,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamilyFont_font com.swingessentials:font}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.swingessentials:fontStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.swingessentials:fontWeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_font com.swingessentials.app:font}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.swingessentials.app:fontStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.swingessentials.app:fontWeight}</code></td><td></td></tr>
      * </table>
      * @see #FontFamilyFont_font
      * @see #FontFamilyFont_fontStyle
@@ -5853,7 +5853,7 @@ public final class R {
         0x7f020070, 0x7f020077, 0x7f020078
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#font}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#font}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5861,11 +5861,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:font
+     * @attr name com.swingessentials.app:font
      */
     public static final int FontFamilyFont_font=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#fontStyle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#fontStyle}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -5878,16 +5878,16 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:fontStyle
+     * @attr name com.swingessentials.app:fontStyle
      */
     public static final int FontFamilyFont_fontStyle=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#fontWeight}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#fontWeight}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.swingessentials:fontWeight
+     * @attr name com.swingessentials.app:fontWeight
      */
     public static final int FontFamilyFont_fontWeight=2;
     /**
@@ -5897,31 +5897,31 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_actualImageScaleType com.swingessentials:actualImageScaleType}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_backgroundImage com.swingessentials:backgroundImage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_fadeDuration com.swingessentials:fadeDuration}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_failureImage com.swingessentials:failureImage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_failureImageScaleType com.swingessentials:failureImageScaleType}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_overlayImage com.swingessentials:overlayImage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_placeholderImage com.swingessentials:placeholderImage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_placeholderImageScaleType com.swingessentials:placeholderImageScaleType}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_pressedStateOverlayImage com.swingessentials:pressedStateOverlayImage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_progressBarAutoRotateInterval com.swingessentials:progressBarAutoRotateInterval}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_progressBarImage com.swingessentials:progressBarImage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_progressBarImageScaleType com.swingessentials:progressBarImageScaleType}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_retryImage com.swingessentials:retryImage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_retryImageScaleType com.swingessentials:retryImageScaleType}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_roundAsCircle com.swingessentials:roundAsCircle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_roundBottomLeft com.swingessentials:roundBottomLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_roundBottomRight com.swingessentials:roundBottomRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_roundTopLeft com.swingessentials:roundTopLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_roundTopRight com.swingessentials:roundTopRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_roundWithOverlayColor com.swingessentials:roundWithOverlayColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_roundedCornerRadius com.swingessentials:roundedCornerRadius}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_roundingBorderColor com.swingessentials:roundingBorderColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_roundingBorderPadding com.swingessentials:roundingBorderPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_roundingBorderWidth com.swingessentials:roundingBorderWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GenericDraweeHierarchy_viewAspectRatio com.swingessentials:viewAspectRatio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_actualImageScaleType com.swingessentials.app:actualImageScaleType}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_backgroundImage com.swingessentials.app:backgroundImage}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_fadeDuration com.swingessentials.app:fadeDuration}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_failureImage com.swingessentials.app:failureImage}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_failureImageScaleType com.swingessentials.app:failureImageScaleType}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_overlayImage com.swingessentials.app:overlayImage}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_placeholderImage com.swingessentials.app:placeholderImage}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_placeholderImageScaleType com.swingessentials.app:placeholderImageScaleType}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_pressedStateOverlayImage com.swingessentials.app:pressedStateOverlayImage}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_progressBarAutoRotateInterval com.swingessentials.app:progressBarAutoRotateInterval}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_progressBarImage com.swingessentials.app:progressBarImage}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_progressBarImageScaleType com.swingessentials.app:progressBarImageScaleType}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_retryImage com.swingessentials.app:retryImage}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_retryImageScaleType com.swingessentials.app:retryImageScaleType}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_roundAsCircle com.swingessentials.app:roundAsCircle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_roundBottomLeft com.swingessentials.app:roundBottomLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_roundBottomRight com.swingessentials.app:roundBottomRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_roundTopLeft com.swingessentials.app:roundTopLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_roundTopRight com.swingessentials.app:roundTopRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_roundWithOverlayColor com.swingessentials.app:roundWithOverlayColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_roundedCornerRadius com.swingessentials.app:roundedCornerRadius}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_roundingBorderColor com.swingessentials.app:roundingBorderColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_roundingBorderPadding com.swingessentials.app:roundingBorderPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_roundingBorderWidth com.swingessentials.app:roundingBorderWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GenericDraweeHierarchy_viewAspectRatio com.swingessentials.app:viewAspectRatio}</code></td><td></td></tr>
      * </table>
      * @see #GenericDraweeHierarchy_actualImageScaleType
      * @see #GenericDraweeHierarchy_backgroundImage
@@ -5959,7 +5959,7 @@ public final class R {
         0x7f0200f4
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actualImageScaleType}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actualImageScaleType}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -5979,11 +5979,11 @@ public final class R {
      * <tr><td>none</td><td>ffffffff</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:actualImageScaleType
+     * @attr name com.swingessentials.app:actualImageScaleType
      */
     public static final int GenericDraweeHierarchy_actualImageScaleType=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#backgroundImage}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#backgroundImage}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5991,20 +5991,20 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:backgroundImage
+     * @attr name com.swingessentials.app:backgroundImage
      */
     public static final int GenericDraweeHierarchy_backgroundImage=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#fadeDuration}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#fadeDuration}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.swingessentials:fadeDuration
+     * @attr name com.swingessentials.app:fadeDuration
      */
     public static final int GenericDraweeHierarchy_fadeDuration=2;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#failureImage}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#failureImage}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6012,11 +6012,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:failureImage
+     * @attr name com.swingessentials.app:failureImage
      */
     public static final int GenericDraweeHierarchy_failureImage=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#failureImageScaleType}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#failureImageScaleType}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -6036,11 +6036,11 @@ public final class R {
      * <tr><td>none</td><td>ffffffff</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:failureImageScaleType
+     * @attr name com.swingessentials.app:failureImageScaleType
      */
     public static final int GenericDraweeHierarchy_failureImageScaleType=4;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#overlayImage}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#overlayImage}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6048,11 +6048,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:overlayImage
+     * @attr name com.swingessentials.app:overlayImage
      */
     public static final int GenericDraweeHierarchy_overlayImage=5;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#placeholderImage}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#placeholderImage}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6060,11 +6060,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:placeholderImage
+     * @attr name com.swingessentials.app:placeholderImage
      */
     public static final int GenericDraweeHierarchy_placeholderImage=6;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#placeholderImageScaleType}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#placeholderImageScaleType}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -6084,11 +6084,11 @@ public final class R {
      * <tr><td>none</td><td>ffffffff</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:placeholderImageScaleType
+     * @attr name com.swingessentials.app:placeholderImageScaleType
      */
     public static final int GenericDraweeHierarchy_placeholderImageScaleType=7;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#pressedStateOverlayImage}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#pressedStateOverlayImage}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6096,20 +6096,20 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:pressedStateOverlayImage
+     * @attr name com.swingessentials.app:pressedStateOverlayImage
      */
     public static final int GenericDraweeHierarchy_pressedStateOverlayImage=8;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#progressBarAutoRotateInterval}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#progressBarAutoRotateInterval}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.swingessentials:progressBarAutoRotateInterval
+     * @attr name com.swingessentials.app:progressBarAutoRotateInterval
      */
     public static final int GenericDraweeHierarchy_progressBarAutoRotateInterval=9;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#progressBarImage}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#progressBarImage}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6117,11 +6117,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:progressBarImage
+     * @attr name com.swingessentials.app:progressBarImage
      */
     public static final int GenericDraweeHierarchy_progressBarImage=10;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#progressBarImageScaleType}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#progressBarImageScaleType}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -6141,11 +6141,11 @@ public final class R {
      * <tr><td>none</td><td>ffffffff</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:progressBarImageScaleType
+     * @attr name com.swingessentials.app:progressBarImageScaleType
      */
     public static final int GenericDraweeHierarchy_progressBarImageScaleType=11;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#retryImage}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#retryImage}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6153,11 +6153,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:retryImage
+     * @attr name com.swingessentials.app:retryImage
      */
     public static final int GenericDraweeHierarchy_retryImage=12;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#retryImageScaleType}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#retryImageScaleType}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -6177,72 +6177,72 @@ public final class R {
      * <tr><td>none</td><td>ffffffff</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:retryImageScaleType
+     * @attr name com.swingessentials.app:retryImageScaleType
      */
     public static final int GenericDraweeHierarchy_retryImageScaleType=13;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#roundAsCircle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#roundAsCircle}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:roundAsCircle
+     * @attr name com.swingessentials.app:roundAsCircle
      */
     public static final int GenericDraweeHierarchy_roundAsCircle=14;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#roundBottomLeft}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#roundBottomLeft}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:roundBottomLeft
+     * @attr name com.swingessentials.app:roundBottomLeft
      */
     public static final int GenericDraweeHierarchy_roundBottomLeft=15;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#roundBottomRight}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#roundBottomRight}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:roundBottomRight
+     * @attr name com.swingessentials.app:roundBottomRight
      */
     public static final int GenericDraweeHierarchy_roundBottomRight=16;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#roundTopLeft}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#roundTopLeft}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:roundTopLeft
+     * @attr name com.swingessentials.app:roundTopLeft
      */
     public static final int GenericDraweeHierarchy_roundTopLeft=17;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#roundTopRight}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#roundTopRight}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:roundTopRight
+     * @attr name com.swingessentials.app:roundTopRight
      */
     public static final int GenericDraweeHierarchy_roundTopRight=18;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#roundWithOverlayColor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#roundWithOverlayColor}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:roundWithOverlayColor
+     * @attr name com.swingessentials.app:roundWithOverlayColor
      */
     public static final int GenericDraweeHierarchy_roundWithOverlayColor=19;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#roundedCornerRadius}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#roundedCornerRadius}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -6251,22 +6251,22 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:roundedCornerRadius
+     * @attr name com.swingessentials.app:roundedCornerRadius
      */
     public static final int GenericDraweeHierarchy_roundedCornerRadius=20;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#roundingBorderColor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#roundingBorderColor}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:roundingBorderColor
+     * @attr name com.swingessentials.app:roundingBorderColor
      */
     public static final int GenericDraweeHierarchy_roundingBorderColor=21;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#roundingBorderPadding}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#roundingBorderPadding}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -6275,11 +6275,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:roundingBorderPadding
+     * @attr name com.swingessentials.app:roundingBorderPadding
      */
     public static final int GenericDraweeHierarchy_roundingBorderPadding=22;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#roundingBorderWidth}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#roundingBorderWidth}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -6288,16 +6288,16 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:roundingBorderWidth
+     * @attr name com.swingessentials.app:roundingBorderWidth
      */
     public static final int GenericDraweeHierarchy_roundingBorderWidth=23;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#viewAspectRatio}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#viewAspectRatio}
      * attribute's value can be found in the {@link #GenericDraweeHierarchy} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.swingessentials:viewAspectRatio
+     * @attr name com.swingessentials.app:viewAspectRatio
      */
     public static final int GenericDraweeHierarchy_viewAspectRatio=24;
     /**
@@ -6312,10 +6312,10 @@ public final class R {
      * <tr><td><code>{@link #LinearLayoutCompat_android_baselineAligned android:baselineAligned}</code></td><td></td></tr>
      * <tr><td><code>{@link #LinearLayoutCompat_android_baselineAlignedChildIndex android:baselineAlignedChildIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_divider com.swingessentials:divider}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.swingessentials:dividerPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.swingessentials:measureWithLargestChild}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_showDividers com.swingessentials:showDividers}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_divider com.swingessentials.app:divider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.swingessentials.app:dividerPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.swingessentials.app:measureWithLargestChild}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_showDividers com.swingessentials.app:showDividers}</code></td><td></td></tr>
      * </table>
      * @see #LinearLayoutCompat_android_gravity
      * @see #LinearLayoutCompat_android_orientation
@@ -6407,7 +6407,7 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_weightSum=4;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#divider}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#divider}
      * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6415,11 +6415,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:divider
+     * @attr name com.swingessentials.app:divider
      */
     public static final int LinearLayoutCompat_divider=5;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#dividerPadding}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#dividerPadding}
      * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -6428,21 +6428,21 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:dividerPadding
+     * @attr name com.swingessentials.app:dividerPadding
      */
     public static final int LinearLayoutCompat_dividerPadding=6;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#measureWithLargestChild}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#measureWithLargestChild}
      * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:measureWithLargestChild
+     * @attr name com.swingessentials.app:measureWithLargestChild
      */
     public static final int LinearLayoutCompat_measureWithLargestChild=7;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#showDividers}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#showDividers}
      * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -6457,7 +6457,7 @@ public final class R {
      * <tr><td>none</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:showDividers
+     * @attr name com.swingessentials.app:showDividers
      */
     public static final int LinearLayoutCompat_showDividers=8;
     /**
@@ -6613,9 +6613,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #LoadingImageView_circleCrop com.swingessentials:circleCrop}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LoadingImageView_imageAspectRatio com.swingessentials:imageAspectRatio}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust com.swingessentials:imageAspectRatioAdjust}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_circleCrop com.swingessentials.app:circleCrop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_imageAspectRatio com.swingessentials.app:imageAspectRatio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust com.swingessentials.app:imageAspectRatioAdjust}</code></td><td></td></tr>
      * </table>
      * @see #LoadingImageView_circleCrop
      * @see #LoadingImageView_imageAspectRatio
@@ -6625,26 +6625,26 @@ public final class R {
         0x7f020044, 0x7f020081, 0x7f020082
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#circleCrop}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#circleCrop}
      * attribute's value can be found in the {@link #LoadingImageView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:circleCrop
+     * @attr name com.swingessentials.app:circleCrop
      */
     public static final int LoadingImageView_circleCrop=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#imageAspectRatio}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#imageAspectRatio}
      * attribute's value can be found in the {@link #LoadingImageView} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.swingessentials:imageAspectRatio
+     * @attr name com.swingessentials.app:imageAspectRatio
      */
     public static final int LoadingImageView_imageAspectRatio=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#imageAspectRatioAdjust}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#imageAspectRatioAdjust}
      * attribute's value can be found in the {@link #LoadingImageView} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -6658,7 +6658,7 @@ public final class R {
      * <tr><td>none</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:imageAspectRatioAdjust
+     * @attr name com.swingessentials.app:imageAspectRatioAdjust
      */
     public static final int LoadingImageView_imageAspectRatioAdjust=2;
     /**
@@ -6784,10 +6784,10 @@ public final class R {
      * <tr><td><code>{@link #MenuItem_android_numericShortcut android:numericShortcut}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuItem_android_onClick android:onClick}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_actionLayout com.swingessentials:actionLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_actionProviderClass com.swingessentials:actionProviderClass}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_actionViewClass com.swingessentials:actionViewClass}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_showAsAction com.swingessentials:showAsAction}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_actionLayout com.swingessentials.app:actionLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_actionProviderClass com.swingessentials.app:actionProviderClass}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_actionViewClass com.swingessentials.app:actionViewClass}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_showAsAction com.swingessentials.app:showAsAction}</code></td><td></td></tr>
      * </table>
      * @see #MenuItem_android_icon
      * @see #MenuItem_android_enabled
@@ -6957,7 +6957,7 @@ public final class R {
      */
     public static final int MenuItem_android_onClick=12;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionLayout}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionLayout}
      * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6965,31 +6965,31 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actionLayout
+     * @attr name com.swingessentials.app:actionLayout
      */
     public static final int MenuItem_actionLayout=13;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionProviderClass}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionProviderClass}
      * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:actionProviderClass
+     * @attr name com.swingessentials.app:actionProviderClass
      */
     public static final int MenuItem_actionProviderClass=14;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actionViewClass}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actionViewClass}
      * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:actionViewClass
+     * @attr name com.swingessentials.app:actionViewClass
      */
     public static final int MenuItem_actionViewClass=15;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#showAsAction}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#showAsAction}
      * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -7005,7 +7005,7 @@ public final class R {
      * <tr><td>withText</td><td>4</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:showAsAction
+     * @attr name com.swingessentials.app:showAsAction
      */
     public static final int MenuItem_showAsAction=16;
     /**
@@ -7022,7 +7022,7 @@ public final class R {
      * <tr><td><code>{@link #MenuView_android_headerBackground android:headerBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuView_android_itemBackground android:itemBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuView_android_itemIconDisabledAlpha android:itemIconDisabledAlpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuView_preserveIconSpacing com.swingessentials:preserveIconSpacing}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuView_preserveIconSpacing com.swingessentials.app:preserveIconSpacing}</code></td><td></td></tr>
      * </table>
      * @see #MenuView_android_windowAnimationStyle
      * @see #MenuView_android_itemTextAppearance
@@ -7125,13 +7125,13 @@ public final class R {
      */
     public static final int MenuView_android_itemIconDisabledAlpha=6;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#preserveIconSpacing}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#preserveIconSpacing}
      * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:preserveIconSpacing
+     * @attr name com.swingessentials.app:preserveIconSpacing
      */
     public static final int MenuView_preserveIconSpacing=7;
     /**
@@ -7142,7 +7142,7 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #PopupWindow_overlapAnchor com.swingessentials:overlapAnchor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #PopupWindow_overlapAnchor com.swingessentials.app:overlapAnchor}</code></td><td></td></tr>
      * </table>
      * @see #PopupWindow_android_popupBackground
      * @see #PopupWindow_overlapAnchor
@@ -7166,13 +7166,13 @@ public final class R {
      */
     public static final int PopupWindow_android_popupBackground=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#overlapAnchor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#overlapAnchor}
      * attribute's value can be found in the {@link #PopupWindow} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:overlapAnchor
+     * @attr name com.swingessentials.app:overlapAnchor
      */
     public static final int PopupWindow_overlapAnchor=1;
     /**
@@ -7182,7 +7182,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.swingessentials:state_above_anchor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.swingessentials.app:state_above_anchor}</code></td><td></td></tr>
      * </table>
      * @see #PopupWindowBackgroundState_state_above_anchor
      */
@@ -7190,13 +7190,13 @@ public final class R {
         0x7f0200d1
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#state_above_anchor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#state_above_anchor}
      * attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:state_above_anchor
+     * @attr name com.swingessentials.app:state_above_anchor
      */
     public static final int PopupWindowBackgroundState_state_above_anchor=0;
     /**
@@ -7210,19 +7210,19 @@ public final class R {
      * <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
      * <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_closeIcon com.swingessentials:closeIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_commitIcon com.swingessentials:commitIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_defaultQueryHint com.swingessentials:defaultQueryHint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_goIcon com.swingessentials:goIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_iconifiedByDefault com.swingessentials:iconifiedByDefault}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_layout com.swingessentials:layout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_queryBackground com.swingessentials:queryBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_queryHint com.swingessentials:queryHint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_searchHintIcon com.swingessentials:searchHintIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_searchIcon com.swingessentials:searchIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_submitBackground com.swingessentials:submitBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_suggestionRowLayout com.swingessentials:suggestionRowLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_voiceIcon com.swingessentials:voiceIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_closeIcon com.swingessentials.app:closeIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_commitIcon com.swingessentials.app:commitIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_defaultQueryHint com.swingessentials.app:defaultQueryHint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_goIcon com.swingessentials.app:goIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_iconifiedByDefault com.swingessentials.app:iconifiedByDefault}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_layout com.swingessentials.app:layout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_queryBackground com.swingessentials.app:queryBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_queryHint com.swingessentials.app:queryHint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_searchHintIcon com.swingessentials.app:searchHintIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_searchIcon com.swingessentials.app:searchIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_submitBackground com.swingessentials.app:submitBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_suggestionRowLayout com.swingessentials.app:suggestionRowLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_voiceIcon com.swingessentials.app:voiceIcon}</code></td><td></td></tr>
      * </table>
      * @see #SearchView_android_focusable
      * @see #SearchView_android_maxWidth
@@ -7351,7 +7351,7 @@ public final class R {
      */
     public static final int SearchView_android_imeOptions=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#closeIcon}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#closeIcon}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7359,11 +7359,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:closeIcon
+     * @attr name com.swingessentials.app:closeIcon
      */
     public static final int SearchView_closeIcon=4;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#commitIcon}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#commitIcon}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7371,21 +7371,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:commitIcon
+     * @attr name com.swingessentials.app:commitIcon
      */
     public static final int SearchView_commitIcon=5;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#defaultQueryHint}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#defaultQueryHint}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:defaultQueryHint
+     * @attr name com.swingessentials.app:defaultQueryHint
      */
     public static final int SearchView_defaultQueryHint=6;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#goIcon}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#goIcon}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7393,21 +7393,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:goIcon
+     * @attr name com.swingessentials.app:goIcon
      */
     public static final int SearchView_goIcon=7;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#iconifiedByDefault}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#iconifiedByDefault}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:iconifiedByDefault
+     * @attr name com.swingessentials.app:iconifiedByDefault
      */
     public static final int SearchView_iconifiedByDefault=8;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#layout}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#layout}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7415,11 +7415,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:layout
+     * @attr name com.swingessentials.app:layout
      */
     public static final int SearchView_layout=9;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#queryBackground}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#queryBackground}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7427,21 +7427,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:queryBackground
+     * @attr name com.swingessentials.app:queryBackground
      */
     public static final int SearchView_queryBackground=10;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#queryHint}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#queryHint}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:queryHint
+     * @attr name com.swingessentials.app:queryHint
      */
     public static final int SearchView_queryHint=11;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#searchHintIcon}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#searchHintIcon}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7449,11 +7449,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:searchHintIcon
+     * @attr name com.swingessentials.app:searchHintIcon
      */
     public static final int SearchView_searchHintIcon=12;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#searchIcon}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#searchIcon}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7461,11 +7461,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:searchIcon
+     * @attr name com.swingessentials.app:searchIcon
      */
     public static final int SearchView_searchIcon=13;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#submitBackground}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#submitBackground}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7473,11 +7473,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:submitBackground
+     * @attr name com.swingessentials.app:submitBackground
      */
     public static final int SearchView_submitBackground=14;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#suggestionRowLayout}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#suggestionRowLayout}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7485,11 +7485,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:suggestionRowLayout
+     * @attr name com.swingessentials.app:suggestionRowLayout
      */
     public static final int SearchView_suggestionRowLayout=15;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#voiceIcon}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#voiceIcon}
      * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7497,7 +7497,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:voiceIcon
+     * @attr name com.swingessentials.app:voiceIcon
      */
     public static final int SearchView_voiceIcon=16;
     /**
@@ -7507,9 +7507,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #SignInButton_buttonSize com.swingessentials:buttonSize}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SignInButton_colorScheme com.swingessentials:colorScheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SignInButton_scopeUris com.swingessentials:scopeUris}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SignInButton_buttonSize com.swingessentials.app:buttonSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SignInButton_colorScheme com.swingessentials.app:colorScheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SignInButton_scopeUris com.swingessentials.app:scopeUris}</code></td><td></td></tr>
      * </table>
      * @see #SignInButton_buttonSize
      * @see #SignInButton_colorScheme
@@ -7519,7 +7519,7 @@ public final class R {
         0x7f02003d, 0x7f020051, 0x7f0200c1
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#buttonSize}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#buttonSize}
      * attribute's value can be found in the {@link #SignInButton} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7537,11 +7537,11 @@ public final class R {
      * <tr><td>wide</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:buttonSize
+     * @attr name com.swingessentials.app:buttonSize
      */
     public static final int SignInButton_buttonSize=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#colorScheme}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#colorScheme}
      * attribute's value can be found in the {@link #SignInButton} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7559,11 +7559,11 @@ public final class R {
      * <tr><td>light</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:colorScheme
+     * @attr name com.swingessentials.app:colorScheme
      */
     public static final int SignInButton_colorScheme=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#scopeUris}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#scopeUris}
      * attribute's value can be found in the {@link #SignInButton} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7573,7 +7573,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:scopeUris
+     * @attr name com.swingessentials.app:scopeUris
      */
     public static final int SignInButton_scopeUris=2;
     /**
@@ -7583,8 +7583,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #SimpleDraweeView_actualImageResource com.swingessentials:actualImageResource}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SimpleDraweeView_actualImageUri com.swingessentials:actualImageUri}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SimpleDraweeView_actualImageResource com.swingessentials.app:actualImageResource}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SimpleDraweeView_actualImageUri com.swingessentials.app:actualImageUri}</code></td><td></td></tr>
      * </table>
      * @see #SimpleDraweeView_actualImageResource
      * @see #SimpleDraweeView_actualImageUri
@@ -7593,7 +7593,7 @@ public final class R {
         0x7f020022, 0x7f020024
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actualImageResource}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actualImageResource}
      * attribute's value can be found in the {@link #SimpleDraweeView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7601,17 +7601,17 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:actualImageResource
+     * @attr name com.swingessentials.app:actualImageResource
      */
     public static final int SimpleDraweeView_actualImageResource=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#actualImageUri}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#actualImageUri}
      * attribute's value can be found in the {@link #SimpleDraweeView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:actualImageUri
+     * @attr name com.swingessentials.app:actualImageUri
      */
     public static final int SimpleDraweeView_actualImageUri=1;
     /**
@@ -7625,7 +7625,7 @@ public final class R {
      * <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #Spinner_android_prompt android:prompt}</code></td><td></td></tr>
      * <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Spinner_popupTheme com.swingessentials:popupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Spinner_popupTheme com.swingessentials.app:popupTheme}</code></td><td></td></tr>
      * </table>
      * @see #Spinner_android_entries
      * @see #Spinner_android_popupBackground
@@ -7700,7 +7700,7 @@ public final class R {
      */
     public static final int Spinner_android_dropDownWidth=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#popupTheme}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#popupTheme}
      * attribute's value can be found in the {@link #Spinner} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7708,7 +7708,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:popupTheme
+     * @attr name com.swingessentials.app:popupTheme
      */
     public static final int Spinner_popupTheme=4;
     /**
@@ -7721,13 +7721,13 @@ public final class R {
      * <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
      * <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
      * <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_showText com.swingessentials:showText}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_splitTrack com.swingessentials:splitTrack}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchMinWidth com.swingessentials:switchMinWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchPadding com.swingessentials:switchPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.swingessentials:switchTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.swingessentials:thumbTextPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_track com.swingessentials:track}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_showText com.swingessentials.app:showText}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_splitTrack com.swingessentials.app:splitTrack}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchMinWidth com.swingessentials.app:switchMinWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchPadding com.swingessentials.app:switchPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.swingessentials.app:switchTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.swingessentials.app:thumbTextPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_track com.swingessentials.app:track}</code></td><td></td></tr>
      * </table>
      * @see #SwitchCompat_android_textOn
      * @see #SwitchCompat_android_textOff
@@ -7778,27 +7778,27 @@ public final class R {
      */
     public static final int SwitchCompat_android_thumb=2;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#showText}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#showText}
      * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:showText
+     * @attr name com.swingessentials.app:showText
      */
     public static final int SwitchCompat_showText=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#splitTrack}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#splitTrack}
      * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:splitTrack
+     * @attr name com.swingessentials.app:splitTrack
      */
     public static final int SwitchCompat_splitTrack=4;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#switchMinWidth}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#switchMinWidth}
      * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -7807,11 +7807,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:switchMinWidth
+     * @attr name com.swingessentials.app:switchMinWidth
      */
     public static final int SwitchCompat_switchMinWidth=5;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#switchPadding}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#switchPadding}
      * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -7820,11 +7820,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:switchPadding
+     * @attr name com.swingessentials.app:switchPadding
      */
     public static final int SwitchCompat_switchPadding=6;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#switchTextAppearance}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#switchTextAppearance}
      * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7832,11 +7832,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:switchTextAppearance
+     * @attr name com.swingessentials.app:switchTextAppearance
      */
     public static final int SwitchCompat_switchTextAppearance=7;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#thumbTextPadding}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#thumbTextPadding}
      * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -7845,11 +7845,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:thumbTextPadding
+     * @attr name com.swingessentials.app:thumbTextPadding
      */
     public static final int SwitchCompat_thumbTextPadding=8;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#track}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#track}
      * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -7857,7 +7857,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:track
+     * @attr name com.swingessentials.app:track
      */
     public static final int SwitchCompat_track=9;
     /**
@@ -7875,7 +7875,7 @@ public final class R {
      * <tr><td><code>{@link #TextAppearance_android_shadowDx android:shadowDx}</code></td><td></td></tr>
      * <tr><td><code>{@link #TextAppearance_android_shadowDy android:shadowDy}</code></td><td></td></tr>
      * <tr><td><code>{@link #TextAppearance_android_shadowRadius android:shadowRadius}</code></td><td></td></tr>
-     * <tr><td><code>{@link #TextAppearance_textAllCaps com.swingessentials:textAllCaps}</code></td><td></td></tr>
+     * <tr><td><code>{@link #TextAppearance_textAllCaps com.swingessentials.app:textAllCaps}</code></td><td></td></tr>
      * </table>
      * @see #TextAppearance_android_textSize
      * @see #TextAppearance_android_typeface
@@ -7996,7 +7996,7 @@ public final class R {
      */
     public static final int TextAppearance_android_shadowRadius=7;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#textAllCaps}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#textAllCaps}
      * attribute's value can be found in the {@link #TextAppearance} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -8006,7 +8006,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.swingessentials:textAllCaps
+     * @attr name com.swingessentials.app:textAllCaps
      */
     public static final int TextAppearance_textAllCaps=8;
     /**
@@ -8189,29 +8189,29 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_collapseContentDescription com.swingessentials:collapseContentDescription}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_collapseIcon com.swingessentials:collapseIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetEnd com.swingessentials:contentInsetEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetLeft com.swingessentials:contentInsetLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetRight com.swingessentials:contentInsetRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetStart com.swingessentials:contentInsetStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_logo com.swingessentials:logo}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_logoDescription com.swingessentials:logoDescription}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_maxButtonHeight com.swingessentials:maxButtonHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_navigationContentDescription com.swingessentials:navigationContentDescription}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_navigationIcon com.swingessentials:navigationIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_popupTheme com.swingessentials:popupTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_subtitle com.swingessentials:subtitle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.swingessentials:subtitleTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_subtitleTextColor com.swingessentials:subtitleTextColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_title com.swingessentials:title}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginBottom com.swingessentials:titleMarginBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginEnd com.swingessentials:titleMarginEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginStart com.swingessentials:titleMarginStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginTop com.swingessentials:titleMarginTop}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMargins com.swingessentials:titleMargins}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleTextAppearance com.swingessentials:titleTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleTextColor com.swingessentials:titleTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_collapseContentDescription com.swingessentials.app:collapseContentDescription}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_collapseIcon com.swingessentials.app:collapseIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetEnd com.swingessentials.app:contentInsetEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetLeft com.swingessentials.app:contentInsetLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetRight com.swingessentials.app:contentInsetRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetStart com.swingessentials.app:contentInsetStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_logo com.swingessentials.app:logo}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_logoDescription com.swingessentials.app:logoDescription}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_maxButtonHeight com.swingessentials.app:maxButtonHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_navigationContentDescription com.swingessentials.app:navigationContentDescription}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_navigationIcon com.swingessentials.app:navigationIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_popupTheme com.swingessentials.app:popupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitle com.swingessentials.app:subtitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.swingessentials.app:subtitleTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitleTextColor com.swingessentials.app:subtitleTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_title com.swingessentials.app:title}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginBottom com.swingessentials.app:titleMarginBottom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginEnd com.swingessentials.app:titleMarginEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginStart com.swingessentials.app:titleMarginStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginTop com.swingessentials.app:titleMarginTop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMargins com.swingessentials.app:titleMargins}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleTextAppearance com.swingessentials.app:titleTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleTextColor com.swingessentials.app:titleTextColor}</code></td><td></td></tr>
      * </table>
      * @see #Toolbar_android_gravity
      * @see #Toolbar_android_minHeight
@@ -8291,17 +8291,17 @@ public final class R {
      */
     public static final int Toolbar_android_minHeight=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#collapseContentDescription}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#collapseContentDescription}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:collapseContentDescription
+     * @attr name com.swingessentials.app:collapseContentDescription
      */
     public static final int Toolbar_collapseContentDescription=2;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#collapseIcon}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#collapseIcon}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -8309,11 +8309,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:collapseIcon
+     * @attr name com.swingessentials.app:collapseIcon
      */
     public static final int Toolbar_collapseIcon=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#contentInsetEnd}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#contentInsetEnd}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -8322,11 +8322,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:contentInsetEnd
+     * @attr name com.swingessentials.app:contentInsetEnd
      */
     public static final int Toolbar_contentInsetEnd=4;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#contentInsetLeft}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#contentInsetLeft}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -8335,11 +8335,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:contentInsetLeft
+     * @attr name com.swingessentials.app:contentInsetLeft
      */
     public static final int Toolbar_contentInsetLeft=5;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#contentInsetRight}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#contentInsetRight}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -8348,11 +8348,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:contentInsetRight
+     * @attr name com.swingessentials.app:contentInsetRight
      */
     public static final int Toolbar_contentInsetRight=6;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#contentInsetStart}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#contentInsetStart}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -8361,11 +8361,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:contentInsetStart
+     * @attr name com.swingessentials.app:contentInsetStart
      */
     public static final int Toolbar_contentInsetStart=7;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#logo}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#logo}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -8373,21 +8373,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:logo
+     * @attr name com.swingessentials.app:logo
      */
     public static final int Toolbar_logo=8;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#logoDescription}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#logoDescription}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:logoDescription
+     * @attr name com.swingessentials.app:logoDescription
      */
     public static final int Toolbar_logoDescription=9;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#maxButtonHeight}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#maxButtonHeight}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -8396,21 +8396,21 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:maxButtonHeight
+     * @attr name com.swingessentials.app:maxButtonHeight
      */
     public static final int Toolbar_maxButtonHeight=10;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#navigationContentDescription}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#navigationContentDescription}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:navigationContentDescription
+     * @attr name com.swingessentials.app:navigationContentDescription
      */
     public static final int Toolbar_navigationContentDescription=11;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#navigationIcon}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#navigationIcon}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -8418,11 +8418,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:navigationIcon
+     * @attr name com.swingessentials.app:navigationIcon
      */
     public static final int Toolbar_navigationIcon=12;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#popupTheme}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#popupTheme}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -8430,21 +8430,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:popupTheme
+     * @attr name com.swingessentials.app:popupTheme
      */
     public static final int Toolbar_popupTheme=13;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#subtitle}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#subtitle}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:subtitle
+     * @attr name com.swingessentials.app:subtitle
      */
     public static final int Toolbar_subtitle=14;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#subtitleTextAppearance}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#subtitleTextAppearance}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -8452,32 +8452,32 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:subtitleTextAppearance
+     * @attr name com.swingessentials.app:subtitleTextAppearance
      */
     public static final int Toolbar_subtitleTextAppearance=15;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#subtitleTextColor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#subtitleTextColor}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:subtitleTextColor
+     * @attr name com.swingessentials.app:subtitleTextColor
      */
     public static final int Toolbar_subtitleTextColor=16;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#title}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#title}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.swingessentials:title
+     * @attr name com.swingessentials.app:title
      */
     public static final int Toolbar_title=17;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#titleMarginBottom}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#titleMarginBottom}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -8486,11 +8486,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:titleMarginBottom
+     * @attr name com.swingessentials.app:titleMarginBottom
      */
     public static final int Toolbar_titleMarginBottom=18;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#titleMarginEnd}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#titleMarginEnd}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -8499,11 +8499,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:titleMarginEnd
+     * @attr name com.swingessentials.app:titleMarginEnd
      */
     public static final int Toolbar_titleMarginEnd=19;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#titleMarginStart}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#titleMarginStart}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -8512,11 +8512,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:titleMarginStart
+     * @attr name com.swingessentials.app:titleMarginStart
      */
     public static final int Toolbar_titleMarginStart=20;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#titleMarginTop}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#titleMarginTop}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -8525,11 +8525,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:titleMarginTop
+     * @attr name com.swingessentials.app:titleMarginTop
      */
     public static final int Toolbar_titleMarginTop=21;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#titleMargins}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#titleMargins}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -8538,11 +8538,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:titleMargins
+     * @attr name com.swingessentials.app:titleMargins
      */
     public static final int Toolbar_titleMargins=22;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#titleTextAppearance}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#titleTextAppearance}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -8550,18 +8550,18 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:titleTextAppearance
+     * @attr name com.swingessentials.app:titleTextAppearance
      */
     public static final int Toolbar_titleTextAppearance=23;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#titleTextColor}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#titleTextColor}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:titleTextColor
+     * @attr name com.swingessentials.app:titleTextColor
      */
     public static final int Toolbar_titleTextColor=24;
     /**
@@ -8573,9 +8573,9 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
      * <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #View_paddingEnd com.swingessentials:paddingEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #View_paddingStart com.swingessentials:paddingStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #View_theme com.swingessentials:theme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_paddingEnd com.swingessentials.app:paddingEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_paddingStart com.swingessentials.app:paddingStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_theme com.swingessentials.app:theme}</code></td><td></td></tr>
      * </table>
      * @see #View_android_theme
      * @see #View_android_focusable
@@ -8610,7 +8610,7 @@ public final class R {
      */
     public static final int View_android_focusable=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#paddingEnd}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#paddingEnd}
      * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -8619,11 +8619,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:paddingEnd
+     * @attr name com.swingessentials.app:paddingEnd
      */
     public static final int View_paddingEnd=2;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#paddingStart}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#paddingStart}
      * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -8632,11 +8632,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.swingessentials:paddingStart
+     * @attr name com.swingessentials.app:paddingStart
      */
     public static final int View_paddingStart=3;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#theme}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#theme}
      * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -8644,7 +8644,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.swingessentials:theme
+     * @attr name com.swingessentials.app:theme
      */
     public static final int View_theme=4;
     /**
@@ -8655,8 +8655,8 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ViewBackgroundHelper_android_background android:background}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.swingessentials:backgroundTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.swingessentials:backgroundTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.swingessentials.app:backgroundTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.swingessentials.app:backgroundTintMode}</code></td><td></td></tr>
      * </table>
      * @see #ViewBackgroundHelper_android_background
      * @see #ViewBackgroundHelper_backgroundTint
@@ -8681,18 +8681,18 @@ public final class R {
      */
     public static final int ViewBackgroundHelper_android_background=0;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#backgroundTint}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#backgroundTint}
      * attribute's value can be found in the {@link #ViewBackgroundHelper} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.swingessentials:backgroundTint
+     * @attr name com.swingessentials.app:backgroundTint
      */
     public static final int ViewBackgroundHelper_backgroundTint=1;
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#backgroundTintMode}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#backgroundTintMode}
      * attribute's value can be found in the {@link #ViewBackgroundHelper} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -8708,7 +8708,7 @@ public final class R {
      * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:backgroundTintMode
+     * @attr name com.swingessentials.app:backgroundTintMode
      */
     public static final int ViewBackgroundHelper_backgroundTintMode=2;
     /**
@@ -8772,7 +8772,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #scaleStyle_scalableType com.swingessentials:scalableType}</code></td><td></td></tr>
+     * <tr><td><code>{@link #scaleStyle_scalableType com.swingessentials.app:scalableType}</code></td><td></td></tr>
      * </table>
      * @see #scaleStyle_scalableType
      */
@@ -8780,7 +8780,7 @@ public final class R {
         0x7f0200c0
       };
     /**
-     * <p>This symbol is the offset where the {@link com.swingessentials.R.attr#scalableType}
+     * <p>This symbol is the offset where the {@link com.swingessentials.app.R.attr#scalableType}
      * attribute's value can be found in the {@link #scaleStyle} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -8817,7 +8817,7 @@ public final class R {
      * <tr><td>startInside</td><td>17</td><td></td></tr>
      * </table>
      *
-     * @attr name com.swingessentials:scalableType
+     * @attr name com.swingessentials.app:scalableType
      */
     public static final int scaleStyle_scalableType=0;
   }
