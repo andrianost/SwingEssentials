@@ -91,12 +91,12 @@ class YourLessonsScreen extends Component {
 
   render() {
     return (
+      <ScrollView>
       <View style={styles.topContainer}>
         <View>
           <View style={styles.container}>
             <Text style={styles.text}>Completed</Text>
           </View>
-          <ScrollView>
             <FlatList
               data={this.props.closed}
               scrollEnabled={false}
@@ -104,9 +104,9 @@ class YourLessonsScreen extends Component {
               renderItem={this._renderItem.bind(this)}
               ListEmptyComponent={this._emptyComponent}
             />
-          </ScrollView>
         </View>
       </View>
+      </ScrollView>
     );
   }
 }

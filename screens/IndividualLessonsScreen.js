@@ -67,6 +67,7 @@ class IndividualLessonsScreen extends Component {
     console.log("response video")
     console.log(this.props.response_video)
     return (
+      <ScrollView>
       <View style={styles.topContainer}>
         <View style={styles.header}>
           <Text style={styles.text}>{this.props.request_date}</Text>
@@ -91,12 +92,11 @@ class IndividualLessonsScreen extends Component {
             <Text style={styles.text}>Comments</Text>
           </View>
           <View style={styles.container}>
-            <ScrollView>
               {this._formatText(this.props.response_notes)}
-            </ScrollView>
           </View>
         </View>
       </View>
+      </ScrollView>
     );
   }
 }

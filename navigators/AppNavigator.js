@@ -137,13 +137,13 @@ export const AppNavigator = DrawerNavigator(
                   navigationOptions: ({ navigation, screenProps }) => ({
                       title: ( <HeaderImage /> ),
                       headerStyle: styles.header,
-                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore}
-                                    onPress={ () => {
-                                                    if (screenProps.from == 'Home'){
-                                                      navigation.navigate('Home')
-                                                    } else  {
-                                                      navigation.navigate('YourLessons')
-                                                    }}} />
+                      headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBefore} onPress={ () => navigation.goBack()}/>
+                                    // onPress={ () => {
+                                    //                 if (screenProps.from == 'Home'){
+                                    //                   navigation.navigate('Home')
+                                    //                 } else  {
+                                    //                   navigation.navigate('YourLessons')
+                                    //                 }}} />
                   })
                 }
           },{

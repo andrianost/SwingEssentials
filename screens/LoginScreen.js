@@ -93,11 +93,10 @@ class LoginScreen extends React.Component{
                   <AppIndicator/>
                 </Modal>
               </View>
-              <View>
+              <View style={styles.bottomContainer}>
                 <Button
+                    buttonStyle={styles.button}
                     title="Forgot Password"
-                    color="blue"
-                    backgroundColor="white"
                     onPress={this._resetPassword.bind(this)}
                 />
               </View>
@@ -113,6 +112,9 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
   },
+  bottomContainer: {
+    paddingTop: 10,
+  },
   container: {
     paddingTop: 20,
     paddingBottom: 10,
@@ -120,7 +122,7 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "#231f61",
     opacity: .8
-  }
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);

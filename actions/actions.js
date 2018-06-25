@@ -52,9 +52,10 @@ export const ACTIVATE_UNLIMITED_SUCCESS = 'ACTIVATE_UNLIMITED_SUCCESS';
 export const ACTIVATE_UNLIMITED_FAILURE = 'ACTIVATE_UNLIMITED_FAILURE';
 export const SET_FROM = 'SET_FROM';
 
-export const BASEURL = 'https://www.josephpboyle.com/api/swingessentials2.php/'
+export const BASEURL = 'https://www.swingessentials.com/apis/swingessentials.php/'
 
-//prod 'https://www.swingessentials.com/apis/swingessentials.php/'
+// sandbox 'https://www.josephpboyle.com/api/swingessentials2.php/'
+// prod 'https://www.swingessentials.com/apis/swingessentials.php/'
 
 
 //login function.  also requests settings, lessons, packages and credits
