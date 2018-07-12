@@ -104,4 +104,5 @@
   <androidx.test.ext/>
   <com.google.android.ads.consent/>
   <androidx.versionedparcelable/>
+  <androidx.media2/>
 </metadata>

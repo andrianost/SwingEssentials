@@ -100,6 +100,13 @@ class LoginScreen extends React.Component{
                     onPress={this._resetPassword.bind(this)}
                 />
               </View>
+              <View style={styles.bottomContainer}>
+                <Button
+                    buttonStyle={styles.button}
+                    title="Create Account"
+                    onPress={this._createAccount.bind(this)}
+                />
+              </View>
             </View>
             </KeyboardAwareScrollView>
           )

@@ -56,18 +56,18 @@ export const AppNavigator = DrawerNavigator(
           }
         })
       },
-      // CreateAccount: {
-      //   screen: StackNavigator({
-      //     CreateAccount: {
-      //       screen: CreateAccountScreen,
-      //       navigationOptions: ({ navigation }) => ({
-      //           title: 'Create Account',
-      //           drawerLabel: () => null,
-      //           headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBeforeGrey} onPress={ () => navigation.navigate('Login')}/>
-      //       })
-      //     }
-      //   })
-      // },
+      CreateAccount: {
+        screen: StackNavigator({
+          CreateAccount: {
+            screen: CreateAccountScreen,
+            navigationOptions: ({ navigation }) => ({
+                title: 'Create Account',
+                drawerLabel: () => null,
+                headerLeft: <MaterialIcons name="navigate-before" size={30} style={styles.navigateBeforeGrey} onPress={ () => navigation.navigate('Login')}/>
+            })
+          }
+        })
+      },
       Home: {
           screen: StackNavigator({
               Home: {

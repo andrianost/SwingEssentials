@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Jun 23 11:54:29 EDT 2018
+#Thu Jul 12 06:16:38 EDT 2018
 5.base=/Users/tito/Projects/SwingEssentials/android/app/build/intermediates/transforms/mergeJniLibs/release/0
 22.path=lib/armeabi-v7a/libjsc.so
 32.set=NATIVE_RESOURCE
